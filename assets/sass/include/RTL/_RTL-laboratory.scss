@@ -1,0 +1,110 @@
+.section-laboratory {
+    h2 {
+        font-weight: bold;
+        font-size: 22px;
+        color: #000;
+        margin-bottom: 24px;
+    }
+    .laboratorys {
+        .item {
+            .inner-item {
+                height: 142.22px;
+                border-radius: 7px;
+                background: #fff;
+                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    .owl-carousel {
+        display: flex;
+        align-items: center;
+    }
+    .owl-nav {
+        display: flex;
+        align-items: center;
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            right: -43px;
+            width: 23.45px;
+            height: 22px;
+            width: 23.45px;
+            height: 22px;
+            background: #fff;
+            box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.13);
+            background-color: white !important;
+            border-radius: 50%;
+            span {
+                font-size: 25px;
+                line-height: 0;
+            }
+        }
+        .owl-next {
+            left: -43px;
+            right: auto;
+        }
+    }
+    .owl-nav [class*='owl-']:hover {
+        color: inherit;
+    }
+}
+
+.best-offer-laboratory {
+    h2 {
+        font-weight: bold;
+        font-size: 22px;
+        color: #000;
+    }
+    .discount-offer {
+        // width: 79px;
+        // height: 30px;
+        // background: #f00;
+        // font-weight: bold;
+        font-size: 13px;
+        // color: #fff;
+        // border-right: 7px solid #d20b0b;
+        // font-weight: bold;
+        // font-size: 13px;
+        // color: #fff;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // position: absolute;
+        right: 14px;
+        top: 14px;
+    }
+    .avatar {
+        margin-bottom: 13px;
+    }
+    .name-laborat {
+        margin-bottom: 13px;
+        h4 {
+            font-weight: normal;
+            font-size: 22px;
+            color: $mainCol;
+        }
+    }
+    .desc-laborat {
+        margin-bottom: 18px;
+        p {
+            font-weight: normal;
+            font-size: 11px;
+            text-align: center;
+            color: #868d9a;
+        }
+    }
+    .book {
+        font-weight: normal;
+        font-size: 11px;
+        color: #fff;
+        width: 144px;
+        height: 40px;
+        background: $mainCol;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

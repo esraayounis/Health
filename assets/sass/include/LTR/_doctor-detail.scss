@@ -1,0 +1,177 @@
+.doctor-detail {
+    .card-about {
+        padding: 20px;
+        h4 {
+            font-weight: 600;
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 20px;
+            svg {
+                margin-right: 20px;
+            }
+        }
+        p {
+            font-weight: normal;
+            font-size: 14px;
+            color: #868d9a;
+            padding-right: 70px;
+            padding-left: 19px;
+        }
+    }
+    .rate-doctor {
+        .item {
+            &:last-of-type {
+                border: none;
+            }
+        }
+        .card-box {
+            padding-top: 31px;
+            .header-card {
+                h5 {
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: #000;
+                }
+            }
+        }
+        h5 {
+            padding-right: 23px;
+            font-weight: bold;
+            font-size: 27px;
+            color: #000;
+        }
+        .star {
+            margin-bottom: 10px;
+        }
+        p {
+            font-weight: normal;
+            font-size: 9px;
+            color: #868d9a;
+        }
+    }
+    .person-comment {
+        padding: 40px;
+        .pubilc {
+            font-weight: normal;
+            font-size: 13px;
+            color: #000;
+        }
+        .comment {
+            font-weight: normal;
+            font-size: 11px;
+            color: #868d9a;
+        }
+        .info {
+            span {
+                font-weight: normal;
+                font-size: 11px;
+                color: #868d9a;
+                margin-left: 10px;
+            }
+        }
+        button {
+            font-weight: bold;
+            font-size: 21px;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            background: $mainCol;
+            border: none;
+        }
+    }
+    .pleace-comment {
+        background: #f2f3f3;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+        padding: 30px;
+        p {
+            font-weight: normal;
+            font-size: 14px;
+            color: $mainCol;
+        }
+        form {
+            input {
+                padding: 10px 15px;
+                height: 40px;
+                border-radius: 10px;
+                background: #fff;
+                color: black;
+                width: 100%;
+                border: none;
+                &::placeholder {
+                    font-weight: normal;
+                    font-size: 16px;
+                    color: #868d9a;
+                }
+            }
+            button {
+                width: 94px;
+                height: 40px;
+                border-radius: 4px;
+                font-weight: bold;
+                font-size: 11px;
+                color: #fff;
+                border: none;
+                background: #3fc98b;
+            }
+        }
+    }
+    .card-tabs {
+        .nav-tabs .nav-link {
+            border: none;
+            margin-bottom: 0;
+            border-bottom: 1px solid #0060;
+            p {
+                font-weight: bold;
+                font-size: 11px;
+                color: #868D9A;
+                margin-bottom: 9px;
+                margin-top: 4px;
+            }
+            svg,
+            path {
+                fill: #868D9A;
+            }
+            &.active {
+                border-bottom: 1px solid $mainCol;
+                svg,
+                path {
+                    fill: $mainCol !important;
+                }
+                p {
+                    color: $mainCol;
+                }
+            }
+        }
+        .content-detail-cats-tabs {
+            p {
+                font-weight: 600;
+                font-size: 17px;
+                text-align: center;
+                span {
+                    color: $mainCol;
+                }
+            }
+        }
+        .notes {
+            p {
+                font-weight: normal;
+                font-size: 14px;
+                color: #868d9a;
+                margin-top: 1rem;
+            }
+        }
+    }
+    .card-maps {
+        height: 225px;
+        .google-maps {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+.profile-img {
+    margin-right: 5px;
+}

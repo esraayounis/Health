@@ -1,0 +1,44 @@
+.search-result-section {
+    .label-result {
+        font-family: 'Cairo';
+        font-weight: 300;
+        font-size: 16px;
+        color: #000;
+        strong {
+            font-weight: 700;
+        }
+    }
+    .inner-filter {
+        .nice-select {
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .nice-select {
+        float: none;
+        text-align: left !important;
+        // padding-right: 10px;
+        &::after {
+            left: auto;
+            right: 12px;
+            width: 10px;
+            height: 10px;
+        }
+        .current {
+            font-weight: normal;
+            font-size: 16px;
+            color: #868d9a;
+            margin-left: 10px;
+        }
+        .list {
+            right: 0;
+            li {
+                text-align: right;
+                font-weight: normal;
+                font-size: 16px;
+                color: #868d9a;
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+    #header {
+        // height: 80px;
+        background: $mainCol;
+        @media (max-width: 992px) {}
+        .login-group {
+            transform: translateY(-7px);
+        }
+        .language {
+            a {
+                color: white;
+                display: none;
+                @media(max-width: 992px) {
+                    display: block;
+                    font-weight: 800;
+                    position: absolute;
+                    left: 48px;
+                    top: 26px;
+                }
+            }
+        }
+        .FAQ {
+            a {
+                display: none;
+                @media(max-width: 992px) {
+                    display: block;
+                    position: absolute;
+                    top: 24px;
+                    left: 14px;
+                }
+            }
+        }
+        .navbar {
+            margin-right: 41px;
+            @media (max-width: 992px) {
+                position: static;
+            }
+            ul {
+                li {
+                    svg {
+                        // display: none;
+                        margin-right: 5px;
+                        @media(max-width: 992px) {
+                            display: block;
+                            margin-right: 10px;
+                        }
+                    }
+                    a.nav-link {
+                        color: white;
+                        @media(max-width: 992px) {
+                            font-family: Cairo;
+                            // font-weight: 600;
+                            // font-size: 14px;
+                            text-align: left;
+                            color: #8d8d8d;
+                            padding: 0px;
+                            margin-right: 16px;
+                        }
+                    }
+                    &.dropdown {
+                        a {
+                            font-family: "Cairo";
+                            // font-weight: 600;
+                            // font-size: 14px;
+                            // text-align: left;
+                            color: #8d8d8d;
+                            width: 100%;
+                            // span {
+                            //     margin-left: 6px;
+                            // }
+                            // svg {
+                            //     transition: all 0.2s ease-in-out 0s;
+                            // }
+                            &:hover {
+                                color: #fff;
+                                background: $mainCol;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .login-group {
+            a {
+                font-weight: normal;
+                font-size: 16px;
+                color: #fff;
+                width: 120px;
+                height: 45px;
+                border-radius: 10px;
+                border: 1px solid #fff;
+                margin-right: 10px;
+                padding-bottom: 4px;
+                transition: 300ms;
+                &.active,
+                &:hover {
+                    background: #fff;
+                    color: $mainCol;
+                }
+            }
+        }
+        .telephone {
+            display: none;
+            @media(max-width: 992px) {}
+        }
+    }
+    
+    .home-care-avatar {
+        width: 70%;
+    }

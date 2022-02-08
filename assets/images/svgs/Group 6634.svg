@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73" height="73" viewBox="0 0 73 73">
+  <defs>
+    <filter id="Path_1246" x="0" y="0" width="73" height="73" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#0065ff" flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_6634" data-name="Group 6634" transform="translate(-157 -706.002)">
+    <g transform="matrix(1, 0, 0, 1, 157, 706)" filter="url(#Path_1246)">
+      <path id="Path_1246-2" data-name="Path 1246" d="M27.5,0A27.5,27.5,0,1,1,0,27.5,27.5,27.5,0,0,1,27.5,0Z" transform="translate(9 9)" fill="#fff"/>
+    </g>
+    <path id="Path_1240" data-name="Path 1240" d="M6,.75a.75.75,0,0,0-1.5,0V1.5H3a3,3,0,0,0-3,3V21a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V4.5a3,3,0,0,0-3-3H19.5V.75a.75.75,0,0,0-1.5,0V1.5H6ZM3,5.25a.75.75,0,0,1,.75-.75h16.5a.75.75,0,0,1,.75.75v1.5a.75.75,0,0,1-.75.75H3.75A.75.75,0,0,1,3,6.75Zm9.75,5.25a.75.75,0,0,0-.75.75v1.5a.75.75,0,0,0,.75.75h1.5a.75.75,0,0,0,.75-.75v-1.5a.75.75,0,0,0-.75-.75Zm4.5,0a.75.75,0,0,0-.75.75v1.5a.75.75,0,0,0,.75.75h1.5a.75.75,0,0,0,.75-.75v-1.5a.75.75,0,0,0-.75-.75ZM4.5,15.75A.75.75,0,0,1,5.25,15h1.5a.75.75,0,0,1,.75.75v1.5a.75.75,0,0,1-.75.75H5.25a.75.75,0,0,1-.75-.75ZM9.75,15a.75.75,0,0,0-.75.75v1.5a.75.75,0,0,0,.75.75h1.5a.75.75,0,0,0,.75-.75v-1.5a.75.75,0,0,0-.75-.75Z" transform="translate(181.5 730.502)" fill="#0065ff" fill-rule="evenodd"/>
+  </g>
+</svg>

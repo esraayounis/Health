@@ -1,0 +1,65 @@
+    #header {
+        // height: 80px;
+        background: $mainCol;
+        @media (max-width: 992px) {
+            // height: 60px;
+        }
+        .navbar {
+            margin-right: 41px;
+            @media (max-width: 992px) {
+                position: static;
+            }
+            ul {
+                li {
+                    a {
+                        font-weight: normal;
+                        font-size: 16px;
+                        color: #fff;
+                        @media(max-width: 992px) {
+                            font-family: Cairo;
+                            // font-weight: 600;
+                            // font-size: 14px;
+                            text-align: left;
+                            color: #8d8d8d;
+                            padding: 0px;
+                            margin-left: 16px;
+                        }
+                    }
+                    &.dropdown {
+                        a {
+                            color: #8d8d8d;
+                            &:hover {
+                                color: #fff;
+                                background: #0065FF;
+                            }
+                            span {
+                                margin-right: 6px;
+                            }
+                            svg {
+                                transition: all 0.2s ease-in-out 0s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .login-group {
+            a {
+                font-weight: normal;
+                font-size: 16px;
+                color: #fff;
+                width: 120px;
+                height: 45px;
+                border-radius: 10px;
+                border: 1px solid #fff;
+                margin-right: 10px;
+                padding-bottom: 4px;
+                transition: 300ms;
+                &.active,
+                &:hover {
+                    background: #fff;
+                    color: $mainCol;
+                }
+            }
+        }
+    }

@@ -1,0 +1,47 @@
+.price-nurse {
+    text-align: center;
+    border-bottom: 1px solid #c4c4c4;
+    p {
+        font-weight: 600;
+        font-size: 17px;
+        color: #000;
+        span {
+            color: $mainCol;
+        }
+    }
+}
+
+.choose-time {
+    h3 {
+        font-weight: 600;
+        font-size: 18px;
+        color: #000;
+        text-align: center;
+    }
+    p {
+        font-weight: normal;
+        font-size: 11px;
+        color: #868d9a;
+        display: inline-block;
+    }
+    button {
+        width: 144px;
+        height: 40px;
+        border-radius: 4px;
+        background: $mainCol;
+        font-weight: normal;
+        font-size: 11px;
+        color: #fff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+.about-nurse {
+    p {
+        padding-right: 25px !important;
+    }
+}

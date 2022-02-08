@@ -1,0 +1,94 @@
+.page-title-section {
+    background: #E5F2FF;
+    overflow-x: hidden;
+    h3.title {
+        display: flex;
+        align-items: center;
+        font-family: 'Cairo';
+        font-weight: 900;
+        font-size: 18px;
+        color: #000;
+        height: 100%;
+    }
+    .inner-search {
+        input {
+            background: #FFFFFF;
+            border-radius: 10px;
+            height: 60px;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 10px;
+        }
+        button {
+            background: #FF0000 0% 0% no-repeat padding-box;
+            width: 100%;
+            max-width: 152px;
+            height: 60px;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+            border-radius: 10px;
+        }
+    }
+    .icon {
+        figure {
+            position: relative;
+            img {
+                height: 142px;
+                position: absolute;
+                top: -33px;
+                left: 8px;
+            }
+        }
+    }
+    &.cov {
+        .icon {
+            figure {
+                img {
+                    height: 106px;
+                    top: -24px;
+                    left: 8px;
+                }
+            }
+        }
+    }
+}
+
+.show-on-map {
+    max-width: 144px;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    background: #0065FF;
+    font-weight: normal;
+    font-size: 11px;
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+// doctor-reservation style search input 
+.custom-input {
+    @media(max-width: 992px) {
+        background: #FFFFFF;
+        border-radius: 10px;
+        border: 1px solid;
+        // height: 60px;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .search-doctor-button {
+        @media(max-width: 992px) {
+            background: none;
+            height: 0px;
+            align-items: center;
+        }
+    }
+}
