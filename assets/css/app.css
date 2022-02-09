@@ -146,16 +146,9 @@ h6 {
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
-  padding: 3px 0;
-  top: 40px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 992px) {
-  #header {
-    padding: 15px 0;
-  }
-}
 #header.header-scrolled {
   top: 0;
 }
@@ -178,10 +171,6 @@ h6 {
 
 #header .logo a {
   color: #555555;
-}
-
-#header .logo img {
-  max-height: 40px;
 }
 
 #header .language a {
@@ -1758,9 +1747,12 @@ section {
 --------------------------------------------------------------*/
 #footer .footer-bottom {
   background: #002154;
-  padding: 0 0 30px 0;
+  padding: 30px 0 30px 0;
   color: #fff;
   font-size: 14px;
+  height: 65px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #footer .footer-top {
@@ -1894,11 +1886,6 @@ section {
 
 #footer .footer-top .footer-newsletter form input[type=submit]:hover {
   background: #65c9cd;
-}
-
-#footer .footer-bottom {
-  align-items: center;
-  justify-content: space-between;
 }
 
 #footer .copyright {
