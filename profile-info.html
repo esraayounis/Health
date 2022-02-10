@@ -58,25 +58,25 @@
 <body>
 
     <div class="sidenav">
-        <a  [class.active]="viewMode == 'my-info'" (click)="viewMode = 'my-info'"> 
-            <img src="assets/imgs/profile/user-plus.svg">    
+        <a  [class.active]="viewMode == 'my-info'" click="viewMode = 'my-info'"> 
+            <img src="assets/images/svg-menu/user-plus.svg">    
             <span class="pad-15">الملف الشخصي</span>
         </a>
-        <a   [class.active]="viewMode == 'reservations'" (click)="viewMode ='reservations'">
-            <img src="assets/imgs/mob-view/reservation-active.svg">
+        <a   [class.active]="viewMode == 'reservations'" click="viewMode ='reservations'">
+            <img src="assets/images/svg-menu/reservation-active.svg">
             <span class="pad-15">الحجوزات</span>
         </a>
-        <a [class.active]="viewMode == 'faviorts'" (click)="viewMode = 'faviorts'">
-            <img src="assets/imgs/mob-view/favorite-active.svg">
+        <a [class.active]="viewMode == 'faviorts'" click="viewMode = 'faviorts'">
+            <img src="assets/images/svg-menu/favorite-active.svg">
             <span class="pad-15">المفضلة</span>
         </a>
-        <a [class.active]="viewMode == 'code'" (click)="viewMode = 'code'">
-            <img src="assets/imgs/profile/code.svg">
+        <a [class.active]="viewMode == 'code'" click="viewMode = 'code'">
+            <img src="assets/images/svg-menu/Union 65.svg">
             <span class="pad-15">كود المستخدم</span>
         </a>
-        <a [class.active]="viewMode == 'contact'" (click)="viewMode = 'contact'">
+        <a [class.active]="viewMode == 'contact'" click="viewMode = 'contact'">
         <div class="dis-inline-flex">
-            <img src="assets/imgs/profile/telephone.svg">
+            <img src="assets/images/svg-menu/telephone-forward-fill.svg">
             <span class="pad-r-15" >كلم</span><a class="mobile" href="tel:+12345"> 12345</a>
         </div>
         </a>
@@ -84,74 +84,106 @@
     <div class="content">
         <div class="container" [ngSwitch]="viewMode">
             <h4>الرئيسية/ جي ان بي</h4>
-            <app-reservations *ngSwitchCase="'reservations'"></app-reservations>
+            <!-- <app-reservations *ngSwitchCase="'reservations'"></app-reservations>
             <app-faviorts *ngSwitchCase="'faviorts'"></app-faviorts>
             <div *ngSwitchCase="'code'">كود المستخدم</div>
             <div *ngSwitchCase="'contact'">كلم 12343</div>
             <div *ngSwitchDefault>Not Found</div>
-            <div *ngSwitchCase="'my-info'">
+            <div *ngSwitchCase="'my-info'"> -->
             <div class="dis-flex">
-                <form role="form" class="registration">
-                    <div class="form-group  input-group-lg">
-                        <h6>الملف الشخصي</h6>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="pos-relative">
-                                <img  class="input-icon top-8" src="assets/imgs/login-page/user.svg">
-                                <input class="form-control custom-input pad-r-40 " type="text" value="أحمد عبدالرحمن">
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                            <div class="pos-relative">
-                                <img  class="input-icon top-8" src="assets/imgs/login-page/mobile.svg">
-                                <input class="form-control custom-input pad-r-40 " type="text" value="+201022355169"> 
-                                </div>
-                            </div>
-                    
-                            <div class="col-12">
-                            <div class="pos-relative">
-                                <img  class="input-icon top-8" src="assets/imgs/login-page/mail.svg">
-                                <input class="form-control custom-input pad-r-40 " type="text" value="ahmedonline75@gmail.com">
-                                </div>
-                            </div>
-                
-                            <div class="col-12">
-                                <div class="pos-relative">
-                                <img  class="input-icon top-8" src="assets/imgs/login-page/birthdate.svg">
-                                <input class="form-control custom-input pad-r-40 " type="text" value="06l01l1996">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-l2">
-                            <div class="pos-relative">
-                                <img  class="input-icon top-8" src="assets/imgs/login-page/gender.svg">
-                                <input class="form-control custom-input pad-r-40 " type="text" value="ذكر">
-                            </div>
-                            </div>
-                    
-                            <div class="col-12">
-                            <div class="pos-relative">
-                                <img  class="input-icon top-12" src="assets/imgs/login-page/password.svg">
-                                <input class="form-control custom-input pad-r-40 " type="password" value="12345">
-                                </div>
-                            </div>
-                
-                            <div class="col-12">
-                            <div class="pos-relative">
-                                <img  class="input-icon top-12" src="assets/imgs/login-page/password.svg">
-                                <input class="form-control custom-input pad-r-40 " type="password" value="12345">
-                                <a class="txt-blue change-pass" href="#">تغيير كلمة السر</a>
-                                </div>
-                            </div>
-                
-                            <div class="col-12">
-                                <input type="button" class="btn btn-primary save-btn float-left" value="حفظ التغيرات">
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <form>
+                    <h6>الملف الشخصي</h6>
+                    <!-- form-fullname-->
+                   <div class="form-group input-group">
+                       <div class="input-group-prepend">
+                           <button class="input-group-text"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" id="user-avatar-filled-alt" width="16" height="16" viewBox="0 0 16 16">
+                               <path id="Union_48" data-name="Union 48" d="M0,8a8,8,0,1,1,8,8A8,8,0,0,1,0,8ZM1.586,5.541A6.857,6.857,0,0,0,3.43,13.1v-.333c0-.008,0-.014,0-.019A2.973,2.973,0,0,1,6.285,9.715h3.43a2.977,2.977,0,0,1,2.857,3.035V13.1A6.86,6.86,0,1,0,1.586,5.541Zm3.557.174A2.857,2.857,0,1,1,8,8.572,2.857,2.857,0,0,1,5.143,5.715Z" fill="#8d8d8d"/>
+                            </svg> 
+                           </button>
+                       </div>
+                       <input name="" class="form-control" placeholder="الأسم كاملاً" type="text">
+                   </div>
+
+                   <!-- form-phone-->
+                   <div class="form-group input-group">
+                       <div class="input-group-prepend">
+                           <button class="input-group-text"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16.014" viewBox="0 0 10 16.014">
+                              <path id="mobile-solid" d="M17.889,4H10.111A1.128,1.128,0,0,0,9,5.144V18.87a1.128,1.128,0,0,0,1.111,1.144h7.778A1.128,1.128,0,0,0,19,18.87V5.144A1.128,1.128,0,0,0,17.889,4ZM14.556,18.87H13.444V17.726h1.111Zm-4.444-2.288V5.144h7.778V16.583Z" transform="translate(-9 -4)" fill="#8d8d8d"/>
+                            </svg> 
+                           </button>
+                       </div>
+                       <input name="" id="phone" class="form-control" placeholder="رقم الهاتف" type="tel">
+                   </div>
+
+                   <!-- form-Email -->
+                   <div class="form-group input-group">
+                       <div class="input-group-prepend">
+                           <button class="input-group-text"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                              <path id="mail" d="M16.25,5.625h-12a1.958,1.958,0,0,0-2,1.909v8.181a1.958,1.958,0,0,0,2,1.909h12a1.958,1.958,0,0,0,2-1.909V7.534a1.958,1.958,0,0,0-2-1.909Zm-.506,3.158L10.6,12.6a.593.593,0,0,1-.7,0L4.757,8.783a.529.529,0,0,1-.1-.765.59.59,0,0,1,.8-.1l4.792,3.558,4.792-3.558a.59.59,0,0,1,.8.1.529.529,0,0,1-.1.765Z" transform="translate(-2.25 -5.625)" fill="#8d8d8d"/>
+                            </svg> 
+                           </button>
+                       </div>
+                       <input name="" class="form-control" placeholder="البريد الالكتروني" type="email">
+                   </div>
+                   
+                   <!-- form-DATE BIRTH -->
+                   <div class="form-group input-group">
+                       <div class="input-group-prepend">
+                           <button class="input-group-text"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+                               <path id="Union_63" data-name="Union 63" d="M.875,15A.89.89,0,0,1,0,14.095V2.905A.89.89,0,0,1,.9,2h2V3.5a1.1,1.1,0,1,0,2.2,0V2h5.825V3.5a1.1,1.1,0,1,0,2.2,0V2h2A.89.89,0,0,1,16,2.905v11.19a.89.89,0,0,1-.875.905ZM12,12h1V11H12ZM9,12h1V11H9ZM6,12H7V11H6ZM3,12H4V11H3Zm9-2.5h1v-1H12Zm-3,0h1v-1H9Zm-3,0H7v-1H6Zm-3,0H4v-1H3ZM12,7h1V6H12ZM9,7h1V6H9ZM6,7H7V6H6ZM3,7H4V6H3Zm8.5-3.5V.5a.5.5,0,1,1,1,0v3a.5.5,0,1,1-1,0Zm-8,0V.5a.5.5,0,1,1,1,0v3a.5.5,0,0,1-1,0Z" fill="#8d8d8d"/>
+                             </svg>
+                           </button>
+                           <input type="date" class="xDateContainer form-control" onchange="ConvertFormat(this,'txtInput');" style="position: absolute; opacity: 0.0;height: 100%;width: 100%;">
+                           <input type="text" id="txtInput" name="txtInput" style="border: none;height: 90%;" placeholder="تاريخ الميلاد" tabindex="-1">
+                       </div>
+                   </div>
+
+                   <!-- form-gender -->
+                   <div class="form-group input-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17.231" viewBox="0 0 16 17.231">
+                               <path id="transgender-alt" d="M12.307.308A.3.3,0,0,1,12.615,0h2.769a.591.591,0,0,1,.433.183A.591.591,0,0,1,16,.616V3.385a.3.3,0,0,1-.308.308h-.616a.3.3,0,0,1-.308-.308V2.1L12.327,4.548A5.388,5.388,0,0,1,13.538,8a5.34,5.34,0,0,1-1.418,3.7,5.372,5.372,0,0,1-3.5,1.8v1.269h.923a.3.3,0,0,1,.308.308v.616A.3.3,0,0,1,9.539,16H8.615v.923a.3.3,0,0,1-.308.308H7.692a.3.3,0,0,1-.308-.308V16H6.461a.3.3,0,0,1-.308-.308v-.616a.3.3,0,0,1,.308-.308h.923V13.5a5.371,5.371,0,0,1-3.5-1.8A5.336,5.336,0,0,1,2.462,8,5.388,5.388,0,0,1,3.673,4.548l-.5-.51L2.2,5.106a.29.29,0,0,1-.212.1.323.323,0,0,1-.221-.072l-.461-.423a.265.265,0,0,1-.1-.207.307.307,0,0,1,.082-.225L2.3,3.173,1.231,2.1V3.385a.3.3,0,0,1-.308.308H.308A.3.3,0,0,1,0,3.385V.616A.591.591,0,0,1,.183.183.591.591,0,0,1,.616,0H3.385a.3.3,0,0,1,.308.308V.923a.3.3,0,0,1-.308.308H2.106L3.125,2.26l.827-.9a.29.29,0,0,1,.212-.1.323.323,0,0,1,.221.072l.461.423a.265.265,0,0,1,.1.207.305.305,0,0,1-.082.225L4,3.135l.548.538A5.388,5.388,0,0,1,8,2.462a5.388,5.388,0,0,1,3.452,1.211L13.9,1.231H12.615a.3.3,0,0,1-.308-.308ZM8,12.307a4.147,4.147,0,0,0,3.043-1.265A4.151,4.151,0,0,0,12.307,8a4.146,4.146,0,0,0-1.265-3.043A4.15,4.15,0,0,0,8,3.692,4.15,4.15,0,0,0,4.957,4.957,4.146,4.146,0,0,0,3.692,8a4.151,4.151,0,0,0,1.265,3.043A4.147,4.147,0,0,0,8,12.307Z" fill="#8d8d8d"/>
+                             </svg> </span>
+                       </div>
+                       <select class="form-control">
+                           <option selected=""> حدد الجنس</option>
+                           <option>ذكر</option>
+                           <option>انثي</option>
+                       </select>
+                   </div>
+
+           
+                   <!-- form-password -->
+                   <div class="form-group input-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="21.02" viewBox="0 0 16 21.02">
+                               <path id="lock" d="M14.029,7.433A2,2,0,0,1,16,9.4V19.445a2,2,0,0,1-1.971,1.97H2.018a1.947,1.947,0,0,1-1.431-.587A1.893,1.893,0,0,1,0,19.445V9.4A1.893,1.893,0,0,1,.587,8.02a1.947,1.947,0,0,1,1.431-.587H3V5.415A4.833,4.833,0,0,1,4.481,1.873,4.83,4.83,0,0,1,8.023.395a4.759,4.759,0,0,1,3.519,1.478A4.868,4.868,0,0,1,13,5.416V7.434h1.032ZM8,16.442a1.918,1.918,0,0,0,1.407-.587,2.039,2.039,0,0,0,0-2.862,1.982,1.982,0,0,0-2.815,0,2.038,2.038,0,0,0,0,2.862A1.92,1.92,0,0,0,8,16.442Zm3.12-9.009V5.415a2.978,2.978,0,0,0-.915-2.182A3.006,3.006,0,0,0,8,2.319a2.93,2.93,0,0,0-2.182.915,3.017,3.017,0,0,0-.891,2.182V7.433H11.12Z" transform="translate(0 -0.395)" fill="#8d8d8d"/>
+                             </svg> </span>
+                       </div>
+                       <input class="form-control" placeholder="كلمة المرور" type="password">
+                   </div>
+
+                   <!-- form-confirm-password -->
+                   <div class="form-group input-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="21.02" viewBox="0 0 16 21.02">
+                               <path id="lock" d="M14.029,7.433A2,2,0,0,1,16,9.4V19.445a2,2,0,0,1-1.971,1.97H2.018a1.947,1.947,0,0,1-1.431-.587A1.893,1.893,0,0,1,0,19.445V9.4A1.893,1.893,0,0,1,.587,8.02a1.947,1.947,0,0,1,1.431-.587H3V5.415A4.833,4.833,0,0,1,4.481,1.873,4.83,4.83,0,0,1,8.023.395a4.759,4.759,0,0,1,3.519,1.478A4.868,4.868,0,0,1,13,5.416V7.434h1.032ZM8,16.442a1.918,1.918,0,0,0,1.407-.587,2.039,2.039,0,0,0,0-2.862,1.982,1.982,0,0,0-2.815,0,2.038,2.038,0,0,0,0,2.862A1.92,1.92,0,0,0,8,16.442Zm3.12-9.009V5.415a2.978,2.978,0,0,0-.915-2.182A3.006,3.006,0,0,0,8,2.319a2.93,2.93,0,0,0-2.182.915,3.017,3.017,0,0,0-.891,2.182V7.433H11.12Z" transform="translate(0 -0.395)" fill="#8d8d8d"/>
+                             </svg> </span>
+                       </div>
+                       <input class="form-control" placeholder="تأكيد كلمة المرور" type="password">
+                   </div>
+
+                   <div class="col-12">
+                       <p class="txt-condition">بتسجيل حسابك علي موقع رعاية 24/7 فأنت ضمنيا موافق علي الشروط و الأحكام الخاصة بخدماتنا Terms & Conditions</p>
+                   </div>
+                 
+                   <div class="create-button">
+                       <a class="txt-white btn create-btn btn-primary btn-block" href="profile-info.html">إنشاء حساب</a>
+                   </div>
+               </form>
                 <form role="form" class="registration mar-r-20">
                     <div class="form-group  input-group-lg">
                         <h6 >العناوين</h6>

@@ -48,14 +48,14 @@
     margin-right: 5px;
     width: 0;
     height: 0;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-top: 4px solid #555;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #8D8D8D;
 }
 
 .iti__arrow--up {
     border-top: none;
-    border-bottom: 4px solid #555;
+    border-bottom: 6px solid #8D8D8D;
 }
 
 .iti__country-list {
@@ -133,7 +133,7 @@
 
 .iti--allow-dropdown .iti__flag-container,
 .iti--separate-dial-code .iti__flag-container {
-    right: 125%;
+    right: 138%;
     /* left: 0; */
 }
 

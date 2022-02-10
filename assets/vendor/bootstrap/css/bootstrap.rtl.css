@@ -4271,6 +4271,8 @@ textarea.form-control-lg {
 
 .card-title {
   margin-bottom: 0.5rem;
+  font: normal normal 600 19px/36px Cairo;
+  color: #000000;
 }
 
 .card-subtitle {

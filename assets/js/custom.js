@@ -1,4 +1,5 @@
-$(document).ready(function() {
+(function ($) {
+    $(document).ready(function() {
         $(".search-result-section select").niceSelect();
 
         // owl-carousel
@@ -109,6 +110,7 @@ $(document).ready(function() {
             $(this).addClass('active');
         })
     })
+})(jQuery);
     // Realtime Event
     (function($) {
         $.fn.jflatTimeline = function(options) {
@@ -439,7 +441,7 @@ $(document).ready(function() {
     })(jQuery)
 
 
-$(document).ready(function() {
-    $('div.jflatTimeline').jflatTimeline({ scroll: '2', scrollingTime: '300' });
+    $(document).ready(function() {
+        $('div.jflatTimeline').jflatTimeline({ scroll: '2', scrollingTime: '300' });
 
-})
+    })
