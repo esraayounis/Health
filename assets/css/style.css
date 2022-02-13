@@ -393,7 +393,190 @@ h6 {
     font-size: 13px;
 }
 
+   /* ----Profile ----- */
 
+    /* The side navigation menu */
+.sidenav {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color:  #FFFFFF;
+    box-shadow: 0px 6px 6px #00000029;
+    position: absolute;
+    height: 100%;
+}
+
+
+.sidenav a {
+    display: block;
+    color:  #8D8D8D;
+    font: normal normal 600 14px/26px Cairo;
+    padding: 16px;
+    text-decoration: none;
+
+}
+
+
+.sidenav a:hover, .sidenav  a.active{
+    font: normal normal 600 14px/26px Cairo;
+    color: #000000;
+    background: #E4E4E4 0% 0% no-repeat padding-box;
+}
+
+
+.mobile{
+    color:#0d6efd!important;
+    padding:0px 5px!important;
+}
+
+.save-btn{
+    height: 40px;
+    background: #0065FF 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    float: left;
+    padding: 0 25px;
+}
+
+.change-pass{
+    position: absolute;
+    top: 10px;
+}
+
+.registration .form-group{
+    padding:30px 40px;
+}
+
+.dis-flex{display:flex;}
+
+
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+
+  
+/* ---- Profile Menu ------ */
+
+.hamburger {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 20px;
+  }
+    .hamburger:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 20px;
+      background: #f953c6;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #da2287, #f953c6);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #da2287, #f953c6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      transform: rotate(0deg);
+      transition: all 0.4s cubic-bezier(0.54, -0.10, 0.57, 0.57);
+    }
+    
+    .hamburger-input {
+      position: absolute;
+      opacity: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      cursor: pointer;
+    }
+    
+    .hamburger-line {
+      width: 100%;
+      background: #fff;
+      height: 2px;
+      display: block;
+      border-radius: 6px;
+      transition: transform 0.4s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+      position: relative;
+    }
+  
+    
+  .menu-button-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+    .item-list {
+      position: absolute;
+      top: 90px;
+      transform: translateX(-50%) scale(0);
+      transform-origin: center;
+      transition: all 0.4s cubic-bezier(0.54, -0.10, 0.57, 0.57);
+      background-color: #303242;
+      color: #fff;
+      width: 200px;
+      left: 50%;
+      padding: 15px 0;
+      text-align: left;
+      border-radius: 100px;
+      font-weight: 300;
+      opacity: 0;
+      user-select: none;
+    }
+  
+  
+    .menu-button {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+    
+  }
+  
+  .menu-button:checked ~ .item-list {
+      transform: translateX(-50%) scale(1);
+      border-radius: 20px;
+      opacity: 1;
+      user-select: auto;
+    }  
+    
+    .menu-button:checked ~ .icon-wrapper .hamburger-line.second {
+      transform: rotate(-45deg); 
+    }
+  
+    .menu-button:checked ~ .icon-wrapper .hamburger-line.first {
+      transform: translate(2px, 8px) rotate(-135deg);
+    }
+  
+    .menu-button:checked ~ .icon-wrapper .hamburger-line.third {
+      transform: translate(11px, -3px) rotate(-135deg);
+    }
+    
+    .menu-button:checked ~ .icon-wrapper .hamburger:before {
+      transform: rotate(45deg);
+  }
+  /* -----End Profile Menu ------ */
+  
 
 /*--------------------------------------------------------------
 # Navigation Menu
