@@ -71,7 +71,22 @@ h6 {
 .mar-top-15{
   margin-top:-15px;
 }
+.mar-top-10{
+  margin-top: 10px;
+}
 
+
+.mobile-show{
+  display: none;
+}
+
+.desktop-show{
+  display: block;
+}
+
+.d-block{
+  display: block;
+}
 
 /*--------------------------------------------------------------
 # Preloader
@@ -188,6 +203,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  
 }
 
 #header.header-scrolled {
@@ -207,6 +223,7 @@ h6 {
 @media (max-width: 992px) {
   #header .logo {
     transform: unset;
+    margin-top:10px;
   }
 }
 
@@ -588,9 +605,73 @@ Desktop Navigation
 
 @media (max-width: 600px) {
   #hero .card-box{
-    top: -70px;
-    z-index: 10;
+    top: -140px;
+    margin:10px;
   }
+  .mobile-show{
+    display: block;
+  }
+
+  .desktop-show{
+    display: none;
+  }
+
+  #header{
+    height: 60px!important;
+    opacity: 0.75;
+    z-index: 1;
+    position: relative;
+  }
+
+  .hero .group-h1 {
+    height: 250px;
+    top:-60px;
+    z-index: 0;
+    background: url("./../images/m-bg-hero-1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+  .hero .group-h1 h1 {
+    font-weight: bold;
+    font-size: 17px!important;
+    color: #fff;
+    text-align: center;
+    top: -70px;
+  }
+  .hero .group-h1 h1 span {
+    font-size: 11px!important;
+  }
+
+  #nav-tab-sub-cats .nav-link{
+    height:60px;
+  }
+
+  .hero .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link span 
+  {
+    margin-top: 25px!important;
+  }
+ 
+  .hero .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link svg 
+  {
+    position: absolute;
+    margin-top: -20px;
+  }
+  #reservation, #faviorts{
+    display: none;
+  }
+  #reservation, #faviorts{
+    display: none;
+  }
+
+  .hero .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link,  .header-sub-cats-tabs .nav.nav-tabs{
+    height:60px;
+  }
+
+  
 }
 
 @media (min-width: 768px){
@@ -607,7 +688,6 @@ Desktop Navigation
       height: 100%;
     }
 
-
     .sidenav .link {
       display: block;
       color:  #8D8D8D;
@@ -617,19 +697,18 @@ Desktop Navigation
 
     }
 
-
     .sidenav .link:hover, .sidenav .link:focus, .sidenav .link:active{
       font: normal normal 600 14px/26px Cairo;
       color: #000000;
       background: #E4E4E4 0% 0% no-repeat padding-box;
     }
 
-
     div.contents {
       margin-right: 270px;
       margin-left:unset;
       margin-top: 20px;
-  }
+    }
+
     .contents h4{
       background: #E4E4E4 0% 0% no-repeat padding-box;
       border-bottom: 1px solid #8d8d8d26;
@@ -640,7 +719,6 @@ Desktop Navigation
       font: normal normal 600 16px/30px Cairo;
       color: #000000;
     }
-
 
     .mobile{
       color:#0d6efd!important;
@@ -662,7 +740,7 @@ Desktop Navigation
 
     .registration .form-group{
       padding:30px 40px;
-  }
+    }
 
     .dis-flex{display:flex;}
 
@@ -680,7 +758,6 @@ Desktop Navigation
         position: absolute;
         z-index: 10;
     }
-    
     
     .registration{
       width:570px;
@@ -798,13 +875,13 @@ Desktop Navigation
     box-shadow: 0px 0px 6px #00000029;
  }
 
- #reservation .nav-link{
-   color:#8D8D8D;
-   font-size:14px;
-   font-weight: bold;
-   text-align: center;
-   height:60px;
- }
+  #reservation .nav-link{
+    color:#8D8D8D;
+    font-size:14px;
+    font-weight: bold;
+    text-align: center;
+    height:60px;
+  }
 
 
   #reservation .nav-tabs .nav-link.active{
@@ -838,10 +915,17 @@ Desktop Navigation
   }
   .registration  .nice-select .option {
     padding:10px;}
+  
+  /* -----Home----- */
 
+    .hero .group-h1 h1 {
+      text-align: center;
+      margin-bottom: 70px;
+    }
 
+    
 }
-
+  
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
@@ -3041,7 +3125,7 @@ body {
     font-weight: 800;
     position: absolute;
     left: 48px;
-    top: 26px;
+    top: 18px;
   }
 }
 #header .FAQ a {
@@ -3051,7 +3135,7 @@ body {
   #header .FAQ a {
     display: block;
     position: absolute;
-    top: 24px;
+    top: 18px;
     left: 14px;
   }
 }
@@ -3307,7 +3391,7 @@ body {
     font-weight: 700;
     position: absolute;
     left: 48px;
-    top: 26px;
+    top: 18px;
   }
 }
 
@@ -3318,7 +3402,7 @@ body {
   #header .FAQ a {
     display: block;
     position: absolute;
-    top: 24px;
+    top: 18px;
     left: 14px;
   }
 }
@@ -3356,7 +3440,6 @@ button.fill-face span {
 .page-title-section .inner-search input {
   background: #FFFFFF;
   border-radius: 10px;
-  height: 60px;
   width: 100%;
   border: none;
   outline: none;
@@ -3372,14 +3455,11 @@ button.fill-face span {
   opacity: 1;
   border-radius: 10px;
 }
-.page-title-section .icon figure {
-  position: relative;
-}
+
 .page-title-section .icon figure img {
-  height: 142px;
   position: absolute;
-  top: -33px;
-  left: 8px;
+  top: 80px;
+  left: -10px;
 }
 .page-title-section.cov .icon figure img {
   height: 106px;
@@ -3429,7 +3509,7 @@ button.fill-face span {
   width: 100%;
   height: 100%;
   background: linear-gradient(#0065FF 0%, rgba(255, 255, 255, 0.56) 100%);
-  opacity: 0.19;
+  opacity: 0.1;
 }
 @media (max-width: 992px) {
   .hero .over-lay {
@@ -3442,8 +3522,7 @@ button.fill-face span {
   width: 100%;
   height: 100%;
   background: linear-gradient(#0065FF 0%, rgba(255, 255, 255, 0.56) 100%);
-  opacity: 0.19;
-  display: none;
+  opacity: 0.1;
 }
 
 .hero .header-main-cats-tabs .nav-tabs {
@@ -3657,7 +3736,7 @@ button.fill-face span {
 .hero .content-main-cats-tabs .content-sub-cats-tabs .inner-btn {
   text-align: right;
 }
-.hero .content-main-cats-tabs .content-sub-cats-tabs .inner-btn button {
+.hero .content-main-cats-tabs .content-sub-cats-tabs .inner-btn .btn {
   width: 100%;
   height: 60px;
   background: #f00;
@@ -3666,9 +3745,17 @@ button.fill-face span {
   color: #fff;
   border: none;
   border-radius: 10px;
+  line-height: 2.6;
 }
+
+.btn:focus {
+  outline: 0;
+  box-shadow: unset;
+  opacity: 0.7;
+}
+
 @media (max-width: 992px) {
-  .hero .content-main-cats-tabs .content-sub-cats-tabs .inner-btn button {
+  .hero .content-main-cats-tabs .content-sub-cats-tabs .inner-btn .btn {
     flex: 1 0 100%;
     width: 100% !important;
   }
@@ -3679,36 +3766,6 @@ button.fill-face span {
 @media (max-width: 992px) {
   .hero .content-main-cats-tabs .content-sub-cats-tabs #nav-tabContent-sub-cats .col {
     flex: 1 0 100%;
-  }
-}
-.hero .group-h1 {
-  position: relative;
-  z-index: 10;
-}
-@media (max-width: 992px) {
-  .hero .group-h1 {
-    height: 200px;
-    background: url("./../images/m-bg-hero.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-  }
-  .hero .group-h1 h1 {
-    font-weight: bold;
-    font-size: 22px !important;
-    color: #fff;
-  }
-  .hero .group-h1 h1 span {
-    font-size: 13px;
-  }
-}
-@media (max-width: 992px) and (max-width: 992px) {
-  .hero .group-h1 h1 {
-    text-align: center;
-    margin-bottom: 70px;
   }
 }
 
@@ -3767,7 +3824,8 @@ button.fill-face span {
   margin-top: 12px;
 }
 .offers-cards h4 {
-  font-size: 1rem;
+  font-size: 11px;
+  font-weight: 600;
   text-align: right;
   margin-right: 7px;
 }
@@ -3784,13 +3842,12 @@ button.fill-face span {
 }
 .offers-cards del {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 11px;
   color: #868d9a;
   margin-bottom: 5px;
 }
 .offers-cards h6 {
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 11px;
   color: #0065ff;
 }
 .offers-cards .note {

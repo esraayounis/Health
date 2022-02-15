@@ -113,13 +113,33 @@
         onscroll(document, toggleBacktotop)
     }
 
+     /**
+     * Mobile reservations btn
+     */
+    $('.open-reservations').click(function() {
+        select('#reservation').classList.toggle('open-reservations')
+        select('#reservation').classList.toggle('d-block')
+        $('body').toggleClass('overflow-hidden')
+        $('#home').toggleClass('d-none')
+        $('#faviorts').toggleClass('d-none')
+
+    })
+
+    /*
+     * Mobile faviorts btn
+    */
+    $('.open-faviorts').click(function() {
+      select('#faviorts').classList.toggle('open-faviorts')
+      select('#faviorts').classList.toggle('d-block')
+      $('body').toggleClass('overflow-hidden')
+      $('#home').toggleClass('d-none')
+      $('#reservation').toggleClass('d-none')
+    })
+
+
     /**
      * Mobile nav toggle
      */
-    // on('click', '.mobile-nav-toggle, .over-lay-mobile', function(e) {
-    //     select('#navbar').classList.toggle('open-mobile-menu')
-    //         // $(".over-lay-mobile").toggleClass('d-none')
-    // })
     $('.open-mobile-menu, .over-lay-mobile, .btn-close-menu').click(function() {
         select('#navbar').classList.toggle('open-mobile-menu')
         $('body').toggleClass('overflow-hidden')
