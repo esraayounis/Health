@@ -118,10 +118,10 @@
      */
     $('.open-reservations').click(function() {
         select('#reservation').classList.toggle('open-reservations')
-        select('#reservation').classList.toggle('d-block')
-        $('body').toggleClass('overflow-hidden')
-        $('#home').toggleClass('d-none')
-        $('#faviorts').toggleClass('d-none')
+        select('#reservation').classList.toggle('dis-block')
+        select('.booking path').classList.toggle('fill-active')
+        $('#home').toggleClass('dis-none')
+        $('#faviorts').toggleClass('dis-none')
 
     })
 
@@ -130,10 +130,10 @@
     */
     $('.open-faviorts').click(function() {
       select('#faviorts').classList.toggle('open-faviorts')
-      select('#faviorts').classList.toggle('d-block')
-      $('body').toggleClass('overflow-hidden')
-      $('#home').toggleClass('d-none')
-      $('#reservation').toggleClass('d-none')
+      select('#faviorts').classList.toggle('dis-block')
+      select('.favorite path').classList.toggle('fill-active')
+      $('#home').toggleClass('dis-none')
+      $('#reservation').toggleClass('dis-none')
     })
 
 
@@ -142,6 +142,7 @@
      */
     $('.open-mobile-menu, .over-lay-mobile, .btn-close-menu').click(function() {
         select('#navbar').classList.toggle('open-mobile-menu')
+        select('.more path').classList.toggle('fill-active')
         $('body').toggleClass('overflow-hidden')
         $('.over-lay-mobile').toggleClass('d-none')
 

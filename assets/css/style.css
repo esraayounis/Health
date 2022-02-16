@@ -46,6 +46,55 @@ h6 {
   color:white;
 }
 
+  
+  .dis-inline-flex{
+    display: inline-flex;
+  }
+  
+  .full-width{
+    width:100%;
+  }
+  
+  .txt-right{
+    text-align: right!important;
+  }
+  
+  .no-pad{
+    padding:0!important;
+  }
+  
+  .pad-r-15{
+    padding-right:15px;
+    padding-left:unset;
+  }
+  .txt-center{
+    text-align: center;
+  }
+  
+  .mar-top-15{
+    margin-top:-15px;
+  }
+  .mar-top-10{
+    margin-top: 10px;
+  }
+  
+  
+  .mobile-show{
+    display: none;
+  }
+  
+  .desktop-show{
+    display: block;
+  }
+  
+  .dis-block{
+    display: block;
+  }
+    
+  .dis-none{
+    display: none;
+  }
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -246,6 +295,50 @@ h6 {
     color: #8D8D8D!important;
     font-size:14px!important;
 }
+
+
+
+.login-forms .form-group {
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #707070a1;
+    height: 48px;
+    width: 100%;
+    font-size: 14px;
+    color: #8D8D8D;
+    margin-bottom: 17px;
+  }
+  
+  .login-forms .input-group-text {
+    background-color: white;
+    border: none;
+  }
+  
+  .login-forms .form-group .form-control {
+    border: 0px solid;
+    text-align: right;
+  }
+  
+  .login-forms .create-button {
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .login-forms .create-btn:hover {
+    background: white;
+    color: #FF0000;
+    border: 1px solid #FF0000;
+  }
+  .login-forms .create-btn {
+    width: 50%;
+    border-radius: 10px;
+    background: #FF0000;
+    height: 40px;
+    border: none;
+    opacity: 0.7;
+  }
+  
 
 
 /*--------------------------------------------------------------

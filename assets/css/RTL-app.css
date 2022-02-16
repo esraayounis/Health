@@ -49,7 +49,7 @@ h6 {
 }
 
 .full-width{
-  width:100%;
+  width:100%!important;;
 }
 
 .txt-right{
@@ -84,8 +84,12 @@ h6 {
   display: block;
 }
 
-.d-block{
-  display: block;
+.dis-block{
+  display: block!important;
+}
+
+.dis-none{
+  display: none!important;
 }
 
 /*--------------------------------------------------------------
@@ -544,23 +548,20 @@ Desktop Navigation
 /* tabs border-radius */
 /* right */
 #nav-consult_clinic-tab,  #nav-residence-version-tab, #nav-visit_doctor-tab,
-#nav-exams_laboratories-tab,  #nav-conhome-tab{
+#nav-exams_laboratories-tab,  #nav-conhome-tab, #nav-current-tab, #nav-register-tab{
     border-radius: 0px 10px 0px 0px;
 }
 
 #nav-consult_home-tab, #nav-renewal-residence-tab, #nav-health-certificate-tab,
- #nav-visit_jilis-tab, #nav-nursing_visit-tab, #nav-rays_holes-tab, #nav-concar-tab
+ #nav-visit_jilis-tab, #nav-nursing_visit-tab, #nav-rays_holes-tab, #nav-concar-tab, #nav-previous-tab
 {
     border-radius: 0px;
 }
 /* left */
 #nav-traffic-license-tab, #nav-traffic-license-tab, #nav-consult_video-tab,
-#nav-heart_exams-tab, #nav-home_services-tab, #nav-concar-tab2{
+#nav-heart_exams-tab, #nav-home_services-tab, #nav-concar-tab2, #nav-cancelled-tab, #nav-login-tab{
     border-radius: 10px 0px 0px 0px;
 }
-
-
-
 
 
 #hero .carousel,
@@ -603,9 +604,98 @@ Desktop Navigation
   color: #fff;
 }
 
+/* ====== profile ======== */
+.faviorts{
+  background: #0065FF 0% 0% no-repeat padding-box;
+  height: 60px!important;
+  font: normal normal 600 12px/30px Cairo;
+  color: white;
+  opacity: 1!important;
+  text-align: center;
+  border-radius: 10px 10px 0 0 ;
+}
+
+ 
+
+.not-found-data{
+
+  text-align: center;
+  padding: 100px;
+  color:#8D8D8D;
+  font-size:12px;
+  font-weight: 600;
+}
+
+/* ======== Sign Up ======= */
+
+article .form-group {
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #707070a1;
+  height: 48px;
+  width: 100%;
+  font-size: 14px;
+  color: #8D8D8D;
+  margin-bottom: 17px;
+}
+
+article .input-group-text {
+  background-color: white;
+  border: none;
+}
+
+article .input-group-prepend
+{
+  display: flex;
+}
+
+article .form-group .form-control {
+  border: 0px solid;
+  text-align: right;
+}
+
+article .create-button {
+  border: 0px solid;
+  display: flex;
+  justify-content: center;
+}
+
+article .create-btn:hover {
+  background: white;
+  color: #FF0000;
+  border: 1px solid #FF0000;
+}
+article .create-btn {
+  width: 50%;
+  border-radius: 10px;
+  background: #FF0000;
+  height: 40px;
+  border: none;
+}
+
+.form-control:focus{
+  box-shadow: none;
+}
+article .nice-select2{
+  height: unset;
+    background: white;
+    position: unset;
+    font-size: 14px;
+    padding-right: 40px;
+}
+
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus{
+  font-size: 14px;
+}
+
+.svg-gender{
+    position: absolute;
+     margin: 15px 10px;
+}
+
 @media (max-width: 600px) {
   #hero .card-box{
-    top: -140px;
+    top: -130px;
     margin:10px;
   }
   .mobile-show{
@@ -660,9 +750,7 @@ Desktop Navigation
     position: absolute;
     margin-top: -20px;
   }
-  #reservation, #faviorts{
-    display: none;
-  }
+
   #reservation, #faviorts{
     display: none;
   }
@@ -671,6 +759,47 @@ Desktop Navigation
     height:60px;
   }
 
+
+
+  .hero .content-main-cats-tabs .content-sub-cats-tabs .group-select .nice-select-hero span.current{
+    margin-top:0px!important;
+    font-size:12px!important;
+  }
+
+  .hero .content-main-cats-tabs .content-sub-cats-tabs .group-select, .hero .content-main-cats-tabs .content-sub-cats-tabs .inner-btn .btn{
+    height: 40px!important;
+    line-height: 1.5!important;
+  }
+
+  .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus, 
+  .hero .content-main-cats-tabs .content-sub-cats-tabs .group-select .nice-select-hero .list li{
+    font-size:13px!important;
+  }
+
+  #hero .nice-select2 svg{
+    top:5px;
+  }
+
+  .fill-active{
+    fill:#0d6efd;
+  }
+
+
+  /* ===== Sign Up ====== */
+
+  #nav-registerations .nav-link span{
+    font-size: 16px;
+    color:#317AF0;
+  }
+
+  #nav-registerations .nav-link.active span{
+    color:#fff;
+  }
+
+  .iti--allow-dropdown .iti__flag-container {
+    right: 115%;
+    left: unset;
+   }
   
 }
 
@@ -852,24 +981,7 @@ Desktop Navigation
     color:#0a58ca;
   }
 
-  .faviorts{
-    background: #0065FF 0% 0% no-repeat padding-box;
-    height: 60px!important;
-    font: normal normal 600 12px/30px Cairo;
-    color: white;
-    opacity: 1!important;
-    text-align: center;
-    border-radius: 10px 10px 0 0 ;
-  }
 
-  .not-found-data{
-
-    text-align: center;
-    padding: 100px;
-    color:#8D8D8D;
-    font-size:12px;
-    font-weight: 600;
-  }
 
   .box-shadow {
     box-shadow: 0px 0px 6px #00000029;
@@ -3253,7 +3365,6 @@ body {
   background: #FF0000;
   height: 40px;
   border: none;
-  opacity: 0.7;
 }
 .login-forms .create-btn:hover {
   background: white;
@@ -3511,11 +3622,7 @@ button.fill-face span {
   background: linear-gradient(#0065FF 0%, rgba(255, 255, 255, 0.56) 100%);
   opacity: 0.1;
 }
-@media (max-width: 992px) {
-  .hero .over-lay {
-    display: none;
-  }
-}
+
 .hero .over-lay-hero-mobil {
   position: absolute;
   inset: 0;
