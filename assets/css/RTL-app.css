@@ -694,6 +694,9 @@ article .nice-select2{
 }
 
 @media (max-width: 600px) {
+  .lang{
+    display: none;
+  }
   #hero .card-box{
     top: -130px;
     margin:10px;
@@ -1034,7 +1037,17 @@ article .nice-select2{
       text-align: center;
       margin-bottom: 70px;
     }
+    
+    .lang{
+      display: block;
+      color:white;
+      margin:auto;
+      padding:0 40px;
+    }
 
+    .lang:hover{
+      color:rgb(235, 235, 235);
+    }
     
 }
   
@@ -3556,6 +3569,13 @@ button.fill-face span {
   outline: none;
   padding: 10px;
 }
+
+.page-title-section .inner-search .custom-input {
+  border: none;
+  height:60px;
+  margin-bottom: 0;
+}
+
 .page-title-section .inner-search button {
   background: #FF0000 0% 0% no-repeat padding-box;
   width: 100%;
@@ -3565,6 +3585,8 @@ button.fill-face span {
   color: #FFFFFF;
   opacity: 1;
   border-radius: 10px;
+  font-weight: bold;
+  font-size:18px;
 }
 
 .page-title-section .icon figure img {
