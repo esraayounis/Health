@@ -3978,6 +3978,9 @@ button.fill-face span {
     display: block;
   }
 }
+.offers-section .card .card-offer .offer-details a{
+  padding:12px 30px;
+}
 
 .offers-cards {
   font-weight: 600;
@@ -4778,7 +4781,7 @@ textarea {
   color: #868d9a;
   display: inline-block;
 }
-.choose-time button {
+.choose-time .btn {
   width: 114px;
   height: 40px;
   border-radius: 4px;
@@ -4791,6 +4794,16 @@ textarea {
   align-items: center;
   justify-content: center;
   margin: auto;
+}
+
+.buy-btn{
+  background: red;
+  color: white;
+  padding: 10px 40px
+}
+
+.buy-btn:hover{
+  color: white;
 }
 
 .about-nurse p {
