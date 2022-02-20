@@ -193,13 +193,25 @@
                     <!-- .navbar -->
                 </div>
                 <!-- Register tabs -->
-                <div class="login-group d-flex">
-                    <a href="sign-up.html" class="btn-registration d-none d-lg-inline-flex align-items-center justify-content-center p-0">
-                            تسجيل جديد
-                        </a>
-                    <a href="#" class="btn-login d-none d-lg-inline-flex justify-content-center align-items-center p-0">
-                            تسجيل دخول
-                        </a>
+                <div class=" d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-lg-2 d-none d-lg-flex d-md-none d-sm-none">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M11,19a8,8,0,1,1,8-8A8,8,0,0,1,11,19Zm0-1.6a6.625,6.625,0,0,0,2.644-.579,6.558,6.558,0,0,0,3.6-4.426A5.756,5.756,0,0,0,17.4,11,6.4,6.4,0,1,0,11,17.4Zm-.8-3.2h1.6v1.6H10.2Zm0-1.594s1.6-.006,1.6,0c0-.8,2.4-1.606,2.4-3.206a3.2,3.2,0,1,0-6.4,0H9.4a1.6,1.6,0,0,1,3.2,0C12.6,10.12,10.2,11.293,10.2,12.606Z" transform="translate(-3 -3)" fill="#f8f9fa" fill-rule="evenodd"/>
+                    </svg></a>
+                        </div>
+                        <div class="col-lg-2 d-none d-lg-flex d-md-none d-sm-none">
+                            <a href="#"><svg id="cart" xmlns="http://www.w3.org/2000/svg" width="16" height="15.376" viewBox="0 0 16 15.376">
+                        <path id="Union_10" data-name="Union 10" d="M11.522,14.2A1.176,1.176,0,1,1,12.7,15.376,1.176,1.176,0,0,1,11.522,14.2Zm-7.143,0a1.176,1.176,0,1,1,1.176,1.176A1.176,1.176,0,0,1,4.379,14.2Zm-.7-2.482A1.39,1.39,0,0,1,3.72,9.946l.068-.068.857-.7L2.247,1.6.371,1.027a.525.525,0,0,1,.308-1L2.821.682a.522.522,0,0,1,.345.34L5.554,8.583h7.838l1.4-6.27H4.932L4.593,1.267H15.472a.538.538,0,0,1,.517.637L14.333,9.22a.523.523,0,0,1-.522.407H5.742L4.483,10.673a.35.35,0,0,0,.292.523h8.805a.522.522,0,0,1,0,1.045H4.859l-.071,0A1.437,1.437,0,0,1,3.678,11.718Z" transform="translate(0 0)" fill="#fff"/>
+                      </svg></a>
+                        </div>
+                        <div class="col-lg-8 d-none d-lg-flex d-md-none d-sm-none">
+                            <span class="text-white">|</span>
+                            <a href="#" class="text-white profile-name">
+                        احمد عبد الرحمن
+                    </a>
+                            <img class="profile-img" src="assets/images/profile.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="language col"><a href="#language">EN</a></div>
@@ -215,16 +227,15 @@
         </div>
     </header>
     <!-- End Header -->
-
     <main id="main">
 
         <!-- ======= Breadcrumbs Section ======= -->
-        <section class="page-title-section re3aya py-4">
+        <section class="page-title-section py-4">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
                         <h3 class="title">
-                            خدمات الرعاية منزلية
+                            خدمات طبية حكومية
                         </h3>
                     </div>
                     <div class="col-lg-6">
@@ -232,10 +243,10 @@
                             <form action="">
                                 <div class="row">
                                     <div class="col-9">
-                                        <input type="text" name="" id="" placeholder="صورة دم كاملة">
+                                        <input type="text"  id="myInput" placeholder="ابحث عن مركز">
                                     </div>
                                     <div class="col-3">
-                                        <button class="btn">ابحث</button>
+                                        <button class="btn filter-button">ابحث</button>
                                     </div>
                                 </div>
                             </form>
@@ -243,10 +254,18 @@
                     </div>
                     <div class="col-lg-2 icon">
                         <figure class="m-0 d-none d-lg-block d-md-none d-sm-none">
-                            <img src="./assets/images/search-re3aya.png" alt="">
+                            <img src="./assets/images/Search-Results.png" alt="">
                         </figure>
                     </div>
                 </div>
+
+                <!-- <div class="d-flex justify-content-between align-items-center">
+                    <h2>Inner Page</h2>
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li>Inner Page</li>
+                    </ol>
+                </div> -->
 
             </div>
         </section>
@@ -256,7 +275,7 @@
             <div class="container">
                 <div class="row">
                     <p class="label-result">
-                        نتائج بحث حوالي <strong>297</strong> نتيجة (صورة دم كاملة)
+                        نتائج بحث حوالي <strong>297</strong> نتيجة (مركز شهادة صحية)
                     </p>
                     <div class="col-lg-4">
                         <div class="inner inner-filter">
@@ -331,10 +350,10 @@
                                                 transform="translate(-0.001)" fill="#0065ff" />
                                         </svg>
                                             <span class="current">
-                                                <span>اختر التخصص</span>
+                                                <span>التقيمات</span>
                                             </span>
                                             <ul class="list">
-                                                <li data-value="1" class="option selected focus disabled">اختر التخصص</li>
+                                                <li data-value="1" class="option selected focus disabled">التقيمات</li>
                                                 <li data-value="1" class="option">test</li>
                                                 <li data-value="1" class="option">test test test </li>
                                                 <li data-value="1" class="option">test</li>
@@ -354,10 +373,10 @@
                                                     fill="#0065ff" />
                                             </svg>
                                             <span class="current">
-                                                <span> مدة الخدمة </span>
+                                                <span> السعر </span>
                                             </span>
                                             <ul class="list">
-                                                <li data-value="1" class="option selected focus disabled"> مدة الخدمة </li>
+                                                <li data-value="1" class="option selected focus disabled"> السعر </li>
                                                 <li data-value="1" class="option">test</li>
                                                 <li data-value="1" class="option">test test test </li>
                                                 <li data-value="1" class="option">test</li>
@@ -377,10 +396,10 @@
                                                     transform="translate(1419.75 1692.327)" fill="#0065ff" />
                                             </svg>
                                             <span class="current">
-                                                <span>أي من الجنسين</span>
+                                                <span>المسافة</span>
                                             </span>
                                             <ul class="list">
-                                                <li data-value="1" class="option selected focus disabled">أي من الجنسين</li>
+                                                <li data-value="1" class="option selected focus disabled">المسافة</li>
                                                 <li data-value="1" class="option">test</li>
                                                 <li data-value="1" class="option">test test test </li>
                                                 <li data-value="1" class="option">test</li>
@@ -395,29 +414,28 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8" id="myUL">
                         <!-- item -->
                         <div class="card-box p-2 py-4 card-detail">
                             <div class="row">
                                 <div class="col-lg-2 p-lg-0">
                                     <div class="avatar text-center">
-                                        <img src="./assets/./images/studio-portrait-successful-young-businesswoman.png" alt="">
+                                        <img src="./assets/./images/amercenter.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-7 p-lg-0 detail">
                                     <h6 class="title-card">
-                                        هنا محمد السيد
-                                        <span>(زيارة تمريض)</span>
+                                        شهادة صحية
+                                        <span>(مركز امر)</span>
                                     </h6>
                                     <div class="d-flex">
-                                        <svg id="Group_6300" data-name="Group 6300" xmlns="http://www.w3.org/2000/svg" width="16" height="15.888" viewBox="0 0 16 15.888">
-                                            <path id="Path_16618" data-name="Path 16618"
-                                                d="M6.2,1.737H8.127S7.891,6.484,9.859,5.148c.9-.61,2.441-1.694,4.328-.049,1.484,1.293,2.805,3.416.769,7.9-1.062,2.335-4.588,6.024-9.955,2-.817-.612-2.981-2.1-3.126,2.632H0s-.073-5.53,3.078-5.118c1.633.214,5.407,1.225,6.012-2.73.125-.818.477-1.828-1.443-2.973C6.829,6.318,6.155,5.879,6.2,1.737Z"
-                                                transform="translate(0.001 -1.737)" fill="#0065ff" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
+                                            <path id="__TEMP__SVG__"
+                                                d="M12.75,2.25c-3.313,0-6,2.3-6,5.143,0,4.571,6,10.857,6,10.857s6-6.286,6-10.857C18.75,4.554,16.063,2.25,12.75,2.25Zm0,8a2.345,2.345,0,0,1-2.4-2.286,2.4,2.4,0,0,1,4.8,0A2.348,2.348,0,0,1,12.75,10.25Z"
+                                                transform="translate(-6.75 -2.25)" fill="#0065ff" />
                                         </svg>
-                                        <p>ممرضة . قسم الجراحة</p>
+                                        <p>الغربية- شارع رياض غرابة خلف المقاولون العرب</p>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -459,7 +477,7 @@
                                                 d="M15.5,16h-3a.507.507,0,0,1-.5-.5v-3a.507.507,0,0,1,.5-.5H13V11a1.291,1.291,0,0,0-.258-.766A2.5,2.5,0,0,0,12,9.578q-.484-.3-.945-.531T9.961,8.532Q9.328,8.251,9,8.063V12h.5a.507.507,0,0,1,.5.5v3a.507.507,0,0,1-.5.5h-3a.507.507,0,0,1-.5-.5v-3a.507.507,0,0,1,.5-.5H7V8.14q-.344.188-.961.461t-1.086.492a10.024,10.024,0,0,0-.945.508,2.6,2.6,0,0,0-.742.64A1.236,1.236,0,0,0,3,11v1h.5a.507.507,0,0,1,.5.5v3a.507.507,0,0,1-.5.5H.5a.481.481,0,0,1-.352-.148A.481.481,0,0,1,0,15.5v-3a.481.481,0,0,1,.148-.352A.481.481,0,0,1,.5,12H1V10a1.378,1.378,0,0,1,.445-.937,4.566,4.566,0,0,1,1.109-.836Q3.219,7.859,4,7.445t1.445-.773a4.9,4.9,0,0,0,1.109-.8A1.252,1.252,0,0,0,7,5V4H6.5A.507.507,0,0,1,6,3.5V.5A.481.481,0,0,1,6.148.148.481.481,0,0,1,6.5,0h3a.481.481,0,0,1,.352.148A.481.481,0,0,1,10,.5v3a.507.507,0,0,1-.5.5H9V5a1.217,1.217,0,0,0,.445.852,5.037,5.037,0,0,0,1.109.789L12,7.422q.781.422,1.445.8a4.7,4.7,0,0,1,1.109.844A1.379,1.379,0,0,1,15,10v2h.5a.507.507,0,0,1,.5.5v3a.508.508,0,0,1-.5.5Z"
                                                 fill="#0065ff" />
                                         </svg>
-                                        <p><span class="c-ml-1">نطاق الخدمة:</span></p>
+                                        <p><span class="c-ml-1">الفرع:</span></p>
                                         <div class="nice-select nice-select2" tabindex="0"><span class="current">طنطا</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
                                                 <path id="arrow-down-fill"
@@ -478,36 +496,13 @@
                                             </ul>
                                         </div>
                                     </div>
-
-                                    <div class="d-flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path id="time-3"
-                                                d="M0,8.016A7.849,7.849,0,0,1,1.077,3.992,7.959,7.959,0,0,1,4,1.072a7.97,7.97,0,0,1,7.11-.437A7.885,7.885,0,0,1,15.365,4.9a7.945,7.945,0,0,1,0,6.225,7.987,7.987,0,0,1-1.707,2.55,8.045,8.045,0,0,1-2.55,1.7,7.963,7.963,0,0,1-6.22-.005A7.868,7.868,0,0,1,.63,11.112,7.788,7.788,0,0,1,0,8.016Zm1.759,0A6.042,6.042,0,0,0,3.6,12.408a6.01,6.01,0,0,0,4.4,1.843,6.092,6.092,0,0,0,3.123-.838,6.25,6.25,0,0,0,2.28-2.275,6.215,6.215,0,0,0,0-6.251,6.248,6.248,0,0,0-2.28-2.28A6.092,6.092,0,0,0,8.005,1.77a6.083,6.083,0,0,0-3.123.838A6.252,6.252,0,0,0,2.6,4.887,6.085,6.085,0,0,0,1.759,8.016Zm5.632,0V3.279a.594.594,0,1,1,1.187,0V7.412h2.686a.593.593,0,0,1,.422,1.01.565.565,0,0,1-.422.177H8.109a.484.484,0,0,1-.125.01.586.586,0,0,1-.593-.593Z"
-                                                fill="#0065ff" />
-                                        </svg>
-                                        <p class="pl-6"><span class="c-ml-1">مدة الخدمة:</span></p>
-                                        <div class="nice-select nice-select2" tabindex="0"><span class="current">ساعتين يومياً</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
-                                                <path id="arrow-down-fill"
-                                                    d="M12.879,20a1.036,1.036,0,0,1-.86-.569L9.3,14.9a2.451,2.451,0,0,1-.168-1.964A1.193,1.193,0,0,1,10.156,12H15.6a1.193,1.193,0,0,1,1.028.933,2.451,2.451,0,0,1-.168,1.964l-2.722,4.533A1.036,1.036,0,0,1,12.879,20Z"
-                                                    transform="translate(-8.998 -12)" fill="#868d9a" />
-                                            </svg>
-                                            <ul class="list">
-                                                <li data-value="1" class="option selected focus">ساعتين يومياً</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test test test </li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="col-lg-3 value-card text-center">
-                                    <div></div>
-                                    <button>طلب زيارة</button>
+                                    <div>
+                                        <p class="mb-1">الإجمالي</p>
+                                        <h5>200 ريال</h5>
+                                    </div>
+                                    <button>أحجز الآن</button>
                                 </div>
                             </div>
                         </div>
@@ -516,21 +511,21 @@
                             <div class="row">
                                 <div class="col-lg-2 p-lg-0">
                                     <div class="avatar text-center">
-                                        <img src="./assets/./images/studio-portrait-successful-young-businesswoman.png" alt="">
+                                        <img src="./assets/./images/saudi-center.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-7 p-lg-0 detail">
                                     <h6 class="title-card">
-                                        هنا محمد السيد
-                                        <span>(زيارة تمريض)</span>
+                                        شهادة صحية
+                                        <span>(مراكز الاتصال)</span>
                                     </h6>
                                     <div class="d-flex">
-                                        <svg id="Group_6300" data-name="Group 6300" xmlns="http://www.w3.org/2000/svg" width="16" height="15.888" viewBox="0 0 16 15.888">
-                                            <path id="Path_16618" data-name="Path 16618"
-                                                d="M6.2,1.737H8.127S7.891,6.484,9.859,5.148c.9-.61,2.441-1.694,4.328-.049,1.484,1.293,2.805,3.416.769,7.9-1.062,2.335-4.588,6.024-9.955,2-.817-.612-2.981-2.1-3.126,2.632H0s-.073-5.53,3.078-5.118c1.633.214,5.407,1.225,6.012-2.73.125-.818.477-1.828-1.443-2.973C6.829,6.318,6.155,5.879,6.2,1.737Z"
-                                                transform="translate(0.001 -1.737)" fill="#0065ff" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
+                                            <path id="__TEMP__SVG__"
+                                                d="M12.75,2.25c-3.313,0-6,2.3-6,5.143,0,4.571,6,10.857,6,10.857s6-6.286,6-10.857C18.75,4.554,16.063,2.25,12.75,2.25Zm0,8a2.345,2.345,0,0,1-2.4-2.286,2.4,2.4,0,0,1,4.8,0A2.348,2.348,0,0,1,12.75,10.25Z"
+                                                transform="translate(-6.75 -2.25)" fill="#0065ff" />
                                         </svg>
-                                        <p>ممرضة . قسم الجراحة</p>
+                                        <p>الغربية- شارع رياض غرابة خلف المقاولون العرب</p>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -572,7 +567,7 @@
                                                 d="M15.5,16h-3a.507.507,0,0,1-.5-.5v-3a.507.507,0,0,1,.5-.5H13V11a1.291,1.291,0,0,0-.258-.766A2.5,2.5,0,0,0,12,9.578q-.484-.3-.945-.531T9.961,8.532Q9.328,8.251,9,8.063V12h.5a.507.507,0,0,1,.5.5v3a.507.507,0,0,1-.5.5h-3a.507.507,0,0,1-.5-.5v-3a.507.507,0,0,1,.5-.5H7V8.14q-.344.188-.961.461t-1.086.492a10.024,10.024,0,0,0-.945.508,2.6,2.6,0,0,0-.742.64A1.236,1.236,0,0,0,3,11v1h.5a.507.507,0,0,1,.5.5v3a.507.507,0,0,1-.5.5H.5a.481.481,0,0,1-.352-.148A.481.481,0,0,1,0,15.5v-3a.481.481,0,0,1,.148-.352A.481.481,0,0,1,.5,12H1V10a1.378,1.378,0,0,1,.445-.937,4.566,4.566,0,0,1,1.109-.836Q3.219,7.859,4,7.445t1.445-.773a4.9,4.9,0,0,0,1.109-.8A1.252,1.252,0,0,0,7,5V4H6.5A.507.507,0,0,1,6,3.5V.5A.481.481,0,0,1,6.148.148.481.481,0,0,1,6.5,0h3a.481.481,0,0,1,.352.148A.481.481,0,0,1,10,.5v3a.507.507,0,0,1-.5.5H9V5a1.217,1.217,0,0,0,.445.852,5.037,5.037,0,0,0,1.109.789L12,7.422q.781.422,1.445.8a4.7,4.7,0,0,1,1.109.844A1.379,1.379,0,0,1,15,10v2h.5a.507.507,0,0,1,.5.5v3a.508.508,0,0,1-.5.5Z"
                                                 fill="#0065ff" />
                                         </svg>
-                                        <p><span class="c-ml-1">نطاق الخدمة:</span></p>
+                                        <p><span class="c-ml-1">الفرع:</span></p>
                                         <div class="nice-select nice-select2" tabindex="0"><span class="current">طنطا</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
                                                 <path id="arrow-down-fill"
@@ -591,36 +586,13 @@
                                             </ul>
                                         </div>
                                     </div>
-
-                                    <div class="d-flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path id="time-3"
-                                                d="M0,8.016A7.849,7.849,0,0,1,1.077,3.992,7.959,7.959,0,0,1,4,1.072a7.97,7.97,0,0,1,7.11-.437A7.885,7.885,0,0,1,15.365,4.9a7.945,7.945,0,0,1,0,6.225,7.987,7.987,0,0,1-1.707,2.55,8.045,8.045,0,0,1-2.55,1.7,7.963,7.963,0,0,1-6.22-.005A7.868,7.868,0,0,1,.63,11.112,7.788,7.788,0,0,1,0,8.016Zm1.759,0A6.042,6.042,0,0,0,3.6,12.408a6.01,6.01,0,0,0,4.4,1.843,6.092,6.092,0,0,0,3.123-.838,6.25,6.25,0,0,0,2.28-2.275,6.215,6.215,0,0,0,0-6.251,6.248,6.248,0,0,0-2.28-2.28A6.092,6.092,0,0,0,8.005,1.77a6.083,6.083,0,0,0-3.123.838A6.252,6.252,0,0,0,2.6,4.887,6.085,6.085,0,0,0,1.759,8.016Zm5.632,0V3.279a.594.594,0,1,1,1.187,0V7.412h2.686a.593.593,0,0,1,.422,1.01.565.565,0,0,1-.422.177H8.109a.484.484,0,0,1-.125.01.586.586,0,0,1-.593-.593Z"
-                                                fill="#0065ff" />
-                                        </svg>
-                                        <p class="pl-6"><span class="c-ml-1">مدة الخدمة:</span></p>
-                                        <div class="nice-select nice-select2" tabindex="0"><span class="current">ساعتين يومياً</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
-                                                <path id="arrow-down-fill"
-                                                    d="M12.879,20a1.036,1.036,0,0,1-.86-.569L9.3,14.9a2.451,2.451,0,0,1-.168-1.964A1.193,1.193,0,0,1,10.156,12H15.6a1.193,1.193,0,0,1,1.028.933,2.451,2.451,0,0,1-.168,1.964l-2.722,4.533A1.036,1.036,0,0,1,12.879,20Z"
-                                                    transform="translate(-8.998 -12)" fill="#868d9a" />
-                                            </svg>
-                                            <ul class="list">
-                                                <li data-value="1" class="option selected focus">ساعتين يومياً</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test test test </li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="col-lg-3 value-card text-center">
-                                    <div></div>
-                                    <button>طلب زيارة</button>
+                                    <div>
+                                        <p class="mb-1">الإجمالي</p>
+                                        <h5>200 ريال</h5>
+                                    </div>
+                                    <button>أحجز الآن</button>
                                 </div>
                             </div>
                         </div>
@@ -629,21 +601,21 @@
                             <div class="row">
                                 <div class="col-lg-2 p-lg-0">
                                     <div class="avatar text-center">
-                                        <img src="./assets/./images/studio-portrait-successful-young-businesswoman.png" alt="">
+                                        <img src="./assets/./images/amercenter.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-7 p-lg-0 detail">
                                     <h6 class="title-card">
-                                        هنا محمد السيد
-                                        <span>(زيارة تمريض)</span>
+                                        شهادة صحية
+                                        <span>(مركز امر)</span>
                                     </h6>
                                     <div class="d-flex">
-                                        <svg id="Group_6300" data-name="Group 6300" xmlns="http://www.w3.org/2000/svg" width="16" height="15.888" viewBox="0 0 16 15.888">
-                                            <path id="Path_16618" data-name="Path 16618"
-                                                d="M6.2,1.737H8.127S7.891,6.484,9.859,5.148c.9-.61,2.441-1.694,4.328-.049,1.484,1.293,2.805,3.416.769,7.9-1.062,2.335-4.588,6.024-9.955,2-.817-.612-2.981-2.1-3.126,2.632H0s-.073-5.53,3.078-5.118c1.633.214,5.407,1.225,6.012-2.73.125-.818.477-1.828-1.443-2.973C6.829,6.318,6.155,5.879,6.2,1.737Z"
-                                                transform="translate(0.001 -1.737)" fill="#0065ff" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
+                                            <path id="__TEMP__SVG__"
+                                                d="M12.75,2.25c-3.313,0-6,2.3-6,5.143,0,4.571,6,10.857,6,10.857s6-6.286,6-10.857C18.75,4.554,16.063,2.25,12.75,2.25Zm0,8a2.345,2.345,0,0,1-2.4-2.286,2.4,2.4,0,0,1,4.8,0A2.348,2.348,0,0,1,12.75,10.25Z"
+                                                transform="translate(-6.75 -2.25)" fill="#0065ff" />
                                         </svg>
-                                        <p>ممرضة . قسم الجراحة</p>
+                                        <p>الغربية- شارع رياض غرابة خلف المقاولون العرب</p>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -685,7 +657,7 @@
                                                 d="M15.5,16h-3a.507.507,0,0,1-.5-.5v-3a.507.507,0,0,1,.5-.5H13V11a1.291,1.291,0,0,0-.258-.766A2.5,2.5,0,0,0,12,9.578q-.484-.3-.945-.531T9.961,8.532Q9.328,8.251,9,8.063V12h.5a.507.507,0,0,1,.5.5v3a.507.507,0,0,1-.5.5h-3a.507.507,0,0,1-.5-.5v-3a.507.507,0,0,1,.5-.5H7V8.14q-.344.188-.961.461t-1.086.492a10.024,10.024,0,0,0-.945.508,2.6,2.6,0,0,0-.742.64A1.236,1.236,0,0,0,3,11v1h.5a.507.507,0,0,1,.5.5v3a.507.507,0,0,1-.5.5H.5a.481.481,0,0,1-.352-.148A.481.481,0,0,1,0,15.5v-3a.481.481,0,0,1,.148-.352A.481.481,0,0,1,.5,12H1V10a1.378,1.378,0,0,1,.445-.937,4.566,4.566,0,0,1,1.109-.836Q3.219,7.859,4,7.445t1.445-.773a4.9,4.9,0,0,0,1.109-.8A1.252,1.252,0,0,0,7,5V4H6.5A.507.507,0,0,1,6,3.5V.5A.481.481,0,0,1,6.148.148.481.481,0,0,1,6.5,0h3a.481.481,0,0,1,.352.148A.481.481,0,0,1,10,.5v3a.507.507,0,0,1-.5.5H9V5a1.217,1.217,0,0,0,.445.852,5.037,5.037,0,0,0,1.109.789L12,7.422q.781.422,1.445.8a4.7,4.7,0,0,1,1.109.844A1.379,1.379,0,0,1,15,10v2h.5a.507.507,0,0,1,.5.5v3a.508.508,0,0,1-.5.5Z"
                                                 fill="#0065ff" />
                                         </svg>
-                                        <p><span class="c-ml-1">نطاق الخدمة:</span></p>
+                                        <p><span class="c-ml-1">الفرع:</span></p>
                                         <div class="nice-select nice-select2" tabindex="0"><span class="current">طنطا</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
                                                 <path id="arrow-down-fill"
@@ -704,36 +676,13 @@
                                             </ul>
                                         </div>
                                     </div>
-
-                                    <div class="d-flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path id="time-3"
-                                                d="M0,8.016A7.849,7.849,0,0,1,1.077,3.992,7.959,7.959,0,0,1,4,1.072a7.97,7.97,0,0,1,7.11-.437A7.885,7.885,0,0,1,15.365,4.9a7.945,7.945,0,0,1,0,6.225,7.987,7.987,0,0,1-1.707,2.55,8.045,8.045,0,0,1-2.55,1.7,7.963,7.963,0,0,1-6.22-.005A7.868,7.868,0,0,1,.63,11.112,7.788,7.788,0,0,1,0,8.016Zm1.759,0A6.042,6.042,0,0,0,3.6,12.408a6.01,6.01,0,0,0,4.4,1.843,6.092,6.092,0,0,0,3.123-.838,6.25,6.25,0,0,0,2.28-2.275,6.215,6.215,0,0,0,0-6.251,6.248,6.248,0,0,0-2.28-2.28A6.092,6.092,0,0,0,8.005,1.77a6.083,6.083,0,0,0-3.123.838A6.252,6.252,0,0,0,2.6,4.887,6.085,6.085,0,0,0,1.759,8.016Zm5.632,0V3.279a.594.594,0,1,1,1.187,0V7.412h2.686a.593.593,0,0,1,.422,1.01.565.565,0,0,1-.422.177H8.109a.484.484,0,0,1-.125.01.586.586,0,0,1-.593-.593Z"
-                                                fill="#0065ff" />
-                                        </svg>
-                                        <p class="pl-6"><span class="c-ml-1">مدة الخدمة:</span></p>
-                                        <div class="nice-select nice-select2" tabindex="0"><span class="current">ساعتين يومياً</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
-                                                <path id="arrow-down-fill"
-                                                    d="M12.879,20a1.036,1.036,0,0,1-.86-.569L9.3,14.9a2.451,2.451,0,0,1-.168-1.964A1.193,1.193,0,0,1,10.156,12H15.6a1.193,1.193,0,0,1,1.028.933,2.451,2.451,0,0,1-.168,1.964l-2.722,4.533A1.036,1.036,0,0,1,12.879,20Z"
-                                                    transform="translate(-8.998 -12)" fill="#868d9a" />
-                                            </svg>
-                                            <ul class="list">
-                                                <li data-value="1" class="option selected focus">ساعتين يومياً</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test test test </li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="col-lg-3 value-card text-center">
-                                    <div></div>
-                                    <button>طلب زيارة</button>
+                                    <div>
+                                        <p class="mb-1">الإجمالي</p>
+                                        <h5>200 ريال</h5>
+                                    </div>
+                                    <button>أحجز الآن</button>
                                 </div>
                             </div>
                         </div>
@@ -742,21 +691,21 @@
                             <div class="row">
                                 <div class="col-lg-2 p-lg-0">
                                     <div class="avatar text-center">
-                                        <img src="./assets/./images/studio-portrait-successful-young-businesswoman.png" alt="">
+                                        <img src="./assets/./images/saudi-center.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-7 p-lg-0 detail">
                                     <h6 class="title-card">
-                                        هنا محمد السيد
-                                        <span>(زيارة تمريض)</span>
+                                        شهادة صحية
+                                        <span>(مراكز الاتصال)</span>
                                     </h6>
                                     <div class="d-flex">
-                                        <svg id="Group_6300" data-name="Group 6300" xmlns="http://www.w3.org/2000/svg" width="16" height="15.888" viewBox="0 0 16 15.888">
-                                            <path id="Path_16618" data-name="Path 16618"
-                                                d="M6.2,1.737H8.127S7.891,6.484,9.859,5.148c.9-.61,2.441-1.694,4.328-.049,1.484,1.293,2.805,3.416.769,7.9-1.062,2.335-4.588,6.024-9.955,2-.817-.612-2.981-2.1-3.126,2.632H0s-.073-5.53,3.078-5.118c1.633.214,5.407,1.225,6.012-2.73.125-.818.477-1.828-1.443-2.973C6.829,6.318,6.155,5.879,6.2,1.737Z"
-                                                transform="translate(0.001 -1.737)" fill="#0065ff" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
+                                            <path id="__TEMP__SVG__"
+                                                d="M12.75,2.25c-3.313,0-6,2.3-6,5.143,0,4.571,6,10.857,6,10.857s6-6.286,6-10.857C18.75,4.554,16.063,2.25,12.75,2.25Zm0,8a2.345,2.345,0,0,1-2.4-2.286,2.4,2.4,0,0,1,4.8,0A2.348,2.348,0,0,1,12.75,10.25Z"
+                                                transform="translate(-6.75 -2.25)" fill="#0065ff" />
                                         </svg>
-                                        <p>ممرضة . قسم الجراحة</p>
+                                        <p>الغربية- شارع رياض غرابة خلف المقاولون العرب</p>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -798,7 +747,7 @@
                                                 d="M15.5,16h-3a.507.507,0,0,1-.5-.5v-3a.507.507,0,0,1,.5-.5H13V11a1.291,1.291,0,0,0-.258-.766A2.5,2.5,0,0,0,12,9.578q-.484-.3-.945-.531T9.961,8.532Q9.328,8.251,9,8.063V12h.5a.507.507,0,0,1,.5.5v3a.507.507,0,0,1-.5.5h-3a.507.507,0,0,1-.5-.5v-3a.507.507,0,0,1,.5-.5H7V8.14q-.344.188-.961.461t-1.086.492a10.024,10.024,0,0,0-.945.508,2.6,2.6,0,0,0-.742.64A1.236,1.236,0,0,0,3,11v1h.5a.507.507,0,0,1,.5.5v3a.507.507,0,0,1-.5.5H.5a.481.481,0,0,1-.352-.148A.481.481,0,0,1,0,15.5v-3a.481.481,0,0,1,.148-.352A.481.481,0,0,1,.5,12H1V10a1.378,1.378,0,0,1,.445-.937,4.566,4.566,0,0,1,1.109-.836Q3.219,7.859,4,7.445t1.445-.773a4.9,4.9,0,0,0,1.109-.8A1.252,1.252,0,0,0,7,5V4H6.5A.507.507,0,0,1,6,3.5V.5A.481.481,0,0,1,6.148.148.481.481,0,0,1,6.5,0h3a.481.481,0,0,1,.352.148A.481.481,0,0,1,10,.5v3a.507.507,0,0,1-.5.5H9V5a1.217,1.217,0,0,0,.445.852,5.037,5.037,0,0,0,1.109.789L12,7.422q.781.422,1.445.8a4.7,4.7,0,0,1,1.109.844A1.379,1.379,0,0,1,15,10v2h.5a.507.507,0,0,1,.5.5v3a.508.508,0,0,1-.5.5Z"
                                                 fill="#0065ff" />
                                         </svg>
-                                        <p><span class="c-ml-1">نطاق الخدمة:</span></p>
+                                        <p><span class="c-ml-1">الفرع:</span></p>
                                         <div class="nice-select nice-select2" tabindex="0"><span class="current">طنطا</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
                                                 <path id="arrow-down-fill"
@@ -817,36 +766,13 @@
                                             </ul>
                                         </div>
                                     </div>
-
-                                    <div class="d-flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path id="time-3"
-                                                d="M0,8.016A7.849,7.849,0,0,1,1.077,3.992,7.959,7.959,0,0,1,4,1.072a7.97,7.97,0,0,1,7.11-.437A7.885,7.885,0,0,1,15.365,4.9a7.945,7.945,0,0,1,0,6.225,7.987,7.987,0,0,1-1.707,2.55,8.045,8.045,0,0,1-2.55,1.7,7.963,7.963,0,0,1-6.22-.005A7.868,7.868,0,0,1,.63,11.112,7.788,7.788,0,0,1,0,8.016Zm1.759,0A6.042,6.042,0,0,0,3.6,12.408a6.01,6.01,0,0,0,4.4,1.843,6.092,6.092,0,0,0,3.123-.838,6.25,6.25,0,0,0,2.28-2.275,6.215,6.215,0,0,0,0-6.251,6.248,6.248,0,0,0-2.28-2.28A6.092,6.092,0,0,0,8.005,1.77a6.083,6.083,0,0,0-3.123.838A6.252,6.252,0,0,0,2.6,4.887,6.085,6.085,0,0,0,1.759,8.016Zm5.632,0V3.279a.594.594,0,1,1,1.187,0V7.412h2.686a.593.593,0,0,1,.422,1.01.565.565,0,0,1-.422.177H8.109a.484.484,0,0,1-.125.01.586.586,0,0,1-.593-.593Z"
-                                                fill="#0065ff" />
-                                        </svg>
-                                        <p class="pl-6"><span class="c-ml-1">مدة الخدمة:</span></p>
-                                        <div class="nice-select nice-select2" tabindex="0"><span class="current">ساعتين يومياً</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
-                                                <path id="arrow-down-fill"
-                                                    d="M12.879,20a1.036,1.036,0,0,1-.86-.569L9.3,14.9a2.451,2.451,0,0,1-.168-1.964A1.193,1.193,0,0,1,10.156,12H15.6a1.193,1.193,0,0,1,1.028.933,2.451,2.451,0,0,1-.168,1.964l-2.722,4.533A1.036,1.036,0,0,1,12.879,20Z"
-                                                    transform="translate(-8.998 -12)" fill="#868d9a" />
-                                            </svg>
-                                            <ul class="list">
-                                                <li data-value="1" class="option selected focus">ساعتين يومياً</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test test test </li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="col-lg-3 value-card text-center">
-                                    <div></div>
-                                    <button>طلب زيارة</button>
+                                    <div>
+                                        <p class="mb-1">الإجمالي</p>
+                                        <h5>250 ريال</h5>
+                                    </div>
+                                    <button>أحجز الآن</button>
                                 </div>
                             </div>
                         </div>
@@ -870,6 +796,7 @@
 
     </main>
     <!-- End #main -->
+
     <!--Mobile Navbar section-->
     <section class="fixedtabs">
         <div class="container">
@@ -878,76 +805,76 @@
                     <!-- <div class=" d-none inner-avatar"></div> -->
                     <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="19.375" height="13.125" viewBox="0 0 19.375 13.125">
-                        <g id="reader-outline" transform="translate(1.688 1.688)">
-                            <path d="M6.188,10.688h16" transform="translate(-6.188 -10.688)" fill="none" stroke="#8d8d8d"
-                                stroke-linecap="round" stroke-miterlimit="10" stroke-width="3.375" />
-                            <path d="M6.188,18h16" transform="translate(-6.188 -13.125)" fill="none" stroke="#8d8d8d"
-                                stroke-linecap="round" stroke-miterlimit="10" stroke-width="3.375" />
-                            <path d="M6.188,25.313h16" transform="translate(-6.188 -15.563)" fill="none" stroke="#8d8d8d"
-                                stroke-linecap="round" stroke-miterlimit="10" stroke-width="3.375" />
-                        </g>
-                    </svg>
+                            <g id="reader-outline" transform="translate(1.688 1.688)">
+                                <path d="M6.188,10.688h16" transform="translate(-6.188 -10.688)" fill="none" stroke="#8d8d8d"
+                                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3.375" />
+                                <path d="M6.188,18h16" transform="translate(-6.188 -13.125)" fill="none" stroke="#8d8d8d"
+                                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3.375" />
+                                <path d="M6.188,25.313h16" transform="translate(-6.188 -15.563)" fill="none" stroke="#8d8d8d"
+                                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3.375" />
+                            </g>
+                        </svg>
                     <div class="inner-text text-center"> المزيد </div>
                 </div>
                 <div class="inner-tab col">
                     <div class="inner-avatar offers text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <path
-                                d="M18.025,11.018l.884-1.528A.8.8,0,0,0,18.617,8.4l-1.53-.884V5.749a.8.8,0,0,0-.8-.8H14.525l-.884-1.529a.807.807,0,0,0-.486-.373.8.8,0,0,0-.608.08l-1.53.885-1.53-.885a.8.8,0,0,0-1.094.293L7.509,4.948H5.748a.8.8,0,0,0-.8.8V7.51l-1.53.884a.8.8,0,0,0-.292,1.095l.884,1.529-.884,1.528a.8.8,0,0,0,.292,1.095l1.53.884v1.761a.8.8,0,0,0,.8.8H7.509l.884,1.53a.8.8,0,0,0,1.1.292l1.528-.884,1.53.884a.8.8,0,0,0,1.094-.292l.884-1.53h1.761a.8.8,0,0,0,.8-.8V14.525l1.53-.884a.8.8,0,0,0,.292-1.095ZM9.014,7.005a1.2,1.2,0,1,1-1.2,1.2,1.2,1.2,0,0,1,1.2-1.2Zm.24,7.689-1.282-.961,4.806-6.408s2.163-.881,1.282.961S9.254,14.695,9.254,14.695Zm3.765.32a1.2,1.2,0,1,1,1.2-1.2,1.2,1.2,0,0,1-1.2,1.2Z"
-                                transform="translate(-3.017 -3.018)" fill="#8d8d8d" />
-                        </svg>
+                                <path
+                                    d="M18.025,11.018l.884-1.528A.8.8,0,0,0,18.617,8.4l-1.53-.884V5.749a.8.8,0,0,0-.8-.8H14.525l-.884-1.529a.807.807,0,0,0-.486-.373.8.8,0,0,0-.608.08l-1.53.885-1.53-.885a.8.8,0,0,0-1.094.293L7.509,4.948H5.748a.8.8,0,0,0-.8.8V7.51l-1.53.884a.8.8,0,0,0-.292,1.095l.884,1.529-.884,1.528a.8.8,0,0,0,.292,1.095l1.53.884v1.761a.8.8,0,0,0,.8.8H7.509l.884,1.53a.8.8,0,0,0,1.1.292l1.528-.884,1.53.884a.8.8,0,0,0,1.094-.292l.884-1.53h1.761a.8.8,0,0,0,.8-.8V14.525l1.53-.884a.8.8,0,0,0,.292-1.095ZM9.014,7.005a1.2,1.2,0,1,1-1.2,1.2,1.2,1.2,0,0,1,1.2-1.2Zm.24,7.689-1.282-.961,4.806-6.408s2.163-.881,1.282.961S9.254,14.695,9.254,14.695Zm3.765.32a1.2,1.2,0,1,1,1.2-1.2,1.2,1.2,0,0,1-1.2,1.2Z"
+                                    transform="translate(-3.017 -3.018)" fill="#8d8d8d" />
+                            </svg>
                     </div>
                     <div class="inner-text text-center ">العروض </div>
                 </div>
                 <div class="inner-tab calendar col">
                     <div class="inner-avatar text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73" height="73" viewBox="0 0 73 73">
-                            <defs>
-                                <filter id="Path_1246" x="0" y="0" width="73" height="73" filterUnits="userSpaceOnUse">
-                                    <feOffset input="SourceAlpha" />
-                                    <feGaussianBlur stdDeviation="3" result="blur" />
-                                    <feFlood flood-color="#0065ff" flood-opacity="0.149" />
-                                    <feComposite operator="in" in2="blur" />
-                                    <feComposite in="SourceGraphic" />
-                                </filter>
-                            </defs>
-                            <g id="Group_6634" data-name="Group 6634" transform="translate(-157 -706.002)">
-                                <g transform="matrix(1, 0, 0, 1, 157, 706)" filter="url(#Path_1246)">
-                                    <path id="Path_1246-2" data-name="Path 1246"
-                                        d="M27.5,0A27.5,27.5,0,1,1,0,27.5,27.5,27.5,0,0,1,27.5,0Z"
-                                        transform="translate(9 9)" fill="#fff" />
+                                <defs>
+                                    <filter id="Path_1246" x="0" y="0" width="73" height="73" filterUnits="userSpaceOnUse">
+                                        <feOffset input="SourceAlpha" />
+                                        <feGaussianBlur stdDeviation="3" result="blur" />
+                                        <feFlood flood-color="#0065ff" flood-opacity="0.149" />
+                                        <feComposite operator="in" in2="blur" />
+                                        <feComposite in="SourceGraphic" />
+                                    </filter>
+                                </defs>
+                                <g id="Group_6634" data-name="Group 6634" transform="translate(-157 -706.002)">
+                                    <g transform="matrix(1, 0, 0, 1, 157, 706)" filter="url(#Path_1246)">
+                                        <path id="Path_1246-2" data-name="Path 1246"
+                                            d="M27.5,0A27.5,27.5,0,1,1,0,27.5,27.5,27.5,0,0,1,27.5,0Z"
+                                            transform="translate(9 9)" fill="#fff" />
+                                    </g>
+                                    <path id="Path_1240" data-name="Path 1240"
+                                        d="M6,.75a.75.75,0,0,0-1.5,0V1.5H3a3,3,0,0,0-3,3V21a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V4.5a3,3,0,0,0-3-3H19.5V.75a.75.75,0,0,0-1.5,0V1.5H6ZM3,5.25a.75.75,0,0,1,.75-.75h16.5a.75.75,0,0,1,.75.75v1.5a.75.75,0,0,1-.75.75H3.75A.75.75,0,0,1,3,6.75Zm9.75,5.25a.75.75,0,0,0-.75.75v1.5a.75.75,0,0,0,.75.75h1.5a.75.75,0,0,0,.75-.75v-1.5a.75.75,0,0,0-.75-.75Zm4.5,0a.75.75,0,0,0-.75.75v1.5a.75.75,0,0,0,.75.75h1.5a.75.75,0,0,0,.75-.75v-1.5a.75.75,0,0,0-.75-.75ZM4.5,15.75A.75.75,0,0,1,5.25,15h1.5a.75.75,0,0,1,.75.75v1.5a.75.75,0,0,1-.75.75H5.25a.75.75,0,0,1-.75-.75ZM9.75,15a.75.75,0,0,0-.75.75v1.5a.75.75,0,0,0,.75.75h1.5a.75.75,0,0,0,.75-.75v-1.5a.75.75,0,0,0-.75-.75Z"
+                                        transform="translate(181.5 730.502)" fill="#0065ff" fill-rule="evenodd" />
                                 </g>
-                                <path id="Path_1240" data-name="Path 1240"
-                                    d="M6,.75a.75.75,0,0,0-1.5,0V1.5H3a3,3,0,0,0-3,3V21a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V4.5a3,3,0,0,0-3-3H19.5V.75a.75.75,0,0,0-1.5,0V1.5H6ZM3,5.25a.75.75,0,0,1,.75-.75h16.5a.75.75,0,0,1,.75.75v1.5a.75.75,0,0,1-.75.75H3.75A.75.75,0,0,1,3,6.75Zm9.75,5.25a.75.75,0,0,0-.75.75v1.5a.75.75,0,0,0,.75.75h1.5a.75.75,0,0,0,.75-.75v-1.5a.75.75,0,0,0-.75-.75Zm4.5,0a.75.75,0,0,0-.75.75v1.5a.75.75,0,0,0,.75.75h1.5a.75.75,0,0,0,.75-.75v-1.5a.75.75,0,0,0-.75-.75ZM4.5,15.75A.75.75,0,0,1,5.25,15h1.5a.75.75,0,0,1,.75.75v1.5a.75.75,0,0,1-.75.75H5.25a.75.75,0,0,1-.75-.75ZM9.75,15a.75.75,0,0,0-.75.75v1.5a.75.75,0,0,0,.75.75h1.5a.75.75,0,0,0,.75-.75v-1.5a.75.75,0,0,0-.75-.75Z"
-                                    transform="translate(181.5 730.502)" fill="#0065ff" fill-rule="evenodd" />
-                            </g>
-                        </svg>
+                            </svg>
                     </div>
                 </div>
                 <div class="inner-tab col">
                     <div class="inner-avatar text-center favorite">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.024" viewBox="0 0 16 15.024">
-                            <path
-                                d="M7.981,15.024,6.82,13.948Q5.246,12.488,4.5,11.777T2.7,9.914A15.418,15.418,0,0,1,1.18,8.031,8.907,8.907,0,0,1,.356,6.359,5.257,5.257,0,0,1,0,4.5,4.4,4.4,0,0,1,1.274,1.306,4.176,4.176,0,0,1,4.384,0a4.465,4.465,0,0,1,3.6,1.729A4.465,4.465,0,0,1,11.579,0a4.222,4.222,0,0,1,3.148,1.306A4.4,4.4,0,0,1,16,4.5a5.015,5.015,0,0,1-.375,1.864A10.79,10.79,0,0,1,14.8,8.031a13.266,13.266,0,0,1-1.518,1.883q-1.068,1.153-1.8,1.864T9.143,13.986Z"
-                                fill="#8d8d8d" />
-                        </svg>
+                                <path
+                                    d="M7.981,15.024,6.82,13.948Q5.246,12.488,4.5,11.777T2.7,9.914A15.418,15.418,0,0,1,1.18,8.031,8.907,8.907,0,0,1,.356,6.359,5.257,5.257,0,0,1,0,4.5,4.4,4.4,0,0,1,1.274,1.306,4.176,4.176,0,0,1,4.384,0a4.465,4.465,0,0,1,3.6,1.729A4.465,4.465,0,0,1,11.579,0a4.222,4.222,0,0,1,3.148,1.306A4.4,4.4,0,0,1,16,4.5a5.015,5.015,0,0,1-.375,1.864A10.79,10.79,0,0,1,14.8,8.031a13.266,13.266,0,0,1-1.518,1.883q-1.068,1.153-1.8,1.864T9.143,13.986Z"
+                                    fill="#8d8d8d" />
+                            </svg>
                     </div>
                     <div class="inner-text text-center"> المفضلة </div>
                 </div>
                 <div class="inner-tab col">
                     <div class="inner-avatar text-center booking">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.481" viewBox="0 0 16 14.481">
-                            <path
-                                d="M2,0A1.912,1.912,0,0,0,0,1.81H16A1.912,1.912,0,0,0,14,0ZM16,2.715H0V7.241H6a.956.956,0,0,1,1,.905.956.956,0,0,1-1,.905H0v3.62a1.912,1.912,0,0,0,2,1.81H14a1.912,1.912,0,0,0,2-1.81V6.336H10a.956.956,0,0,1-1-.905.956.956,0,0,1,1-.905h6Z"
-                                fill="#8d8d8d" fill-rule="evenodd" />
-                        </svg>
+                                <path
+                                    d="M2,0A1.912,1.912,0,0,0,0,1.81H16A1.912,1.912,0,0,0,14,0ZM16,2.715H0V7.241H6a.956.956,0,0,1,1,.905.956.956,0,0,1-1,.905H0v3.62a1.912,1.912,0,0,0,2,1.81H14a1.912,1.912,0,0,0,2-1.81V6.336H10a.956.956,0,0,1-1-.905.956.956,0,0,1,1-.905h6Z"
+                                    fill="#8d8d8d" fill-rule="evenodd" />
+                            </svg>
                     </div>
                     <div class="inner-text text-center">الحجوزات</div>
                 </div>
             </div>
         </div>
     </section>
-   
+ 
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -963,9 +890,12 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script> -->
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
+
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/filter.js"></script>
+    <script src="assets/js/filter.js"></script>
 
 </body>
 

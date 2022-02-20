@@ -558,7 +558,7 @@ Desktop Navigation
 
 #hero h1 {
   font-weight: bold;
-  font-size: 39px;
+  font-size: 30px;
   color: #fff;
   position: relative;
   line-height: 1.5em;
@@ -566,11 +566,7 @@ Desktop Navigation
 #hero h1 a {
   color: #fff;
 }
-@media (min-width: 992px) {
-  #hero h1 {
-    margin-bottom: 90px;
-  }
-}
+
 
 #hero p {
   margin: 0 auto 30px auto;

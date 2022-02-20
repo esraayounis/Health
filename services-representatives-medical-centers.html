@@ -214,7 +214,7 @@
 
         <!-- ======= Breadcrumbs Section ======= -->
         <section class="page-title-section py-4">
-            <div class="container">
+            <div class="container no-pad">
                 <div class="row">
                     <div class="col-lg-3">
                         <h3 class="title">
@@ -227,12 +227,12 @@
                                 <div class="row">
                                     <div class="col-9">
                                         <div class="custom-input d-flex">
-                                            <input class="search-doctor-button" type="text" name="" id="" placeholder="أبحث باسم مجمع طبي">
+                                            <input class="search-doctor-button" type="text"  id="myInput" placeholder="أبحث باسم مجمع طبي">
                                             <a class="d-none d-lg-none d-md-flex d-sm-block text-decoration-underline" href="#">تعديل</a>
                                         </div>
                                     </div>
                                     <div class="col-3 d-none d-lg-block">
-                                        <button class="btn">ابحث</button>
+                                        <button class="btn filter-button">ابحث</button>
                                     </div>
                                 </div>
                             </form>
@@ -252,7 +252,7 @@
             <div class="container">
                 <div class="row">
                     <p class="label-result">
-                        نتائج بحث حوالي <strong>297</strong> نتيجة (مستشفي )
+                        نتائج بحث حوالي <strong>297</strong> نتيجة (مجمع طبي )
                     </p>
                     <div class="col-lg-4 d-none d-lg-block">
                         <div class="inner inner-filter">
@@ -394,7 +394,7 @@
 
 
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8" id="myUL">
                         <!-- item -->
                         <div class="card-box p-2 py-5 card-detail">
                             <div class="row">
@@ -945,6 +945,7 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/filter.js"></script>
 
 </body>
 

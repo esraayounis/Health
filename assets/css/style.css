@@ -282,7 +282,7 @@ h6 {
 .card-title {
     margin-bottom: 0.5rem;
     font-weight: 600;
-    font-size:19px;
+    font-size:18px;
     color: #000000;
 }
 
@@ -302,7 +302,7 @@ h6 {
     border-radius: 5px;
     background: #fff;
     border: 1px solid #707070a1;
-    height: 48px;
+    height: 40px;
     width: 100%;
     font-size: 14px;
     color: #8D8D8D;
@@ -941,7 +941,7 @@ h6 {
 
 #hero h1 {
     font-weight: bold;
-    font-size: 39px;
+    font-size: 30px;
     color: #fff;
 }
 

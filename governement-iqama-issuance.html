@@ -193,13 +193,25 @@
                     <!-- .navbar -->
                 </div>
                 <!-- Register tabs -->
-                <div class="login-group d-flex">
-                    <a href="sign-up.html" class="btn-registration d-none d-lg-inline-flex align-items-center justify-content-center p-0">
-                            تسجيل جديد
-                        </a>
-                    <a href="#" class="btn-login d-none d-lg-inline-flex justify-content-center align-items-center p-0">
-                            تسجيل دخول
-                        </a>
+                <div class=" d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-lg-2 d-none d-lg-flex d-md-none d-sm-none">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M11,19a8,8,0,1,1,8-8A8,8,0,0,1,11,19Zm0-1.6a6.625,6.625,0,0,0,2.644-.579,6.558,6.558,0,0,0,3.6-4.426A5.756,5.756,0,0,0,17.4,11,6.4,6.4,0,1,0,11,17.4Zm-.8-3.2h1.6v1.6H10.2Zm0-1.594s1.6-.006,1.6,0c0-.8,2.4-1.606,2.4-3.206a3.2,3.2,0,1,0-6.4,0H9.4a1.6,1.6,0,0,1,3.2,0C12.6,10.12,10.2,11.293,10.2,12.606Z" transform="translate(-3 -3)" fill="#f8f9fa" fill-rule="evenodd"/>
+                    </svg></a>
+                        </div>
+                        <div class="col-lg-2 d-none d-lg-flex d-md-none d-sm-none">
+                            <a href="#"><svg id="cart" xmlns="http://www.w3.org/2000/svg" width="16" height="15.376" viewBox="0 0 16 15.376">
+                        <path id="Union_10" data-name="Union 10" d="M11.522,14.2A1.176,1.176,0,1,1,12.7,15.376,1.176,1.176,0,0,1,11.522,14.2Zm-7.143,0a1.176,1.176,0,1,1,1.176,1.176A1.176,1.176,0,0,1,4.379,14.2Zm-.7-2.482A1.39,1.39,0,0,1,3.72,9.946l.068-.068.857-.7L2.247,1.6.371,1.027a.525.525,0,0,1,.308-1L2.821.682a.522.522,0,0,1,.345.34L5.554,8.583h7.838l1.4-6.27H4.932L4.593,1.267H15.472a.538.538,0,0,1,.517.637L14.333,9.22a.523.523,0,0,1-.522.407H5.742L4.483,10.673a.35.35,0,0,0,.292.523h8.805a.522.522,0,0,1,0,1.045H4.859l-.071,0A1.437,1.437,0,0,1,3.678,11.718Z" transform="translate(0 0)" fill="#fff"/>
+                      </svg></a>
+                        </div>
+                        <div class="col-lg-8 d-none d-lg-flex d-md-none d-sm-none">
+                            <span class="text-white">|</span>
+                            <a href="#" class="text-white profile-name">
+                        احمد عبد الرحمن
+                    </a>
+                            <img class="profile-img" src="assets/images/profile.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="language col"><a href="#language">EN</a></div>
@@ -215,7 +227,6 @@
         </div>
     </header>
     <!-- End Header -->
-
     <main id="main">
 
         <!-- ======= Breadcrumbs Section ======= -->
@@ -224,7 +235,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <h3 class="title">
-                            أحجز مسحة كوفيد -19
+                            خدمات طبية حكومية
                         </h3>
                     </div>
                     <div class="col-lg-6">
@@ -232,7 +243,7 @@
                             <form action="">
                                 <div class="row">
                                     <div class="col-9">
-                                        <input type="text" id="myInput" placeholder="ابحث بأسم المعمل">
+                                        <input type="text"  id="myInput" placeholder="ابحث عن مركز">
                                     </div>
                                     <div class="col-3">
                                         <button class="btn filter-button">ابحث</button>
@@ -242,8 +253,8 @@
                         </div>
                     </div>
                     <div class="col-lg-2 icon">
-                        <figure class="m-0">
-                            <img src="./assets/images/cov.png" alt="">
+                        <figure class="m-0 d-none d-lg-block d-md-none d-sm-none">
+                            <img src="./assets/images/Search-Results.png" alt="">
                         </figure>
                     </div>
                 </div>
@@ -264,7 +275,7 @@
             <div class="container">
                 <div class="row">
                     <p class="label-result">
-                        نتائج بحث حوالي <strong>297</strong> نتيجة (صورة دم كاملة)
+                        نتائج بحث حوالي <strong>297</strong> نتيجة (مركز إصدار إقامة )
                     </p>
                     <div class="col-lg-4">
                         <div class="inner inner-filter">
@@ -403,41 +414,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="inner inner-required">
-                            <div class="card-box">
-                                <div class="header-card">
-                                    <h5>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23.064" viewBox="0 0 24 23.064">
-                                        <path id="Union_11" data-name="Union 11"
-                                            d="M17.283,21.3a1.764,1.764,0,1,1,1.763,1.764A1.763,1.763,0,0,1,17.283,21.3Zm-10.715,0a1.764,1.764,0,1,1,1.764,1.764A1.763,1.763,0,0,1,6.568,21.3Zm-1.05-3.723A2.086,2.086,0,0,1,5.58,14.92l.1-.1,1.286-1.05L3.37,2.4.556,1.54A.787.787,0,0,1,1.018.035l3.214.988a.782.782,0,0,1,.517.509L8.332,12.874H20.089l2.093-9.405H7.4L6.89,1.9H23.208a.806.806,0,0,1,.776.956L21.5,13.83a.784.784,0,0,1-.784.611H8.614L6.725,16.009a.525.525,0,0,0,.439.784H20.371a.784.784,0,0,1,0,1.567H7.289l-.107,0A2.155,2.155,0,0,1,5.518,17.577Z"
-                                            transform="translate(0)" fill="#fff" />
-                                    </svg> التحاليل المطلوبة
-                                    </h5>
-                                </div>
-                                <div class="content-card px-0 pt-3">
-
-                                    <div class="item d-flex justify-content-between align-content-around px-3 mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19.77" viewBox="0 0 16 19.77">
-                                            <g id="microscope" transform="translate(-1 -0.001)">
-                                                <path id="Union_13" data-name="Union 13"
-                                                    d="M.819,19.77a.941.941,0,0,1,0-1.866H9.23A6.735,6.735,0,0,1,2.719,13.15H.615a.595.595,0,1,1,0-1.189H5.539a.595.595,0,1,1,0,1.189H4.011A5.528,5.528,0,0,0,9.23,16.716a5.62,5.62,0,0,0,3.916-1.567,5.242,5.242,0,0,0,1.622-3.783,5.342,5.342,0,0,0-3.251-4.871L7.927,9.961a.629.629,0,0,1-.87,0l-.435-.419L5.194,10.921a.629.629,0,0,1-.87,0L2.583,9.24a.579.579,0,0,1,0-.84L4.012,7.021,3.577,6.6a.578.578,0,0,1,0-.84L9.046.479a.631.631,0,0,1,.87,0L10.351.9,11.1.175a.629.629,0,0,1,.87,0l1.74,1.68a.58.58,0,0,1,0,.84l-.752.726.435.419a.579.579,0,0,1,0,.84l-.961.929A6.508,6.508,0,0,1,16,11.368,6.656,6.656,0,0,1,9.23,17.9h4.691a.941.941,0,0,1,0,1.866ZM3.889,8.82l.869.84L6.131,8.336l-.825-.884Zm7.665-5.691a.6.6,0,0,1,.1-.128l.751-.726-.87-.84-.751.726a.609.609,0,0,1-.076.062Z"
-                                                    transform="translate(1 0.001)" fill="#0065ff" />
-                                            </g>
-                                        </svg>
-                                        <p class="w-100 mx-3">مسحة معتمدة للسفر</p>
-                                        <svg class="pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="18.667" viewBox="0 0 16 18.667">
-                                            <g id="delete" transform="translate(4.351 1.6)">
-                                                <path id="Union_12" data-name="Union 12"
-                                                    d="M2.667,18.667a1.32,1.32,0,0,1-1.334-1.306V4.306H0V3H16V4.306H14.667V17.361a1.32,1.32,0,0,1-1.334,1.306Zm0-1.306H13.333V4.306H2.667Zm6.56-2.32v-9h1.5v9Zm-3.955,0v-9h1.5v9ZM5,1.5V0h6V1.5Z"
-                                                    transform="translate(-4.351 -1.6)" fill="red" />
-                                            </g>
-                                        </svg>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="col-lg-8" id="myUL">
                         <!-- item -->
@@ -445,13 +421,13 @@
                             <div class="row">
                                 <div class="col-lg-2 p-lg-0">
                                     <div class="avatar text-center">
-                                        <img src="./assets/./images/sun-lab.png" alt="">
+                                        <img src="./assets/./images/amercenter.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-7 p-lg-0 detail">
                                     <h6 class="title-card">
-                                        مسحة معتمدة للسفر
-                                        <span>(معمل الشمس)</span>
+                                        إصدار إقامة
+                                        <span>(مركز امر)</span>
                                     </h6>
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
@@ -535,13 +511,13 @@
                             <div class="row">
                                 <div class="col-lg-2 p-lg-0">
                                     <div class="avatar text-center">
-                                        <img src="./assets/./images/fath-lab.png" alt="">
+                                        <img src="./assets/./images/saudi-center.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-7 p-lg-0 detail">
                                     <h6 class="title-card">
-                                        مسحة عادية (اطمئنان) PCR
-                                        <span>(معمل الفتح)</span>
+                                        إصدار إقامة
+                                        <span>(مراكز الاتصال)</span>
                                     </h6>
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
@@ -625,13 +601,13 @@
                             <div class="row">
                                 <div class="col-lg-2 p-lg-0">
                                     <div class="avatar text-center">
-                                        <img src="./assets/./images/sun-lab.png" alt="">
+                                        <img src="./assets/./images/amercenter.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-7 p-lg-0 detail">
                                     <h6 class="title-card">
-                                        تحليل دلالات كوفيد-19 (باقة 1) معامل الشمس
-                                        <span>(معمل الشمس)</span>
+                                        إصدار إقامة
+                                        <span>(مركز امر)</span>
                                     </h6>
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
@@ -715,13 +691,13 @@
                             <div class="row">
                                 <div class="col-lg-2 p-lg-0">
                                     <div class="avatar text-center">
-                                        <img src="./assets/./images/town-lab.png" alt="">
+                                        <img src="./assets/./images/saudi-center.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-7 p-lg-0 detail">
                                     <h6 class="title-card">
-                                        تحليل دلالات كوفيد-19 (باقة كاملة) تاون لاب
-                                        <span>(معمل تاون لاب)</span>
+                                        إصدار إقامة
+                                        <span>(مراكز الاتصال)</span>
                                     </h6>
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
@@ -898,7 +874,7 @@
             </div>
         </div>
     </section>
-  
+ 
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -918,6 +894,7 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/filter.js"></script>
     <script src="assets/js/filter.js"></script>
 
 </body>

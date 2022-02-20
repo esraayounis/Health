@@ -60,12 +60,20 @@ h6 {
   padding:0!important;
 }
 
+.no-mar{
+  margin:0px;
+}
+
 .pad-r-15{
   padding-right:15px;
   padding-left:unset;
 }
 .txt-center{
   text-align: center;
+}
+
+.align-center{
+  align-items: center;
 }
 
 .mar-top-15{
@@ -530,7 +538,7 @@ Desktop Navigation
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  /* height: 100vh; */
+   height: 100vh;
   background-color: white;
   /* overflow: hidden; */
   position: relative;
@@ -595,7 +603,7 @@ Desktop Navigation
 
 #hero h1 {
   font-weight: bold;
-  font-size: 39px;
+  font-size: 30px;
   color: #fff;
   position: relative;
   line-height: 1.5em;
@@ -803,6 +811,10 @@ article .nice-select2{
     right: 115%;
     left: unset;
    }
+
+   #hero .gender svg {
+    top: unset!important;
+  }
   
 }
 
@@ -1048,6 +1060,9 @@ article .nice-select2{
     .lang:hover{
       color:rgb(235, 235, 235);
     }
+    #home .card-box.p-4{
+      padding:0.5rem!important;
+    }
     
 }
   
@@ -1070,11 +1085,7 @@ article .nice-select2{
     float: none;
   }
 }
-@media (min-width: 992px) {
-  #hero h1 {
-    margin-bottom: 90px;
-  }
-}
+
 
 /* ---- Profile Menu ------ */
 
@@ -3328,25 +3339,33 @@ body {
   background-size: cover !important;
   background-repeat: no-repeat !important;
   position: relative;
+ 
 }
 
-.login-forms-pad{
-  padding: 175px 0 ; 
+.login{
+  padding:75px 0 ;
 }
 
-.login-forms-pad  .card-box{
- top:-90px; 
+.sign-up .card-body {
+  padding: 0.2rem 0 1rem 0;
 }
+.sign-up{
+  padding: 20px 0;
+}
+
+
+
 
 .login-forms .card-box {
   background-color: #fff;
   z-index: 1;
+  margin-bottom:0;
 }
 .login-forms .form-group {
   border-radius: 5px;
   background: #fff;
   border: 1px solid #707070a1;
-  height: 48px;
+  height: 40px;
   width:100%;
   font-size:14px;
   color:#8D8D8D;
@@ -3474,8 +3493,6 @@ body {
 .divider-text {
   position: relative;
   text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
 
 .divider-text span {
@@ -3509,6 +3526,12 @@ body {
   color: white;
   display: none;
 }
+
+
+.gender
+{
+  height: 38px!important;
+}
 @media (max-width: 992px) {
   #header .language a {
     display: block;
@@ -3536,7 +3559,7 @@ button.fill-face {
   font-size: 1rem;
   color: #fff;
   width: auto;
-  padding: 13px;
+  padding: 10px;
   width: 100%;
   background: #2b4b90;
   border: 0px solid;
@@ -3592,8 +3615,13 @@ button.fill-face span {
 .page-title-section .icon figure img {
   position: absolute;
   top: 80px;
-  left: -10px;
+  left: 0px;
 }
+.page-title-section .icon figure .doctor {
+  top: 70px;
+  height: 115px;
+}
+
 .page-title-section.cov .icon figure img {
   height: 106px;
   top: -24px;
@@ -3760,7 +3788,7 @@ button.fill-face span {
 }
 .hero .content-main-cats-tabs .content-sub-cats-tabs .group-select {
   text-align: right;
-  height: 60px;
+  height: 50px;
   border-radius: 10px;
   background: #fff;
   border: 1px solid #c4c4c4;
@@ -3867,20 +3895,25 @@ button.fill-face span {
 }
 .hero .content-main-cats-tabs .content-sub-cats-tabs .inner-btn .btn {
   width: 100%;
-  height: 60px;
+  height: 50px;
   background: #f00;
   font-weight: bold;
   font-size: 18px;
   color: #fff;
   border: none;
   border-radius: 10px;
-  line-height: 2.6;
+  line-height: 2.2;
 }
 
 .btn:focus {
   outline: 0;
   box-shadow: unset;
   opacity: 0.7;
+}
+
+#home .nav-tabs .py-4{
+  padding-top: 1.2rem!important;
+  padding-bottom: 1.2rem!important;
 }
 
 @media (max-width: 992px) {
@@ -5114,7 +5147,7 @@ textarea {
 .card-title {
   margin-bottom: 0.5rem;
   font-weight: 600;
-  font-size:19px;
+  font-size:18px;
   color: #000000;
 }
 
@@ -5122,6 +5155,5 @@ textarea {
   font-size: 11px;
   color: #8D8D8D;
 }
-
 
 /*# sourceMappingURL=RTL-app.css.map */

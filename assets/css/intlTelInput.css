@@ -137,6 +137,10 @@
     /* left: 0; */
 }
 
+.sign-up .iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container{
+    right: 154%;
+}
+
 .iti--allow-dropdown .iti__flag-container:hover {
     cursor: pointer;
 }
