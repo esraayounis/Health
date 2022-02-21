@@ -100,6 +100,12 @@ h6 {
   display: none!important;
 }
 
+.mar-bot{
+  margin-bottom:0!important;
+}
+.bg-red{
+  background: #FF0000!important;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -510,8 +516,9 @@ Desktop Navigation
 }
 
 .navbar-mobile .dropdown ul a {
-  padding: 10px 20px;
-  font-size: 18px !important;
+  width:100%;
+  padding: 10px;
+  font-size: 15px !important;
 }
 
 .navbar-mobile .dropdown ul a i {
@@ -1950,6 +1957,13 @@ section {
 /*--------------------------------------------------------------
 # Doctors
 --------------------------------------------------------------*/
+.doctor-img{
+  position: absolute;
+  top: 70px!important;
+  height: 115px!important;
+  left:0!important;
+}
+
 .doctors .member {
   margin-bottom: 20px;
   overflow: hidden;
@@ -2849,7 +2863,7 @@ body {
   font-size: 20px;
   color: #000;
 }
-.card-detail .value-card button {
+.card-detail .value-card .btn {
   max-width: 144px;
   width: 100%;
   height: 40px;
@@ -2858,6 +2872,7 @@ body {
   font-weight: normal;
   font-size: 11px;
   color: #fff;
+  line-height: 2.5;
   border: none;
 }
 .card-detail .value-card.react-icon svg {
@@ -2996,7 +3011,7 @@ body {
 }
 
 .c-ml-1 {
-  margin-left: 1rem !important;
+  margin: 0 1rem !important;
 }
 
 .c-mr-1 {
@@ -4057,6 +4072,15 @@ button.fill-face span {
   color: #868d9a;
   margin-right: 7px;
 }
+
+.card-detail .nice-select .current{
+  font-size: 14px;
+}
+
+.choose-time  .nice-select .current {
+  font-size: 11px;
+}
+
 .search-result-section .nice-select .list {
   right: 0;
 }
@@ -4780,6 +4804,7 @@ textarea {
   font-size: 11px;
   color: #868d9a;
   display: inline-block;
+  margin: 5px!important;
 }
 .choose-time .btn {
   width: 114px;

@@ -2893,7 +2893,7 @@ footer {
 }
 .search-result-section .nice-select .current {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 11px;
   color: #868d9a;
   margin-left: 10px;
 }
@@ -3587,6 +3587,7 @@ textarea {
   font-size: 11px;
   color: #868d9a;
   display: inline-block;
+  margin: 5px!important;
 }
 .choose-time button {
   width: 144px;
