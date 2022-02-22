@@ -34,7 +34,7 @@
 
     <!-- #End Switch LTR & RTL -->
     <link href="assets/vendor/bootstrap/css/bootstrap-utilities.min.css" rel="stylesheet">
-    
+    <link href="assets/css/intlTelInput.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
@@ -240,14 +240,39 @@
 
                     <div class="col-lg-8" id="myUL"> 
                         <!-- item -->
-                        <div class="card-box p-2 py-4 card-detail">
+                        <div class="card-box p-2 py-4 card-doctor card-detail">
                             <div class="row">
-                                <div class="col-lg-2 p-lg-0">
+                                <div class="col-lg-3 p-lg-0">
                                     <div class="avatar text-center">
-                                        <img src="./assets/./images/187.png" alt="">
+                                        <img src="./assets/./images/abdo2.png" alt="">
+                                    </div>
+                                    <div class="stars d-flex justify-content-center align-items-center mt-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <path id="star-half-o"
+                                            d="M11.4,9.326l2.471-2.521-3.423-.524-.635-.1-.288-.6L8,2.329v9.709l.567.313,3.058,1.694-.577-3.579L10.933,9.8Zm4.346-2.641-3.49,3.569.827,5.041a.817.817,0,0,1-.058.519A.351.351,0,0,1,12.7,16a.828.828,0,0,1-.384-.121L8,13.5,3.684,15.879A.83.83,0,0,1,3.3,16a.351.351,0,0,1-.327-.186.817.817,0,0,1-.058-.519l.827-5.041L.241,6.684a.612.612,0,0,1-.221-.6q.086-.277.52-.348L5.366,5,7.53.413Q7.722,0,8,0t.471.413L10.636,5l4.827.736q.433.07.519.348a.608.608,0,0,1-.231.6Z"
+                                            transform="translate(-0.001 0)" fill="#ffc000" />
+                                    </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <path id="Icon_awesome-star" data-name="Icon awesome-star"
+                                            d="M8.583.556,6.63,4.693l-4.369.666a1.013,1.013,0,0,0-.529,1.706l3.161,3.218-.748,4.546a.966.966,0,0,0,1.388,1.053l3.909-2.147,3.909,2.147a.967.967,0,0,0,1.388-1.053l-.748-4.546,3.161-3.218a1.013,1.013,0,0,0-.529-1.706l-4.369-.666L10.3.556A.94.94,0,0,0,8.583.556Z"
+                                            transform="translate(-1.441 0.001)" fill="#ffc000" />
+                                    </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <path id="Icon_awesome-star" data-name="Icon awesome-star"
+                                            d="M8.583.556,6.63,4.693l-4.369.666a1.013,1.013,0,0,0-.529,1.706l3.161,3.218-.748,4.546a.966.966,0,0,0,1.388,1.053l3.909-2.147,3.909,2.147a.967.967,0,0,0,1.388-1.053l-.748-4.546,3.161-3.218a1.013,1.013,0,0,0-.529-1.706l-4.369-.666L10.3.556A.94.94,0,0,0,8.583.556Z"
+                                            transform="translate(-1.441 0.001)" fill="#ffc000" />
+                                    </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <path id="Icon_awesome-star" data-name="Icon awesome-star"
+                                            d="M8.583.556,6.63,4.693l-4.369.666a1.013,1.013,0,0,0-.529,1.706l3.161,3.218-.748,4.546a.966.966,0,0,0,1.388,1.053l3.909-2.147,3.909,2.147a.967.967,0,0,0,1.388-1.053l-.748-4.546,3.161-3.218a1.013,1.013,0,0,0-.529-1.706l-4.369-.666L10.3.556A.94.94,0,0,0,8.583.556Z"
+                                            transform="translate(-1.441 0.001)" fill="#ffc000" />
+                                    </svg>
+                                    </div>
+                                    <div class=" mt-3">
+                                        <p class="num-visitors text-center mb-0">التقييم العام من 300 زاروا الدكتور</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-7 p-lg-0 detail">
+                                <div class="col-lg-6 p-lg-0 detail">
                                     <h6 class="title-card">
                                         شادي السيد عبدالعزيز
                                     </h6>
@@ -278,41 +303,7 @@
                                         <path id="__TEMP__SVG__" d="M12.75,2.25c-3.313,0-6,2.3-6,5.143,0,4.571,6,10.857,6,10.857s6-6.286,6-10.857C18.75,4.554,16.063,2.25,12.75,2.25Zm0,8a2.345,2.345,0,0,1-2.4-2.286,2.4,2.4,0,0,1,4.8,0A2.348,2.348,0,0,1,12.75,10.25Z" transform="translate(-6.75 -2.25)" fill="#0065ff"></path>
                                     </svg>
                                         <p>ميدان المحطة المنصورة</p>
-                                    </div>
-
-                                    <div class="d-flex align-items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path id="star-half-o"
-                                                d="M11.4,9.326l2.471-2.521-3.423-.524-.635-.1-.288-.6L8,2.329v9.709l.567.313,3.058,1.694-.577-3.579L10.933,9.8Zm4.346-2.641-3.49,3.569.827,5.041a.817.817,0,0,1-.058.519A.351.351,0,0,1,12.7,16a.828.828,0,0,1-.384-.121L8,13.5,3.684,15.879A.83.83,0,0,1,3.3,16a.351.351,0,0,1-.327-.186.817.817,0,0,1-.058-.519l.827-5.041L.241,6.684a.612.612,0,0,1-.221-.6q.086-.277.52-.348L5.366,5,7.53.413Q7.722,0,8,0t.471.413L10.636,5l4.827.736q.433.07.519.348a.608.608,0,0,1-.231.6Z"
-                                                transform="translate(-0.001)" fill="#0065ff" />
-                                        </svg>
-                                        <p>التقييم</p>
-                                        <div class="stars">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path id="star-half-o"
-                                                    d="M11.4,9.326l2.471-2.521-3.423-.524-.635-.1-.288-.6L8,2.329v9.709l.567.313,3.058,1.694-.577-3.579L10.933,9.8Zm4.346-2.641-3.49,3.569.827,5.041a.817.817,0,0,1-.058.519A.351.351,0,0,1,12.7,16a.828.828,0,0,1-.384-.121L8,13.5,3.684,15.879A.83.83,0,0,1,3.3,16a.351.351,0,0,1-.327-.186.817.817,0,0,1-.058-.519l.827-5.041L.241,6.684a.612.612,0,0,1-.221-.6q.086-.277.52-.348L5.366,5,7.53.413Q7.722,0,8,0t.471.413L10.636,5l4.827.736q.433.07.519.348a.608.608,0,0,1-.231.6Z"
-                                                    transform="translate(-0.001 0)" fill="#ffc000" />
-                                            </svg>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path id="Icon_awesome-star" data-name="Icon awesome-star"
-                                                    d="M8.583.556,6.63,4.693l-4.369.666a1.013,1.013,0,0,0-.529,1.706l3.161,3.218-.748,4.546a.966.966,0,0,0,1.388,1.053l3.909-2.147,3.909,2.147a.967.967,0,0,0,1.388-1.053l-.748-4.546,3.161-3.218a1.013,1.013,0,0,0-.529-1.706l-4.369-.666L10.3.556A.94.94,0,0,0,8.583.556Z"
-                                                    transform="translate(-1.441 0.001)" fill="#ffc000" />
-                                            </svg>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path id="Icon_awesome-star" data-name="Icon awesome-star"
-                                                    d="M8.583.556,6.63,4.693l-4.369.666a1.013,1.013,0,0,0-.529,1.706l3.161,3.218-.748,4.546a.966.966,0,0,0,1.388,1.053l3.909-2.147,3.909,2.147a.967.967,0,0,0,1.388-1.053l-.748-4.546,3.161-3.218a1.013,1.013,0,0,0-.529-1.706l-4.369-.666L10.3.556A.94.94,0,0,0,8.583.556Z"
-                                                    transform="translate(-1.441 0.001)" fill="#ffc000" />
-                                            </svg>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path id="Icon_awesome-star" data-name="Icon awesome-star"
-                                                    d="M8.583.556,6.63,4.693l-4.369.666a1.013,1.013,0,0,0-.529,1.706l3.161,3.218-.748,4.546a.966.966,0,0,0,1.388,1.053l3.909-2.147,3.909,2.147a.967.967,0,0,0,1.388-1.053l-.748-4.546,3.161-3.218a1.013,1.013,0,0,0-.529-1.706l-4.369-.666L10.3.556A.94.94,0,0,0,8.583.556Z"
-                                                    transform="translate(-1.441 0.001)" fill="#ffc000" />
-                                            </svg>
-                                        </div>
-                                        <span class="small">
-                                            التقييم العام من <span>300</span> زاروا امختبر
-                                        </span>
-                                    </div>
+                                </div>
 
                                 </div>
                                 <div class="col-lg-3 value-card react-icon text-center">
@@ -529,7 +520,7 @@
                     </div>
                     <div class="col-lg-4">
 
-                        <div class="inner card-tabs">
+                        <div class="inner card-tabs info-book-special">
                             <div class="card-box">
                                 <div class="header-card">
                                     <h5 class="text-center mb-0">
@@ -546,7 +537,7 @@
                                                         d="M26.689,14.767,15.89,3.382a1.283,1.283,0,0,0-1.783,0L3.308,14.767a1.092,1.092,0,0,0-.2,1.225,1.2,1.2,0,0,0,1.1.675H6.6v7.97a1.17,1.17,0,0,0,1.2,1.139H22.2a1.17,1.17,0,0,0,1.2-1.139v-7.97h2.4a1.2,1.2,0,0,0,1.1-.674,1.092,1.092,0,0,0-.207-1.226ZM19.8,17.806H16.2v3.416H13.8V17.806H10.2V15.529h3.6V12.113h2.4v3.416h3.6Z"
                                                         transform="translate(-2.999 -3.021)" fill="" />
                                                 </svg>
-                                                <p>زيارة المعمل</p>
+                                                <p>زيارة عيادة</p>
                                             </button>
                                             <button class="nav-link pt-2 p-0 col" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.999"
@@ -564,7 +555,7 @@
                                                         d="M17.4,26H6.6V23.213a3.944,3.944,0,0,1,1.108-2.756,3.7,3.7,0,0,1,2.672-1.143h3.24a3.7,3.7,0,0,1,2.671,1.143A3.944,3.944,0,0,1,17.4,23.213V26Zm-6.915-2.8H11.7v1.273H12.3V23.2h1.212v-.636H12.3V21.294H11.7v1.272H10.485ZM4.8,24a2.4,2.4,0,0,1-2.4-2.4V13.2H1.2a1.2,1.2,0,0,1-.849-2.048l10.8-10.8a1.2,1.2,0,0,1,1.7,0l10.8,10.8A1.2,1.2,0,0,1,22.8,13.2H21.6v8.4A2.4,2.4,0,0,1,19.2,24V10.1L12,2.9,4.8,10.1V24h0Zm3.421-9.7A3.841,3.841,0,0,1,12,10.4a3.9,3.9,0,0,1,0,7.8A3.841,3.841,0,0,1,8.221,14.3Z"
                                                         transform="translate(0)" fill="" />
                                                 </svg>
-                                                <p>زيارة منزلية</p>
+                                                <p>استشارة هاتفية</p>
                                             </button>
                                         </div>
                                     </div>
@@ -628,74 +619,98 @@
                                                             </svg>
 
                                                             <p class="text-center pt-4">
-                                                                تكلفة التحاليل:
+                                                                السعر:
                                                                 <span>300 ريال</span>
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card-date py-4">
-                                                    <h3 class="text-center">اختر الموعد المناسب لك</h3>
-                                                    <div class="owl-carousel owl-theme owl-choose-data position-relative">
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ،21/يوليو</p>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ، 24/يوليو</p>
-                                                            </div>
-                                                        </div>
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ، 4/يوليو</p>
-                                                            </div>
-                                                        </div>
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ، 14/يوليو</p>
-                                                            </div>
-                                                        </div>
-
+                                                
+                                                <div class="choose-time">
+                                                    <h3 class="my-3">ادخــــل بـــيــــانـــات الــحــجــز</h3>
+                                                    <p class="text-center w-100 font-normal">اليوم ، 28،يوليو في تمام الساعة الحادية عشر صباحاً
+                                                    </p>
+                                                    <div class="text-center py-3">
+                                                        <button class="fill-face "  onclick="window.location.href='https://www.facebook.com/'">
+                                                            إملا بياناتك بواسطة فيسبوك
+                                                            <span>|</span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.665" height="24"
+                                                                viewBox="0 0 11.665 24">
+                                                                <path id="facebook"
+                                                                    d="M2.978,24V12.739H0V8.684H2.978V5.221C2.978,2.5,4.737,0,8.79,0a24.609,24.609,0,0,1,2.854.157l-.1,3.787s-1.237-.012-2.588-.012c-1.461,0-1.7.673-1.7,1.791V8.684h4.4l-.191,4.055H7.265V24H2.978"
+                                                                    fill="#fff" />
+                                                            </svg>
+                                                        </button>
                                                     </div>
-                                                    <div class="cards">
-                                                        <div class="row">
-                                                            <div class="col-4 p-0">
-                                                                <div class="inner">
-                                                                    <h6>Morning</h6>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
+                                                   
+                                                    <div class="book-form py-3 px-4 pt-0">
+                                                        <hr class="my-4">
+                                                        <span class="or">أو</span>
+                                                        <form action="">
+                                                            <div class="nice-select nice-select2 w-100 row-input" tabindex="0">
+                                                                <svg style="transform: none !important;" class="position-static" xmlns="http://www.w3.org/2000/svg" width="12.8" height="16" viewBox="0 0 12.8 16">
+                                                                    <path id="document"
+                                                                        d="M14.8,4.6H7.6V17.4h9.6V7H14.8ZM7.6,3h8l3.2,3.2V17.4A1.6,1.6,0,0,1,17.2,19H7.6A1.6,1.6,0,0,1,6,17.4V4.6A1.6,1.6,0,0,1,7.6,3Zm1.6,7.2h6.4v1.6H9.2Zm0,3.2h6.4V15H9.2Z"
+                                                                        transform="translate(-6 -3)" fill="#868d9a" />
+                                                                </svg>
+                                                                <span class="current">
+                                                                    هل الحجز لك ام شخص آخر
+                                                                </span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
+                                                                    <path id="arrow-down-fill"
+                                                                        d="M12.879,20a1.036,1.036,0,0,1-.86-.569L9.3,14.9a2.451,2.451,0,0,1-.168-1.964A1.193,1.193,0,0,1,10.156,12H15.6a1.193,1.193,0,0,1,1.028.933,2.451,2.451,0,0,1-.168,1.964l-2.722,4.533A1.036,1.036,0,0,1,12.879,20Z"
+                                                                        transform="translate(-8.998 -12)" fill="#868d9a"></path>
+                                                                </svg>
+                                                                <ul class="list">
+                                                                    <li data-value="1" class="option selected focus disabled">
+                                                                        هل الحجز لك ام شخص آخر
+                                                                    </li>
+                                                                    <li data-value="1" class="option">لنفسي</li>
+                                                                    <li data-value="1" class="option">لشخص أخر</li>
+                                                                </ul>
+                                                            </div>
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg id="user-avatar-filled-alt" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                                    <path id="Union_48" data-name="Union 48"
+                                                                        d="M0,8a8,8,0,1,1,8,8A8,8,0,0,1,0,8ZM1.586,5.541A6.857,6.857,0,0,0,3.43,13.1v-.333c0-.008,0-.014,0-.019A2.973,2.973,0,0,1,6.285,9.715h3.43a2.977,2.977,0,0,1,2.857,3.035V13.1A6.86,6.86,0,1,0,1.586,5.541Zm3.557.174A2.857,2.857,0,1,1,8,8.572,2.857,2.857,0,0,1,5.143,5.715Z"
+                                                                        fill="#868d9a" />
+                                                                </svg>
+                                                                <input class="h-100 w-100 px-2" type="text" placeholder="اسم المريض كاملا">
+                                                            </div>
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16.014" viewBox="0 0 10 16.014">
+                                                                    <path id="mobile-solid" d="M17.889,4H10.111A1.128,1.128,0,0,0,9,5.144V18.87a1.128,1.128,0,0,0,1.111,1.144h7.778A1.128,1.128,0,0,0,19,18.87V5.144A1.128,1.128,0,0,0,17.889,4ZM14.556,18.87H13.444V17.726h1.111Zm-4.444-2.288V5.144h7.778V16.583Z" transform="translate(-9 -4)" fill="#8d8d8d"/>
+                                                                </svg> 
+                                                                <input name="" id="phone1" class="h-100 w-100 px-2" placeholder="رقم الموبيل" type="tel">
+                                                            </div>
+                                                            
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                                                                    <path id="mail"
+                                                                        d="M16.25,5.625h-12a1.958,1.958,0,0,0-2,1.909v8.181a1.958,1.958,0,0,0,2,1.909h12a1.958,1.958,0,0,0,2-1.909V7.534a1.958,1.958,0,0,0-2-1.909Zm-.506,3.158L10.6,12.6a.593.593,0,0,1-.7,0L4.757,8.783a.529.529,0,0,1-.1-.765.59.59,0,0,1,.8-.1l4.792,3.558,4.792-3.558a.59.59,0,0,1,.8.1.529.529,0,0,1-.1.765Z"
+                                                                        transform="translate(-2.25 -5.625)" fill="#868d9a" />
+                                                                </svg>
+                                                                <input class="h-100 w-100 px-2" type="email" placeholder="البريد الإلكتروني">
+                                                            </div>
+            
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <a class="mt-4 w-100 bg-red btn" href="doctor-reserve.html">أحجز الآن</a>
+                                                                </div>
+                                                                <div class="col-5">
+                                                                    <button class="mt-4 btn-cancel btn">إلغاء</button>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-4 p-0">
-                                                                <div class="inner">
-                                                                    <h6>Afternoon</h6>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 p-0">
-                                                                <div class="inner">
-                                                                    <h6>Evening & Night</h6>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <button class="book-date">أحجز الآن</button>
+                                                        </form>
                                                     </div>
-                                                </div>
-                                                <div class="notes">
-                                                    <p>احجز أونلاين، ادفع في المعمل!</p>
+                                                    <hr>
+                                                    <p class="text-center notes w-100">
+                                                        هنوصلك بالدكتور في الميعاد اللي اخترته.
+                                                        <br> من فضلك اتأكد ان تليفونك مفتوح في الميعاد المحدد
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -717,96 +732,137 @@
                                                                 <g id="cash-outline" transform="translate(-1.125 -4.5)">
                                                                     <path id="Path_16619" data-name="Path 16619"
                                                                         d="M3.375,5.625h29.25A1.125,1.125,0,0,1,33.75,6.75V22.5a1.125,1.125,0,0,1-1.125,1.125H3.375A1.125,1.125,0,0,1,2.25,22.5V6.75A1.125,1.125,0,0,1,3.375,5.625Z"
-                                                                        fill="none" stroke="#0065ff" stroke-linejoin="round" stroke-width="2.25" />
-                                                                    <path id="Path_16620" data-name="Path 16620" d="M4.5,27h27" fill="none" stroke="#0065ff"
-                                                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" />
-                                                                    <path id="Path_16621" data-name="Path 16621" d="M6.75,30.375h22.5" fill="none" stroke="#0065ff"
-                                                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" />
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linejoin="round" stroke-width="2.25" />
+                                                                    <path id="Path_16620" data-name="Path 16620"
+                                                                        d="M4.5,27h27" fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2.25" />
+                                                                    <path id="Path_16621" data-name="Path 16621"
+                                                                        d="M6.75,30.375h22.5" fill="none"
+                                                                        stroke="#0065ff" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-width="2.25" />
                                                                     <path id="Path_16622" data-name="Path 16622"
-                                                                        d="M23.625,14.625A5.625,5.625,0,1,1,18,9a5.625,5.625,0,0,1,5.625,5.625Z" fill="none"
-                                                                        stroke="#0065ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" />
-                                                                    <path id="Path_16623" data-name="Path 16623" d="M33.75,11.25a5.625,5.625,0,0,1-5.625-5.625"
-                                                                        fill="none" stroke="#0065ff" stroke-linecap="round" stroke-linejoin="round"
+                                                                        d="M23.625,14.625A5.625,5.625,0,1,1,18,9a5.625,5.625,0,0,1,5.625,5.625Z"
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
                                                                         stroke-width="2.25" />
-                                                                    <path id="Path_16624" data-name="Path 16624" d="M2.25,11.25A5.625,5.625,0,0,0,7.875,5.625"
-                                                                        fill="none" stroke="#0065ff" stroke-linecap="round" stroke-linejoin="round"
+                                                                    <path id="Path_16623" data-name="Path 16623"
+                                                                        d="M33.75,11.25a5.625,5.625,0,0,1-5.625-5.625"
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
                                                                         stroke-width="2.25" />
-                                                                    <path id="Path_16625" data-name="Path 16625" d="M33.75,18a5.625,5.625,0,0,0-5.625,5.625" fill="none"
-                                                                        stroke="#0065ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" />
-                                                                    <path id="Path_16626" data-name="Path 16626" d="M2.25,18a5.625,5.625,0,0,1,5.625,5.625" fill="none"
-                                                                        stroke="#0065ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" />
+                                                                    <path id="Path_16624" data-name="Path 16624"
+                                                                        d="M2.25,11.25A5.625,5.625,0,0,0,7.875,5.625"
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2.25" />
+                                                                    <path id="Path_16625" data-name="Path 16625"
+                                                                        d="M33.75,18a5.625,5.625,0,0,0-5.625,5.625"
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2.25" />
+                                                                    <path id="Path_16626" data-name="Path 16626"
+                                                                        d="M2.25,18a5.625,5.625,0,0,1,5.625,5.625"
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2.25" />
                                                                 </g>
                                                             </svg>
 
                                                             <p class="text-center pt-4">
-                                                                تكلفة التحاليل:
+                                                                السعر:
                                                                 <span>300 ريال</span>
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card-date py-4">
-                                                    <h3 class="text-center">اختر الموعد المناسب لك</h3>
-                                                    <div class="owl-carousel owl-theme owl-choose-data position-relative">
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ،21/يوليو</p>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ، 24/يوليو</p>
-                                                            </div>
-                                                        </div>
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ، 4/يوليو</p>
-                                                            </div>
-                                                        </div>
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ، 14/يوليو</p>
-                                                            </div>
-                                                        </div>
-
+                                                
+                                                <div class="choose-time">
+                                                    <h3 class="my-3">ادخــــل بـــيــــانـــات الــحــجــز</h3>
+                                                    <p class="text-center w-100 font-normal">اليوم ، 28،يوليو في تمام الساعة الحادية عشر صباحاً
+                                                    </p>
+                                                    <div class="text-center py-3">
+                                                        <button class="fill-face "  onclick="window.location.href='https://www.facebook.com/'">
+                                                            إملا بياناتك بواسطة فيسبوك
+                                                            <span>|</span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.665" height="24"
+                                                                viewBox="0 0 11.665 24">
+                                                                <path id="facebook"
+                                                                    d="M2.978,24V12.739H0V8.684H2.978V5.221C2.978,2.5,4.737,0,8.79,0a24.609,24.609,0,0,1,2.854.157l-.1,3.787s-1.237-.012-2.588-.012c-1.461,0-1.7.673-1.7,1.791V8.684h4.4l-.191,4.055H7.265V24H2.978"
+                                                                    fill="#fff" />
+                                                            </svg>
+                                                        </button>
                                                     </div>
-                                                    <div class="cards">
-                                                        <div class="row">
-                                                            <div class="col-4 p-0">
-                                                                <div class="inner">
-                                                                    <h6>Morning</h6>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
+                                                   
+                                                    <div class="book-form py-3 px-4 pt-0">
+                                                        <hr class="my-4">
+                                                        <span class="or">أو</span>
+                                                        <form action="">
+                                                            <div class="nice-select nice-select2 w-100 row-input" tabindex="0">
+                                                                <svg style="transform: none !important;" class="position-static" xmlns="http://www.w3.org/2000/svg" width="12.8" height="16" viewBox="0 0 12.8 16">
+                                                                    <path id="document"
+                                                                        d="M14.8,4.6H7.6V17.4h9.6V7H14.8ZM7.6,3h8l3.2,3.2V17.4A1.6,1.6,0,0,1,17.2,19H7.6A1.6,1.6,0,0,1,6,17.4V4.6A1.6,1.6,0,0,1,7.6,3Zm1.6,7.2h6.4v1.6H9.2Zm0,3.2h6.4V15H9.2Z"
+                                                                        transform="translate(-6 -3)" fill="#868d9a" />
+                                                                </svg>
+                                                                <span class="current">
+                                                                    هل الحجز لك ام شخص آخر
+                                                                </span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
+                                                                    <path id="arrow-down-fill"
+                                                                        d="M12.879,20a1.036,1.036,0,0,1-.86-.569L9.3,14.9a2.451,2.451,0,0,1-.168-1.964A1.193,1.193,0,0,1,10.156,12H15.6a1.193,1.193,0,0,1,1.028.933,2.451,2.451,0,0,1-.168,1.964l-2.722,4.533A1.036,1.036,0,0,1,12.879,20Z"
+                                                                        transform="translate(-8.998 -12)" fill="#868d9a"></path>
+                                                                </svg>
+                                                                <ul class="list">
+                                                                    <li data-value="1" class="option selected focus disabled">
+                                                                        هل الحجز لك ام شخص آخر
+                                                                    </li>
+                                                                    <li data-value="1" class="option">لنفسي</li>
+                                                                    <li data-value="1" class="option">لشخص أخر</li>
+                                                                </ul>
+                                                            </div>
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg id="user-avatar-filled-alt" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                                    <path id="Union_48" data-name="Union 48"
+                                                                        d="M0,8a8,8,0,1,1,8,8A8,8,0,0,1,0,8ZM1.586,5.541A6.857,6.857,0,0,0,3.43,13.1v-.333c0-.008,0-.014,0-.019A2.973,2.973,0,0,1,6.285,9.715h3.43a2.977,2.977,0,0,1,2.857,3.035V13.1A6.86,6.86,0,1,0,1.586,5.541Zm3.557.174A2.857,2.857,0,1,1,8,8.572,2.857,2.857,0,0,1,5.143,5.715Z"
+                                                                        fill="#868d9a" />
+                                                                </svg>
+                                                                <input class="h-100 w-100 px-2" type="text" placeholder="اسم المريض كاملا">
+                                                            </div>
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16.014" viewBox="0 0 10 16.014">
+                                                                    <path id="mobile-solid" d="M17.889,4H10.111A1.128,1.128,0,0,0,9,5.144V18.87a1.128,1.128,0,0,0,1.111,1.144h7.778A1.128,1.128,0,0,0,19,18.87V5.144A1.128,1.128,0,0,0,17.889,4ZM14.556,18.87H13.444V17.726h1.111Zm-4.444-2.288V5.144h7.778V16.583Z" transform="translate(-9 -4)" fill="#8d8d8d"/>
+                                                                </svg> 
+                                                                <input name="" id="phone2" class="h-100 w-100 px-2" placeholder="رقم الموبيل" type="tel">
+                                                            </div>
+                                                            
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                                                                    <path id="mail"
+                                                                        d="M16.25,5.625h-12a1.958,1.958,0,0,0-2,1.909v8.181a1.958,1.958,0,0,0,2,1.909h12a1.958,1.958,0,0,0,2-1.909V7.534a1.958,1.958,0,0,0-2-1.909Zm-.506,3.158L10.6,12.6a.593.593,0,0,1-.7,0L4.757,8.783a.529.529,0,0,1-.1-.765.59.59,0,0,1,.8-.1l4.792,3.558,4.792-3.558a.59.59,0,0,1,.8.1.529.529,0,0,1-.1.765Z"
+                                                                        transform="translate(-2.25 -5.625)" fill="#868d9a" />
+                                                                </svg>
+                                                                <input class="h-100 w-100 px-2" type="email" placeholder="البريد الإلكتروني">
+                                                            </div>
+            
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <a class="mt-4 w-100 bg-red btn" href="doctor-reserve.html">أحجز الآن</a>
+                                                                </div>
+                                                                <div class="col-5">
+                                                                    <button class="mt-4 btn-cancel btn">إلغاء</button>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-4 p-0">
-                                                                <div class="inner">
-                                                                    <h6>Afternoon</h6>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 p-0">
-                                                                <div class="inner">
-                                                                    <h6>Evening & Night</h6>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <button class="book-date">أحجز الآن</button>
+                                                        </form>
                                                     </div>
-                                                </div>
-                                                <div class="notes">
-                                                    <p>جي إن بي سوف تؤكد حجر مع دكتور شادي علي عنوانك المدرج</p>
+                                                    <hr>
+                                                    <p class="text-center notes w-100">
+                                                        هنوصلك بالدكتور في الميعاد اللي اخترته.
+                                                        <br> من فضلك اتأكد ان تليفونك مفتوح في الميعاد المحدد
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="nav-phone" role="tabpanel" aria-labelledby="nav-phone-tab">
@@ -828,96 +884,136 @@
                                                                 <g id="cash-outline" transform="translate(-1.125 -4.5)">
                                                                     <path id="Path_16619" data-name="Path 16619"
                                                                         d="M3.375,5.625h29.25A1.125,1.125,0,0,1,33.75,6.75V22.5a1.125,1.125,0,0,1-1.125,1.125H3.375A1.125,1.125,0,0,1,2.25,22.5V6.75A1.125,1.125,0,0,1,3.375,5.625Z"
-                                                                        fill="none" stroke="#0065ff" stroke-linejoin="round" stroke-width="2.25" />
-                                                                    <path id="Path_16620" data-name="Path 16620" d="M4.5,27h27" fill="none" stroke="#0065ff"
-                                                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" />
-                                                                    <path id="Path_16621" data-name="Path 16621" d="M6.75,30.375h22.5" fill="none" stroke="#0065ff"
-                                                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" />
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linejoin="round" stroke-width="2.25" />
+                                                                    <path id="Path_16620" data-name="Path 16620"
+                                                                        d="M4.5,27h27" fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2.25" />
+                                                                    <path id="Path_16621" data-name="Path 16621"
+                                                                        d="M6.75,30.375h22.5" fill="none"
+                                                                        stroke="#0065ff" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-width="2.25" />
                                                                     <path id="Path_16622" data-name="Path 16622"
-                                                                        d="M23.625,14.625A5.625,5.625,0,1,1,18,9a5.625,5.625,0,0,1,5.625,5.625Z" fill="none"
-                                                                        stroke="#0065ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" />
-                                                                    <path id="Path_16623" data-name="Path 16623" d="M33.75,11.25a5.625,5.625,0,0,1-5.625-5.625"
-                                                                        fill="none" stroke="#0065ff" stroke-linecap="round" stroke-linejoin="round"
+                                                                        d="M23.625,14.625A5.625,5.625,0,1,1,18,9a5.625,5.625,0,0,1,5.625,5.625Z"
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
                                                                         stroke-width="2.25" />
-                                                                    <path id="Path_16624" data-name="Path 16624" d="M2.25,11.25A5.625,5.625,0,0,0,7.875,5.625"
-                                                                        fill="none" stroke="#0065ff" stroke-linecap="round" stroke-linejoin="round"
+                                                                    <path id="Path_16623" data-name="Path 16623"
+                                                                        d="M33.75,11.25a5.625,5.625,0,0,1-5.625-5.625"
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
                                                                         stroke-width="2.25" />
-                                                                    <path id="Path_16625" data-name="Path 16625" d="M33.75,18a5.625,5.625,0,0,0-5.625,5.625" fill="none"
-                                                                        stroke="#0065ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" />
-                                                                    <path id="Path_16626" data-name="Path 16626" d="M2.25,18a5.625,5.625,0,0,1,5.625,5.625" fill="none"
-                                                                        stroke="#0065ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" />
+                                                                    <path id="Path_16624" data-name="Path 16624"
+                                                                        d="M2.25,11.25A5.625,5.625,0,0,0,7.875,5.625"
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2.25" />
+                                                                    <path id="Path_16625" data-name="Path 16625"
+                                                                        d="M33.75,18a5.625,5.625,0,0,0-5.625,5.625"
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2.25" />
+                                                                    <path id="Path_16626" data-name="Path 16626"
+                                                                        d="M2.25,18a5.625,5.625,0,0,1,5.625,5.625"
+                                                                        fill="none" stroke="#0065ff"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2.25" />
                                                                 </g>
                                                             </svg>
 
                                                             <p class="text-center pt-4">
-                                                                تكلفة التحاليل:
+                                                                السعر:
                                                                 <span>300 ريال</span>
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card-date py-4">
-                                                    <h3 class="text-center">اختر الموعد المناسب لك</h3>
-                                                    <div class="owl-carousel owl-theme owl-choose-data position-relative">
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ،21/يوليو</p>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ، 24/يوليو</p>
-                                                            </div>
-                                                        </div>
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ، 4/يوليو</p>
-                                                            </div>
-                                                        </div>
-                                                        <!-- item -->
-                                                        <div class="item">
-                                                            <div class="inner-item">
-                                                                <p>اليوم ، 14/يوليو</p>
-                                                            </div>
-                                                        </div>
-
+                                                
+                                                <div class="choose-time">
+                                                    <h3 class="my-3">ادخــــل بـــيــــانـــات الــحــجــز</h3>
+                                                    <p class="text-center w-100 font-normal">اليوم ، 28،يوليو في تمام الساعة الحادية عشر صباحاً
+                                                    </p>
+                                                    <div class="text-center py-3">
+                                                        <button class="fill-face "  onclick="window.location.href='https://www.facebook.com/'">
+                                                            إملا بياناتك بواسطة فيسبوك
+                                                            <span>|</span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.665" height="24"
+                                                                viewBox="0 0 11.665 24">
+                                                                <path id="facebook"
+                                                                    d="M2.978,24V12.739H0V8.684H2.978V5.221C2.978,2.5,4.737,0,8.79,0a24.609,24.609,0,0,1,2.854.157l-.1,3.787s-1.237-.012-2.588-.012c-1.461,0-1.7.673-1.7,1.791V8.684h4.4l-.191,4.055H7.265V24H2.978"
+                                                                    fill="#fff" />
+                                                            </svg>
+                                                        </button>
                                                     </div>
-                                                    <div class="cards">
-                                                        <div class="row">
-                                                            <div class="col-4 p-0">
-                                                                <div class="inner">
-                                                                    <h6>Morning</h6>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
+                                                   
+                                                    <div class="book-form py-3 px-4 pt-0">
+                                                        <hr class="my-4">
+                                                        <span class="or">أو</span>
+                                                        <form action="">
+                                                            <div class="nice-select nice-select2 w-100 row-input" tabindex="0">
+                                                                <svg style="transform: none !important;" class="position-static" xmlns="http://www.w3.org/2000/svg" width="12.8" height="16" viewBox="0 0 12.8 16">
+                                                                    <path id="document"
+                                                                        d="M14.8,4.6H7.6V17.4h9.6V7H14.8ZM7.6,3h8l3.2,3.2V17.4A1.6,1.6,0,0,1,17.2,19H7.6A1.6,1.6,0,0,1,6,17.4V4.6A1.6,1.6,0,0,1,7.6,3Zm1.6,7.2h6.4v1.6H9.2Zm0,3.2h6.4V15H9.2Z"
+                                                                        transform="translate(-6 -3)" fill="#868d9a" />
+                                                                </svg>
+                                                                <span class="current">
+                                                                    هل الحجز لك ام شخص آخر
+                                                                </span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
+                                                                    <path id="arrow-down-fill"
+                                                                        d="M12.879,20a1.036,1.036,0,0,1-.86-.569L9.3,14.9a2.451,2.451,0,0,1-.168-1.964A1.193,1.193,0,0,1,10.156,12H15.6a1.193,1.193,0,0,1,1.028.933,2.451,2.451,0,0,1-.168,1.964l-2.722,4.533A1.036,1.036,0,0,1,12.879,20Z"
+                                                                        transform="translate(-8.998 -12)" fill="#868d9a"></path>
+                                                                </svg>
+                                                                <ul class="list">
+                                                                    <li data-value="1" class="option selected focus disabled">
+                                                                        هل الحجز لك ام شخص آخر
+                                                                    </li>
+                                                                    <li data-value="1" class="option">لنفسي</li>
+                                                                    <li data-value="1" class="option">لشخص أخر</li>
+                                                                </ul>
+                                                            </div>
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg id="user-avatar-filled-alt" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                                    <path id="Union_48" data-name="Union 48"
+                                                                        d="M0,8a8,8,0,1,1,8,8A8,8,0,0,1,0,8ZM1.586,5.541A6.857,6.857,0,0,0,3.43,13.1v-.333c0-.008,0-.014,0-.019A2.973,2.973,0,0,1,6.285,9.715h3.43a2.977,2.977,0,0,1,2.857,3.035V13.1A6.86,6.86,0,1,0,1.586,5.541Zm3.557.174A2.857,2.857,0,1,1,8,8.572,2.857,2.857,0,0,1,5.143,5.715Z"
+                                                                        fill="#868d9a" />
+                                                                </svg>
+                                                                <input class="h-100 w-100 px-2" type="text" placeholder="اسم المريض كاملا">
+                                                            </div>
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16.014" viewBox="0 0 10 16.014">
+                                                                    <path id="mobile-solid" d="M17.889,4H10.111A1.128,1.128,0,0,0,9,5.144V18.87a1.128,1.128,0,0,0,1.111,1.144h7.778A1.128,1.128,0,0,0,19,18.87V5.144A1.128,1.128,0,0,0,17.889,4ZM14.556,18.87H13.444V17.726h1.111Zm-4.444-2.288V5.144h7.778V16.583Z" transform="translate(-9 -4)" fill="#8d8d8d"/>
+                                                                </svg> 
+                                                                <input name="" id="phone3" class="h-100 w-100 px-2" placeholder="رقم الموبيل" type="tel">
+                                                            </div>
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                                                                    <path id="mail"
+                                                                        d="M16.25,5.625h-12a1.958,1.958,0,0,0-2,1.909v8.181a1.958,1.958,0,0,0,2,1.909h12a1.958,1.958,0,0,0,2-1.909V7.534a1.958,1.958,0,0,0-2-1.909Zm-.506,3.158L10.6,12.6a.593.593,0,0,1-.7,0L4.757,8.783a.529.529,0,0,1-.1-.765.59.59,0,0,1,.8-.1l4.792,3.558,4.792-3.558a.59.59,0,0,1,.8.1.529.529,0,0,1-.1.765Z"
+                                                                        transform="translate(-2.25 -5.625)" fill="#868d9a" />
+                                                                </svg>
+                                                                <input class="h-100 w-100 px-2" type="email" placeholder="البريد الإلكتروني">
+                                                            </div>
+            
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <a class="mt-4 w-100 bg-red btn" href="doctor-reserve.html">أحجز الآن</a>
+                                                                </div>
+                                                                <div class="col-5">
+                                                                    <button class="mt-4 btn-cancel btn">إلغاء</button>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-4 p-0">
-                                                                <div class="inner">
-                                                                    <h6>Afternoon</h6>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 p-0">
-                                                                <div class="inner">
-                                                                    <h6>Evening & Night</h6>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                    <button>10.00</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <button class="book-date">أحجز الآن</button>
+                                                        </form>
                                                     </div>
-                                                </div>
-                                                <div class="notes">
-                                                    <p>هنوصلك بالدكتور في الميعاد اللي اخترته. <br> من فضلك اتأكد ان تليفونك مفتوح في الميعاد المحدد</p>
+                                                    <hr>
+                                                    <p class="text-center notes w-100">
+                                                        هنوصلك بالدكتور في الميعاد اللي اخترته.
+                                                        <br> من فضلك اتأكد ان تليفونك مفتوح في الميعاد المحدد
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1030,9 +1126,27 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script> -->
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
+    <script src="assets/js/intlTelInput.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+        var input = document.querySelector("#phone1");
+        window.intlTelInput(input, {
+            onlyCountries: ['sa', 'eg', 'ur'],
+            utilsScript: "build/js/utils.js",
+        });
+        var input = document.querySelector("#phone2");
+        window.intlTelInput(input, {
+            onlyCountries: ['sa', 'eg', 'ur'],
+            utilsScript: "build/js/utils.js",
+        });
+        var input = document.querySelector("#phone3");
+        window.intlTelInput(input, {
+            onlyCountries: ['sa', 'eg', 'ur'],
+            utilsScript: "build/js/utils.js",
+        });
+    </script>
 
 </body>
 

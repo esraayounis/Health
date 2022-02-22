@@ -106,6 +106,14 @@ h6 {
 .bg-red{
   background: #FF0000!important;
 }
+
+.justify-content-center{
+  justify-content: center;
+}
+.font-normal{
+  font-weight: normal!important;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -955,9 +963,7 @@ article .nice-select2{
     right: unset;
   }
 
-  #phone{
-    top:5px;
-  }
+
 
   .contents .login-forms{
     width: 570px;
@@ -1957,6 +1963,16 @@ section {
 /*--------------------------------------------------------------
 # Doctors
 --------------------------------------------------------------*/
+.card-doctor .stars svg{
+  margin:0 5px!important;
+}
+
+.card-doctor .value-card{
+  float: left;
+  text-align: left;
+  display: block!important;
+  margin-top: 10px;
+}
 .doctor-img{
   position: absolute;
   top: 70px!important;
@@ -2856,7 +2872,7 @@ body {
 .card-detail .value-card p {
   font-weight: 600;
   font-size: 14px;
-  color: #000;
+  color: #0065FF;
 }
 .card-detail .value-card h5 {
   font-weight: bold;
@@ -3569,13 +3585,29 @@ body {
   }
 }
 
+.book-form .or
+{
+  top: 410px;
+}
+
+.book-form .iti--allow-dropdown .iti__flag-container{
+  right:130%;
+  left:unset;
+}
+
+
+.choose-time .nice-select .current
+{
+  font-size: 14px!important;
+}
+
+
 button.fill-face {
   font-weight: normal;
   font-size: 1rem;
   color: #fff;
   width: auto;
   padding: 10px;
-  width: 100%;
   background: #2b4b90;
   border: 0px solid;
   border-radius: 10px;
@@ -3584,6 +3616,10 @@ button.fill-face {
 button.fill-face span {
   margin-right: 10px;
   margin-left: 14px;
+}
+
+.login-forms button.fill-face {
+   width:100%;
 }
 
 .page-title-section {
@@ -4075,6 +4111,10 @@ button.fill-face span {
 
 .card-detail .nice-select .current{
   font-size: 14px;
+}
+.choose-time 
+{
+  border-top: 1px solid #c4c4c4;
 }
 
 .choose-time  .nice-select .current {
@@ -4727,7 +4767,7 @@ textarea {
 }
 .doctor-detail .card-tabs .content-detail-cats-tabs p {
   font-weight: 600;
-  font-size: 17px;
+  font-size: 14px;
   text-align: center;
 }
 .doctor-detail .card-tabs .content-detail-cats-tabs p span {

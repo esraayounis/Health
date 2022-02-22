@@ -2103,7 +2103,7 @@ footer {
 .card-detail .value-card p {
   font-weight: 600;
   font-size: 14px;
-  color: #000;
+  color: #0065FF;
 }
 .card-detail .value-card h5 {
   font-weight: bold;
@@ -3542,7 +3542,7 @@ textarea {
 }
 .doctor-detail .card-tabs .content-detail-cats-tabs p {
   font-weight: 600;
-  font-size: 17px;
+  font-size: 14px;
   text-align: center;
 }
 .doctor-detail .card-tabs .content-detail-cats-tabs p span {
