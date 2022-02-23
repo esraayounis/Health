@@ -437,7 +437,7 @@
                                                 d="M12.75,2.25c-3.313,0-6,2.3-6,5.143,0,4.571,6,10.857,6,10.857s6-6.286,6-10.857C18.75,4.554,16.063,2.25,12.75,2.25Zm0,8a2.345,2.345,0,0,1-2.4-2.286,2.4,2.4,0,0,1,4.8,0A2.348,2.348,0,0,1,12.75,10.25Z"
                                                 transform="translate(-6.75 -2.25)" fill="#0065ff" />
                                         </svg>
-                                        <p>الغربية- شارع رياض غرابة خلف المقاولون العرب</p>
+                                        <p>الرياض 11112 المملكة العربية السعودية.</p>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -469,7 +469,7 @@
                                             </svg>
                                         </div>
                                         <span class="small">
-                                            التقييم العام من <span>300</span> زاروا امختبر
+                                            التقييم العام من <span>300</span> زاروا المركز
                                         </span>
                                     </div>
 
@@ -489,7 +489,7 @@
                                                     transform="translate(-8.998 -12)" fill="#868d9a" />
                                             </svg>
                                             <ul class="list">
-                                                <li data-value="1" class="option selected focus">طنطا</li>
+                                                <li data-value="1" class="option selected focus">الرياض</li>
                                                 <li data-value="1" class="option">test</li>
                                                 <li data-value="1" class="option">test test test </li>
                                                 <li data-value="1" class="option">test</li>
@@ -705,7 +705,7 @@
                                 <div class="col-lg-7 p-lg-0 detail">
                                     <h6 class="title-card">
                                         إصدار إقامة
-                                        <span>(مراكز الاتصال)</span>
+                                        <span id="">{office} </span>
                                     </h6>
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
@@ -713,7 +713,7 @@
                                                 d="M12.75,2.25c-3.313,0-6,2.3-6,5.143,0,4.571,6,10.857,6,10.857s6-6.286,6-10.857C18.75,4.554,16.063,2.25,12.75,2.25Zm0,8a2.345,2.345,0,0,1-2.4-2.286,2.4,2.4,0,0,1,4.8,0A2.348,2.348,0,0,1,12.75,10.25Z"
                                                 transform="translate(-6.75 -2.25)" fill="#0065ff" />
                                         </svg>
-                                        <p>الغربية- شارع رياض غرابة خلف المقاولون العرب</p>
+                                        <p id="city"></p>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -758,23 +758,7 @@
                                             </svg>
                                             <p><span class="c-ml-1">الفرع:</span></p>
                                         </div>
-                                        <div class="nice-select nice-select2" tabindex="0"><span class="current">طنطا</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
-                                                <path id="arrow-down-fill"
-                                                    d="M12.879,20a1.036,1.036,0,0,1-.86-.569L9.3,14.9a2.451,2.451,0,0,1-.168-1.964A1.193,1.193,0,0,1,10.156,12H15.6a1.193,1.193,0,0,1,1.028.933,2.451,2.451,0,0,1-.168,1.964l-2.722,4.533A1.036,1.036,0,0,1,12.879,20Z"
-                                                    transform="translate(-8.998 -12)" fill="#868d9a" />
-                                            </svg>
-                                            <ul class="list">
-                                                <li data-value="1" class="option selected focus">طنطا</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test test test </li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                                <li data-value="1" class="option">test</li>
-                                            </ul>
-                                        </div>
+                                        <p id="region"></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 value-card text-center">
@@ -906,6 +890,19 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/filter.js"></script>
     <script src="assets/js/filter.js"></script>
+    <script>
+        //displaying the value from local storage to another page by their respective Ids
+    //    var office = localStorage.getItem("office");
+        // document.getElementById("city").innerHTML=localStorage.getItem("city");
+        // document.getElementById("region").innerHTML=localStorage.getItem("region");
+        var queryString = decodeURIComponent(window.location.search);
+        queryString = queryString.substring(1);
+        var queries = queryString.split("&");
+        for (var i = 0; i < queries.length; i++)
+        {
+        document.write(queries[i] + "<br>");
+}
+    </script>
 
 </body>
 

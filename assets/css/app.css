@@ -660,7 +660,7 @@ Desktop Navigation
 
 @media (min-width: 992px) {
   #hero {
-    padding-top: 90px;
+    padding-top: 70px;
   }
 }
 @media (min-width: 992px) {
@@ -2095,7 +2095,7 @@ footer {
   margin-left: 4px;
 }
 .card-detail .value-card {
-  display: flex;
+  display: flex!important;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;

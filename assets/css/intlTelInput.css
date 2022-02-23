@@ -74,6 +74,13 @@
     -webkit-overflow-scrolling: touch;
 }
 
+.book-form .iti__country-list
+{
+        overflow-y: hidden;
+        left: 0px;
+        text-align: right;
+}
+
 .iti__country-list--dropup {
     bottom: 100%;
     margin-bottom: -1px;

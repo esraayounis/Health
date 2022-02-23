@@ -553,7 +553,7 @@ Desktop Navigation
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-   height: 100vh;
+   height: 100%;
   background-color: white;
   /* overflow: hidden; */
   position: relative;
@@ -1972,6 +1972,7 @@ section {
   text-align: left;
   display: block!important;
   margin-top: 10px;
+  padding: 5px 30px;
 }
 .doctor-img{
   position: absolute;
@@ -3389,7 +3390,6 @@ body {
 
 .login-forms .card-box {
   background-color: #fff;
-  z-index: 1;
   margin-bottom:0;
 }
 .login-forms .form-group {
@@ -4130,6 +4130,8 @@ button.fill-face span {
   font-size: 16px;
   color: #868d9a;
 }
+
+
 
 .nice-card .nice-select {
   height: 100px;
