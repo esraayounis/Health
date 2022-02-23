@@ -3872,7 +3872,7 @@ textarea {
   align-items: center;
 }
 .info-book-special .notes {
-  font-weight: normal;
+  font-weight: normal!important;
   font-size: 14px;
   text-align: center;
   color: #868d9a;

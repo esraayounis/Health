@@ -4771,11 +4771,7 @@ textarea {
 .doctor-detail .card-tabs .nav-tabs .nav-link.active p {
   color: #0065FF;
 }
-.doctor-detail .card-tabs .content-detail-cats-tabs p, .content-card p{
-  font-weight: 600;
-  font-size: 14px;
-  /* text-align: center; */
-}
+
 .doctor-detail .card-tabs .content-detail-cats-tabs p span {
   color: #0065FF;
 }

@@ -38,6 +38,7 @@
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/css/intlTelInput.css" rel="stylesheet">
     <link href="assets/css/nice-select.css" rel="stylesheet">
     <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
     <link href="assets/css/owl.theme.default.css" rel="stylesheet">
@@ -670,7 +671,7 @@
                             </div>
                         </div>
 
-                        <div class="inner card-tabs">
+                        <div class="inner card-tabs info-book-special">
                             <div class="card-box">
                                 <div class="header-card">
                                     <h5 class="text-center mb-0">
@@ -823,11 +824,89 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <button class="book-date">أحجز الآن</button>
                                                     </div>
                                                 </div>
-                                                <div class="notes">
-                                                    <p>احجز أونلاين، ادفع في المعمل!</p>
+                                                <div class="choose-time">
+                                                    <h3 class="my-3">ادخــــل بـــيــــانـــات الــحــجــز</h3>
+                                                    <p class="text-center w-100 font-normal">اليوم ، 28،يوليو في تمام الساعة الحادية عشر صباحاً
+                                                    </p>
+                                                    <div class="text-center py-3">
+                                                        <button class="fill-face " onclick="window.location.href='https://www.facebook.com/'">
+                                                            إملا بياناتك بواسطة فيسبوك
+                                                            <span>|</span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.665" height="24" viewBox="0 0 11.665 24">
+                                                                <path id="facebook" d="M2.978,24V12.739H0V8.684H2.978V5.221C2.978,2.5,4.737,0,8.79,0a24.609,24.609,0,0,1,2.854.157l-.1,3.787s-1.237-.012-2.588-.012c-1.461,0-1.7.673-1.7,1.791V8.684h4.4l-.191,4.055H7.265V24H2.978" fill="#fff"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                   
+                                                    <div class="book-form py-3 px-4 pt-0">
+                                                        <hr class="my-4">
+                                                        <span class="or">أو</span>
+                                                        <form action="">
+                                                            <div class="nice-select nice-select2 w-100 row-input" tabindex="0">
+                                                                <svg style="transform: none !important;" class="position-static" xmlns="http://www.w3.org/2000/svg" width="12.8" height="16" viewBox="0 0 12.8 16">
+                                                                    <path id="document"
+                                                                        d="M14.8,4.6H7.6V17.4h9.6V7H14.8ZM7.6,3h8l3.2,3.2V17.4A1.6,1.6,0,0,1,17.2,19H7.6A1.6,1.6,0,0,1,6,17.4V4.6A1.6,1.6,0,0,1,7.6,3Zm1.6,7.2h6.4v1.6H9.2Zm0,3.2h6.4V15H9.2Z"
+                                                                        transform="translate(-6 -3)" fill="#868d9a" />
+                                                                </svg>
+                                                                <span class="current">
+                                                                    هل الحجز لك ام شخص آخر
+                                                                </span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
+                                                                    <path id="arrow-down-fill"
+                                                                        d="M12.879,20a1.036,1.036,0,0,1-.86-.569L9.3,14.9a2.451,2.451,0,0,1-.168-1.964A1.193,1.193,0,0,1,10.156,12H15.6a1.193,1.193,0,0,1,1.028.933,2.451,2.451,0,0,1-.168,1.964l-2.722,4.533A1.036,1.036,0,0,1,12.879,20Z"
+                                                                        transform="translate(-8.998 -12)" fill="#868d9a"></path>
+                                                                </svg>
+                                                                <ul class="list">
+                                                                    <li data-value="1" class="option selected focus disabled">
+                                                                        هل الحجز لك ام شخص آخر
+                                                                    </li>
+                                                                    <li class="txt-md option" data-value="1" class="option">لنفسي</li>
+                                                                    <li  class="txt-md option" data-value="1" class="option">لشخص أخر</li>
+                                                                </ul>
+                                                            </div>
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg id="user-avatar-filled-alt" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                                    <path id="Union_48" data-name="Union 48"
+                                                                        d="M0,8a8,8,0,1,1,8,8A8,8,0,0,1,0,8ZM1.586,5.541A6.857,6.857,0,0,0,3.43,13.1v-.333c0-.008,0-.014,0-.019A2.973,2.973,0,0,1,6.285,9.715h3.43a2.977,2.977,0,0,1,2.857,3.035V13.1A6.86,6.86,0,1,0,1.586,5.541Zm3.557.174A2.857,2.857,0,1,1,8,8.572,2.857,2.857,0,0,1,5.143,5.715Z"
+                                                                        fill="#868d9a" />
+                                                                </svg>
+                                                                <input class="h-100 w-100 px-2" type="text" placeholder="اسم المريض كاملا">
+                                                            </div>
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16.014" viewBox="0 0 10 16.014">
+                                                                    <path id="mobile-solid" d="M17.889,4H10.111A1.128,1.128,0,0,0,9,5.144V18.87a1.128,1.128,0,0,0,1.111,1.144h7.778A1.128,1.128,0,0,0,19,18.87V5.144A1.128,1.128,0,0,0,17.889,4ZM14.556,18.87H13.444V17.726h1.111Zm-4.444-2.288V5.144h7.778V16.583Z" transform="translate(-9 -4)" fill="#8d8d8d"/>
+                                                                </svg> 
+                                                                <input name="" id="phone" class="h-100 w-100 px-2" placeholder="رقم الموبيل" type="tel">
+                                                            </div>
+                                                            
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                                                                    <path id="mail"
+                                                                        d="M16.25,5.625h-12a1.958,1.958,0,0,0-2,1.909v8.181a1.958,1.958,0,0,0,2,1.909h12a1.958,1.958,0,0,0,2-1.909V7.534a1.958,1.958,0,0,0-2-1.909Zm-.506,3.158L10.6,12.6a.593.593,0,0,1-.7,0L4.757,8.783a.529.529,0,0,1-.1-.765.59.59,0,0,1,.8-.1l4.792,3.558,4.792-3.558a.59.59,0,0,1,.8.1.529.529,0,0,1-.1.765Z"
+                                                                        transform="translate(-2.25 -5.625)" fill="#868d9a" />
+                                                                </svg>
+                                                                <input class="h-100 w-100 px-2" type="email" placeholder="البريد الإلكتروني">
+                                                            </div>
+            
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <a class="mt-4 w-100 bg-red btn" href="doctor-reserve.html">أحجز الآن</a>
+                                                                </div>
+                                                                <div class="col-5">
+                                                                    <button class="mt-4 btn-cancel btn">إلغاء</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <hr>
+                                                    <p class="text-center notes w-100">
+                                                      هنوصلك بالمعمل في الميعاد اللي اخترته. <br> من فضلك اتأكد ان تليفونك مفتوح في الميعاد المحدد
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -839,7 +918,7 @@
                                                                     d="M0,18.035A17.66,17.66,0,0,1,2.424,8.982a17.909,17.909,0,0,1,6.57-6.57,17.933,17.933,0,0,1,16-.983,17.742,17.742,0,0,1,9.579,9.591,17.876,17.876,0,0,1,0,14.007,17.971,17.971,0,0,1-3.841,5.738,18.1,18.1,0,0,1-5.738,3.818A17.916,17.916,0,0,1,11,34.571,17.7,17.7,0,0,1,1.417,25,17.522,17.522,0,0,1,0,18.035Zm3.958,0A13.594,13.594,0,0,0,8.1,27.919a13.522,13.522,0,0,0,9.908,4.146,13.708,13.708,0,0,0,7.027-1.885,14.064,14.064,0,0,0,5.129-5.118,13.984,13.984,0,0,0,0-14.065,14.058,14.058,0,0,0-5.129-5.129,13.708,13.708,0,0,0-7.027-1.886,13.688,13.688,0,0,0-7.027,1.885A14.068,14.068,0,0,0,5.856,11,13.692,13.692,0,0,0,3.958,18.035Zm12.671,0V7.378a1.336,1.336,0,1,1,2.671,0v9.3h6.043a1.334,1.334,0,0,1,.949,2.272,1.27,1.27,0,0,1-.949.4h-7.1a1.09,1.09,0,0,1-.281.023,1.318,1.318,0,0,1-1.335-1.335Z"
                                                                     fill="#0065ff" />
                                                             </svg>
-                                                            <p class="text-center pt-4">وقت الإنتظار: <span>15
+                                                            <p class="text-center pt-4">وقت الإنتظار: <span>30
                                                                     دقيقة</span></p>
                                                         </div>
                                                     </div>
@@ -872,7 +951,7 @@
 
                                                             <p class="text-center pt-4">
                                                                 تكلفة التحاليل:
-                                                                <span>300 ريال</span>
+                                                                <span>350 ريال</span>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -934,17 +1013,99 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <button class="book-date">أحجز الآن</button>
+                                                       
                                                     </div>
                                                 </div>
-                                                <div class="notes">
-                                                    <p>هنوصلك بالمعمل في الميعاد اللي اخترته. <br> من فضلك اتأكد ان تليفونك مفتوح في الميعاد المحدد</p>
+                                                <div class="choose-time">
+                                                    <h3 class="my-3">ادخــــل بـــيــــانـــات الــحــجــز</h3>
+                                                    <p class="text-center w-100 font-normal">اليوم ، 28،يوليو في تمام الساعة الحادية عشر صباحاً
+                                                    </p>
+                                                    <div class="text-center py-3">
+                                                        <button class="fill-face " onclick="window.location.href='https://www.facebook.com/'">
+                                                            إملا بياناتك بواسطة فيسبوك
+                                                            <span>|</span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.665" height="24" viewBox="0 0 11.665 24">
+                                                                <path id="facebook" d="M2.978,24V12.739H0V8.684H2.978V5.221C2.978,2.5,4.737,0,8.79,0a24.609,24.609,0,0,1,2.854.157l-.1,3.787s-1.237-.012-2.588-.012c-1.461,0-1.7.673-1.7,1.791V8.684h4.4l-.191,4.055H7.265V24H2.978" fill="#fff"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                   
+                                                    <div class="book-form py-3 px-4 pt-0">
+                                                        <hr class="my-4">
+                                                        <span class="or">أو</span>
+                                                        <form action="">
+                                                            <div class="nice-select nice-select2 w-100 row-input" tabindex="0">
+                                                                <svg style="transform: none !important;" class="position-static" xmlns="http://www.w3.org/2000/svg" width="12.8" height="16" viewBox="0 0 12.8 16">
+                                                                    <path id="document"
+                                                                        d="M14.8,4.6H7.6V17.4h9.6V7H14.8ZM7.6,3h8l3.2,3.2V17.4A1.6,1.6,0,0,1,17.2,19H7.6A1.6,1.6,0,0,1,6,17.4V4.6A1.6,1.6,0,0,1,7.6,3Zm1.6,7.2h6.4v1.6H9.2Zm0,3.2h6.4V15H9.2Z"
+                                                                        transform="translate(-6 -3)" fill="#868d9a" />
+                                                                </svg>
+                                                                <span class="current">
+                                                                    هل الحجز لك ام شخص آخر
+                                                                </span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
+                                                                    <path id="arrow-down-fill"
+                                                                        d="M12.879,20a1.036,1.036,0,0,1-.86-.569L9.3,14.9a2.451,2.451,0,0,1-.168-1.964A1.193,1.193,0,0,1,10.156,12H15.6a1.193,1.193,0,0,1,1.028.933,2.451,2.451,0,0,1-.168,1.964l-2.722,4.533A1.036,1.036,0,0,1,12.879,20Z"
+                                                                        transform="translate(-8.998 -12)" fill="#868d9a"></path>
+                                                                </svg>
+                                                                <ul class="list">
+                                                                    <li data-value="1" class="option selected focus disabled">
+                                                                        هل الحجز لك ام شخص آخر
+                                                                    </li>
+                                                                    <li class="txt-md option" data-value="1" class="option">لنفسي</li>
+                                                                    <li  class="txt-md option" data-value="1" class="option">لشخص أخر</li>
+                                                                </ul>
+                                                            </div>
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg id="user-avatar-filled-alt" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                                    <path id="Union_48" data-name="Union 48"
+                                                                        d="M0,8a8,8,0,1,1,8,8A8,8,0,0,1,0,8ZM1.586,5.541A6.857,6.857,0,0,0,3.43,13.1v-.333c0-.008,0-.014,0-.019A2.973,2.973,0,0,1,6.285,9.715h3.43a2.977,2.977,0,0,1,2.857,3.035V13.1A6.86,6.86,0,1,0,1.586,5.541Zm3.557.174A2.857,2.857,0,1,1,8,8.572,2.857,2.857,0,0,1,5.143,5.715Z"
+                                                                        fill="#868d9a" />
+                                                                </svg>
+                                                                <input class="h-100 w-100 px-2" type="text" placeholder="اسم المريض كاملا">
+                                                            </div>
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16.014" viewBox="0 0 10 16.014">
+                                                                    <path id="mobile-solid" d="M17.889,4H10.111A1.128,1.128,0,0,0,9,5.144V18.87a1.128,1.128,0,0,0,1.111,1.144h7.778A1.128,1.128,0,0,0,19,18.87V5.144A1.128,1.128,0,0,0,17.889,4ZM14.556,18.87H13.444V17.726h1.111Zm-4.444-2.288V5.144h7.778V16.583Z" transform="translate(-9 -4)" fill="#8d8d8d"/>
+                                                                </svg> 
+                                                                <input name="" id="phone" class="h-100 w-100 px-2" placeholder="رقم الموبيل" type="tel">
+                                                            </div>
+                                                            
+            
+                                                            <div class="row-input d-flex mt-3 px-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                                                                    <path id="mail"
+                                                                        d="M16.25,5.625h-12a1.958,1.958,0,0,0-2,1.909v8.181a1.958,1.958,0,0,0,2,1.909h12a1.958,1.958,0,0,0,2-1.909V7.534a1.958,1.958,0,0,0-2-1.909Zm-.506,3.158L10.6,12.6a.593.593,0,0,1-.7,0L4.757,8.783a.529.529,0,0,1-.1-.765.59.59,0,0,1,.8-.1l4.792,3.558,4.792-3.558a.59.59,0,0,1,.8.1.529.529,0,0,1-.1.765Z"
+                                                                        transform="translate(-2.25 -5.625)" fill="#868d9a" />
+                                                                </svg>
+                                                                <input class="h-100 w-100 px-2" type="email" placeholder="البريد الإلكتروني">
+                                                            </div>
+            
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <a class="mt-4 w-100 bg-red btn" href="doctor-reserve.html">أحجز الآن</a>
+                                                                </div>
+                                                                <div class="col-5">
+                                                                    <button class="mt-4 btn-cancel btn">إلغاء</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <hr>
+                                                    <p class="text-center notes w-100">
+                                                      هنوصلك بالمعمل في الميعاد اللي اخترته. <br> من فضلك اتأكد ان تليفونك مفتوح في الميعاد المحدد
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
+                            </div>
+                            <div class="card-box card-maps">
+                                <iframe class="google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55251.33564047079!2d31.223444830576376!3d30.059558098497583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1628939526651!5m2!1sen!2seg" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                         </div>
 
@@ -1046,11 +1207,19 @@
     <!-- <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script> -->
+    <script src="assets/js/intlTelInput.js"></script>
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            onlyCountries: ['sa', 'eg', 'ur'],
+            utilsScript: "build/js/utils.js",
+        });
+    </script>
 
 </body>
 
