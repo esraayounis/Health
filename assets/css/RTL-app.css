@@ -20,6 +20,9 @@ a {
   color: #0065FF;
   text-decoration: none;
 }
+.txt-blue{
+  color: #0065FF;
+}
 
 a:hover {
   color: #65c9cd;
@@ -35,6 +38,10 @@ h6 {
   font-family: "Cairo", sans-serif;
 }
 
+
+.font-bold{
+  font-weight: bold!important;
+}
 
 .txt-md{
   font-size:14px!important;
@@ -1967,18 +1974,18 @@ section {
   margin:0 5px!important;
 }
 
-.card-doctor .value-card{
-  float: left;
-  text-align: left;
-  display: block!important;
-  margin-top: 10px;
-  padding: 5px 30px;
-}
+
 .doctor-img{
   position: absolute;
   top: 70px!important;
   height: 115px!important;
   left:0!important;
+}
+
+.consult{
+  display: block!important;
+  text-align: left;
+  padding: 10px 25px;
 }
 
 .doctors .member {
@@ -2901,10 +2908,7 @@ body {
   color: #868d9a;
 }
 
-.card-date {
-  border-top: 1px solid #c4c4c4;
-  border-bottom: 1px solid #c4c4c4;
-}
+
 .card-date .item .inner-item p {
   font-family: "Poppins";
   font-weight: normal;
@@ -4767,10 +4771,10 @@ textarea {
 .doctor-detail .card-tabs .nav-tabs .nav-link.active p {
   color: #0065FF;
 }
-.doctor-detail .card-tabs .content-detail-cats-tabs p {
+.doctor-detail .card-tabs .content-detail-cats-tabs p, .content-card p{
   font-weight: 600;
   font-size: 14px;
-  text-align: center;
+  /* text-align: center; */
 }
 .doctor-detail .card-tabs .content-detail-cats-tabs p span {
   color: #0065FF;
