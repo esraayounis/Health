@@ -60,7 +60,8 @@
             <div class="d-flex align-items-center justify-content-between">
                 <div class="d-flex">
                     <!-- logo  -->
-                    <a href="index.html" class="logo ml-auto"><img src="assets/img/logo.png" alt=""></a>
+                     <a href="index.html" class="logo ml-auto desktop-show"><img src="assets/images/hero/logo@2x.png" alt="" style="width:110px;"></a>
+                    <a href="index.html" class="logo ml-auto mar-top-10 mobile-show"><img src="assets/images/hero/logo.png" alt=""></a>
                     <nav id="navbar" class="navbar order-last order-lg-0 navbar-mobile">
                         <!-- Navbar menu -->
                         <ul class="nav-menu">
@@ -224,7 +225,7 @@
                 <div class="d-flex align-items-center">
                     <ol>
                         <li><a href="index.html">الرئيسية</a></li>
-                        <li>زيارة عيادة</li>
+                        <li id="selected-service"></li>
                         <li>شادي السيد عبدالعزيز</li>
                     </ol>
                 </div>
@@ -1131,6 +1132,8 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
+       var selectedService =  localStorage.getItem("selectedService");
+       document.getElementById("selected-service").innerHTML = selectedService;
         var input = document.querySelector("#phone1");
         window.intlTelInput(input, {
             onlyCountries: ['sa', 'eg', 'ur'],

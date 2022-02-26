@@ -125,6 +125,7 @@ input:focus-visible{
   outline: none!important;
 }
 
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -728,6 +729,9 @@ article .nice-select2{
 }
 
 @media (max-width: 600px) {
+  .z-index{
+    z-index: 1;
+  }
   .lang{
     display: none;
   }
@@ -741,6 +745,11 @@ article .nice-select2{
 
   .desktop-show{
     display: none;
+  }
+  .page-title-section.cov .icon figure img
+  {
+    height: 215px!important;
+    top: -10px!important;
   }
 
   #header{
@@ -1969,6 +1978,17 @@ section {
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #0065FF;
+}
+
+.filter-btn{
+  top: 790px;
+left: 300px;
+width: 59px;
+height: 59px;
+/* UI Properties */
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 0px 24px #00000029;
+opacity: 1;
 }
 
 /*--------------------------------------------------------------
