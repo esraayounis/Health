@@ -121,6 +121,10 @@ h6 {
   font-weight: normal!important;
 }
 
+input:focus-visible{
+  outline: none!important;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -2827,12 +2831,10 @@ body {
 .card-box .header-card h5 svg {
   margin-left: 10px;
 }
-.card-box .content-card {
-  padding: 26px 12px 12px;
-}
+
 
 .card-detail {
-  padding: 10px;
+  padding: 20px 0!important;
 }
 .card-detail .title-card {
   font-weight: 600;
@@ -3199,7 +3201,7 @@ body {
 }
 
 .box {
-  display: block;
+  display: none;
 }
 
 .locate {
@@ -3227,15 +3229,21 @@ body {
   overflow: hidden;
   padding-left: 5px;
   margin-left: 3px;
+  font-size:13px;
 }
 .item-input input:focus {
   border: 0px;
 }
 .item-input span {
   color: #0065FF;
-  font-weight: bold;
+  font-weight: 600;
   margin-left: 3px;
   padding-left: 5px;
+  font-size:13px;
+}
+
+.d-flex .mb-4 a{
+  padding: 0 3px;
 }
 
 .promo {
@@ -3243,6 +3251,9 @@ body {
   border-radius: 8px;
   padding: 5px;
   overflow: hidden;
+  font-size: 14px;
+  position: relative;
+  height:45px;
 }
 .promo .svg-type {
   border: 0px solid;
@@ -3256,10 +3267,25 @@ body {
   border: 0px solid;
   background-color: #0065FF;
   color: white;
-  border-radius: 4px;
   width: 17%;
   text-align: center;
   padding: inherit;
+  position: absolute;
+  line-height: 2.2;
+  float: left;
+  height: 43px;
+  top: 0px;
+  left: 0;
+}
+
+.mar-hr{
+  margin:40px 0;
+}
+
+.book-form .current{
+  color:#868D9A;
+  font-size:14px;
+  padding: 0 5px;
 }
 
 .price {
@@ -3461,8 +3487,17 @@ body {
 }
 }
 
-.card-body {
+/* .card-body {
   padding: 1rem 1rem 3rem 1rem;
+} */
+
+.radio-text{
+  font-size: 14px!important;
+    font-weight: 600!important;
+}
+.radio-svg
+{
+  margin: 0 10px 0px 5px;
 }
 
 .form-bg img {
@@ -4116,10 +4151,10 @@ button.fill-face span {
 .card-detail .nice-select .current{
   font-size: 14px;
 }
-.choose-time 
+/* .choose-time 
 {
   border-top: 1px solid #c4c4c4;
-}
+} */
 
 .choose-time  .nice-select .current {
   font-size: 11px;
@@ -4668,18 +4703,13 @@ textarea {
   font-size: 20px;
   color: #000;
 }
-.doctor-detail .rate-doctor h5 {
-  padding-right: 23px;
-  font-weight: bold;
-  font-size: 27px;
-  color: #000;
-}
+
 .doctor-detail .rate-doctor .star {
   margin-bottom: 10px;
 }
 .doctor-detail .rate-doctor p {
   font-weight: normal;
-  font-size: 9px;
+  font-size: 14px;
   color: #868d9a;
 }
 .doctor-detail .person-comment {
@@ -4866,7 +4896,9 @@ textarea {
 .buy-btn{
   background: red;
   color: white;
-  padding: 10px 40px
+  padding: 10px 40px;
+  font-size:12px;
+  border-radius: 4px;
 }
 
 .buy-btn:hover{

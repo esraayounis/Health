@@ -2050,12 +2050,10 @@ footer {
 .card-box .header-card h5 svg {
   margin-right: 10px;
 }
-.card-box .content-card {
-  padding: 26px 12px 12px;
-}
+
 
 .card-detail {
-  padding: 10px;
+  padding: 20px 0!important;
 }
 .card-detail .title-card {
   font-weight: 600;
@@ -3437,18 +3435,13 @@ textarea {
   font-size: 20px;
   color: #000;
 }
-.doctor-detail .rate-doctor h5 {
-  padding-right: 23px;
-  font-weight: bold;
-  font-size: 27px;
-  color: #000;
-}
+
 .doctor-detail .rate-doctor .star {
   margin-bottom: 10px;
 }
 .doctor-detail .rate-doctor p {
   font-weight: normal;
-  font-size: 9px;
+  font-size: 14px;
   color: #868d9a;
 }
 .doctor-detail .person-comment {

@@ -113,6 +113,7 @@
         onscroll(document, toggleBacktotop)
     }
 
+
      /**
      * Mobile reservations btn
      */
