@@ -125,6 +125,18 @@ input:focus-visible{
   outline: none!important;
 }
 
+.mar-svg{
+  margin:0 5px;
+}
+
+.txt-left{
+  text-align: left;
+}
+
+.content-card{
+  padding-bottom:5px;
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -729,6 +741,38 @@ article .nice-select2{
 }
 
 @media (max-width: 600px) {
+  .txt-sm{
+    font-size: 11px!important;
+  }
+  .txt-md{
+    font-size: 14px!important;
+  }
+  .page-title-section .inner-search .custom-input
+  {
+    height:40px!important;
+  }
+
+  .page-title-section.cov .icon figure img {
+    height: 186px!important;
+  }
+
+  .discount-offer
+  {
+    left:15px!important;
+  }
+
+  .avaliable-btn
+  {
+    height: 40px;
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    font: normal normal normal 11px/20px Cairo;
+    color: #313450;
+    border:none;
+    max-width: 144px;
+    width: 100%;
+  }
+
   .z-index{
     z-index: 1;
   }
@@ -748,7 +792,7 @@ article .nice-select2{
   }
   .page-title-section.cov .icon figure img
   {
-    height: 215px!important;
+    height: 215px;
     top: -10px!important;
   }
 
@@ -757,6 +801,15 @@ article .nice-select2{
     opacity: 0.75;
     z-index: 1;
     position: relative;
+  }
+
+  .show-more-btn{
+    font-size: 11px!important;
+    font-weight: 600!important;
+  }
+
+  .show-on-map{
+    max-width: 125px;
   }
 
   .hero .group-h1 {
@@ -828,6 +881,25 @@ article .nice-select2{
 
   .fill-active{
     fill:#0d6efd;
+  }
+
+  /* ====== Doctors ====== */
+
+  .language{
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .doctor-img{
+    position: absolute;
+    top: 70px!important;
+    height: 115px!important;
+    left:0!important;
+  }
+  
+  .hospital-img{
+    top: 45px!important;
+    height: 130px!important;
   }
 
 
@@ -1077,6 +1149,12 @@ article .nice-select2{
     padding:10px;}
   
   /* -----Home----- */
+  .navbar-mobile .dropdown > .dropdown-active li
+  {
+    margin-bottom: 0;
+  }
+
+
 
     .hero .group-h1 h1 {
       text-align: center;
@@ -1096,7 +1174,13 @@ article .nice-select2{
     #home .card-box.p-4{
       padding:0.5rem!important;
     }
-    
+
+    .doctor-img{
+      position: absolute;
+      top: 70px!important;
+      height: 115px!important;
+      left:0!important;
+    }
 }
   
 
@@ -1995,16 +2079,11 @@ opacity: 1;
 # Doctors
 --------------------------------------------------------------*/
 .card-doctor .stars svg{
-  margin:0 5px!important;
+  margin:0 3px!important;
 }
 
 
-.doctor-img{
-  position: absolute;
-  top: 70px!important;
-  height: 115px!important;
-  left:0!important;
-}
+
 
 .consult{
   display: block!important;
@@ -2872,14 +2951,13 @@ body {
 .card-detail .detail > div {
   margin-bottom: 10px;
 }
-.card-detail .detail > div > svg {
-  margin-left: 12px;
-}
+
 .card-detail .detail p {
   font-weight: normal;
   font-size: 14px;
   color: #868d9a;
   margin-bottom: 0;
+  padding-right:10px;
 }
 .card-detail .detail .small {
   font-weight: normal;
@@ -4154,12 +4232,21 @@ button.fill-face span {
   text-align: right !important;
   padding-right: 10px;
   height: auto;
+
 }
 .search-result-section .nice-select::after {
   right: auto;
   left: 12px;
   width: 10px;
   height: 10px;
+  border-bottom: 2px solid #0065ff;
+  border-right: 2px solid #0065ff;
+}
+
+
+
+.search-result-section .nice-select.open svg {
+  transform: rotate(180deg);
 }
 .search-result-section .nice-select .current {
   font-weight: normal;
@@ -4190,11 +4277,17 @@ button.fill-face span {
   color: #868d9a;
 }
 
-
-
-.nice-card .nice-select {
-  height: 100px;
+.content-card .nice-select
+{
+  margin:15px;
 }
+/* .nice-card .nice-select {
+  padding-right: 0px;
+  line-height: 20px;
+  color:#8D8D8D;
+  border:none;
+  position: unset;
+} */
 
 .section-laboratory h2 {
   font-weight: bold;
@@ -5092,7 +5185,7 @@ textarea {
   color: #fff;
   position: absolute;
   top: 15px;
-  left: 33px;
+  left: 15px;
   border-right: 10px solid #d20b0b;
   display: flex;
   justify-content: center;

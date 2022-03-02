@@ -7,6 +7,7 @@
 (function() {
     "use strict";
 
+
     /**
      * Easy selector helper function
      */
@@ -211,67 +212,7 @@
             heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
     });
 
-    /**
-     * Testimonials slider
-     */
-    // new Swiper('.testimonials-slider', {
-    //     speed: 600,
-    //     loop: true,
-    //     autoplay: {
-    //         delay: 5000,
-    //         disableOnInteraction: false
-    //     },
-    //     slidesPerView: 'auto',
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         type: 'bullets',
-    //         clickable: true
-    //     },
-    //     breakpoints: {
-    //         320: {
-    //             slidesPerView: 1,
-    //             spaceBetween: 20
-    //         },
-
-    //         1200: {
-    //             slidesPerView: 3,
-    //             spaceBetween: 20
-    //         }
-    //     }
-    // });
-
-    /**
-     * Clients Slider
-     */
-    // new Swiper('.gallery-slider', {
-    //     speed: 400,
-    //     loop: true,
-    //     centeredSlides: true,
-    //     autoplay: {
-    //         delay: 5000,
-    //         disableOnInteraction: false
-    //     },
-    //     slidesPerView: 'auto',
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         type: 'bullets',
-    //         clickable: true
-    //     },
-    //     breakpoints: {
-    //         320: {
-    //             slidesPerView: 1,
-    //             spaceBetween: 20
-    //         },
-    //         640: {
-    //             slidesPerView: 3,
-    //             spaceBetween: 20
-    //         },
-    //         992: {
-    //             slidesPerView: 5,
-    //             spaceBetween: 20
-    //         }
-    //     }
-    // });
+    
 
     /**
      * Initiate gallery lightbox
@@ -293,3 +234,23 @@
     });
 
 })()
+
+
+jQuery(".services-links a").click(function(e) {
+    debugger
+    e.preventDefault();
+    var activeLink =  jQuery(this).text().trim();
+    var services = document.getElementById("nav-home-care-tab").innerHTML;
+    var governments = document.getElementById("nav-government-tab span").innerHTML;
+    var consults = document.getElementById("nav-consultation-tab").innerHTML;
+    var homeCare = document.getElementById("nav-covid-tab").innerHTML;
+    var examinations = document.getElementById("nav-examinations-tab").innerHTML;
+    const tabs = ["services", "governments", "consults", "homeCare", "examinations"];
+    for (let i = 0; i < tabs.length; i++) {
+      if ( activeLink === tabs[i]) {
+        $(this).addClass('active');
+       }
+    }
+    });
+
+
