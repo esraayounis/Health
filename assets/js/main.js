@@ -237,7 +237,7 @@
 
 
 jQuery(".services-links a").click(function(e) {
-    debugger
+    // debugger
     e.preventDefault();
     var activeLink =  jQuery(this).text().trim();
     var services = document.getElementById("nav-home-care-tab").innerHTML;

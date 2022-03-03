@@ -2213,7 +2213,7 @@
                                                         <a class="btn" href="consult-clinic-visit.html">ابحث</a>
                                                     </div>
                                                 </div>
-                                                <span class="callus">أحجر أونلاين أو كلم 12345</span>
+                                                
                                             </div>
                                         </div>
                                         <!-- item -->
@@ -4634,9 +4634,26 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
-      
 
-    
+    // Covid pop up
+      $(document).ready(function() {
+
+        const popup = document.querySelector('.popup')
+        const overlay = document.querySelector('.bg-overlay')
+        const close = document.querySelector('.close')
+        window.onload = function() {
+                setTimeout(function() {
+                    popup.style.display = "block";
+                    overlay.style.display = "block";
+                }, 1000)
+            }
+        $('.close').on('click', function() {
+            overlay.style.display = "none";
+            popup.style.display = "none";
+        })
+       })
+
+    // Share title of services
     $('.inner-btn').click(function(){
        // debugger
         

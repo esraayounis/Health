@@ -137,7 +137,9 @@ input:focus-visible{
   padding-bottom:5px;
 }
 
-
+input:-webkit-autofill{
+  transition: background-color 5000s ease-in-out 0s;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -809,7 +811,15 @@ article .nice-select2{
   }
 
   .show-on-map{
-    max-width: 125px;
+    max-width: 120px!important;
+  }
+
+  .card-detail .value-card
+  {
+    align-items: flex-end!important;
+  }
+  .stars svg{
+    margin-left:5px!important;
   }
 
   .hero .group-h1 {
@@ -884,6 +894,76 @@ article .nice-select2{
   }
 
   /* ====== Doctors ====== */
+  .modal-body .nice-select
+  {
+    border: 0.699999988079071px solid #8D8D8D;
+    height: 40px;
+    font-size: 11px;
+    color: #8D8D8D;
+    width: 100%;
+    text-align: right;
+  }
+
+  .modal-body .nice-select .current
+  {
+    padding-right:5px;
+  }
+
+  .modal-body .nice-select .option{
+    font-size: 11px!important;
+    text-align: right;
+    padding-right:10px;
+  }
+  .modal-body .nice-select .option.focus, .modal-body .nice-select .option.selected.focus{
+    font-size: 11px!important;
+  }
+  .modal-body .nice-select:after{
+    width:10px;
+    height:10px;
+  }
+
+  .modal-body {
+    padding: 2rem 1rem 0.5rem 1rem;
+   }
+  .modal-footer
+  {
+   border-top:unset!important;
+  }
+  .modal-content{
+    height: 100%;
+    border-radius: 1rem;
+  }
+  .modal-dialog{
+    height: 97%;
+  }
+
+  .filter
+  {
+    border-radius: 25px;
+    height: 50px;
+    padding: 0 50px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .add-fav {
+    position: relative;
+    transition: all .5s ease;
+  }
+
+  
+  .save-icon {
+    position: relative;
+    transition: all .5s ease-in-out;
+  }
+  
+  .save-input { 
+    position: absolute;
+    opacity: 0;
+  }
+  .save-input:checked + .save-icon {
+    fill:#0d6efd!important;
+  }
 
   .language{
     font-size: 13px;
@@ -2065,22 +2145,19 @@ section {
 }
 
 .filter-btn{
-  top: 790px;
-left: 300px;
-width: 59px;
-height: 59px;
-/* UI Properties */
-background: #FFFFFF 0% 0% no-repeat padding-box;
-box-shadow: 0px 0px 24px #00000029;
-opacity: 1;
+  right: -30px;
+  bottom: 45px;
+  position: fixed;
+  z-index: 996;
+  transition: all 0.4s;
 }
 
 /*--------------------------------------------------------------
 # Doctors
 --------------------------------------------------------------*/
-.card-doctor .stars svg{
+/* .card-doctor .stars svg{
   margin:0 3px!important;
-}
+} */
 
 
 
@@ -3503,7 +3580,7 @@ body {
 }
 
 .login{
-  padding:75px 0 ;
+  padding:90px 0 ;
 }
 
 .sign-up .card-body {
@@ -3829,6 +3906,7 @@ button.fill-face span {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  float:left;
 }
 
 @media (max-width: 992px) {

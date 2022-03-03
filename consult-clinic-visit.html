@@ -259,7 +259,7 @@
                                         </div>
                                     </div>
                                     <div class="col-3 d-none d-lg-block">
-                                        <button class="btn filter-button">ابحث</button>
+                                        <button type="button" class="btn filter-button">ابحث</button>
                                     </div>
                                 </div>
                             </form>
@@ -465,11 +465,16 @@
                                                     شادي السيد عبدالعزيز
                                                 </h6>
                                                 <div class="col-3">
-                                                        <svg class="mar-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="15.001" viewBox="0 0 16 15.001">
+                                                   <a href="javascript:addfav()">
+                                                    
+                                                        <svg class="mar-svg save-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="15.001" viewBox="0 0 16 15.001">
                                                             <path id="Path_16627" data-name="Path 16627"
                                                                 d="M8,2.748l-.717-.737A3.756,3.756,0,0,0,1.4,3.053a4.715,4.715,0,0,0,.314,4.385C2.635,9.253,4.549,11.427,8,13.8c3.452-2.368,5.365-4.542,6.286-6.357A4.714,4.714,0,0,0,14.6,3.053,3.756,3.756,0,0,0,8.717,2.01ZM8,15C-7.333,4.868,3.279-3.04,7.825,1.143c.06.055.119.112.176.171q.085-.089.176-.17C12.721-3.042,23.334,4.867,8,15Z"
                                                                 transform="translate(0 0)" fill="#0065ff" fill-rule="evenodd" />
                                                         </svg>
+                                                  
+                                                   </a>
+                                                        
                                                   
                                                         <svg class="mar-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                             <g id="share" transform="translate(0)">
@@ -1050,7 +1055,7 @@
                     </div>
                 </div>
         </section>
-        <div class="mobile-show filter-btn"></div>
+      
 
     </main>
     <!-- End #main -->
@@ -1151,6 +1156,17 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/filter.js"></script>
+    <script>
+        function addfav()
+        {
+        if (document.all)
+            {
+            window.external.AddFavorite
+            ("index.html","faviorites")
+            }
+        }
+    
+    </script>
 
 </body>
 
