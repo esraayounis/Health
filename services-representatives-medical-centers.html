@@ -402,7 +402,7 @@
 
 
                     </div>
-                    <div class="col-lg-8" id="myUL">
+                    <div class="col-lg-8 page" id="myUL page">
                         <!-- item -->
                         <div class="card-box p-2 py-5 card-detail desktop-show">
                             <div class="row">
@@ -1055,20 +1055,10 @@
                             </div>
                         </div>
 
-                        <div class="pagination justify-content-center pt-4">
-                            <nav aria-label="...">
-                                <ul class="pagination pagination-lg">
-                                    <li class="page-item active">
-                                        <a class="page-link" href="#" tabindex="-1">1</a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                </ul>
-                            </nav>
-
-                        </div>
+                        
+                    </div>
+                    <div class="pagination justify-content-center pt-4">
+                        <ul id="pagination-demo" class="pagination pagination-lg pull-right"></ul>
                     </div>
                 </div>
             </div>
@@ -1152,6 +1142,125 @@
             </div>
         </div>
     </section>
+    
+    <div class="modal" tabindex="-1" id="filterModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+                <div class="">
+                    <div class="nice-select mb-3" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15.332" height="20.219" viewBox="0 0 15.332 20.219">
+                            <path id="__TEMP__SVG__"
+                                d="M14.416,2.25c-4.232,0-7.666,2.911-7.666,6.5,0,5.777,7.666,13.72,7.666,13.72s7.666-7.943,7.666-13.72C22.082,5.161,18.649,2.25,14.416,2.25Zm0,10.109A2.981,2.981,0,0,1,11.35,9.471a2.981,2.981,0,0,1,3.066-2.888,2.981,2.981,0,0,1,3.066,2.888A2.985,2.985,0,0,1,14.416,12.359Z"
+                                transform="translate(-6.75 -2.25)" fill="#0065ff" />
+                        </svg>
+                        <span class="current" >
+                            <span>اختر المحافظة</span>
+                        </span>
+                        <ul class="list">
+                            <li data-value="1" class="option selected focus disabled">اختر المحافظة</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test test test </li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                        </ul>
+                    </div>
+                
+                    <div class="nice-select mb-3" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.389" viewBox="0 0 16 14.389">
+                        <path id="city-alt"
+                            d="M7.981,3.185H16v11.2H0V0H7.981Zm-4.8,9.593V11.2H1.611v1.574Zm0-3.185V7.982H1.611V9.593Zm0-3.185V4.8H1.611V6.408Zm0-3.223V1.611H1.611V3.185H3.185Zm3.223,9.592V11.2H4.8v1.574Zm0-3.185V7.982H4.8V9.593Zm0-3.185V4.8H4.8V6.408Zm0-3.223V1.611H4.8V3.185H6.408Zm7.981,9.592V4.8H7.981V6.408H9.592V7.981H7.981V9.592H9.592V11.2H7.981v1.574h6.408Zm-1.611-6.37V7.981H11.2V6.408Zm0,3.185V11.2H11.2V9.592Z"
+                            fill="#0065ff" />
+                    </svg>
+                        <span class="current">
+                            <span>اختر المنطقة</span>
+                        </span>
+                        <ul class="list">
+                            <li data-value="1" class="option selected focus disabled">اختر المنطقة</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test test test </li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                        </ul>
+                    </div>
+           
+                    <div class="nice-select mb-3" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path id="star-half-o"
+                            d="M11.4,9.326l2.471-2.521-3.423-.524-.635-.1-.288-.6L8,2.329v9.709l.567.313,3.058,1.694-.577-3.579L10.933,9.8Zm4.346-2.641-3.49,3.569.827,5.041a.817.817,0,0,1-.058.519A.351.351,0,0,1,12.7,16a.828.828,0,0,1-.384-.121L8,13.5,3.684,15.879A.83.83,0,0,1,3.3,16a.351.351,0,0,1-.327-.186.817.817,0,0,1-.058-.519l.827-5.041L.241,6.684a.612.612,0,0,1-.221-.6q.086-.277.52-.348L5.366,5,7.53.413Q7.722,0,8,0t.471.413L10.636,5l4.827.736q.433.07.519.348a.608.608,0,0,1-.231.6Z"
+                            transform="translate(-0.001)" fill="#0065ff" />
+                    </svg>
+                        <span class="current">
+                            <span>التقيمات</span>
+                        </span>
+                        <ul class="list">
+                            <li data-value="1" class="option selected focus disabled">التقيمات</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test test test </li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                        </ul>
+                    </div>
+               
+                    <div class="nice-select mb-3" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16.551" viewBox="0 0 16 16.551">
+                            <path id="moneybag"
+                                d="M11.734,16.534q-.75.017-3.734.017t-3.734-.017a18.28,18.28,0,0,1-3.192-.283Q0,16.018,0,15.468a5.546,5.546,0,0,1,.333-1.342q.333-1.008.733-2.117A22.489,22.489,0,0,0,1.8,9.459a11.406,11.406,0,0,0,.333-2.525q0-3.2,5.867-3.2t5.867,3.2A11.4,11.4,0,0,0,14.2,9.459a22.489,22.489,0,0,0,.733,2.55q.4,1.108.733,2.117A5.546,5.546,0,0,1,16,15.467q0,.55-1.075.783A18.229,18.229,0,0,1,11.734,16.534ZM8,7.467a5.766,5.766,0,0,1,1.892.267q.759.267.775.783v.017a.533.533,0,0,0,1.067,0q0-1.95-3.2-2.117v-.55a.533.533,0,0,0-1.067,0v.55q-3.2.167-3.2,2.117a1.677,1.677,0,0,0,.108.634,1.007,1.007,0,0,0,.35.442,2.258,2.258,0,0,0,.525.283A3.088,3.088,0,0,0,6,10.05q.466.05.9.067t1.1.017a5.662,5.662,0,0,1,1.908.275q.758.275.758.793t-.759.792A5.694,5.694,0,0,1,8,12.267,5.766,5.766,0,0,1,6.109,12q-.759-.267-.775-.783V11.2a.533.533,0,0,0-1.067,0q0,1.95,3.2,2.117v.55a.533.533,0,0,0,1.067,0v-.55q3.2-.167,3.2-2.117,0-2.133-3.734-2.133-.234,0-.583.008t-.567.017q-.217.008-.483,0a2.708,2.708,0,0,1-.434-.042,1.918,1.918,0,0,1-.317-.091A.422.422,0,0,1,5.4,8.792a.48.48,0,0,1-.067-.258q0-.517.767-.792A5.679,5.679,0,0,1,8,7.467Zm0-4.8a15.428,15.428,0,0,0-1.833.1,13.333,13.333,0,0,1-.592-1.359A3.325,3.325,0,0,1,5.333.533q0-.267.434-.533A3.81,3.81,0,0,0,6.784.383,5.138,5.138,0,0,0,8,.533,5.138,5.138,0,0,0,9.217.383,3.81,3.81,0,0,0,10.234,0q.434.267.434.533a3.327,3.327,0,0,1-.242.875,13.333,13.333,0,0,1-.592,1.359A15.428,15.428,0,0,0,8,2.667Z"
+                                fill="#0065ff" />
+                        </svg>
+                        <span class="current">
+                            <span> السعر </span>
+                        </span>
+                        <ul class="list">
+                            <li data-value="1" class="option selected focus disabled"> السعر </li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test test test </li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                        </ul>
+                    </div>
+               
+                    <div class="nice-select" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path id="Union_24" data-name="Union 24"
+                                d="M-1410.191-1676.374l-3.429-2.291a.3.3,0,0,1-.129-.247v-13.122a.294.294,0,0,1,.15-.257.278.278,0,0,1,.291.012l3.429,2.3a.3.3,0,0,1,.13.247v13.114a.3.3,0,0,1-.151.258.276.276,0,0,1-.135.035A.282.282,0,0,1-1410.191-1676.374Zm1.736,0a.3.3,0,0,1-.152-.26v-13.119a.3.3,0,0,1,.13-.247l3.005-2.018a.378.378,0,0,1,.045-.027,1.1,1.1,0,0,1,1.125.032h0a1.209,1.209,0,0,1,.553,1.035v10.864a1.179,1.179,0,0,1-.586,1.027l-3.824,2.7a.28.28,0,0,1-.161.051A.278.278,0,0,1-1408.455-1676.378Zm-10.743-.26a1.182,1.182,0,0,1-.552-1.009v-10.892a1.181,1.181,0,0,1,.577-1.024l3.834-2.7a.278.278,0,0,1,.295-.017.3.3,0,0,1,.152.26v13.117a.3.3,0,0,1-.129.246l-3.005,2.021a.478.478,0,0,1-.045.027,1.119,1.119,0,0,1-.536.137A1.117,1.117,0,0,1-1419.2-1676.638Z"
+                                transform="translate(1419.75 1692.327)" fill="#0065ff" />
+                        </svg>
+                        <span class="current">
+                            <span>المسافة</span>
+                        </span>
+                        <ul class="list">
+                            <li data-value="1" class="option selected focus disabled">المسافة</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test test test </li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                            <li data-value="1" class="option">test</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary filter" data-bs-dismiss="modal">فرز</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
     <!-- ======= Footer ======= -->
     <footer id="footer" class="d-none d-lg-block">
         <div class="footer-top">
@@ -1293,6 +1402,8 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/filter.js"></script>
+    <script src="assets/vendor/Jquery-Pagination/jquery.twbsPagination.js"></script>
+    <script src="assets/js/paging.js"></script>
 
 </body>
 
