@@ -754,6 +754,12 @@ article .nice-select2{
     height:40px!important;
   }
 
+  .page-title-section .inner-search button
+  {
+    height:40px!important;
+    font-size: 11px!important;
+  }
+
   .page-title-section.cov .icon figure img {
     height: 186px!important;
   }
@@ -773,6 +779,7 @@ article .nice-select2{
     border:none;
     max-width: 144px;
     width: 100%;
+    justify-content: space-around;
   }
 
   .z-index{
@@ -894,6 +901,22 @@ article .nice-select2{
   }
 
   /* ====== Doctors ====== */
+
+  .card-detail .value-card p{
+    color:#313450!important;
+    font-size:11px!important;
+    line-height: 3.5;
+  }
+
+  .card-detail .value-card h5{
+    font-size:16px!important;
+    line-height: 2.5;
+  }
+
+  .card-detail .value-card .btn
+  {
+    width: 30%!important;
+  }
   .modal-body .nice-select
   {
     border: 0.699999988079071px solid #8D8D8D;
@@ -2145,11 +2168,19 @@ section {
 }
 
 .filter-btn{
-  right: -30px;
-  bottom: 45px;
-  position: fixed;
-  z-index: 996;
-  transition: all 0.4s;
+    right: 20px;
+    bottom: 65px;
+    position: fixed;
+    z-index: 996;
+    transition: all 0.4s;
+    width: 59px;
+    height: 59px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 24px #00000029;
+    opacity: 1;
+    border-radius: 50%;
+    line-height: 3.5;
+    text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -4310,6 +4341,7 @@ button.fill-face span {
   text-align: right !important;
   padding-right: 10px;
   height: auto;
+  margin-right:10px;
 
 }
 .search-result-section .nice-select::after {
