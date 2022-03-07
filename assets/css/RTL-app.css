@@ -742,6 +742,17 @@ article .nice-select2{
      margin: 15px 10px;
 }
 
+.card-detail .title-card {
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.card-detail .title-card span
+{
+  color:#0065FF;
+}
+
 @media (max-width: 600px) {
   .txt-sm{
     font-size: 11px!important;
@@ -1005,7 +1016,6 @@ article .nice-select2{
 
   .breadcrumbs .doctor-img {
     top: 50px!important;
-    height: 140px!important;
   }
 
   .search-result-section .ms-5{
@@ -1034,11 +1044,13 @@ article .nice-select2{
   }
 
   .doctor-detail{
-    margin-top:-80px;
+    margin-top:-60px;
   }
 
   .breadcrumbs {
-    padding: 20px 0 80px 0px!important;
+    padding: 20px 0 60px 0px!important;
+    background: #E5F2FF;
+    overflow-x: hidden;
   }
 
   .doctor-detail .rate-doctor .card-box .header-card h5
@@ -1051,17 +1063,6 @@ article .nice-select2{
   .doctor-detail .pleace-comment form button
   {
     width:60px!important;
-  }
-
-  .card-detail .title-card {
-    font-weight: 600;
-    font-size: 14px;
-    color: #000;
-    margin-bottom: 10px;
-  }
-  .card-detail .title-card span
-  {
-    color:#0065FF;
   }
 
   /* ===== Success ===== */
@@ -3133,13 +3134,13 @@ body {
 .card-detail {
   padding: 20px 0!important;
 }
-.card-detail .title-card txt-md {
+.card-detail .title-card {
   font-weight: 600;
   font-size: 16px;
   color: #000;
   margin-bottom: 10px;
 }
-.card-detail .title-card txt-md span {
+.card-detail .title-card  span {
   font-weight: 600;
   font-size: 16px;
   text-align: left;
