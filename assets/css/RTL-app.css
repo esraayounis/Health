@@ -901,22 +901,6 @@ article .nice-select2{
   }
 
   /* ====== Doctors ====== */
-
-  .card-detail .value-card p{
-    color:#313450!important;
-    font-size:11px!important;
-    line-height: 3.5;
-  }
-
-  .card-detail .value-card h5{
-    font-size:16px!important;
-    line-height: 2.5;
-  }
-
-  .card-detail .value-card .btn
-  {
-    width: 30%!important;
-  }
   .modal-body .nice-select
   {
     border: 0.699999988079071px solid #8D8D8D;
@@ -1005,6 +989,112 @@ article .nice-select2{
     height: 130px!important;
   }
 
+
+  /* ====== Doctor Details & Reservations ======== */
+
+  .card-detail .value-card p{
+    color:#313450!important;
+    font-size:11px!important;
+    line-height: 3.5;
+  }
+
+  .card-detail .value-card h5{
+    font-size:16px!important;
+    line-height: 2.5;
+  }
+
+  .breadcrumbs .doctor-img {
+    top: 50px!important;
+    height: 140px!important;
+  }
+
+  .search-result-section .ms-5{
+    margin:0!important;
+  }
+
+  .card-box .header-card span{
+    text-align: center!important;
+    font-size: 16px;
+  }
+  .card-box .header-card{
+    text-align: center!important;
+  }
+
+  .price span{
+    color:#000000;
+  }
+
+  .doctor-detail .rate-doctor .card-box {
+    padding-top: 0px;
+}
+
+
+  .content-card p{
+    text-align: center;
+  }
+
+  .doctor-detail{
+    margin-top:-80px;
+  }
+
+  .breadcrumbs {
+    padding: 20px 0 80px 0px!important;
+  }
+
+  .doctor-detail .rate-doctor .card-box .header-card h5
+  {font-size: 14px;}
+
+  .card-detail .value-card .btn
+  {
+    width: 30%!important;
+  }
+  .doctor-detail .pleace-comment form button
+  {
+    width:60px!important;
+  }
+
+  .card-detail .title-card {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  .card-detail .title-card span
+  {
+    color:#0065FF;
+  }
+
+  /* ===== Success ===== */
+  .success-message .text
+  {
+    font-size: 16px!important;
+    font-weight:bold;
+    color: #211F1F;
+  }
+
+  .success-message .text-field, .email-sent
+  {
+    font-size: 11px;
+    text-align: center;
+    color: #000000;
+    display: flex;
+    padding: 0 35px;
+  }
+
+  .h-success-logo{
+    height:75px;
+  }
+
+  .success-message .back-to-home{
+    font-size: 11px;
+  }
+  .section-success
+  {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    margin: 20px;
+  }
 
   /* ===== Sign Up ====== */
 
@@ -3043,13 +3133,13 @@ body {
 .card-detail {
   padding: 20px 0!important;
 }
-.card-detail .title-card {
+.card-detail .title-card txt-md {
   font-weight: 600;
   font-size: 16px;
   color: #000;
   margin-bottom: 10px;
 }
-.card-detail .title-card span {
+.card-detail .title-card txt-md span {
   font-weight: 600;
   font-size: 16px;
   text-align: left;

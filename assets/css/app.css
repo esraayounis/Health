@@ -2055,13 +2055,13 @@ footer {
 .card-detail {
   padding: 20px 0!important;
 }
-.card-detail .title-card {
+.card-detail .title-card txt-md {
   font-weight: 600;
   font-size: 16px;
   color: #000;
   margin-bottom: 10px;
 }
-.card-detail .title-card span {
+.card-detail .title-card txt-md span {
   font-weight: 600;
   font-size: 16px;
   text-align: left;
