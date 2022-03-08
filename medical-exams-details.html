@@ -517,48 +517,48 @@
                                          <!-- item -->
                                         <div class="item exam d-flex justify-content-between align-content-around px-4 mb-3">
                                             <p class="w-100 mx-4" >أشعة خاصة بالأسنان</p>
-                                            <button type="button" onclick="Clone(this)">
+                                           
                                                 <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                     <path id="add"
                                                         d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
                                                         transform="translate(-7.5 -7.5)" fill="#0065ff" />
                                                 </svg>
-                                            </button>
+                                         
                                             
         
                                         </div>
                                         <!-- item -->
                                         <div class="item exam d-flex justify-content-between align-content-around px-4 mb-3">
                                             <p class="w-100 mx-4">أشعة عادية </p>
-                                            <button type="button" onclick="Clone(this)">
+                                            <!-- <button type="button" onclick="Clone(this)"> -->
                                                 <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                     <path id="add"
                                                         d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
                                                         transform="translate(-7.5 -7.5)" fill="#0065ff" />
                                                 </svg>
-                                            </button>
+                                              
                                         </div>
                                         <!-- item -->
                                         <div class="item exam d-flex justify-content-between align-content-around px-4 mb-3">
                                             <p class="w-100 mx-4">دوبلر</p>
-                                            <button type="button" onclick="Clone(this)">
+                                            <!-- <button type="button" onclick="Clone(this)"> -->
                                                 <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                     <path id="add"
                                                         d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
                                                         transform="translate(-7.5 -7.5)" fill="#0065ff" />
                                                 </svg>
-                                            </button>
+                                          
                                         </div>
                                         <!-- item -->
                                         <div class="item exam d-flex justify-content-between align-content-around px-4 mb-3">
                                             <p class="w-100 mx-4">موجات صوتية</p>
-                                            <button type="button" onclick="Clone(this)">
+                                            <!-- <button type="button" onclick="Clone(this)"> -->
                                                 <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                     <path id="add"
                                                         d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
                                                         transform="translate(-7.5 -7.5)" fill="#0065ff" />
                                                 </svg>
-                                            </button>
+                                          
                                         </div>
                                     </div>
                                 </div>
@@ -757,7 +757,7 @@
                                             </g>
                                         </svg>
                                         <p class="w-100 mx-3">صورة دم كاملة</p>
-                                        <button id="delete-icon" type="button"  onclick="Delete(this)">
+                                        <!-- <button id="delete-icon" type="button"  onclick="Delete(this)"> -->
                                             <svg  class="pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="18.667" viewBox="0 0 16 18.667">
                                                 <g id="delete" transform="translate(4.351 1.6)">
                                                     <path id="Union_12" data-name="Union 12"
@@ -765,7 +765,7 @@
                                                         transform="translate(-4.351 -1.6)" fill="red" />
                                                 </g>
                                             </svg>
-                                        </button>
+                                       
                                     </div>
 
                                     <div class="item d-flex justify-content-between align-content-around px-3 mb-3">
@@ -777,7 +777,7 @@
                                             </g>
                                         </svg>
                                         <p class="w-100 mx-3">مسحة عادية (اطمئنان) PCR</p>
-                                        <button id="delete-icon" type="button"  onclick="Delete(this)">
+                                        <!-- <button id="delete-icon" type="button"  onclick="Delete(this)"> -->
                                             <svg  class="pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="18.667" viewBox="0 0 16 18.667">
                                                 <g id="delete" transform="translate(4.351 1.6)">
                                                     <path id="Union_12" data-name="Union 12"
@@ -785,7 +785,7 @@
                                                         transform="translate(-4.351 -1.6)" fill="red" />
                                                 </g>
                                             </svg>
-                                        </button>
+                                       
                                     </div>
 
                                 </div>
@@ -1458,24 +1458,24 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/filter.js"></script>
     <script>
-        function Clone() {
-            debugger
-            var clone = document.getElementById('specialist').cloneNode(true); // "deep" clone
-            document.getElementById("exam-list").appendChild(clone);
+        // function Clone() {
+        //     debugger
+        //     var clone = document.getElementById('specialist').cloneNode(true); // "deep" clone
+        //     document.getElementById("exam-list").appendChild(clone);
 
-        }
+        // }
 
-        function Delete(button) {
-            debugger
-            var parent = button.parentNode;
-            var grand_father = parent.parentNode;
-            grand_father.removeChild(parent);
-        }
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            onlyCountries: ['sa', 'eg', 'ur'],
-            utilsScript: "build/js/utils.js",
-        });
+        // function Delete(button) {
+        //     debugger
+        //     var parent = button.parentNode;
+        //     var grand_father = parent.parentNode;
+        //     grand_father.removeChild(parent);
+        // }
+        // var input = document.querySelector("#phone");
+        // window.intlTelInput(input, {
+        //     onlyCountries: ['sa', 'eg', 'ur'],
+        //     utilsScript: "build/js/utils.js",
+        // });
     </script>
 
 </body>

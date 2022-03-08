@@ -242,7 +242,8 @@
                                                     <span class="bg-light">أو</span>
                                                 </p>
                                                 <form>
-                                                        <!-- form-fullname-->
+                                                    <!-- form-fullname-->
+                                                    <label for="name">Name:</label>
                                                     <div class="form-group input-group">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text"> 
@@ -251,7 +252,7 @@
                                                                 </svg> 
                                                             </span>
                                                         </div>
-                                                        <input name="" class="form-control" placeholder="الأسم كاملاً" type="text">
+                                                        <input name="name" id="name" class="form-control" placeholder="الأسم كاملاً" type="text">
                                                     </div>
                 
                                                     <!-- form-phone-->
@@ -263,7 +264,7 @@
                                                                 </svg> 
                                                             </span>
                                                         </div>
-                                                        <input name="" id="phone" class="form-control" placeholder="رقم الهاتف" type="tel">
+                                                        <input name="phone" id="phone" class="form-control" placeholder="رقم الهاتف" type="tel">
                                                     </div>
                 
                                                     <!-- form-Email -->
@@ -275,7 +276,7 @@
                                                                 </svg> 
                                                             </span>
                                                         </div>
-                                                        <input name="" class="form-control" placeholder="البريد الالكتروني" type="email">
+                                                        <input name="email" id="email" class="form-control" placeholder="البريد الالكتروني" type="email">
                                                     </div>
                                                     
                                                     <!-- form-DATE BIRTH -->
@@ -326,7 +327,7 @@
                                                                 </svg> 
                                                             </span>
                                                         </div>
-                                                        <input class="form-control" placeholder="كلمة المرور" type="password">
+                                                        <input id="psw" name="psw"  class="form-control" placeholder="كلمة المرور" type="password">
                                                     </div>
                 
                                                     <!-- form-confirm-password -->
@@ -338,7 +339,7 @@
                                                                 </svg> 
                                                             </span>
                                                         </div>
-                                                        <input class="form-control" placeholder="تأكيد كلمة المرور" type="password">
+                                                        <input id="confirm-pass" name="confirm-pass" class="form-control" placeholder="تأكيد كلمة المرور" type="password">
                                                     </div>
                 
                                                     <div class="col-12">
@@ -346,12 +347,14 @@
                                                     </div>
                                                     
                                                     <div class="create-button">
-                                                        <a class="txt-white btn create-btn btn-primary btn-block full-width" href="index.html">إنشاء حساب</a>
+                                                        <button type="button"  onclick="saveDataNewUsers()" id="save_btn" class="txt-white btn create-btn btn-primary btn-block full-width">إنشاء حساب</button>
                                                     </div>
                                                 </form>
                                             </article>
                                         </div>
                                     </div>
+
+
                                     <div class="tab-pane fade py-4 px-1 " id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab">
                                         <!-- Start login form -->
                                         <div class="container">
@@ -379,7 +382,7 @@
                                                                 </svg> 
                                                             </button>
                                                         </div>
-                                                        <input name="" class="form-control" placeholder="البريد الالكتروني" type="email">
+                                                        <input name="email" id="email" class="form-control" placeholder="البريد الالكتروني" type="email">
                                                     </div>
                                                     
                                                     <!-- form-password -->
@@ -389,12 +392,13 @@
                                                                 <path id="lock" d="M14.029,7.433A2,2,0,0,1,16,9.4V19.445a2,2,0,0,1-1.971,1.97H2.018a1.947,1.947,0,0,1-1.431-.587A1.893,1.893,0,0,1,0,19.445V9.4A1.893,1.893,0,0,1,.587,8.02a1.947,1.947,0,0,1,1.431-.587H3V5.415A4.833,4.833,0,0,1,4.481,1.873,4.83,4.83,0,0,1,8.023.395a4.759,4.759,0,0,1,3.519,1.478A4.868,4.868,0,0,1,13,5.416V7.434h1.032ZM8,16.442a1.918,1.918,0,0,0,1.407-.587,2.039,2.039,0,0,0,0-2.862,1.982,1.982,0,0,0-2.815,0,2.038,2.038,0,0,0,0,2.862A1.92,1.92,0,0,0,8,16.442Zm3.12-9.009V5.415a2.978,2.978,0,0,0-.915-2.182A3.006,3.006,0,0,0,8,2.319a2.93,2.93,0,0,0-2.182.915,3.017,3.017,0,0,0-.891,2.182V7.433H11.12Z" transform="translate(0 -0.395)" fill="#8d8d8d"/>
                                                                 </svg> </span>
                                                         </div>
-                                                        <input class="form-control" placeholder="كلمة المرور" type="password">
+                                                        <input id="psw" name="psw" class="form-control" placeholder="كلمة المرور" type="password">
                                                     </div>
                 
                                                     
                                                     
                                                     <div class="create-button">
+
                                                         <a class="txt-white btn create-btn btn-primary btn-block full-width" href="index.html">تسجيل دخول</a>
                                                     </div>
                                                 </form>
@@ -504,14 +508,15 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/set-local-storage-login.js"></script>
+    <script src="assets/js/set-local-storage-users.js"></script>
     <script>
-        var input = document.querySelector("#phone");
+         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
             onlyCountries: ['sa', 'eg', 'ur'],
             utilsScript: "build/js/utils.js",
         });
-    </script>
-    <script>
+
         function ConvertFormat(xObj, xTraget) {
             var date = new Date(xObj.value);
             var month = date.getMonth() + 1;

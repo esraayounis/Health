@@ -218,6 +218,7 @@
                                 </p>
                                 <form>
                                      <!-- form-fullname-->
+                                     <label class="d-none" for="name">Name:</label>
                                     <div class="form-group input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> 
@@ -226,7 +227,7 @@
                                              </svg> 
                                             </span>
                                         </div>
-                                        <input name="" class="form-control" placeholder="الأسم كاملاً" type="text">
+                                        <input name="name" id="name" class="form-control" placeholder="الأسم كاملاً" type="text">
                                     </div>
 
                                     <!-- form-phone-->
@@ -238,10 +239,11 @@
                                              </svg> 
                                             </span>
                                         </div>
-                                        <input name="" id="phone" class="form-control" placeholder="رقم الهاتف" type="tel">
+                                        <input name="phone" id="phone" class="form-control" placeholder="رقم الهاتف" type="tel">
                                     </div>
 
                                     <!-- form-Email -->
+                                   
                                     <div class="form-group input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> 
@@ -250,7 +252,7 @@
                                              </svg> 
                                             </span>
                                         </div>
-                                        <input name="" class="form-control" placeholder="البريد الالكتروني" type="email">
+                                        <input name="email" id="email" class="form-control" placeholder="البريد الالكتروني" type="email">
                                     </div>
                                     
                                     <!-- form-DATE BIRTH -->
@@ -301,7 +303,7 @@
                                               </svg> 
                                             </span>
                                         </div>
-                                        <input class="form-control" placeholder="كلمة المرور" type="password">
+                                        <input id="psw" name="psw" class="form-control" placeholder="كلمة المرور" type="password">
                                     </div>
 
                                     <!-- form-confirm-password -->
@@ -313,7 +315,7 @@
                                               </svg> 
                                             </span>
                                         </div>
-                                        <input class="form-control" placeholder="تأكيد كلمة المرور" type="password">
+                                        <input id="confirm-pass" name="confirm-pass" class="form-control" placeholder="تأكيد كلمة المرور" type="password">
                                     </div>
 
                                     <div class="col-12">
@@ -321,7 +323,7 @@
                                     </div>
                                   
                                     <div class="create-button">
-                                        <a class="txt-white btn create-btn btn-primary btn-block" href="profile-info.html">إنشاء حساب</a>
+                                        <button type="button"  onclick="saveDataNewUsers()" id="save_btn" class="txt-white btn create-btn btn-primary btn-block">إنشاء حساب</button>
                                     </div>
                                 </form>
                             </article>
@@ -424,7 +426,9 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/set-local-storage-users.js"></script>
     <script>
+
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
             onlyCountries: ['sa', 'eg', 'ur'],
