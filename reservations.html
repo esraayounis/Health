@@ -225,9 +225,8 @@
                         <div class="d-flex align-items-center">
                             <ol>
                                 <li><a href="index.html">الرئيسية</a></li>
-                                <!-- <li id="selected-service">زيارة دكتور</li> -->
-                                <li>زيارة دكتور</li>
-                                <li>شادي السيد عبدالعزيز</li>
+                                <li id="type"></li>
+                                <li id="name"></li>
                             </ol>
                         </div>
                     </div>
@@ -250,9 +249,9 @@
                 <div class="row">
 
                     <div class="col-lg-8">
-                        <div class="card-box p-2 py-4 card-detail desktop-show">
-                            <div class="row">
-                                <div class="col-lg-3 p-lg-0">
+                        <div class="card-box p-2 py-4 card-detail desktop-show"  id="card-data-web">
+                           
+                            <!-- <div class="col-lg-3 p-lg-0">
                                     <div class="avatar text-center">
                                         <img src="./assets/./images/abdo2.png" alt="">
                                     </div>
@@ -331,8 +330,8 @@
                                         <p>ميدان المحطة المنصورة</p>
                                     </div>
                                    
-                                </div>
-                            </div>
+                                </div> -->
+                          
                         </div>
                         <div class="inner rate-doctor desktop-show">
                             <div class="card-box">
@@ -471,9 +470,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-box nice-card  p-0 py-1 card-detail mobile-show">
-                            <div class="row">
-                                <div class="col-lg-2 ">
+                        <div class="card-box nice-card  p-0 py-1 card-detail mobile-show" id="card-data-mob">
+                            <!-- <div class="row">
+                               <div class="col-lg-2 ">
                                     <div class="row">
                                         <div class="col-3 avatar txt-left">
                                             <img src="./assets/./images/doctor-img.png" alt="">
@@ -555,8 +554,8 @@
                                     </svg>
                                         <p>ميدان المحطة المنصورة</p>
                                     </div>
-                                </div>
-                            </div>
+                                </div> 
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -575,7 +574,7 @@
                                                 d="M26.689,14.767,15.89,3.382a1.283,1.283,0,0,0-1.783,0L3.308,14.767a1.092,1.092,0,0,0-.2,1.225,1.2,1.2,0,0,0,1.1.675H6.6v7.97a1.17,1.17,0,0,0,1.2,1.139H22.2a1.17,1.17,0,0,0,1.2-1.139v-7.97h2.4a1.2,1.2,0,0,0,1.1-.674,1.092,1.092,0,0,0-.207-1.226ZM19.8,17.806H16.2v3.416H13.8V17.806H10.2V15.529h3.6V12.113h2.4v3.416h3.6Z"
                                                 transform="translate(-2.999 -3.021)" fill="#0065ff" />
                                         </svg>
-                                        <span>زيارة عيادة</span>
+                                        <span id="selected-service"></span>
                                     </div>
                                     <div class="price-nurse py-4">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="33.75" height="27" viewBox="0 0 33.75 27">
@@ -927,6 +926,32 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
+        // Shared Data
+        window.onload = function () {
+             var queryString = decodeURIComponent(window.location.search); //parsing 
+            queryString = queryString.substring(1); 
+             var queries = queryString.split("&"); 
+             console.log(queries)
+            data = {}, tmp= [];
+            for (var i = 0; i < queries.length; i++) 
+            { 
+                tmp = queries[i].split('=');
+                data[tmp[0]] = tmp[1];
+            } 
+
+            console.log(data)
+         
+            document.getElementById('selected-service').innerHTML = data.type;
+            document.getElementById('type').innerHTML = data.type;
+            document.getElementById('name').innerHTML = data.name;
+
+            var card1 =  localStorage.getItem("card-web");
+            var card2 =  localStorage.getItem("card-mob");
+            document.getElementById('card-data-web').innerHTML = card1;
+            document.getElementById('card-data-mob').innerHTML = card2;
+        }
+
+        //  Payment Method
         $(document).ready(function() {
             $('input[type="radio"]').click(function() {
                 var inputValue = $(this).attr("value");

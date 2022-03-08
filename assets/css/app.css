@@ -3528,7 +3528,7 @@ textarea {
 }
 .doctor-detail .card-tabs .nav-tabs .nav-link.active svg,
 .doctor-detail .card-tabs .nav-tabs .nav-link.active path {
-  fill: #0065FF !important;
+  fill: #0065FF;
 }
 .doctor-detail .card-tabs .nav-tabs .nav-link.active p {
   color: #0065FF;

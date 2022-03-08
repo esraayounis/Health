@@ -1002,6 +1002,25 @@ article .nice-select2{
 
 
   /* ====== Doctor Details & Reservations ======== */
+  .doctor-detail .card-tabs #nav-laborat-tab.active{
+    border-radius: 0px 10px 0px 0px;
+  }
+
+  .doctor-detail .card-tabs #nav-home-tab.active{
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    background: #0065FF !important;
+  }
+
+  .doctor-detail .card-tabs #nav-laborat-tab.active p{
+       color:white;
+  }
+
+  .doctor-detail .card-tabs #nav-laborat-tab.active svg{
+    fill: white !important;
+   }
 
   .card-detail .value-card p{
     color:#313450!important;
@@ -1034,6 +1053,7 @@ article .nice-select2{
     color:#000000;
   }
 
+
   .doctor-detail .rate-doctor .card-box {
     padding-top: 0px;
 }
@@ -1063,6 +1083,10 @@ article .nice-select2{
   .doctor-detail .pleace-comment form button
   {
     width:60px!important;
+  }
+
+  .doctor-detail .rate-doctor .star{
+    text-align: center;
   }
 
   /* ===== Success ===== */

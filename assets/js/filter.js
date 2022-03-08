@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
     
     $(".filter-button").click(function(){
         debugger
@@ -17,7 +17,7 @@ $(document).ready(function(){
             li[i].style.display = "none";
         }
     }
-  });
+
 
 
 //   $(".filter-exam").click(function(){

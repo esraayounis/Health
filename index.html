@@ -4659,17 +4659,13 @@
         
         var title = $('.home-tabs .active span').text();
         localStorage.setItem("selectedService", title);
+      
     });
-    // var title = document.getElementById('').innerText;;
-    //  localStorage.setItem("selectedService", title);
-
-
-    // var value1=document.getElementById("office").value;
-    //     var value2=document.getElementById("city").value; 
-    //     var value3=document.getElementById("region").value;
-
-    //     var queryString = "?para1=" + value1 + "&para2=" + value2 + "&para3=" + value3;
-    //     window.location.href = "governement-iqama-issuance.html" + queryString;
+    $('.nav-link').click(function(){
+        var title =  $(".home-tabs.active span").text();
+        localStorage.setItem("selectedService", title);
+    });
+    
 
     </script>
 </body>
