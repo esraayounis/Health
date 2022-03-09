@@ -251,6 +251,45 @@ jQuery(".services-links a").click(function(e) {
         $(this).addClass('active');
        }
     }
-    });
+});
+
+
+// ======== Home Page =============
+
+  /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+function openUserDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+     var i;
+     for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+        }
+     }
+    }
+}
+
+
+  // Share Selected Services
+function openServicesDropdown() {
+    document.getElementById("servicesDropdown").classList.toggle("show");
+}
+$('.parent-header').click(function(){
+    debugger
+    var x = $(this).text;
+    function getService(x) {
+       debugger
+      var service = $('.child-header.active span').text();
+      localStorage.setItem("selected-service", service);
+      console.log(service)
+   }
+});
 
 

@@ -1,5 +1,21 @@
 let name=localStorage.getItem('name')?localStorage.getItem('name'):''
 console.log(name);
+document.getElementById("profile-name").value = name;
+$(document).ready(function() {
+     document.getElementById("profile-name").innerHTML = name;
+     if (name == '') {
+        var usernamediv = document.querySelector('.username');
+        usernamediv.style.display = 'none';
+        var logindiv = document.querySelector('.login-group');
+        logindiv.style.display = 'block';
+    }
+    else {
+        var usernamediv = document.querySelector('.username');
+        usernamediv.style.display = 'block';
+        var logindiv = document.querySelector('.login-group');
+        logindiv.style.display = 'none';
+    }
+  });
 function Logout()
 {
   localStorage.removeItem('name');
@@ -11,9 +27,9 @@ function Logout()
 
   if(matched)
   {
-    window.location.href="login-web.html";
+    window.location.href="sign-up-mobile.html";
   }
   else{
-    
+    window.location.href="login-web.html";
   }
 }

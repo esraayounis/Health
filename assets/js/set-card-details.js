@@ -1,11 +1,10 @@
-$('.nav-link .link-tab').click(function(){
-    var newName =  $(".nav-link .link-tab.active p").text();
+   // Share Data
+$('.nav-link').click(function(){
+    var newName =  $(".nav-link.active p").text();
     console.log(newName);
     localStorage.setItem("selected-tab", newName);
 });
 
-
-// Share Data
 function shareCardData()
 {
 var sharedCardWeb = document.getElementById('set-card-data-web').innerHTML;
