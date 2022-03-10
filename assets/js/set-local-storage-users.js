@@ -32,6 +32,8 @@ function saveDataNewUsers()
     localStorage.setItem("birthdate",birthdate)
     localStorage.setItem("gender",gender)
     }
+
+    sessionStorage.setItem('status','loggedIn') 
     window.location.href="index.html"
 
 }

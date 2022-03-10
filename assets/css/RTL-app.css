@@ -12,8 +12,8 @@ body {
   font-family: "Cairo", sans-serif;
   color: #444444;
 }
-body::-webkit-scrollbar { 
-  display: none; 
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -21,8 +21,8 @@ a {
   text-decoration: none;
 }
 
-a:focus{
-  cursor: pointer;
+a:focus, a:active, .a:hover{
+  cursor: pointer!important;
 }
 .txt-blue{
   color: #0065FF;
@@ -144,6 +144,10 @@ input:focus-visible{
 input:-webkit-autofill{
   transition: background-color 5000s ease-in-out 0s;
 }
+
+.cash p, .epay p, .atm p{
+  margin-right:60px;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -259,7 +263,7 @@ input:-webkit-autofill{
   transition: all 0.5s;
   z-index: 997;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  
+
 }
 
 #header.header-scrolled {
@@ -668,7 +672,7 @@ Desktop Navigation
   border-radius: 10px 10px 0 0 ;
 }
 
- 
+
 
 .not-found-data{
 
@@ -871,12 +875,12 @@ article .nice-select2{
     height:60px;
   }
 
-  .hero .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link span 
+  .hero .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link span
   {
     margin-top: 25px!important;
   }
- 
-  .hero .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link svg 
+
+  .hero .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link svg
   {
     position: absolute;
     margin-top: -20px;
@@ -902,7 +906,7 @@ article .nice-select2{
     line-height: 1.5!important;
   }
 
-  .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus, 
+  .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus,
   .hero .content-main-cats-tabs .content-sub-cats-tabs .group-select .nice-select-hero .list li{
     font-size:13px!important;
   }
@@ -973,13 +977,13 @@ article .nice-select2{
     transition: all .5s ease;
   }
 
-  
+
   .save-icon {
     position: relative;
     transition: all .5s ease-in-out;
   }
-  
-  .save-input { 
+
+  .save-input {
     position: absolute;
     opacity: 0;
   }
@@ -998,7 +1002,7 @@ article .nice-select2{
     height: 115px!important;
     left:0!important;
   }
-  
+
   .hospital-img{
     top: 45px!important;
     height: 130px!important;
@@ -1144,7 +1148,7 @@ article .nice-select2{
    #hero .gender svg {
     top: unset!important;
   }
-  
+
 }
 
 @media (min-width: 768px){
@@ -1220,7 +1224,7 @@ article .nice-select2{
     .pos-relative{
       position: relative;
     }
-    
+
     .input-icon
     {
         left: auto;
@@ -1231,7 +1235,7 @@ article .nice-select2{
         position: absolute;
         z-index: 10;
     }
-    
+
     .registration{
       width:570px;
       background: #ffffffbf 0% 0% no-repeat padding-box;
@@ -1239,13 +1243,13 @@ article .nice-select2{
       border-radius: 10px;
       opacity: 0.8;
     }
-    
+
     .registration h6, .contents h4, .login-forms h6{
       font-size:16px;
       color:#000000;
       font-weight: 600;
     }
-    
+
     .custom-input{
       background: #FFFFFF 0% 0% no-repeat padding-box;
       border: 1px solid #707070a1;
@@ -1257,7 +1261,7 @@ article .nice-select2{
       margin-bottom:17px;
       padding-right:10px!important;
     }
-    
+
     .mar-r-20{margin-right:20px;margin-left:unset;}
 
     .contents .container{
@@ -1312,7 +1316,7 @@ article .nice-select2{
     color: #8D8D8D;
     margin-bottom: 17px;
     padding-right: 10px!important;
-  
+
   }
 
   .form-control{
@@ -1369,7 +1373,7 @@ article .nice-select2{
   }
   .registration  .nice-select .option {
     padding:10px;}
-  
+
   /* -----Home----- */
   .navbar-mobile .dropdown > .dropdown-active li
   {
@@ -1382,7 +1386,7 @@ article .nice-select2{
       text-align: center;
       margin-bottom: 70px;
     }
-    
+
     .lang{
       display: block;
       color:white;
@@ -1404,7 +1408,7 @@ article .nice-select2{
       left:0!important;
     }
 }
-  
+
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
@@ -1449,7 +1453,7 @@ article .nice-select2{
     transform: rotate(0deg);
     transition: all 0.4s cubic-bezier(0.54, -0.10, 0.57, 0.57);
   }
-  
+
   .hamburger-input {
     position: absolute;
     opacity: 0;
@@ -1460,7 +1464,7 @@ article .nice-select2{
     cursor: pointer;
   }
 
-  
+
 .menu-button-wrapper {
   position: relative;
   display: inline-block;
@@ -1493,7 +1497,7 @@ article .nice-select2{
     z-index: 2;
     opacity: 0;
     cursor: pointer;
-  
+
 }
 
 .navbar-nav{
@@ -1505,10 +1509,10 @@ article .nice-select2{
     border-radius: 20px;
     opacity: 1;
     user-select: auto;
-  }  
-  
+  }
+
   .menu-button:checked ~ .icon-wrapper .hamburger-line.second {
-    transform: rotate(-45deg); 
+    transform: rotate(-45deg);
   }
 
   .menu-button:checked ~ .icon-wrapper .hamburger-line.first {
@@ -1518,7 +1522,7 @@ article .nice-select2{
   .menu-button:checked ~ .icon-wrapper .hamburger-line.third {
     transform: translate(11px, -3px) rotate(-135deg);
   }
-  
+
   .menu-button:checked ~ .icon-wrapper .hamburger:before {
     transform: rotate(45deg);
 }
@@ -1627,7 +1631,7 @@ article .nice-select2{
   .hero .over-lay-hero-mobil {
     display: block;
   }
-  
+
   .navbar-mobile .dropdown ul {
     position: absolute;
     right: 14px;
@@ -3525,9 +3529,6 @@ body {
   border: 0px solid;
 }
 
-.box {
-  display: none;
-}
 
 .locate {
   align-items: baseline;
@@ -3726,7 +3727,7 @@ body {
   background-size: cover !important;
   background-repeat: no-repeat !important;
   position: relative;
- 
+
 }
 
 .login{
@@ -3794,7 +3795,7 @@ body {
   color: #FF0000;
   border: 2px solid #80808080;
   border-color: none;
-  box-shadow: none; 
+  box-shadow: none;
 }
 .login-forms .btn-facebook {
   background: #2b4b90;
@@ -4398,6 +4399,19 @@ button.fill-face span {
   padding:12px 30px;
 }
 
+/* ====== Offers ======= */
+
+#more {display: none;}
+
+.pad-card{
+  padding:0 10px;
+}
+
+.h-img-teeth{
+  height:240px;
+  border-radius: 10px 10px 0 0;
+}
+
 .offers-cards {
   font-weight: 600;
   font-size: 18px;
@@ -4487,7 +4501,7 @@ button.fill-face span {
 .card-detail .nice-select .current{
   font-size: 14px;
 }
-/* .choose-time 
+/* .choose-time
 {
   border-top: 1px solid #c4c4c4;
 } */
@@ -4536,6 +4550,9 @@ button.fill-face span {
 .section-laboratory .owl-carousel {
   display: flex;
   align-items: center;
+}
+.owl-carousel{
+  z-index: 0;
 }
 .section-laboratory .owl-nav {
   display: flex;
@@ -4611,7 +4628,7 @@ button.fill-face span {
 
 /* // Form panels from doctor list page  */
 .book-form  .nice-select {
-  margin: 0px; 
+  margin: 0px;
 }
 
 .reserve-btn {
@@ -5263,25 +5280,19 @@ textarea {
     padding: 0;
   }
 }
+
+
+
 .offers-slider-section .inner-slider .item .inner-item img {
   display: block;
-  width: 100%;
-  width: inherit;
-  height: 200px !important;
+  width: 100%!important;
+  height: 430px!important;
   object-fit: cover;
   box-sizing: border-box;
-  height: 100%;
   bottom: 0;
   left: 0;
-  width: 100%;
-  padding: 15px;
-  background-color: rgba(255, 255, 255, 0.9);
 }
-@media (min-width: 1200px) {
-  .offers-slider-section .inner-slider .item .inner-item img {
-    height: 300px !important;
-  }
-}
+
 .offers-slider-section .inner-slider .owl-theme .owl-dots .owl-dot span {
   width: 10px;
   height: 10px;
@@ -5409,8 +5420,8 @@ textarea {
 
 .discount-offer {
   background: transparent;
-  width: 73px;
-  height: 30px;
+  width: 50px;
+  height: 60px;
   background: #f00;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   font-weight: bold;
@@ -5419,7 +5430,7 @@ textarea {
   position: absolute;
   top: 15px;
   left: 15px;
-  border-right: 10px solid #d20b0b;
+  border-top: 10px solid #d20b0b;
   display: flex;
   justify-content: center;
   align-items: center;
