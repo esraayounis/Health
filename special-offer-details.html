@@ -239,12 +239,11 @@
         <!-- ======= Breadcrumbs Section ======= -->
         <section class="breadcrumbs mt-0">
             <div class="container">
-
                 <div class="d-flex align-items-center">
                     <ol>
                         <li><a href="index.html">الرئيسية</a></li>
                         <li>عروض خاصة </li>
-                        <li id="selected-name">تبييض بلليزر + تنظيف + تلميع الأسنان</li>
+                        <li id="type">تبييض بلليزر + تنظيف + تلميع الأسنان</li>
                     </ol>
                 </div>
 
@@ -320,7 +319,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 p-lg-0 detail">
+                                <div class="col-lg-6 p-lg-0 detail" id="offer-card-details-web">
                                     <h6 class="title-card txt-md">
                                         شادي السيد عبدالعزيز
                                         <span>(زيارة تمريض)</span>
@@ -556,9 +555,9 @@
                                             d="M19.5,13.5h-3v-3h3m0,15h-3v-9h3M18,3A15,15,0,1,0,33,18,15,15,0,0,0,18,3Z"
                                             transform="translate(-3 -3)" fill="#0065ff"></path>
                                     </svg>
-                                    <span>اتراك تقييمك للممرضة هنا</span>
+                                    <span>اتراك تقييمك للدكتور هنا</span>
                                 </h4>
-                                <p>كيف كانت تجربتك مع ممرضة هنا ؟</p>
+                                <p>كيف كانت تجربتك مع الدكتور هنا ؟</p>
                                 <form action="">
                                     <div class="row">
                                         <div class="col-10">
@@ -729,7 +728,7 @@
 
                                                 <div class="row">
                                                     <div class="col-7">
-                                                        <a class="mt-4 w-100 btn-book btn" href="special-offer-reserve.html">أحجز الآن</a>
+                                                        <button type="button" class="mt-4 w-100 btn-book btn" onClick="shareOfferDetails()" >أحجز الآن</button>
                                                     </div>
                                                     <div class="col-5">
                                                         <button class="mt-4 btn-cancel btn">إلغاء</button>
@@ -979,6 +978,29 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
+    <script>
+                // Get Shared Data
+        window.onload = function () {
+             var queryString = decodeURIComponent(window.location.search); //parsing 
+            queryString = queryString.substring(1); 
+             var queries = queryString.split("&"); 
+             console.log(queries)
+            data = {}, tmp= [];
+            for (var i = 0; i < queries.length; i++) 
+            { 
+                tmp = queries[i].split('=');
+                data[tmp[0]] = tmp[1];
+            } 
+            console.log(data)
+            document.getElementById('selected-service').innerHTML = data.type;
+            document.getElementById('type').innerHTML = data.type;
+
+            var card1 =  localStorage.getItem("card-web");
+            var card2 =  localStorage.getItem("card-mob");
+            document.getElementById('card-data-web').innerHTML = card1;
+            document.getElementById('card-data-mob').innerHTML = card2;
+        }
+    </script>
 
 </body>
 

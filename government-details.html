@@ -1540,6 +1540,26 @@
     <script src="assets/js/set-card-details.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
     <script>
+          window.onload = function () {
+            debugger
+             var queryString = decodeURIComponent(window.location.search); //parsing 
+            queryString = queryString.substring(1); 
+             var queries = queryString.split("&"); 
+             console.log(queries)
+            data = {}, tmp= [];
+            for (var i = 0; i < queries.length; i++) 
+            { 
+                tmp = queries[i].split('=');
+                data[tmp[0]] = tmp[1];
+            } 
+            console.log(data)
+            document.getElementById('service').innerHTML = data.name;
+            var card1 =  localStorage.getItem("card-web");
+            var card2 =  localStorage.getItem("card-mob");
+            document.getElementById('card-data-web').innerHTML = card1;
+            document.getElementById('card-data-mob').innerHTML = card2;
+        }
+
        // intlTelInput 
         var input = document.querySelector("#phone1");
         window.intlTelInput(input, {

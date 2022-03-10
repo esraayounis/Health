@@ -1,22 +1,3 @@
-   // Share Data
-$('.nav-link').click(function(){
-    var newName =  $(".nav-link.active p").text();
-    console.log(newName);
-    localStorage.setItem("selected-tab", newName);
-});
-
-function shareCardData()
-{
-    var sharedCardWeb = document.getElementById('set-card-data-web').innerHTML;
-    localStorage.setItem("card-web", sharedCardWeb);
-    var sharedCardMob = document.getElementById('set-card-data-mob').innerHTML;
-    localStorage.setItem("card-mob", sharedCardMob);
-    var type =  localStorage.getItem("selected-tab");
-    var name = document.getElementById('selected-name').innerHTML;
-    var queryString = "?type=" + type + "&name=" + name; 
-    window.location.href = "reservations.html" + queryString; 
-}
-
 // ----- Special Offers-----
 function saveSelectedOfferCard(){
     if (sessionStorage.getItem('status') != null){
@@ -34,6 +15,17 @@ function saveSelectedOfferCard(){
     }
 }
 
+// ----- Offers Details -----
+function shareOfferDetails(){
+    var shareOfferDetailsdWeb = document.getElementById('offer-card-details-web').innerHTML;
+    localStorage.setItem("offer-details-web", shareOfferDetailsdWeb);
+    // var shareOfferDetailsdMob = document.getElementById('offer-card-details-mob').innerHTML;
+    // localStorage.setItem("offer-details-mob", shareOfferDetailsdMob);
+    var type = localStorage.getItem("selected-card");
+    var queryString = "?type=" + type; 
+    window.location.href = "special-offer-reserve.html" + queryString; 
+}
+
 // ------ Special Labs -----
 function saveSelectedlabCard(){
     if (sessionStorage.getItem('status') != null){
@@ -49,5 +41,25 @@ function saveSelectedlabCard(){
     else{
        alert("من فضلك سجل دخول أولا")
     }
+}
+
+   // Share Data
+   $('.nav-link').click(function(){
+    var newName =  $(".nav-link.active p").text();
+    console.log(newName);
+    localStorage.setItem("selected-tab", newName);
+});
+
+// ----- Card Details -----
+function shareCardData()
+{
+    var sharedCardWeb = document.getElementById('set-card-data-web').innerHTML;
+    localStorage.setItem("card-web", sharedCardWeb);
+    var sharedCardMob = document.getElementById('set-card-data-mob').innerHTML;
+    localStorage.setItem("card-mob", sharedCardMob);
+    var type =  localStorage.getItem("selected-tab");
+    var name = document.getElementById('selected-name').innerHTML;
+    var queryString = "?type=" + type + "&name=" + name; 
+    window.location.href = "reservations.html" + queryString; 
 }
 

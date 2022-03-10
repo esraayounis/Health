@@ -281,15 +281,16 @@ if (!event.target.matches('.dropbtn')) {
 function openServicesDropdown() {
     document.getElementById("servicesDropdown").classList.toggle("show");
 }
-$('.parent-header').click(function(){
-    debugger
-    var x = $(this).text;
-    function getService(x) {
-       debugger
-      var service = $('.child-header.active span').text();
-      localStorage.setItem("selected-service", service);
-      console.log(service)
-   }
-});
+
+// $('.child-header').click(function(){
+//     debugger
+//     var x = $('this').text;
+//     function getService(x) {
+//        debugger
+//       var service = $('.child-header.active span').text();
+//       localStorage.setItem("selected-service", service);
+//       console.log(service)
+//    }
+// });
 
 
