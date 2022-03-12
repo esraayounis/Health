@@ -42,6 +42,9 @@ h6 {
   font-family: "Cairo", sans-serif;
 }
 
+.txt-align-right{
+  text-align: right;
+}
 
 .font-bold{
   font-weight: bold!important;
@@ -147,6 +150,10 @@ input:-webkit-autofill{
 
 .cash p, .epay p, .atm p{
   margin-right:60px;
+}
+
+.btn:hover{
+  color:white;
 }
 /*--------------------------------------------------------------
 # Preloader
@@ -786,6 +793,8 @@ article .nice-select2{
   .discount-offer
   {
     left:15px!important;
+    width:60px!important;
+    height:35px!important;
   }
 
   .avaliable-btn
@@ -809,7 +818,6 @@ article .nice-select2{
   }
   #hero .card-box{
     top: -130px;
-    margin:10px;
   }
   .mobile-show{
     display: block;
@@ -919,6 +927,10 @@ article .nice-select2{
     fill:#0d6efd;
   }
 
+  .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link.active {
+    background: #0065FF;
+}
+
   /* ====== Doctors ====== */
   .modal-body .nice-select
   {
@@ -1018,10 +1030,6 @@ article .nice-select2{
     border-radius: 10px 10px 0px 0px;
   }
 
-  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
-    background: #0065FF !important;
-  }
-
   .doctor-detail .card-tabs #nav-laborat-tab.active p{
        color:white;
   }
@@ -1050,8 +1058,7 @@ article .nice-select2{
   }
 
   .card-box .header-card span{
-    text-align: center!important;
-    font-size: 16px;
+    font-size: 14px;
   }
   .card-box .header-card{
     text-align: center!important;
@@ -1066,10 +1073,6 @@ article .nice-select2{
     padding-top: 0px;
 }
 
-
-  .content-card p{
-    text-align: center;
-  }
 
   .doctor-detail{
     margin-top:-60px;
@@ -1093,8 +1096,121 @@ article .nice-select2{
     width:60px!important;
   }
 
-  .doctor-detail .rate-doctor .star{
+
+  .person-comment .rate{
+    align-content: center;
+    justify-content: center;
     text-align: center;
+    margin-top: 2rem;
+  }
+
+  .doctor-detail .person-comment{
+    padding:20px!important;
+  }
+  .doctor-detail .rate-doctor .card-box{
+    padding-top:10px!important;
+  }
+
+  .person-comment .info{
+    text-align: center;
+  }
+
+  .doctor-detail .card-about h4{
+    font-size:14px!important;
+  }
+  .doctor-detail .card-about h4 svg,  .card-box .header-card h5 svg{
+    width:16px!important;
+    height:16px!important;
+  }
+
+  .about-nurse p{
+    padding-right:40px!important;
+  }
+
+  .doctor-detail .pleace-comment form input{
+    font-size:11px!important;
+  }
+  .doctor-detail .card-about p{
+    padding-right:40px!important;
+  }
+  .select-no-mar{
+    margin:0px!important;
+  }
+
+  /* ===== Offers ===== */
+  .offers-title{
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+    text-align: right;
+  }
+  
+  .pad-offers{
+    position: relative;
+    top: -120px;
+  }
+
+  .home-offer{
+    top:0!important;
+    width:35px!important;
+    height:50px!important;
+  }
+
+  .offer-btn{
+    height: 40px;
+    background: #FF0000 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    color:white;
+    width:100%;
+    font-size:18px;
+    font-weight:bold;
+  }
+
+  .offers-section h3, .offers-slider-section h3{
+    font-size:16px!important;
+    font-weight: bold;
+    color: #000;
+    padding:10px!important;
+  }
+  .offers-section .card .card-offer .offer-details h4{
+    font-size:13px!important;
+  }
+
+  .offers-slider-section .inner-slider .item .inner-item img{
+    height:100%!important;
+  }
+
+ .offers-section .owl-item{
+    width:170.5px!important;
+  }
+  
+  .offers-section .owl-nav{
+    display:none!important;
+  }
+
+  .offers-section .discount-offer {
+    width: 35px!important;
+    height: 45px!important;
+  }
+
+  .offers-section .card{
+    box-shadow: 0px 0px 6px #00000029;
+    border-radius: 7px;
+    border: none;
+  }
+  .offers-slider-section{
+    padding:10px;
+  }
+  .cash p, .epay p, .atm p{
+    margin-right:50px;
+  }
+  .offers-section .card .card-offer .offer-details del, .offers-section .card .card-offer .offer-details h6{
+    font-size: 11px!important;
+  }
+
+  .offers-section .more-order {
+    margin-top:0px;
+    display: block;
   }
 
   /* ===== Success ===== */
@@ -1406,6 +1522,12 @@ article .nice-select2{
       top: 70px!important;
       height: 115px!important;
       left:0!important;
+    }
+
+  
+    .offers-section .more-order {
+      margin-top:50px;
+      display: flex;
     }
 }
 
@@ -3430,11 +3552,7 @@ body {
 .card-required .content-card .item {
   border-bottom: 1px solid #D8D7D7;
 }
-@media (max-width: 992px) {
-  .card-required .card-box {
-    height: 95vh;
-  }
-}
+
 .card-required .responsive p {
   padding-right: 2rem;
   font-weight: normal;
@@ -3896,6 +4014,7 @@ body {
   font-size: 12px;
   position: relative;
   z-index: 2;
+  background: white!important;
 }
 
 .divider-text:after {
@@ -5043,17 +5162,21 @@ textarea {
   font-weight: 600;
   font-size: 18px;
   color: #000;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .doctor-detail .card-about h4 svg {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .doctor-detail .card-about p {
   font-weight: normal;
   font-size: 14px;
   color: #868d9a;
-  padding-right: 70px;
+  padding-right: 55px;
   padding-left: 19px;
+}
+
+.rate{
+  margin-top:50px;
 }
 .doctor-detail .rate-doctor .item:last-of-type {
   border: none;
@@ -5107,7 +5230,6 @@ textarea {
 .doctor-detail .pleace-comment {
   background: #f2f3f3;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
-  padding: 30px;
 }
 .doctor-detail .pleace-comment p {
   font-weight: normal;
@@ -5268,10 +5390,6 @@ textarea {
   color: white;
 }
 
-.about-nurse p {
-  padding-right: 25px !important;
-}
-
 .offers-slider-section {
   padding-top: 0;
 }
@@ -5286,7 +5404,7 @@ textarea {
 .offers-slider-section .inner-slider .item .inner-item img {
   display: block;
   width: 100%!important;
-  height: 430px!important;
+  height: 430px;
   object-fit: cover;
   box-sizing: border-box;
   bottom: 0;
@@ -5399,7 +5517,7 @@ textarea {
   display: flex;
   justify-content: center;
 }
-.offers-section .more-offers button {
+.offers-section .more-offers button, .labs-btn {
   width: 144px;
   height: 40px;
   background: #fff;
@@ -5412,7 +5530,7 @@ textarea {
   margin: auto;
   transition: 0.3s;
 }
-.offers-section .more-offers button:hover {
+.offers-section .more-offers button:hover, .labs-btn:hover {
   background: #0065FF;
   color: #fff;
   transition: 0.3s;

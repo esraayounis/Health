@@ -144,7 +144,6 @@
      */
     $('.open-mobile-menu, .over-lay-mobile, .btn-close-menu').click(function() {
         select('#navbar').classList.toggle('open-mobile-menu')
-        select('.more path').classList.toggle('fill-active')
         $('body').toggleClass('overflow-hidden')
         $('.over-lay-mobile').toggleClass('d-none')
 
@@ -293,4 +292,11 @@ function openServicesDropdown() {
 //    }
 // });
 
+
+// Hide offers slider when click service in home page 
+
+$('.nav-link').click(function(){ 
+    document.getElementById('specialOffers').style.display='none';
+    document.getElementById('footer').style.display='none';
+});
 

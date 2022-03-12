@@ -249,14 +249,10 @@
                     <div class="inner-search">
                         <form action="">
                             <div class="row">
-                                <div class="col-lg-9 d-md-12 d-sm-12 col-9">
+                                <div class="col-lg-12 d-md-12 d-sm-12 col-12">
                                     <div class="custom-input d-flex">
-                                        <input class="search-doctor-button txt-sm" type="text" id="myInput" placeholder="ابحث عن عرض">
-                                        <a class="mobile-show  d-lg-none d-md-flex d-sm-block txt-sm">تعديل</a>
+                                        <input class="search-doctor-button txt-sm" type="text" id="myInput" placeholder="ابحث باسم اختار التخصص">
                                     </div>
-                                </div>
-                                <div class="col-3">
-                                    <button type="button" class="btn filter-button">ابحث</button>
                                 </div>
                             </div>
                         </form>
@@ -276,6 +272,7 @@
     <main id="main">
         <section class="offers-slider-section">
             <div class="">
+                <h3 class="mobile-show">عروض الباقات</h3>
                 <div class="inner-slider">
                     <div class="owl-carousel owl-theme owl-offers">
                         <div class="item">
@@ -305,9 +302,9 @@
             </div>
         </section>
 
-        <section class="offers-section pt-0">
+        <section class="offers-section no-pad">
             <div class="container">
-                <div class="row">
+                <div class="row desktop-show more-order">
                     <h3 class="mb-4">الأكثر مشاهدة</h3>
                     <!-- <div class="owl-carousel owl-theme owl-offers-most-viewed"> -->
                     <div class="owl-carousel owl-theme owl-offers-most-viewed-rtl">
@@ -342,7 +339,7 @@
                             <div class="card box">
                                 <div class="card-offer">
                                     <div class="offer-details-img">
-                                        <img class="h-img-teeth" src="./assets/images/offers/teeth.jpg" alt="">
+                                        <img class="" src="./assets/images/offers/item-1.png" alt="">
                                     </div>
                                     <div class="offer-details">
                                         <h4 id="selected-card-type">تبييض بلليزر + تنظيف + تلميع الأسنان</h4>
@@ -368,7 +365,7 @@
                             <div class="card box">
                                 <div class="card-offer">
                                     <div class="offer-details-img">
-                                        <img class="h-img-teeth" src="./assets/images/offers/fix-teeth.jpg" alt="">
+                                        <img class="" src="./assets/images/offers/item-1.png" alt="">
                                     </div>
                                     <div class="offer-details">
                                         <h4 id="selected-card-type">تقويم أسنان معدني</h4>
@@ -420,7 +417,7 @@
                             <div class="card box">
                                 <div class="card-offer">
                                     <div class="offer-details-img">
-                                        <img src="./assets/images/offers/teeth.jpg" alt="">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
                                     </div>
                                     <div class="offer-details">
                                         <h4 id="selected-card-type">تبييض بلليزر + تنظيف + تلميع الأسنان</h4>
@@ -446,7 +443,7 @@
                             <div class="card box">
                                 <div class="card-offer">
                                     <div class="offer-details-img">
-                                        <img src="./assets/images/offers/fix-teeth.jpg" alt="">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
                                     </div>
                                     <div class="offer-details">
                                         <h4 id="selected-card-type">تقويم أسنان معدني</h4>
@@ -471,14 +468,178 @@
                     <div class="col-lg-4">
                     </div>
                 </div>
+                <div class="row mobile-show">
+                    <h3 class="mb-4">الأكثر مشاهدة</h3>
+                    <!-- <div class="owl-carousel owl-theme owl-offers-most-viewed"> -->
+                    <div class="owl-carousel owl-theme owl-offers-most-viewed-rtl pb-4">
+                        <!-- item -->
+                        <div  onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">شفط الدهون</h4>
+                                        <p class="desc">
+                                            1 جلسة شفط الدهون
+                                        </p>
+                                        <del>20,000 ريال</del>
+                                        <h6>14000 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                      
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">تبييض بلليزر + تنظيف + تلميع الأسنان</h4>
+                                        <p class="desc">
+                                            جلسة واحدة في تلميع الأسنان
+                                        </p>
+                                        <del>1100 ريال</del>
+                                        <h6>880 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                       
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">تقويم أسنان معدني</h4>
+                                        <p class="desc">
+                                            جلستين في تقويم وتلميع الأسنان
+                                        </p>
+                                        <del>11,000 ريال</del>
+                                        <h6>8,030 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">شفط الدهون</h4>
+                                        <p class="desc">
+                                            1 جلسة شفط الدهون
+                                        </p>
+                                        <del>20,000 ريال</del>
+                                        <h6>14000 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                       
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- item -->
+                         <div onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">تبييض بلليزر + تنظيف + تلميع الأسنان</h4>
+                                        <p class="desc">
+                                            جلسة واحدة في تلميع الأسنان
+                                        </p>
+                                        <del>1100 ريال</del>
+                                        <h6>880 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                      
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">تقويم أسنان معدني</h4>
+                                        <p class="desc">
+                                            جلستين في تقويم وتلميع الأسنان
+                                        </p>
+                                        <del>11,000 ريال</del>
+                                        <h6>8,030 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                      
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="offers-section pt-0">
+        <section class="offers-section no-pad">
             <div class="container">
-                <div class="row">
+                <div class="row desktop-show more-order">
                     <h3 class="mb-4">الأكثر طلباً</h3>
                     <!-- item -->
-                    <div class="col-12 col-lg-6 col-xl-4 mb-3" id="selected-card-web">
+                    <div  class="col-12 col-lg-6 col-xl-4 mb-3" id="selected-card-web">
                         <div class="card box">
                             <div class="card-offer">
                                 <div class="offer-details-img">
@@ -508,7 +669,7 @@
                         <div class="card box">
                             <div class="card-offer">
                                 <div class="offer-details-img">
-                                    <img class="h-img-teeth" src="./assets/images/offers/teeth.jpg" alt="">
+                                    <img class="" src="./assets/images/offers/item-1.png" alt="">
                                 </div>
                                 <div class="offer-details">
                                     <h4 id="selected-card-type">تبييض بلليزر + تنظيف + تلميع الأسنان</h4>
@@ -530,11 +691,11 @@
                         </div>
                     </div>
                     <!-- item -->
-                    <div class="col-12 col-lg-6 col-xl-4 mb-3" id="selected-card-web">
+                    <div  class="col-12 col-lg-6 col-xl-4 mb-3" id="selected-card-web">
                         <div class="card box">
                             <div class="card-offer">
                                 <div class="offer-details-img">
-                                    <img class="h-img-teeth" src="./assets/images/offers/fix-teeth.jpg" alt="">
+                                    <img class="" src="./assets/images/offers/item-1.png" alt="">
                                 </div>
                                 <div class="offer-details">
                                     <h4 id="selected-card-type">تقويم أسنان معدني </h4>
@@ -586,7 +747,7 @@
                         <div class="card box">
                             <div class="card-offer">
                                 <div class="offer-details-img">
-                                    <img class="h-img-teeth" src="./assets/images/offers/teeth.jpg" alt="">
+                                    <img class="" src="./assets/images/offers/item-1.png" alt="">
                                 </div>
                                 <div class="offer-details">
                                     <h4 id="selected-card-type">تبييض بلليزر + تنظيف + تلميع الأسنان</h4>
@@ -612,7 +773,7 @@
                         <div class="card box">
                             <div class="card-offer">
                                 <div class="offer-details-img">
-                                    <img class="h-img-teeth" src="./assets/images/offers/fix-teeth.jpg" alt="">
+                                    <img class="" src="./assets/images/offers/item-1.png" alt="">
                                 </div>
                                 <div class="offer-details">
                                     <h4 id="selected-card-type">تقويم أسنان معدني </h4>
@@ -715,10 +876,173 @@
                         </div>
                     </span>
 
-                    <div class="more-offers mt-4">
+                    <div class="more-offers mt-4 mb-4">
                         <button type="button" onclick="showMore()" id="show-more-btn">المزيد</button>
                     </div>
 
+                </div>
+
+                <div class="row mobile-show">
+                    <h3 class="mb-4">الأكثر طلباً</h3>
+                    <div class="owl-carousel owl-theme owl-offers-most-viewed-rtl">
+                        <!-- item -->
+                        <div onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img  src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">شفط الدهون</h4>
+                                        <p class="desc">
+                                            1 جلسة شفط الدهون
+                                        </p>
+                                        <del>20,000 ريال</del>
+                                        <h6>14000 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">تبييض بلليزر + تنظيف + تلميع الأسنان</h4>
+                                        <p class="desc">
+                                            جلسة واحدة في تلميع الأسنان
+                                        </p>
+                                        <del>1100 ريال</del>
+                                        <h6>880 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">تقويم أسنان معدني</h4>
+                                        <p class="desc">
+                                            جلستين في تقويم وتلميع الأسنان
+                                        </p>
+                                        <del>11,000 ريال</del>
+                                        <h6>8,030 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">شفط الدهون</h4>
+                                        <p class="desc">
+                                            1 جلسة شفط الدهون
+                                        </p>
+                                        <del>20,000 ريال</del>
+                                        <h6>14000 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                       
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- item -->
+                         <div onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">تبييض بلليزر + تنظيف + تلميع الأسنان</h4>
+                                        <p class="desc">
+                                            جلسة واحدة في تلميع الأسنان
+                                        </p>
+                                        <del>1100 ريال</del>
+                                        <h6>880 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                       
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div onClick="saveSelectedOfferCard()" class="item" id="selected-card-mob">
+                            <div class="card box">
+                                <div class="card-offer">
+                                    <div class="offer-details-img">
+                                        <img src="./assets/images/offers/item-1.png" alt="">
+                                    </div>
+                                    <div class="offer-details">
+                                        <h4 id="selected-card-type">تقويم أسنان معدني</h4>
+                                        <p class="desc">
+                                            جلستين في تقويم وتلميع الأسنان
+                                        </p>
+                                        <del>11,000 ريال</del>
+                                        <h6>8,030 ريال</h6>
+                                        <p class="note">
+                                            ينتهي في 30 ,AUG,2021
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="discount-offer">
+                                        <span>خصم</span>
+                                        <span>27%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                    </div>
                 </div>
             </div>
         </section>

@@ -33,7 +33,7 @@ function saveDataNewUsers()
     localStorage.setItem("gender",gender)
     }
 
-    sessionStorage.setItem('status','loggedIn') 
+    localStorage.setItem('status','loggedIn') 
     window.location.href="index.html"
 
 }

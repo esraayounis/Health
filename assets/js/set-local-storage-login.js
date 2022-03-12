@@ -14,15 +14,15 @@ user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.g
 if(user_records.some((v)=>{return v.email==email && v.psw==psw}))
 {
 
-  sessionStorage.setItem('status','loggedIn') 
+  localStorage.setItem('status','loggedIn') 
   let current_user=user_records.filter((v)=>{return v.email==email && v.psw==psw})[0]
   localStorage.setItem('name',current_user.name);
   localStorage.setItem('email',current_user.email);
   window.location.href="index.html"
-  }
-  else
-  {
+}
+else
+{
     //alert('Login Fail');
-  }
+}
 
 }

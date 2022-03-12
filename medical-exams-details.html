@@ -493,7 +493,7 @@
                                         <span class="text-black c-mr-1">تحاليل أخري</span>
                                     </h5>
                                 </div>
-                                <div class="content-card px-0 pt-3">
+                                <div class="content-card px-0 ">
                                     <div class="row responsive mb-4">
                                         <div class="col-lg-9">
                                             <input class="search-doctor-button txt-sm" type="text" id="myInputExam" placeholder=" ابحث التحاليل التي ترغب بالحصول عليها">
@@ -503,52 +503,44 @@
                                         </div>
                                     </div>
                                     <div  id="examinations">
-
                                          <!-- item -->
                                         <div class="item exam d-flex justify-content-between align-content-around px-4 mb-3">
-                                            <p class="w-100 mx-4" >أشعة خاصة بالأسنان</p>
-                                           
-                                                <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path id="add"
-                                                        d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
-                                                        transform="translate(-7.5 -7.5)" fill="#0065ff" />
-                                                </svg>
-                                         
-                                            
-        
+                                            <p id="txtVal" class="w-100 mx-4" >أشعة خاصة بالأسنان</p>
+                                            <svg onClick="addItem()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path id="add"
+                                                    d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
+                                                    transform="translate(-7.5 -7.5)" fill="#0065ff" />
+                                            </svg>
                                         </div>
                                         <!-- item -->
                                         <div class="item exam d-flex justify-content-between align-content-around px-4 mb-3">
-                                            <p class="w-100 mx-4">أشعة عادية </p>
+                                            <p id="txtVal" class="w-100 mx-4">أشعة عادية </p>
                                             <!-- <button type="button" onclick="Clone(this)"> -->
-                                                <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <svg  onClick="addItem()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                     <path id="add"
                                                         d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
                                                         transform="translate(-7.5 -7.5)" fill="#0065ff" />
-                                                </svg>
-                                              
+                                                </svg> 
                                         </div>
                                         <!-- item -->
                                         <div class="item exam d-flex justify-content-between align-content-around px-4 mb-3">
-                                            <p class="w-100 mx-4">دوبلر</p>
+                                            <p id="txtVal" class="w-100 mx-4">دوبلر</p>
                                             <!-- <button type="button" onclick="Clone(this)"> -->
-                                                <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <svg  onClick="addItem()"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                     <path id="add"
                                                         d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
                                                         transform="translate(-7.5 -7.5)" fill="#0065ff" />
                                                 </svg>
-                                          
                                         </div>
                                         <!-- item -->
                                         <div class="item exam d-flex justify-content-between align-content-around px-4 mb-3">
-                                            <p class="w-100 mx-4">موجات صوتية</p>
+                                            <p id="txtVal" class="w-100 mx-4">موجات صوتية</p>
                                             <!-- <button type="button" onclick="Clone(this)"> -->
-                                                <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <svg  onClick="addItem(this)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                     <path id="add"
                                                         d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
                                                         transform="translate(-7.5 -7.5)" fill="#0065ff" />
                                                 </svg>
-                                          
                                         </div>
                                     </div>
                                 </div>
@@ -564,12 +556,12 @@
                                                 d="M20.193,17.486l4.376-4.726-6.061-.983-1.124-.189-.511-1.134L14.166,4.367v18.2l1,.586,5.414,3.176-1.021-6.711-.2-1.248Zm7.7-4.953-6.18,6.692,1.465,9.452a1.613,1.613,0,0,1-.1.973.616.616,0,0,1-.579.35,1.409,1.409,0,0,1-.681-.227l-7.645-4.461L6.522,29.773A1.412,1.412,0,0,1,5.841,30a.616.616,0,0,1-.579-.35,1.613,1.613,0,0,1-.1-.973l1.465-9.452-6.2-6.692a1.187,1.187,0,0,1-.392-1.125q.153-.52.92-.653L9.5,9.376l3.83-8.6Q13.672,0,14.166,0q.477,0,.834.775l3.831,8.6,8.547,1.38q.767.132.919.652a1.178,1.178,0,0,1-.408,1.125Z"
                                                 transform="translate(0)" fill="#0065ff" />
                                         </svg>
-                                        <span class="text-black c-mr-1">التقييم العام</span>
+                                        <span class="text-black">التقييم العام</span>
                                     </h5>
                                 </div>
-                                <div class="content-card px-0 pt-3">
+                                <div class="content-card px-0 ">
                                     <div class="item text-center">
-                                        <h5>4.5</h5>
+                                        <h5 class="font-bold">4.5</h5>
                                         <div class="star">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path id="Icon_awesome-star" data-name="Icon awesome-star"
@@ -601,8 +593,8 @@
                                         <p>التقييم العام من <span>300</span> زاروا المختبر</p>
                                     </div>
                                     <div class="item">
-                                        <div class="person-comment">
-                                            <div class="row">
+                                        <div class="row person-comment">
+                                            <div class="d-flex">
                                                 <div class="col-lg-9">
                                                     <div class="star">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -641,7 +633,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3">
-                                                    <div class="d-flex align-items-center h-100">
+                                                    <div class="rate">
                                                         <button type="button">4.5</button>
                                                     </div>
                                                 </div>
@@ -649,8 +641,8 @@
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <div class="person-comment">
-                                            <div class="row">
+                                        <div class="row person-comment">
+                                            <div class="d-flex">
                                                 <div class="col-lg-9">
                                                     <div class="star">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -689,7 +681,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3">
-                                                    <div class="d-flex align-items-center h-100">
+                                                    <div class="rate">
                                                         <button type="button">4.5</button>
                                                     </div>
                                                 </div>
@@ -712,10 +704,10 @@
                                 <p>كيف كانت تجربتك مع المعمل هنا ؟</p>
                                 <form action="">
                                     <div class="row">
-                                        <div class="col-10">
+                                        <div class="col-9">
                                             <input type="text" placeholder="اكتب هنا">
                                         </div>
-                                        <div class="col-2">
+                                        <div class="col-3">
                                             <button type="button">تقييم</button>
                                         </div>
 
@@ -737,47 +729,50 @@
                                         </svg> التحاليل المطلوبة
                                     </h5>
                                 </div>
-                                <div class="content-card px-0 pt-3" id="exam-list">
-                                    <div class="item d-flex justify-content-between align-content-around px-3 mb-3">
-                                        <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="19.77" viewBox="0 0 16 19.77">
-                                            <g id="microscope" transform="translate(-1 -0.001)">
-                                                <path id="Union_13" data-name="Union 13"
-                                                    d="M.819,19.77a.941.941,0,0,1,0-1.866H9.23A6.735,6.735,0,0,1,2.719,13.15H.615a.595.595,0,1,1,0-1.189H5.539a.595.595,0,1,1,0,1.189H4.011A5.528,5.528,0,0,0,9.23,16.716a5.62,5.62,0,0,0,3.916-1.567,5.242,5.242,0,0,0,1.622-3.783,5.342,5.342,0,0,0-3.251-4.871L7.927,9.961a.629.629,0,0,1-.87,0l-.435-.419L5.194,10.921a.629.629,0,0,1-.87,0L2.583,9.24a.579.579,0,0,1,0-.84L4.012,7.021,3.577,6.6a.578.578,0,0,1,0-.84L9.046.479a.631.631,0,0,1,.87,0L10.351.9,11.1.175a.629.629,0,0,1,.87,0l1.74,1.68a.58.58,0,0,1,0,.84l-.752.726.435.419a.579.579,0,0,1,0,.84l-.961.929A6.508,6.508,0,0,1,16,11.368,6.656,6.656,0,0,1,9.23,17.9h4.691a.941.941,0,0,1,0,1.866ZM3.889,8.82l.869.84L6.131,8.336l-.825-.884Zm7.665-5.691a.6.6,0,0,1,.1-.128l.751-.726-.87-.84-.751.726a.609.609,0,0,1-.076.062Z"
-                                                    transform="translate(1 0.001)" fill="#0065ff" />
-                                            </g>
-                                        </svg>
-                                        <p class="w-100 mx-3">صورة دم كاملة</p>
-                                        <!-- <button id="delete-icon" type="button"  onclick="Delete(this)"> -->
-                                            <svg  class="pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="18.667" viewBox="0 0 16 18.667">
-                                                <g id="delete" transform="translate(4.351 1.6)">
-                                                    <path id="Union_12" data-name="Union 12"
-                                                        d="M2.667,18.667a1.32,1.32,0,0,1-1.334-1.306V4.306H0V3H16V4.306H14.667V17.361a1.32,1.32,0,0,1-1.334,1.306Zm0-1.306H13.333V4.306H2.667Zm6.56-2.32v-9h1.5v9Zm-3.955,0v-9h1.5v9ZM5,1.5V0h6V1.5Z"
-                                                        transform="translate(-4.351 -1.6)" fill="red" />
+                                <div class="content-card px-0 " id="exam-list">
+                                    <ul id="list">
+                                        <li> 
+                                          <div class="item d-flex justify-content-between align-content-around px-3 mb-3">
+                                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="19.77" viewBox="0 0 16 19.77">
+                                                <g id="microscope" transform="translate(-1 -0.001)">
+                                                    <path id="Union_13" data-name="Union 13"
+                                                        d="M.819,19.77a.941.941,0,0,1,0-1.866H9.23A6.735,6.735,0,0,1,2.719,13.15H.615a.595.595,0,1,1,0-1.189H5.539a.595.595,0,1,1,0,1.189H4.011A5.528,5.528,0,0,0,9.23,16.716a5.62,5.62,0,0,0,3.916-1.567,5.242,5.242,0,0,0,1.622-3.783,5.342,5.342,0,0,0-3.251-4.871L7.927,9.961a.629.629,0,0,1-.87,0l-.435-.419L5.194,10.921a.629.629,0,0,1-.87,0L2.583,9.24a.579.579,0,0,1,0-.84L4.012,7.021,3.577,6.6a.578.578,0,0,1,0-.84L9.046.479a.631.631,0,0,1,.87,0L10.351.9,11.1.175a.629.629,0,0,1,.87,0l1.74,1.68a.58.58,0,0,1,0,.84l-.752.726.435.419a.579.579,0,0,1,0,.84l-.961.929A6.508,6.508,0,0,1,16,11.368,6.656,6.656,0,0,1,9.23,17.9h4.691a.941.941,0,0,1,0,1.866ZM3.889,8.82l.869.84L6.131,8.336l-.825-.884Zm7.665-5.691a.6.6,0,0,1,.1-.128l.751-.726-.87-.84-.751.726a.609.609,0,0,1-.076.062Z"
+                                                        transform="translate(1 0.001)" fill="#0065ff" />
                                                 </g>
                                             </svg>
-                                       
-                                    </div>
-
-                                    <div class="item d-flex justify-content-between align-content-around px-3 mb-3">
-                                        <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="19.77" viewBox="0 0 16 19.77">
-                                            <g id="microscope" transform="translate(-1 -0.001)">
-                                                <path id="Union_13" data-name="Union 13"
-                                                    d="M.819,19.77a.941.941,0,0,1,0-1.866H9.23A6.735,6.735,0,0,1,2.719,13.15H.615a.595.595,0,1,1,0-1.189H5.539a.595.595,0,1,1,0,1.189H4.011A5.528,5.528,0,0,0,9.23,16.716a5.62,5.62,0,0,0,3.916-1.567,5.242,5.242,0,0,0,1.622-3.783,5.342,5.342,0,0,0-3.251-4.871L7.927,9.961a.629.629,0,0,1-.87,0l-.435-.419L5.194,10.921a.629.629,0,0,1-.87,0L2.583,9.24a.579.579,0,0,1,0-.84L4.012,7.021,3.577,6.6a.578.578,0,0,1,0-.84L9.046.479a.631.631,0,0,1,.87,0L10.351.9,11.1.175a.629.629,0,0,1,.87,0l1.74,1.68a.58.58,0,0,1,0,.84l-.752.726.435.419a.579.579,0,0,1,0,.84l-.961.929A6.508,6.508,0,0,1,16,11.368,6.656,6.656,0,0,1,9.23,17.9h4.691a.941.941,0,0,1,0,1.866ZM3.889,8.82l.869.84L6.131,8.336l-.825-.884Zm7.665-5.691a.6.6,0,0,1,.1-.128l.751-.726-.87-.84-.751.726a.609.609,0,0,1-.076.062Z"
-                                                    transform="translate(1 0.001)" fill="#0065ff" />
-                                            </g>
-                                        </svg>
-                                        <p class="w-100 mx-3">مسحة عادية (اطمئنان) PCR</p>
-                                        <!-- <button id="delete-icon" type="button"  onclick="Delete(this)"> -->
+                                            <p class="w-100 mx-3">صورة دم كاملة</p>
+                                            <!-- <button id="delete-icon" type="button"  onclick="Delete(this)"> -->
                                             <svg  class="pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="18.667" viewBox="0 0 16 18.667">
-                                                <g id="delete" transform="translate(4.351 1.6)">
-                                                    <path id="Union_12" data-name="Union 12"
-                                                        d="M2.667,18.667a1.32,1.32,0,0,1-1.334-1.306V4.306H0V3H16V4.306H14.667V17.361a1.32,1.32,0,0,1-1.334,1.306Zm0-1.306H13.333V4.306H2.667Zm6.56-2.32v-9h1.5v9Zm-3.955,0v-9h1.5v9ZM5,1.5V0h6V1.5Z"
-                                                        transform="translate(-4.351 -1.6)" fill="red" />
-                                                </g>
+                                                    <g id="delete" transform="translate(4.351 1.6)">
+                                                        <path id="Union_12" data-name="Union 12"
+                                                            d="M2.667,18.667a1.32,1.32,0,0,1-1.334-1.306V4.306H0V3H16V4.306H14.667V17.361a1.32,1.32,0,0,1-1.334,1.306Zm0-1.306H13.333V4.306H2.667Zm6.56-2.32v-9h1.5v9Zm-3.955,0v-9h1.5v9ZM5,1.5V0h6V1.5Z"
+                                                            transform="translate(-4.351 -1.6)" fill="red" />
+                                                    </g>
                                             </svg>
-                                       
-                                    </div>
-
+                                          </div>
+                                        </li>
+                                        <li>
+                                            <div class="item d-flex justify-content-between align-content-around px-3 mb-3">
+                                                <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="19.77" viewBox="0 0 16 19.77">
+                                                    <g id="microscope" transform="translate(-1 -0.001)">
+                                                        <path id="Union_13" data-name="Union 13"
+                                                            d="M.819,19.77a.941.941,0,0,1,0-1.866H9.23A6.735,6.735,0,0,1,2.719,13.15H.615a.595.595,0,1,1,0-1.189H5.539a.595.595,0,1,1,0,1.189H4.011A5.528,5.528,0,0,0,9.23,16.716a5.62,5.62,0,0,0,3.916-1.567,5.242,5.242,0,0,0,1.622-3.783,5.342,5.342,0,0,0-3.251-4.871L7.927,9.961a.629.629,0,0,1-.87,0l-.435-.419L5.194,10.921a.629.629,0,0,1-.87,0L2.583,9.24a.579.579,0,0,1,0-.84L4.012,7.021,3.577,6.6a.578.578,0,0,1,0-.84L9.046.479a.631.631,0,0,1,.87,0L10.351.9,11.1.175a.629.629,0,0,1,.87,0l1.74,1.68a.58.58,0,0,1,0,.84l-.752.726.435.419a.579.579,0,0,1,0,.84l-.961.929A6.508,6.508,0,0,1,16,11.368,6.656,6.656,0,0,1,9.23,17.9h4.691a.941.941,0,0,1,0,1.866ZM3.889,8.82l.869.84L6.131,8.336l-.825-.884Zm7.665-5.691a.6.6,0,0,1,.1-.128l.751-.726-.87-.84-.751.726a.609.609,0,0,1-.076.062Z"
+                                                            transform="translate(1 0.001)" fill="#0065ff" />
+                                                    </g>
+                                                </svg>
+                                                <p class="w-100 mx-3">مسحة عادية (اطمئنان) PCR</p>
+                                                <!-- <button id="delete-icon" type="button"  onclick="Delete(this)"> -->
+                                                    <svg  class="pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="18.667" viewBox="0 0 16 18.667">
+                                                        <g id="delete" transform="translate(4.351 1.6)">
+                                                            <path id="Union_12" data-name="Union 12"
+                                                                d="M2.667,18.667a1.32,1.32,0,0,1-1.334-1.306V4.306H0V3H16V4.306H14.667V17.361a1.32,1.32,0,0,1-1.334,1.306Zm0-1.306H13.333V4.306H2.667Zm6.56-2.32v-9h1.5v9Zm-3.955,0v-9h1.5v9ZM5,1.5V0h6V1.5Z"
+                                                                transform="translate(-4.351 -1.6)" fill="red" />
+                                                        </g>
+                                                    </svg>
+                                               
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -1450,6 +1445,15 @@
     <script src="assets/js/set-card-details.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
     <script>
+        function addItem() {
+            debugger
+            var txtVal = document.getElementById('txtVal').innerText,
+            liNode = document.createElement("li"),
+            txtNode = document.createTextNode(txtVal);
+            node.appendChild(txtNode);
+            document.getElementById("list").appendChild(node);
+
+        }
         // function Clone() {
         //     debugger
         //     var clone = document.getElementById('specialist').cloneNode(true); // "deep" clone
