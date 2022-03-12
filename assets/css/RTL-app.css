@@ -1210,7 +1210,7 @@ article .nice-select2{
 
   .offers-section .more-order {
     margin-top:0px;
-    display: block;
+    display: none;
   }
 
   /* ===== Success ===== */
