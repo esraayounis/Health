@@ -28,6 +28,10 @@ a:focus, a:active, .a:hover{
   color: #0065FF;
 }
 
+.bg-blue{
+  background:#0065FF;
+}
+
 a:hover {
   color: #65c9cd;
   text-decoration: none;
@@ -767,6 +771,93 @@ article .nice-select2{
 {
   color:#0065FF;
 }
+.login-forms .divider-text span{
+  background: #F8F9FA!important;
+}
+
+
+
+/* ==== Contact us ====== */
+
+#contact-form {
+  background: none;
+}
+#contact-form .iti--allow-dropdown .iti__flag-container{
+  right:190%;
+}
+
+.form{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 10px;
+  margin: 2.5rem;
+  padding: 2rem 0;
+}
+
+input{
+  border:none;
+}
+
+.error{
+  color: red;
+  font-size: 13px;
+  top: -20px!important;
+  position: relative;
+}
+
+
+textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #707070a1;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-size:14px;
+  color: #8d8d8d;
+  font-family: 'Cairo'!important;
+}
+textarea:focus-visible{
+  outline: 0;
+}
+.contact-form-pad{
+  padding:10px;
+}
+
+[type=email], [type=number], [type=tel], [type=url] {
+  direction: rtl;
+}
+.btn-submit{
+  background: #0065FF;
+  color:white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  font-size: 14px;
+}
+.contact-form-pad h5{
+  font-size:1rem;
+  font-weight: 600;
+}
+.contact-form-pad p{
+  font-size:14px;
+}
+
+.border-left{
+  border-left:1px solid #707070a1;
+}
+.border-top{
+  border-top:unset!important;
+}
+
+.form .title{
+  padding-bottom:15px;
+  text-align: center;
+}
 
 @media (max-width: 600px) {
   .txt-sm{
@@ -1212,6 +1303,26 @@ article .nice-select2{
     margin-top:0px;
     display: none;
   }
+
+  /* ===== Contact us ===== */
+  .form{
+    margin:1rem;
+  }
+
+  .border-left{
+    border-left:unset;
+  }
+
+  .border-top{
+    border-top:1px solid #707070a1!important;
+    margin-top:20px;
+  }
+
+  #contact-form .iti--allow-dropdown .iti__flag-container{
+    right:90%;
+  }
+
+
 
   /* ===== Success ===== */
   .success-message .text
