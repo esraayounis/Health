@@ -859,6 +859,96 @@ textarea:focus-visible{
   text-align: center;
 }
 
+.add-btn{
+  border:none;
+  background: none;
+}
+
+.search-doctor-button{
+  padding:0 70px;
+}
+#list
+{
+  padding:10px 0 0 0;
+}
+
+.exam, #list .item{
+  display: flex;
+}
+
+/* ==== Rate add comment ====== */
+
+
+.container .text{
+  font-size: 14px;
+}
+
+.container .star-widget input{
+  display: none;
+}
+.star-widget{
+  padding: 0 40px 30px 0;
+}
+
+.fa-star-o{
+  font-size:20px;
+}
+.fa-star:before{
+  font-size:20px;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #ffc000;
+}
+input:checked ~ label{
+  color: #ffc000;
+}
+
+
+input:checked ~ form{
+  display: block;
+}
+form header{
+  width: 100%;
+  font-size: 14px;
+  color: #868d9a;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+form .textarea{
+  padding:0 40px;
+}
+
+form .textarea textarea{
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  height:40px;
+  overflow: hidden;
+  color:#868D9A;
+  border:none;
+  margin:0;
+}
+
+
+form .btn button{
+  height: 100%;
+  outline: none;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
 @media (max-width: 600px) {
   .txt-sm{
     font-size: 11px!important;
@@ -1228,6 +1318,7 @@ textarea:focus-visible{
     margin:0px!important;
   }
 
+
   /* ===== Offers ===== */
   .offers-title{
     font-size: 11px;
@@ -1322,7 +1413,7 @@ textarea:focus-visible{
     right:90%;
   }
 
-
+   
 
   /* ===== Success ===== */
   .success-message .text
