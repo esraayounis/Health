@@ -123,6 +123,7 @@
         select('#reservation').classList.toggle('dis-block')
         select('.booking path').classList.toggle('fill-active')
         $('#home').toggleClass('dis-none')
+        $('.basic-content').toggleClass('dis-none')
         $('#faviorts').toggleClass('dis-none')
 
     })
@@ -135,8 +136,18 @@
       select('#faviorts').classList.toggle('dis-block')
       select('.favorite path').classList.toggle('fill-active')
       $('#home').toggleClass('dis-none')
+      $('.basic-content').toggleClass('dis-none')
       $('#reservation').toggleClass('dis-none')
     })
+
+     /*
+     * Mobile offers btn
+    */
+     $('.open-offers').click(function() {
+        select('.offers path').classList.toggle('fill-active')
+        window.location.href = "special-offers.html";
+
+      })
 
 
     /**

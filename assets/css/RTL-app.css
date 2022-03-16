@@ -950,6 +950,9 @@ form .btn button{
 
 
 @media (max-width: 600px) {
+  .avatar img{
+    width:50px;
+  }
   .txt-sm{
     font-size: 11px!important;
   }

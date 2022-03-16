@@ -1,6 +1,7 @@
 // ----- Special Offers-----
 function saveSelectedOfferCard(){
     debugger
+    // console.log(this)
     var status = localStorage.getItem('status');
     console.log(status);
     if (status == "" || status == null ){
