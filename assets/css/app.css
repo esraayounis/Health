@@ -2707,11 +2707,11 @@ footer {
     margin-right: 0;
   }
 }
-.hero .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link.active {
+.main-opacity .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link.active {
   border-bottom: 2px solid #0065FF;
 }
-.hero .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link.active span,
-.hero .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link.active svg path {
+.main-opacity .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link.active span,
+.main-opacity .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link.active svg path {
   color: #0065FF;
   fill: #0065FF !important;
 }

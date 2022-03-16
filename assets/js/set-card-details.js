@@ -1,6 +1,6 @@
 // ----- Special Offers-----
 function saveSelectedOfferCard(){
-    debugger
+    
     // console.log(this)
     var status = localStorage.getItem('status');
     console.log(status);
@@ -21,7 +21,7 @@ function saveSelectedOfferCard(){
 
 // ----- Offers Details -----
 function shareOfferDetails(){
-    debugger
+    
     var shareOfferDetailsdWeb = document.getElementById('offer-details-web').innerHTML;
     localStorage.setItem("offer-details-web", shareOfferDetailsdWeb);
     var shareDoctorDetailsdWeb = document.getElementById('doctor-details-web').innerHTML;

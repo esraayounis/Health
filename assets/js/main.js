@@ -157,7 +157,8 @@
         select('#navbar').classList.toggle('open-mobile-menu')
         $('body').toggleClass('overflow-hidden')
         $('.over-lay-mobile').toggleClass('d-none')
-
+        select('.main-opacity').classList.toggle('no-opacity')
+    
     })
 
     /**
@@ -247,7 +248,7 @@
 
 
 jQuery(".services-links a").click(function(e) {
-    // debugger
+    // 
     e.preventDefault();
     var activeLink =  jQuery(this).text().trim();
     var services = document.getElementById("nav-home-care-tab").innerHTML;
@@ -293,10 +294,10 @@ function openServicesDropdown() {
 }
 
 // $('.child-header').click(function(){
-//     debugger
+//     
 //     var x = $('this').text;
 //     function getService(x) {
-//        debugger
+//        
 //       var service = $('.child-header.active span').text();
 //       localStorage.setItem("selected-service", service);
 //       console.log(service)

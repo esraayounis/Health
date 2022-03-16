@@ -118,7 +118,7 @@
                                 <a class="nav-link" href="about-us.html">عن الشركة </a>
                             </li>
                             <!-- Login tab -->
-                            <li>
+                            <li class="login-mob">
                                 <svg class="d-lg-none" xmlns="http://www.w3.org/2000/svg" id="sign-in-solid" width="15.429" height="16" viewBox="0 0 15.429 16">
                                     <path id="Path_16860" data-name="Path 16860"
                                         d="M18.1,4H10.9A1.043,1.043,0,0,0,10,5.143v4h3.825L12.3,7.263a.688.688,0,0,1,.024-.776.384.384,0,0,1,.611-.03l2.606,3.309-2.606,3.309a.384.384,0,0,1-.611-.03.688.688,0,0,1-.024-.776l1.521-1.983H10v8.571A1.043,1.043,0,0,0,10.9,20h7.2a1.043,1.043,0,0,0,.9-1.143V5.143A1.043,1.043,0,0,0,18.1,4Z"
@@ -126,10 +126,10 @@
                                     <path id="Path_16861" data-name="Path 16861" d="M10,13H4a1,1,0,0,0,0,2h6Z" transform="translate(-3 -8.154)"
                                         fill="#317af0" />
                                 </svg>
-                                <a class="nav-link d-lg-none" href="sign-up-mobile.html">تسجيل الدخول</a>
+                                <a class="nav-link d-lg-none login-text" href="sign-up-mobile.html">تسجيل الدخول</a>
                             </li>
                             <!-- Register Now tab -->
-                            <li>
+                            <li class="login-mob1">
                                 <svg class="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="16" height="14.222" viewBox="0 0 16 14.222">
                                     <path id="user-plus" d="M13.111,15.778c2.832,0,5.373.507,7.111,2.723v1.721H6V18.5C7.738,16.284,10.279,15.778,13.111,15.778Zm0-2.667a3.556,3.556,0,1,1,3.556-3.556A3.556,3.556,0,0,1,13.111,13.111Zm7.111,1.778a.889.889,0,0,1-1.778,0V14h-.889a.889.889,0,1,1,0-1.778h.889v-.889a.889.889,0,1,1,1.778,0v.889h.889a.889.889,0,1,1,0,1.778h-.889Z" transform="translate(-6 -6)" fill="#317af0" fill-rule="evenodd"/>
                                   </svg>
@@ -174,6 +174,11 @@
                                         </g>
                                       </svg>
                                 <a class="nav-link" href="contact-us.html">أتصل بنا</a>
+                            </li>
+                             <!-- Logout tab -->
+                             <li class="username-mob">
+                                <img class="d-lg-none logout-svg" width="15.429" height="16" src="assets/images/svg-menu/logout.svg">
+                                <a class="nav-link d-lg-none logout-mar"  href="" onclick="Logout()">تسجيل خروج</a>
                             </li>
                         </ul>
                         <!-- Mobile hamburger menu -->
@@ -249,7 +254,7 @@
 
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero main-opacity">
         <div class="group-h1 mar-top-15">
             <div class="over-lay-hero-mobil"></div>
             <div class="container text-center">

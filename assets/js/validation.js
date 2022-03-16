@@ -1,6 +1,6 @@
 function validateForm()                                    
 { 
-    debugger
+    
     var name = document.forms["myForm"]["name"];
     var phone = document.forms["myForm"]["phone"];    
     var email = document.forms["myForm"]["email"];    
