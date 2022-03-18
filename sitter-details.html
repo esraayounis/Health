@@ -89,11 +89,11 @@
                                     </svg>
                                 </a>
                                 <ul>
-                                    <li class="services-links"><a >مقدمي الخدمات الطبية</a></li>
-                                    <li class="services-links"><a href="#2">خدمات طبية حكومية</a></li>
-                                    <li class="services-links"><a href="#3">استشارة طبيب</a></li>
-                                    <li class="services-links"><a href="#4">رعاية منزلية</a></li>
-                                    <li class="services-links"><a href="#4">فحوصات طبية</a></li>
+                                    <li class="services-links"><a href="">مقدمي الخدمات الطبية</a></li>
+                                    <li class="services-links"><a href="">خدمات طبية حكومية</a></li>
+                                    <li class="services-links"><a href="">استشارة طبيب</a></li>
+                                    <li class="services-links"><a href="">رعاية منزلية</a></li>
+                                    <li class="services-links"><a href="">فحوصات طبية</a></li>
                                 </ul>
                             </li>
                             <!-- About tab -->
@@ -247,7 +247,7 @@
                         <div class="d-flex align-items-center">
                             <ol>
                             <li><a href="index.html">الرئيسية</a></li>
-                            <li>زيارة جليس</li>
+                            <li id="selected-service"></li>
                             <li id="selected-name">مركز ميديكال كير </li>
                             </ol>
                         </div>
@@ -1112,6 +1112,10 @@
     <script src="assets/js/set-card-details.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
     <script>
+          window.onload = function () {
+          var service =  localStorage.getItem("selected-service");
+           document.getElementById('selected-service').innerHTML = service;
+        }
         // rating and add comment
         var count = 0;
         var addcomment = document.getElementById("addcomment");

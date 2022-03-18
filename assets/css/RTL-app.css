@@ -1312,7 +1312,6 @@ form .btn button{
     align-content: center;
     justify-content: center;
     text-align: center;
-    margin-top: 2rem;
   }
 
   .doctor-detail .person-comment{
@@ -1976,6 +1975,10 @@ form .btn button{
   line-height: 1;
   color: #fff;
   background: #0065FF;
+}
+
+.s{
+  color:red;
 }
 
 #hero .btn-get-started:hover {
@@ -5418,7 +5421,7 @@ textarea {
 }
 
 .rate{
-  margin-top:50px;
+  margin-top:60px;
 }
 .doctor-detail .rate-doctor .item:last-of-type {
   border: none;
@@ -5435,11 +5438,12 @@ textarea {
 .doctor-detail .rate-doctor .star {
   margin-bottom: 10px;
 }
+
+
 .doctor-detail .rate-doctor p {
   font-weight: normal;
   font-size: 14px;
   color: #868d9a;
-  margin-right:50px;
 }
 .doctor-detail .person-comment {
   padding: 40px;

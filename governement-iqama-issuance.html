@@ -86,11 +86,11 @@
                                     </svg>
                                 </a>
                                 <ul>
-                                    <li class="services-links"><a >مقدمي الخدمات الطبية</a></li>
-                                    <li class="services-links"><a href="#2">خدمات طبية حكومية</a></li>
-                                    <li class="services-links"><a href="#3">استشارة طبيب</a></li>
-                                    <li class="services-links"><a href="#4">رعاية منزلية</a></li>
-                                    <li class="services-links"><a href="#4">فحوصات طبية</a></li>
+                                     <li class="services-links"><a href="">مقدمي الخدمات الطبية</a></li>
+                                    <li class="services-links"><a href="">خدمات طبية حكومية</a></li>
+                                    <li class="services-links"><a href="">استشارة طبيب</a></li>
+                                    <li class="services-links"><a href="">رعاية منزلية</a></li>
+                                    <li class="services-links"><a href="">فحوصات طبية</a></li>
                                 </ul>
                             </li>
                             <!-- About tab -->
@@ -427,10 +427,10 @@
                             <div class="row">
                                 <div class="col-lg-3 p-lg-0">
                                     <div class="avatar text-center">
-                                        <img src="./assets/./images/amercenter.png" alt="">
+                                        <img id="card-img" src="./assets/./images/amercenter.png" alt="">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 p-lg-0 detail">
+                                <div class="col-lg-6 p-lg-0 detail" id="card-details">
                                     <h6 class="title-card txt-md">
                                         إصدار إقامة
                                         <span>(مركز امر)</span>
@@ -506,11 +506,11 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 value-card text-center">
-                                    <div>
+                                    <div  id="price">
                                         <p class="mb-1">الإجمالي</p>
                                         <h5>200 ريال</h5>
                                     </div>
-                                    <a class="btn" href="government-details.html">أحجز الآن</a>
+                                    <a class="btn details-btn" href="government-details.html">أحجز الآن</a>
                                 </div>
                             </div>
                         </div>
@@ -1764,6 +1764,7 @@
     <script src="assets/js/paging.js"></script>
     <script src="assets/js/paging-mob.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
+    <script src="assets/js/set-card-details.js"></script>
     <script>
         var queryString = decodeURIComponent(window.location.search);
         queryString = queryString.substring(1);
