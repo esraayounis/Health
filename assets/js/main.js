@@ -165,6 +165,7 @@
      * Mobile nav dropdowns activate
      */
     on('click', '.navbar .dropdown > a', function(e) {
+        debugger
             if (select('#navbar').classList.contains('navbar-mobile')) {
                 e.preventDefault()
                 this.nextElementSibling.classList.toggle('dropdown-active')

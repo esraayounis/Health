@@ -1982,7 +1982,7 @@ form .btn button{
   background: #65c9cd;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #hero {
     padding-top: 90px;
     padding-bottom: 150px;
