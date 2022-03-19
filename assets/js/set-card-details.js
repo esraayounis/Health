@@ -84,3 +84,20 @@ function shareCardData()
 // });
 
 
+    // ----- Add to Faviorts -----
+    $('.save-btn').click(function(){ 
+        debugger
+        var faviorts =  document.getElementById("save-btn");
+        var add = Number(faviorts.getAttribute('data-count') || 0);
+        faviorts.setAttribute('data-count', add + 1);
+        var faviortCount =  document.querySelector("[data-count]").childElementCount;
+        localStorage.setItem("reservations-count", faviortCount)
+        var cardImg =  document.getElementById("card-img").innerHTML;
+        var cardDetails =  document.getElementById("card-details").innerHTML;
+        var price =  document.getElementById("price").innerText;
+        localStorage.setItem("saveCardImg" , cardImg);
+        localStorage.setItem("saveCardDetails" , cardDetails);
+        localStorage.setItem("price" , price);
+    });    
+
+

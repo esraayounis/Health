@@ -364,7 +364,7 @@
                                 <div class="nav nav-tabs" id="nav-reservations" role="tablist">
                                     <div class="nav-link py-4 active col" id="nav-current" data-bs-toggle="tab" data-bs-target="#nav-current" type="button" role="tab" aria-controls="nav-current" aria-selected="true">
                                       <div class="mar-top-15">
-                                        <span id="count"></span><br><span> الحجوزات الحالية </span>
+                                        <span id="current-reserv-count"></span><br><span> الحجوزات الحالية </span>
                                       </div>
                                     </div>
                                     <div class="nav-link py-4 col" id="nav-previous" data-bs-toggle="tab" data-bs-target="#nav-previous" type="button" role="tab" aria-controls="nav-previous" aria-selected="false">
@@ -405,7 +405,7 @@
             </div>
             
             <div class="box-shadow" id="faviorts">
-              <h6 class="faviorts">0<br>المفضلة</h6>
+              <h6 class="faviorts" id="faviorts-count"><br>المفضلة</h6>
               <div class="container-fluid not-found-data">
                   <img src="assets/images/nothing.png" alt="">
               </div>
@@ -425,25 +425,12 @@
     <script src="assets/js/owl.carousel.js"></script>
     <script src="assets/js/intlTelInput.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
-
+    <script src="assets/js/get-details.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
 
-    window.onload = function () {
-        debugger
-        var reservations = localStorage.getItem("cloneCardData");
-        var reservationsCount = localStorage.getItem("reservations-count");
-        console.log(reservations);
-        if(reservations == ""){
-          document.getElementById("count").innerText = "0"
-        }
-
-        else{
-            document.getElementById("count").innerText = reservationsCount;
-        }
-    }
 
     // retrieved user data 
     $(document).ready(function() {

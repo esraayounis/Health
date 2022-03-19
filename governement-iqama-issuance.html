@@ -1777,8 +1777,8 @@
                 var add = Number(notifications.getAttribute('data-count') || 0);
                 notifications.setAttribute('data-count', add + 1);
                 notifications.classList.add('zero');
-                var count =  document.querySelector("[data-count]").childElementCount;
-                localStorage.setItem("reservations-count", count)
+                var reservationCount =  document.querySelector("[data-count]").childElementCount;
+                localStorage.setItem("reservations-count", reservationCount)
 
                 // copy paste element
                 var parent = e.target.parentNode;

@@ -1644,30 +1644,6 @@
             utilsScript: "https://intl-tel-input.com/node_modules/intl-tel-input/build/js/utils.js",
         });
 
-    // *****  Add to Faviorts ****
-        var saveButton =  document.getElementById("save-btn");
-        var cardImg =  document.getElementById("card-img");
-        var cardDetails =  document.getElementById("card-details");
-     
-        saveButton.addEventListener('click',(e)=>{
-            debugger
-            // var add = Number(faviorts.getAttribute('data-count') || 0);
-            // faviorts.setAttribute('data-count', add + 1);
-            // faviorts.classList.add('zero');
-
-            // copy paste element
-            var parent = e.target.parentNode;
-            console.log(parent)
-            var clone = parent.cloneNode(true);
-            console.log(clone)
-            select.appendChild(clone);
-
-            if(clone){
-                notifications.onclick =()=>{
-                    select.classList.toggle('display');
-                }
-            }
-        });    
     </script>
 
 </body>
