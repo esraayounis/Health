@@ -70,10 +70,17 @@ function shareCardData()
 }
 
 //   Share slected card to details page 
-$('.details-btn').click(function(){ 
-    debugger
-    var cardDetails =  document.getElementById('card-details').innerHTML;
-    localStorage.setItem("selected-card", cardDetails);
-    console.log(cardDetails)   
-});
+// $('.details-btn').click(function(){ 
+//     debugger
+//     var cardImg =  document.getElementById('card-img').innerHTML;
+//     localStorage.setItem("selected-card", cardImg);
+//     console.log(cardImg)   
+//     var cardDetails =  document.querySelector('#card-details').innerHTML;
+//     localStorage.setItem("selected-card", cardDetails);
+//     console.log(cardDetails)  
+//     var cardPrice =  document.getElementById('price').innerHTML;
+//     localStorage.setItem("price", cardPrice);
+//     console.log(cardPrice)    
+// });
+
 

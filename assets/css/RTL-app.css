@@ -1648,6 +1648,7 @@ form .btn button{
     border-radius: 10px;
     opacity: 0.8;
     padding-bottom:30px;
+    z-index: -1;
   }
 
   .form-pad{
@@ -5552,6 +5553,7 @@ textarea {
   border-radius: 10px;
 }
 
+
 @media (max-width: 992px) {
   .detail {
     display: flex;
@@ -5989,6 +5991,119 @@ textarea {
   font-size: 11px;
   color: #8D8D8D;
 }
+
+
+/* Add To card Button*/
+
+  #cart{
+    position: relative;
+    cursor: pointer;
+  }
+  #cart:before{
+    content: attr(data-count);
+    position: absolute;
+    color:white;
+    text-align: center;
+    width:15px;
+    height:15px;
+    background: red;
+    font-size: 12px;
+    border-radius: 5px;
+    top:-12px;
+    right:16px;
+    opacity: 0;
+    justify-content: center;
+  }
+
+  #cart.zero:before{
+    opacity:1;
+  }
+
+/* 
+  #main  .select{
+    width: 60%;
+    height: 580px;
+    padding: 5%;
+    background: #222;
+    position: absolute;
+    top: -1000px;
+    left: 20%;
+    transition: 0.5s;
+    overflow-y: auto;
+    margin: auto;
+  }
+  #main  .select.display{
+    top: 10px;
+  }
+  #main .select div{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    padding: 5px;
+    border: 1px solid white;
+    position: relative;
+    margin: 5px auto;
+  }
+  #main .select div img{
+    width: 300px;
+    height: 100%;
+  }
+  #main .select div p{
+    padding: 35px;
+    color: white;
+  }
+  #main .select div h6,
+  #main .select div button{
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    color: white;
+  }
+  #main .select div button{
+    left: 60%;
+    top: 55%;
+  }
+  #main .select div span{
+    display: none;
+  } */
+
+  section .card-span{
+    position: absolute;
+      top: 14px;
+      left: 13px;
+      background: red;
+      width: 300px;
+      height: 186px;
+      display: none;
+  }
+  section .card-span img{
+    width: 100%;
+    height: 100%;
+  }
+  section .card-detail:nth-child(1)>.card-span.active{
+    animation: first 0.5s ease-in;
+    z-index: 2;
+    display: block;
+
+  }
+  section .card-detail:nth-child(2)>.card-span.active{
+    animation: second 0.5s ease-in;
+    z-index: 2;
+    display: block;
+
+  }
+  section .card-detail:nth-child(3)>.card-span.active{
+    animation: third 0.5s ease-in;
+    z-index: 2;
+    display: block;
+
+  }
+  section .card-detail:nth-child(4)>.card-span.active{
+    animation: four 0.5s ease-in;
+    z-index: 2;
+    display: block;
+
+  }
 
 
 /* paganations */

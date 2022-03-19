@@ -296,7 +296,6 @@ $('.parent-header1').click(function(){
     console.log(typeService)   
 });
 $('.parent-header2').click(function(){ 
-    debugger
     var typeService =  document.querySelector('.child-header2').innerText;
     localStorage.setItem("selected-service", typeService);
     console.log(typeService)   
@@ -327,7 +326,6 @@ $('.child-header1').click(function(){
 });
 
 $('.child-header2').click(function(){
-    debugger
     var typeService =  document.querySelector('.child-header2.active').innerText; 
     localStorage.setItem("selected-service", typeService);
     console.log(typeService)
@@ -404,7 +402,6 @@ jQuery(".services-links a").click(function(e) {
             console.log(service4)
         }
         if ( activeLink === tabs[4]) {
-            debugger
             document.getElementById('nav-examinations-tab').classList.add('active');
             document.getElementById('nav-examinations').classList.add('active');
             document.getElementById('nav-examinations').classList.add('show');
