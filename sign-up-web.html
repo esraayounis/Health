@@ -287,12 +287,12 @@
                                                   <path id="arrow-down-fill" d="M14.36,20.453a1.51,1.51,0,0,1-1.188-.6L9.41,15.062a2.055,2.055,0,0,1-.232-2.076A1.573,1.573,0,0,1,10.6,12h7.523a1.573,1.573,0,0,1,1.421.986,2.055,2.055,0,0,1-.232,2.076l-3.761,4.79A1.51,1.51,0,0,1,14.36,20.453Z" transform="translate(-8.998 -12)" fill="#c4c4c4"></path>
                                               </svg>
         
-                                              <ul class="list row full-width">
+                                              <ul class="list row full-width" id="gender">
                                                   <li data-value="1" class="option selected focus disabled txt-right">
                                                       حدد الجنس
                                                   </li>
-                                                  <li data-value="1" id="gender" class="option col-12 col-lg-12 txt-right">ذكر</li>
-                                                  <li data-value="1" id="gender" class="option col-12 col-lg-12 txt-right">أنثي</li>
+                                                  <li value="ذكر" class="option col-12 col-lg-12 txt-right">ذكر</li>
+                                                  <li value="أنثي" class="option col-12 col-lg-12 txt-right">أنثي</li>
                                               </ul>
                                             </div>
                                           </div>
@@ -441,6 +441,7 @@
         });
     </script>
     <script>
+      $(document).ready(function() {
         function ConvertFormat(xObj, xTraget) {
             var date = new Date(xObj.value);
             var month = date.getMonth() + 1;
@@ -450,6 +451,7 @@
                 document.getElementById(xTraget).value = day + " / " + month + " / " + year;
             }
         }
+    });
     </script>
 </body>
 

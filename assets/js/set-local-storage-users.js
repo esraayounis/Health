@@ -1,12 +1,12 @@
 function saveDataNewUsers()
-{
+{debugger
     let name,email,psw,phone,birthdate,gender;
     name = document.getElementById("name").value;
     email = document.getElementById("email").value;
     psw = document.getElementById("psw").value;
     phone = document.getElementById("phone").value;
     birthdate = document.getElementById("birthdate").value;
-    gender = document.querySelector(".list .selected").text;
+    gender =  document.querySelector(".gender .current").innerText;
 
     let user_records=new Array();
     user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]

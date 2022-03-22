@@ -277,8 +277,6 @@ function openServicesDropdown() {
 }
 
 
-
-
 // Hide offers slider when click service in home page 
 
 $('.nav-link').click(function(){ 
@@ -287,47 +285,52 @@ $('.nav-link').click(function(){
 });
 
 
-
-
 //   Share slected service name 
 $('.parent-header1').click(function(){ 
     var typeService =  document.querySelector('.child-header1').innerText;
     localStorage.setItem("selected-service", typeService);
+    localStorage.setItem("service-num", "1");
     console.log(typeService)   
 });
 $('.parent-header2').click(function(){ 
     var typeService =  document.querySelector('.child-header2').innerText;
     localStorage.setItem("selected-service", typeService);
+    localStorage.setItem("service-num", "2");
     console.log(typeService)   
 });
 $('.parent-header3').click(function(){ 
 
     var typeService =  document.querySelector('.child-header3').innerText;
     localStorage.setItem("selected-service", typeService);
+    localStorage.setItem("service-num", "3");
     console.log(typeService)   
 });
 $('.parent-header4').click(function(){ 
 
     var typeService =  document.querySelector('.child-header4').innerText;
     localStorage.setItem("selected-service", typeService);
+    localStorage.setItem("service-num", "4");
     console.log(typeService)   
 });
 $('.parent-header5').click(function(){ 
 
     var typeService =  document.querySelector('.child-header5').innerText;
     localStorage.setItem("selected-service", typeService);
+    localStorage.setItem("service-num", "5");
     console.log(typeService)   
 });
 
 $('.child-header1').click(function(){
     var typeService =  document.querySelector('.child-header1.active').innerText; 
     localStorage.setItem("selected-service", typeService);
+    localStorage.setItem("service-num", "1");
     console.log(typeService)
 });
 
 $('.child-header2').click(function(){
     var typeService =  document.querySelector('.child-header2.active').innerText; 
     localStorage.setItem("selected-service", typeService);
+    localStorage.setItem("service-num", "2");
     console.log(typeService)
 });
 
@@ -335,6 +338,7 @@ $('.child-header2').click(function(){
 $('.child-header3').click(function(){
     var typeService =  document.querySelector('.child-header3.active').innerText; 
     localStorage.setItem("selected-service", typeService);
+    localStorage.setItem("service-num", "3");
     console.log(typeService)
 });
 
@@ -342,6 +346,7 @@ $('.child-header3').click(function(){
 $('.child-header4').click(function(){
     var typeService =  document.querySelector('.child-header4.active').innerText; 
     localStorage.setItem("selected-service", typeService);
+    localStorage.setItem("service-num", "4");
     console.log(typeService)
 });
 
@@ -350,6 +355,7 @@ $('.child-header5').click(function(){
 
     var typeService =  document.querySelector('.child-header5.active').innerText; 
     localStorage.setItem("selected-service", typeService);
+    localStorage.setItem("service-num", "5");
     console.log(typeService)
 });
 
@@ -374,6 +380,7 @@ jQuery(".services-links a").click(function(e) {
             document.getElementById('nav-home-care').classList.add('show');
             var service1 =  document.querySelector('#nav-home-care #title-tab').innerText; 
             localStorage.setItem("selected-service", service1);
+            localStorage.setItem("service-num", "1");
             console.log(service1)
         }
         if ( activeLink === tabs[1]) {
@@ -382,6 +389,7 @@ jQuery(".services-links a").click(function(e) {
             document.getElementById('nav-government').classList.add('show');
             var service2 =  document.querySelector('#nav-government #title-tab').innerText; 
             localStorage.setItem("selected-service", service2);
+            localStorage.setItem("service-num", "2");
             console.log(service2)
             
         }
@@ -391,6 +399,7 @@ jQuery(".services-links a").click(function(e) {
             document.getElementById('nav-consultation').classList.add('show');
             var service3 =  document.querySelector('#nav-consultation #title-tab').innerText; 
             localStorage.setItem("selected-service", service3);
+            localStorage.setItem("service-num", "3");
             console.log(service3)
         }
         if ( activeLink === tabs[3]) {
@@ -399,6 +408,7 @@ jQuery(".services-links a").click(function(e) {
             document.getElementById('nav-covid').classList.add('show');
             var service4 =  document.querySelector('#nav-covid #title-tab').innerText;
             localStorage.setItem("selected-service", service4);
+            localStorage.setItem("service-num", "4");
             console.log(service4)
         }
         if ( activeLink === tabs[4]) {
@@ -407,6 +417,7 @@ jQuery(".services-links a").click(function(e) {
             document.getElementById('nav-examinations').classList.add('show');
             var service5 =  document.querySelector('#nav-examinations #title-tab').innerText; 
             localStorage.setItem("selected-service", service5);
+            localStorage.setItem("service-num", "5");
             console.log(service5)
         }
         }

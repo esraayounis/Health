@@ -193,9 +193,9 @@
                     </svg></a>
                         </div>
                         <div class="col-lg-2 d-none d-lg-flex d-md-none d-sm-none">
-                            <a id="cart"><svg  xmlns="http://www.w3.org/2000/svg" width="16" height="15.376" viewBox="0 0 16 15.376">
-                        <path id="Union_10" data-name="Union 10" d="M11.522,14.2A1.176,1.176,0,1,1,12.7,15.376,1.176,1.176,0,0,1,11.522,14.2Zm-7.143,0a1.176,1.176,0,1,1,1.176,1.176A1.176,1.176,0,0,1,4.379,14.2Zm-.7-2.482A1.39,1.39,0,0,1,3.72,9.946l.068-.068.857-.7L2.247,1.6.371,1.027a.525.525,0,0,1,.308-1L2.821.682a.522.522,0,0,1,.345.34L5.554,8.583h7.838l1.4-6.27H4.932L4.593,1.267H15.472a.538.538,0,0,1,.517.637L14.333,9.22a.523.523,0,0,1-.522.407H5.742L4.483,10.673a.35.35,0,0,0,.292.523h8.805a.522.522,0,0,1,0,1.045H4.859l-.071,0A1.437,1.437,0,0,1,3.678,11.718Z" transform="translate(0 0)" fill="#fff"/>
-                      </svg></a>
+                            <a id="cart"><svg id="navfixed" xmlns="http://www.w3.org/2000/svg" width="16" height="14.481" viewBox="0 0 16 14.481">
+                                <path d="M2,0A1.912,1.912,0,0,0,0,1.81H16A1.912,1.912,0,0,0,14,0ZM16,2.715H0V7.241H6a.956.956,0,0,1,1,.905.956.956,0,0,1-1,.905H0v3.62a1.912,1.912,0,0,0,2,1.81H14a1.912,1.912,0,0,0,2-1.81V6.336H10a.956.956,0,0,1-1-.905.956.956,0,0,1,1-.905h6Z" fill="white" fill-rule="evenodd"></path>
+                            </svg></a>
                         </div>
                         <div class="col-lg-8 d-none d-lg-flex d-md-none d-sm-none">
                             <span class="text-white">|</span>
@@ -426,14 +426,14 @@
                         <div class="card-box p-2 py-4 card-detail">
                             <div class="row">
                                 <div class="col-lg-3 p-lg-0">
-                                    <div class="avatar text-center">
+                                    <div class="avatar text-center" id="main-img">
                                         <img src="./assets/./images/amercenter.png" alt="">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 p-lg-0 detail">
+                                <div class="col-lg-6 p-lg-0 detail" id="main-card-details">
                                     <h6 class="title-card txt-md">
                                         شهادة صحية
-                                        <span>(مركز امر)</span>
+                                        <span id="selected-name">(مركز امر)</span>
                                     </h6>
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
@@ -508,9 +508,9 @@
                                 <div class="col-lg-3 value-card text-center">
                                     <div>
                                         <p class="mb-1">الإجمالي</p>
-                                        <h5>200 ريال</h5>
+                                        <h5 id="price">200 ريال</h5>
                                     </div>
-                                    <a class="btn" href="government-details.html">أحجز الآن</a>
+                                    <a class="btn details-btn">أحجز الآن</a>
                                 </div>
                             </div>
                         </div>
@@ -518,14 +518,14 @@
                         <div class="card-box p-2 py-4 card-detail">
                             <div class="row">
                                 <div class="col-lg-3 p-lg-0">
-                                    <div class="avatar text-center">
+                                    <div class="avatar text-center"  id="main-img">
                                         <img src="./assets/./images/saudi-center.png" alt="">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 p-lg-0 detail">
+                                <div class="col-lg-6 p-lg-0 detail" id="main-card-details">
                                     <h6 class="title-card txt-md">
                                         شهادة صحية
-                                        <span>(مراكز الاتصال)</span>
+                                        <span id="selected-name">(مراكز الاتصال)</span>
                                     </h6>
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
@@ -600,9 +600,9 @@
                                 <div class="col-lg-3 value-card text-center">
                                     <div>
                                         <p class="mb-1">الإجمالي</p>
-                                        <h5>200 ريال</h5>
+                                        <h5 id="price">200 ريال</h5>
                                     </div>
-                                    <a class="btn" href="government-details.html">أحجز الآن</a>
+                                    <a class="btn details-btn">أحجز الآن</a>
                                 </div>
                             </div>
                         </div>
@@ -610,14 +610,14 @@
                         <div class="card-box p-2 py-4 card-detail">
                             <div class="row">
                                 <div class="col-lg-3 p-lg-0">
-                                    <div class="avatar text-center">
+                                    <div class="avatar text-center"  id="main-img">
                                         <img src="./assets/./images/amercenter.png" alt="">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 p-lg-0 detail">
+                                <div class="col-lg-6 p-lg-0 detail" id="main-card-details">
                                     <h6 class="title-card txt-md">
                                         شهادة صحية
-                                        <span>(مركز امر)</span>
+                                        <span id="selected-name">(مركز امر)</span>
                                     </h6>
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
@@ -692,9 +692,9 @@
                                 <div class="col-lg-3 value-card text-center">
                                     <div>
                                         <p class="mb-1">الإجمالي</p>
-                                        <h5>200 ريال</h5>
+                                        <h5 id="price">200 ريال</h5>
                                     </div>
-                                    <a class="btn" href="government-details.html">أحجز الآن</a>
+                                    <a class="btn details-btn">أحجز الآن</a>
                                 </div>
                             </div>
                         </div>
@@ -702,14 +702,14 @@
                         <div class="card-box p-2 py-4 card-detail">
                             <div class="row">
                                 <div class="col-lg-3 p-lg-0">
-                                    <div class="avatar text-center">
+                                    <div class="avatar text-center" id="main-img" >
                                         <img src="./assets/./images/saudi-center.png" alt="">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 p-lg-0 detail">
+                                <div class="col-lg-6 p-lg-0 detail" id="main-card-details">
                                     <h6 class="title-card txt-md">
                                         شهادة صحية
-                                        <span>(مراكز الاتصال)</span>
+                                        <span id="selected-name">(مراكز الاتصال)</span>
                                     </h6>
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
@@ -784,9 +784,9 @@
                                 <div class="col-lg-3 value-card text-center">
                                     <div>
                                         <p class="mb-1">الإجمالي</p>
-                                        <h5>250 ريال</h5>
+                                        <h5 id="price">250 ريال</h5>
                                     </div>
-                                    <a class="btn" href="government-details.html">أحجز الآن</a>
+                                    <a class="btn details-btn">أحجز الآن</a>
                                 </div>
                             </div>
                         </div>
@@ -794,14 +794,14 @@
                           <div class="card-box p-2 py-4 card-detail">
                             <div class="row">
                                 <div class="col-lg-3 p-lg-0">
-                                    <div class="avatar text-center">
+                                    <div class="avatar text-center" id="main-img">
                                         <img src="./assets/./images/amercenter.png" alt="">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 p-lg-0 detail">
+                                <div class="col-lg-6 p-lg-0 detail" id="main-card-details">
                                     <h6 class="title-card txt-md">
                                         شهادة صحية
-                                        <span>(مركز امر)</span>
+                                        <span id="selected-name">(مركز امر)</span>
                                     </h6>
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
@@ -876,9 +876,9 @@
                                 <div class="col-lg-3 value-card text-center">
                                     <div>
                                         <p class="mb-1">الإجمالي</p>
-                                        <h5>200 ريال</h5>
+                                        <h5 id="price">200 ريال</h5>
                                     </div>
-                                    <a class="btn" href="government-details.html">أحجز الآن</a>
+                                    <a class="btn details-btn">أحجز الآن</a>
                                 </div>
                             </div>
                         </div>
@@ -891,14 +891,14 @@
                             <div class="row">
                                 <div class="col-lg-2 ">
                                     <div class="row">
-                                        <div class="col-3 avatar txt-left">
+                                        <div class="col-3 avatar txt-left" id="mob-img">
                                             <img src="./assets/./images/doctor-img.png" alt="">
                                         </div>
-                                        <div class="col-9">
+                                        <div class="col-9" id="mob-title">
                                             <div class="d-flex">
                                                 <h6 class="title-card txt-md">
                                                     شهادة صحية
-                                                    <span>(مركز امر)</span>
+                                                    <span id="selected-name">(مركز امر)</span>
                                                 </h6>
                                             </div>
                                             <div class="d-flex">
@@ -931,7 +931,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-7  detail mt-3">
+                                <div class="col-lg-7  detail mt-3" id="mob-card-details">
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
                                             <path id="__TEMP__SVG__"
@@ -975,9 +975,9 @@
                                     <div class="reserves justify-content-around w-100">
                                         <div class="mb-0 d-flex avaliable-btn">
                                             <p class="">السعر</p>
-                                            <h5>200 ريال</h5>
+                                            <h5 id="mob-price">200 ريال</h5>
                                         </div>
-                                        <a class="btn mb-0" href="government-details.html">أحجز الآن</a>
+                                        <a class="btn mb-0 details-btn" >أحجز الآن</a>
                                     </div>
                                 </div>
                             </div>
@@ -987,14 +987,14 @@
                             <div class="row">
                                 <div class="col-lg-2 ">
                                     <div class="row">
-                                        <div class="col-3 avatar txt-left">
+                                        <div class="col-3 avatar txt-left" id="mob-img">
                                             <img src="./assets/./images/saudi-center.png" alt="">
                                         </div>
-                                        <div class="col-9">
+                                        <div class="col-9" id="mob-title">
                                             <div class="d-flex">
                                                 <h6 class="title-card txt-md">
                                                     شهادة صحية
-                                                    <span>(مراكز الاتصال)</span>
+                                                    <span id="selected-name">(مراكز الاتصال)</span>
                                                 </h6>
                                             </div>
                                             <div class="d-flex">
@@ -1027,7 +1027,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-7  detail mt-3">
+                                <div class="col-lg-7  detail mt-3" id="mob-card-details">
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
                                             <path id="__TEMP__SVG__"
@@ -1071,9 +1071,9 @@
                                     <div class="reserves justify-content-around w-100">
                                         <div class="mb-0 d-flex avaliable-btn">
                                             <p class="">السعر</p>
-                                            <h5>200 ريال</h5>
+                                            <h5 id="mob-price">200 ريال</h5>
                                         </div>
-                                        <a class="btn mb-0" href="government-details.html">أحجز الآن</a>
+                                        <a class="btn mb-0 details-btn" >أحجز الآن</a>
                                     </div>
                                 </div>
                             </div>
@@ -1083,14 +1083,14 @@
                             <div class="row">
                                 <div class="col-lg-2 ">
                                     <div class="row">
-                                        <div class="col-3 avatar txt-left">
+                                        <div class="col-3 avatar txt-left" id="mob-img">
                                             <img src="./assets/./images/amercenter.png" alt="">
                                         </div>
-                                        <div class="col-9">
+                                        <div class="col-9" id="mob-title">
                                             <div class="d-flex">
                                                 <h6 class="title-card txt-md">
                                                     شهادة صحية
-                                                    <span>(مركز امر)</span>
+                                                    <span id="selected-name">(مركز امر)</span>
                                                 </h6>
                                             </div>
                                             <div class="d-flex">
@@ -1123,7 +1123,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-7  detail mt-3">
+                                <div class="col-lg-7  detail mt-3" id="mob-card-details">
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
                                             <path id="__TEMP__SVG__"
@@ -1167,9 +1167,9 @@
                                     <div class="reserves justify-content-around w-100">
                                         <div class="mb-0 d-flex avaliable-btn">
                                             <p class="">السعر</p>
-                                            <h5>200 ريال</h5>
+                                            <h5 id="mob-price">200 ريال</h5>
                                         </div>
-                                        <a class="btn mb-0" href="government-details.html">أحجز الآن</a>
+                                        <a class="btn mb-0 details-btn">أحجز الآن</a>
                                     </div>
                                 </div>
                             </div>
@@ -1179,14 +1179,14 @@
                             <div class="row">
                                 <div class="col-lg-2 ">
                                     <div class="row">
-                                        <div class="col-3 avatar txt-left">
+                                        <div class="col-3 avatar txt-left" id="mob-img">
                                             <img src="./assets/./images/saudi-center.png" alt="">
                                         </div>
-                                        <div class="col-9">
+                                        <div class="col-9" id="mob-title">
                                             <div class="d-flex">
                                                 <h6 class="title-card txt-md">
                                                     شهادة صحية
-                                                    <span>(مراكز الاتصال)</span>
+                                                    <span id="selected-name">(مراكز الاتصال)</span>
                                                 </h6>
                                             </div>
                                             <div class="d-flex">
@@ -1219,7 +1219,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-7  detail mt-3">
+                                <div class="col-lg-7  detail mt-3" id="mob-card-details">
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
                                             <path id="__TEMP__SVG__"
@@ -1263,9 +1263,9 @@
                                     <div class="reserves justify-content-around w-100">
                                         <div class="mb-0 d-flex avaliable-btn">
                                             <p class="">السعر</p>
-                                            <h5>200 ريال</h5>
+                                            <h5 id="mob-price">200 ريال</h5>
                                         </div>
-                                        <a class="btn mb-0" href="government-details.html">أحجز الآن</a>
+                                        <a class="btn mb-0 details-btn">أحجز الآن</a>
                                     </div>
                                 </div>
                             </div>
@@ -1275,14 +1275,14 @@
                             <div class="row">
                                 <div class="col-lg-2 ">
                                     <div class="row">
-                                        <div class="col-3 avatar txt-left">
+                                        <div class="col-3 avatar txt-left" id="mob-img">
                                             <img src="./assets/./images/amercenter.png" alt="">
                                         </div>
-                                        <div class="col-9">
+                                        <div class="col-9" id="mob-title">
                                             <div class="d-flex">
                                                 <h6 class="title-card txt-md">
                                                     شهادة صحية
-                                                    <span>(مركز امر)</span>
+                                                    <span id="selected-name">(مركز امر)</span>
                                                 </h6>
                                             </div>
                                             <div class="d-flex">
@@ -1315,7 +1315,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-7  detail mt-3">
+                                <div class="col-lg-7  detail mt-3" id="mob-card-details">
                                     <div class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
                                             <path id="__TEMP__SVG__"
@@ -1359,9 +1359,9 @@
                                     <div class="reserves justify-content-around w-100">
                                         <div class="mb-0 d-flex avaliable-btn">
                                             <p class="">السعر</p>
-                                            <h5>200 ريال</h5>
+                                            <h5 id="mob-price">200 ريال</h5>
                                         </div>
-                                        <a class="btn mb-0" href="government-details.html">أحجز الآن</a>
+                                        <a class="btn mb-0 details-btn">أحجز الآن</a>
                                     </div>
                                 </div>
                             </div>
@@ -1755,7 +1755,7 @@
     <!-- End Footer -->
 
  
-
+    <div id="documentCard" style="display: none;"></div>
     <div id="preloader"></div>
     <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a> -->
@@ -1779,6 +1779,7 @@
     <script src="assets/js/paging.js"></script>
     <script src="assets/js/paging-mob.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
+    <script src="assets/js/set-card-details.js"></script>
 
 </body>
 

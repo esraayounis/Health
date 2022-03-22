@@ -193,9 +193,9 @@
                     </svg></a>
                         </div>
                         <div class="col-lg-2 d-none d-lg-flex d-md-none d-sm-none">
-                            <a id="cart"><svg  xmlns="http://www.w3.org/2000/svg" width="16" height="15.376" viewBox="0 0 16 15.376">
-                        <path id="Union_10" data-name="Union 10" d="M11.522,14.2A1.176,1.176,0,1,1,12.7,15.376,1.176,1.176,0,0,1,11.522,14.2Zm-7.143,0a1.176,1.176,0,1,1,1.176,1.176A1.176,1.176,0,0,1,4.379,14.2Zm-.7-2.482A1.39,1.39,0,0,1,3.72,9.946l.068-.068.857-.7L2.247,1.6.371,1.027a.525.525,0,0,1,.308-1L2.821.682a.522.522,0,0,1,.345.34L5.554,8.583h7.838l1.4-6.27H4.932L4.593,1.267H15.472a.538.538,0,0,1,.517.637L14.333,9.22a.523.523,0,0,1-.522.407H5.742L4.483,10.673a.35.35,0,0,0,.292.523h8.805a.522.522,0,0,1,0,1.045H4.859l-.071,0A1.437,1.437,0,0,1,3.678,11.718Z" transform="translate(0 0)" fill="#fff"/>
-                      </svg></a>
+                            <a id="cart"><svg id="navfixed" xmlns="http://www.w3.org/2000/svg" width="16" height="14.481" viewBox="0 0 16 14.481">
+                                <path d="M2,0A1.912,1.912,0,0,0,0,1.81H16A1.912,1.912,0,0,0,14,0ZM16,2.715H0V7.241H6a.956.956,0,0,1,1,.905.956.956,0,0,1-1,.905H0v3.62a1.912,1.912,0,0,0,2,1.81H14a1.912,1.912,0,0,0,2-1.81V6.336H10a.956.956,0,0,1-1-.905.956.956,0,0,1,1-.905h6Z" fill="white" fill-rule="evenodd"fill="#8d8d8d" fill-rule="evenodd"></path>
+                            </svg></a>
                         </div>
                         <div class="col-lg-8 d-none d-lg-flex d-md-none d-sm-none">
                             <span class="text-white">|</span>
@@ -427,7 +427,7 @@
                          <div class="card-box p-2 pt-0 py-lg-4 card-doctor  card-detail">
                              <div class="row">
                                  <div class="col-xl-3 col-md-4 p-lg-0">
-                                     <div class="avatar text-center">
+                                     <div class="avatar text-center" id="main-img">
                                          <img src="./assets/./images/abdo2.png" alt="">
                                      </div>
                                      <div class="stars-special text-center">
@@ -450,8 +450,8 @@
                                         </p>
                                     </div>
                                  </div>
-                                 <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0">
-                                     <h6 class="title-card txt-md desktop-show">
+                                 <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0" id="main-card-details">
+                                     <h6 class="title-card txt-md" id="selected-name">
                                          شادي السيد عبدالعزيز
                                      </h6>
                                      <div class="d-flex">
@@ -558,7 +558,7 @@
                              </div>
                              <div class="row">
                                  <div class="value-card consult">
-                                     <a class="btn" href="consult-details.html">طلب زيارة</a>
+                                     <a class="btn details-btn">أحجز الآن</a>
                                  </div>
                              </div>
                          </div>
@@ -566,7 +566,7 @@
                           <div class="card-box p-2 pt-0 py-lg-4 card-doctor  card-detail">
                              <div class="row">
                                  <div class="col-xl-3 col-md-4 p-lg-0">
-                                     <div class="avatar text-center">
+                                     <div class="avatar text-center" id="main-img">
                                          <img src="./assets/./images/abdo2.png" alt="">
                                      </div>
                                      <div class="stars-special text-center">
@@ -590,8 +590,8 @@
                                     </div>
                                  </div>
                                 
-                                 <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0">
-                                     <h6 class="title-card txt-md desktop-show">
+                                 <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0" id="main-card-details">
+                                     <h6 class="title-card txt-md" id="selected-name">
                                          شادي السيد عبدالعزيز
                                      </h6>
                                      <div class="d-flex">
@@ -699,15 +699,15 @@
                              </div>
                              <div class="row">
                                  <div class="value-card consult">
-                                     <a class="btn" href="consult-details.html">طلب زيارة</a>
+                                     <a class="btn details-btn">أحجز الآن</a>
                                  </div>
                              </div>
                          </div>
                           <!-- item -->
                           <div class="card-box p-2 pt-0 py-lg-4 card-doctor  card-detail">
                              <div class="row">
-                                 <div class="col-xl-3 col-md-4 p-lg-0 desktop-show">
-                                     <div class="avatar text-center">
+                                 <div class="col-xl-3 col-md-4 p-lg-0">
+                                     <div class="avatar text-center" id="main-img">
                                          <img src="./assets/./images/abdo2.png" alt="">
                                      </div>
                                      <div class="stars-special text-center">
@@ -730,8 +730,8 @@
                                         </p>
                                     </div>
                                  </div>
-                                 <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0">
-                                     <h6 class="title-card txt-md desktop-show">
+                                 <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0" id="main-card-details">
+                                     <h6 class="title-card txt-md" id="selected-name">
                                          شادي السيد عبدالعزيز
                                      </h6>
                                      <div class="d-flex">
@@ -839,7 +839,7 @@
                              </div>
                              <div class="row">
                                  <div class="value-card consult">
-                                     <a class="btn" href="consult-details.html">طلب زيارة</a>
+                                     <a class="btn details-btn">أحجز الآن</a>
                                  </div>
                              </div>
                          </div>
@@ -847,7 +847,7 @@
                           <div class="card-box p-2 pt-0 py-lg-4 card-doctor  card-detail">
                             <div class="row">
                                 <div class="col-xl-3 col-md-4 p-lg-0">
-                                    <div class="avatar text-center">
+                                    <div class="avatar text-center" id="main-img">
                                         <img src="./assets/./images/abdo2.png" alt="">
                                     </div>
                                     <div class="stars-special text-center">
@@ -871,8 +871,8 @@
                                     </div>
                                 </div>
                                
-                                <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0">
-                                    <h6 class="title-card txt-md desktop-show">
+                                <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0" id="main-card-details">
+                                    <h6 class="title-card txt-md " id="selected-name">
                                         شادي السيد عبدالعزيز
                                     </h6>
                                     <div class="d-flex">
@@ -980,7 +980,7 @@
                             </div>
                             <div class="row">
                                 <div class="value-card consult">
-                                    <a class="btn" href="consult-details.html">طلب زيارة</a>
+                                    <a class="btn details-btn">أحجز الآن</a>
                                 </div>
                             </div>
                         </div>
@@ -994,12 +994,12 @@
                             <div class="row">
                                 <div class="col-xl-3 col-md-4 p-lg-0">
                                     <div class="row">
-                                       <div class="col-3 avatar txt-left">
+                                       <div class="col-3 avatar txt-left" id="mob-img">
                                             <img src="./assets/./images/doctor-img.png" alt="">
                                        </div>
-                                      <div class="col-9">
+                                      <div class="col-9" id="mob-title">
                                         <div class="d-flex">
-                                            <h6 class="col-9 title-card txt-md">
+                                            <h6 class="col-9 title-card txt-md" id="selected-name">
                                                 شادي السيد عبدالعزيز
                                             </h6>
                                             <div class="col-3">
@@ -1049,7 +1049,7 @@
                                       </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0">
+                                <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0" id="mob-card-details">
                                     <h6 class="title-card txt-md desktop-show">
                                         شادي السيد عبدالعزيز
                                     </h6>
@@ -1158,7 +1158,7 @@
                             </div>
                             <div class="row">
                                 <div class="value-card consult">
-                                    <a class="btn" href="consult-details.html">طلب زيارة</a>
+                                    <a class="btn details-btn">أحجز الآن</a>
                                 </div>
                             </div>
                         </div>
@@ -1167,12 +1167,12 @@
                             <div class="row">
                                 <div class="col-xl-3 col-md-4 p-lg-0">
                                     <div class="row">
-                                       <div class="col-3 avatar txt-left">
+                                       <div class="col-3 avatar txt-left" id="mob-img">
                                             <img src="./assets/./images/doctor-img.png" alt="">
                                        </div>
-                                      <div class="col-9">
+                                      <div class="col-9" id="mob-title">
                                         <div class="d-flex">
-                                            <h6 class="col-9 title-card txt-md">
+                                            <h6 class="col-9 title-card txt-md" id="selected-name">
                                                 شادي السيد عبدالعزيز
                                             </h6>
                                             <div class="col-3">
@@ -1222,7 +1222,7 @@
                                       </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0">
+                                <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0" id="mob-card-details">
                                     <h6 class="title-card txt-md desktop-show">
                                         شادي السيد عبدالعزيز
                                     </h6>
@@ -1331,7 +1331,7 @@
                             </div>
                             <div class="row">
                                 <div class="value-card consult">
-                                    <a class="btn" href="consult-details.html">طلب زيارة</a>
+                                    <a class="btn details-btn">أحجز الآن</a>
                                 </div>
                             </div>
                         </div>
@@ -1340,12 +1340,12 @@
                             <div class="row">
                                 <div class="col-xl-3 col-md-4 p-lg-0">
                                     <div class="row">
-                                       <div class="col-3 avatar txt-left">
+                                       <div class="col-3 avatar txt-left" id="mob-img">
                                             <img src="./assets/./images/doctor-img.png" alt="">
                                        </div>
-                                      <div class="col-9">
+                                      <div class="col-9" id="mob-title">
                                         <div class="d-flex">
-                                            <h6 class="col-9 title-card txt-md">
+                                            <h6 class="col-9 title-card txt-md" id="selected-name">
                                                 شادي السيد عبدالعزيز
                                             </h6>
                                             <div class="col-3">
@@ -1395,7 +1395,7 @@
                                       </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0">
+                                <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0" id="mob-card-details">
                                     <h6 class="title-card txt-md desktop-show">
                                         شادي السيد عبدالعزيز
                                     </h6>
@@ -1504,7 +1504,7 @@
                             </div>
                             <div class="row">
                                 <div class="value-card consult">
-                                    <a class="btn" href="consult-details.html">طلب زيارة</a>
+                                    <a class="btn details-btn">أحجز الآن</a>
                                 </div>
                             </div>
                         </div>
@@ -1513,12 +1513,12 @@
                             <div class="row">
                                 <div class="col-xl-3 col-md-4 p-lg-0">
                                     <div class="row">
-                                       <div class="col-3 avatar txt-left">
+                                       <div class="col-3 avatar txt-left" id="mob-img">
                                             <img src="./assets/./images/doctor-img.png" alt="">
                                        </div>
-                                      <div class="col-9">
+                                      <div class="col-9" id="mob-title">
                                         <div class="d-flex">
-                                            <h6 class="col-9 title-card txt-md">
+                                            <h6 class="col-9 title-card txt-md" id="selected-name">
                                                 شادي السيد عبدالعزيز
                                             </h6>
                                             <div class="col-3">
@@ -1568,7 +1568,7 @@
                                       </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0">
+                                <div class="col-xl-3 col-md-8 p-lg-0 detail py-2 py-lg-0" id="mob-card-details">
                                     <h6 class="title-card txt-md desktop-show">
                                         شادي السيد عبدالعزيز
                                     </h6>
@@ -1677,7 +1677,7 @@
                             </div>
                             <div class="row">
                                 <div class="value-card consult">
-                                    <a class="btn" href="consult-details.html">طلب زيارة</a>
+                                    <a class="btn details-btn">أحجز الآن</a>
                                 </div>
                             </div>
                         </div>
@@ -2061,7 +2061,7 @@
         </div>
     </footer>
     <!-- End Footer -->
-
+    <div id="documentCard" style="display: none;"></div>
    
     <div id="preloader"></div>
     <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -2085,6 +2085,7 @@
     <script src="assets/js/paging.js"></script>
     <script src="assets/js/paging-mob.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
+    <script src="assets/js/set-card-details.js"></script>
 
 </body>
 

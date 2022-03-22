@@ -4958,6 +4958,10 @@ button.fill-face span {
   font-size: 13px;
   right: 14px;
   top: 14px;
+  height:30px;
+  width:70px;
+  border-right:6px solid #d20b0b;
+  border-top:unset;
 }
 .best-offer-laboratory .avatar {
   margin-bottom: 13px;
@@ -6019,53 +6023,8 @@ textarea {
     opacity:1;
   }
 
-/* 
-  #main  .select{
-    width: 60%;
-    height: 580px;
-    padding: 5%;
-    background: #222;
-    position: absolute;
-    top: -1000px;
-    left: 20%;
-    transition: 0.5s;
-    overflow-y: auto;
-    margin: auto;
-  }
-  #main  .select.display{
-    top: 10px;
-  }
-  #main .select div{
-    width: 100%;
-    height: 200px;
-    display: flex;
-    padding: 5px;
-    border: 1px solid white;
-    position: relative;
-    margin: 5px auto;
-  }
-  #main .select div img{
-    width: 300px;
-    height: 100%;
-  }
-  #main .select div p{
-    padding: 35px;
-    color: white;
-  }
-  #main .select div h6,
-  #main .select div button{
-    position: absolute;
-    left: 45%;
-    top: 50%;
-    color: white;
-  }
-  #main .select div button{
-    left: 60%;
-    top: 55%;
-  }
-  #main .select div span{
-    display: none;
-  } */
+
+
 
   section .card-span{
     position: absolute;
