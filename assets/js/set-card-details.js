@@ -1,7 +1,7 @@
 // -----  Share slected card to details page -----
 
 $('.details-btn').click(function(){
-       debugger
+       
     var $target = $(this).parents('.card-detail');
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
@@ -98,6 +98,8 @@ function shareCardData()
     localStorage.setItem("card-web", sharedCardWeb);
     var sharedCardMob = document.getElementById('set-card-data-mob').innerHTML;
     localStorage.setItem("card-mob", sharedCardMob);
+
+    //addReservations();
     var type =  localStorage.getItem("selected-service");
     var name = localStorage.getItem("selected-name");
     var queryString = "?type=" + type + "&name=" + name; 
@@ -151,6 +153,59 @@ function shareOfferDetails(){
 }
 
 // ------ Special Labs -----
+$('.save-lab-card').click(function(){
+       debugger
+    var $target = $(this).parents('.card-detail');
+    var selectedCard = $target[0].innerHTML
+    localStorage.setItem("detials", selectedCard)
+    document.getElementById('documentCard').innerHTML=selectedCard;
+
+    var type = localStorage.getItem("selected-service");
+    var serviceOrder = localStorage.getItem("service-num");
+
+    var selectedName = document.querySelector('#documentCard #selected-name').innerText;
+    localStorage.setItem("selected-name", selectedName);
+
+    var media_query = 'screen and (max-width:600px)';
+    var matched = window.matchMedia(media_query).matches;
+    if(matched){
+        var mobCardImg =  document.querySelector('#documentCard #mob-img').innerHTML;
+        localStorage.setItem("selected-mob-img", mobCardImg);
+        var mobTitle =  document.querySelector('#documentCard #mob-title').innerHTML;
+        localStorage.setItem("selected-mob-title", mobTitle);
+        var mobCardDetails =  document.querySelector('#documentCard #mob-card-details').innerHTML;
+        localStorage.setItem("selected-mob-Details", mobCardDetails);
+        var mobPrice =  document.querySelector('#documentCard #mob-price');
+        if(mobPrice != null)
+        {
+            var mobPrice =  document.querySelector('#documentCard #mob-price').innerHTML;
+            localStorage.setItem("mob-price", mobPrice);  
+        }
+        else{
+            localStorage.setItem("main-price", null);  
+        }
+        console.log(mobPrice)
+       
+    }
+
+    else{
+        var mainCardImg =  document.querySelector('#documentCard #main-img').innerHTML;
+        localStorage.setItem("selected-main-img", mainCardImg);
+        var mainCardDetails =  document.querySelector('#documentCard #main-card-details').innerHTML;
+        localStorage.setItem("selected-main-Details", mainCardDetails);
+        var mainPrice =  document.querySelector('#documentCard #price');
+        if(mainPrice != null)
+        {
+            var mainPrice =  document.querySelector('#documentCard #price').innerHTML;
+            localStorage.setItem("main-price", mainPrice);  
+        }
+        else{
+            localStorage.setItem("main-price", null);  
+        }
+        console.log(mainPrice)
+    }
+
+});
 function saveSelectedlabCard(){
 
     var status = localStorage.getItem('status');
@@ -174,7 +229,7 @@ function saveSelectedlabCard(){
 // ----- Add to Faviorts -----
 
 $('#save-btn').click(function(){ 
-    debugger
+    
     document.getElementById("save").style.fill = "red";
     var faviorts =  document.getElementById("save-btn");
     var add = Number(faviorts.getAttribute('data-count') || 0);
@@ -202,9 +257,11 @@ $('#save-btn').click(function(){
 }); 
 
 // ----- Add to Reservations -----
+// function addReservations()
 // var notifications =  document.getElementById("cart");
 // var buttons =  document.querySelectorAll('.details-btn');
 // for(var btn of buttons){
+//     debugger
 //     btn.addEventListener('click',(e)=>{
 //         debugger
 //         var add = Number(notifications.getAttribute('data-count') || 0);
@@ -226,5 +283,6 @@ $('#save-btn').click(function(){
 //         }
 //     });
 //  }
+
 
 

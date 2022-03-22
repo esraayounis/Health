@@ -1,6 +1,6 @@
 
     window.onload = function () {
-        debugger 
+         
 
         var selectCard = localStorage.getItem("detials");
         console.log(selectCard)

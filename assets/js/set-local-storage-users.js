@@ -1,5 +1,5 @@
 function saveDataNewUsers()
-{debugger
+{
     let name,email,psw,phone,birthdate,gender;
     name = document.getElementById("name").value;
     email = document.getElementById("email").value;

@@ -963,6 +963,9 @@ form .btn button{
 
 
 @media (max-width: 600px) {
+  .laboratorys .owl-nav{
+    display: none!important;
+  }
   .logout-mar{
     margin-right:10px;
   }
@@ -1377,13 +1380,13 @@ form .btn button{
     font-weight:bold;
   }
 
-  .offers-section h3, .offers-slider-section h3{
+  .offers-section h3, .offers-slider-section h3, .section-laboratory h2, .best-offer-laboratory h2{
     font-size:16px!important;
     font-weight: bold;
     color: #000;
     padding:10px!important;
   }
-  .offers-section .card .card-offer .offer-details h4{
+  .offers-section .card .card-offer .offer-details h4, .best-offer-laboratory .name-laborat h4{
     font-size:13px!important;
   }
 
@@ -2682,7 +2685,9 @@ section {
 } */
 
 
-
+.share{
+  padding: 0 10px;
+}
 
 .consult{
   display: block!important;
@@ -3572,9 +3577,16 @@ body {
 }
 .card-detail .value-card {
   display: flex;
-  flex-direction: column;
+   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+.detalis .card-detail .value-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: unset;
+  align-items: unset;
 }
 .card-detail .value-card p {
   font-weight: 600;
