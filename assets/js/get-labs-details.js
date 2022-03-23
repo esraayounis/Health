@@ -1,6 +1,18 @@
 
     window.onload = function () {
         debugger
+
+        var storedTests = localStorage.getItem("requiredTests");
+          if(storedTests!= null)
+          {
+            document.getElementById('no-exams').style.display = "none";
+            document.getElementById('list').innerHTML = storedTests;
+          }
+
+          else{
+            document.getElementById('no-exams').style.display = "block";
+          }
+          
         var selectCard = localStorage.getItem("detials");
         console.log(selectCard)
       
@@ -25,7 +37,7 @@
 
             var mobPrice =  localStorage.getItem("mob-price");
             if (mobPrice != "null"){
-                document.getElementById('total-price').innerHTML = mobPrice;
+                document.getElementById('lab-total-price').innerHTML = mobPrice;
             }
             
         }
@@ -40,7 +52,7 @@
             var mainPrice =  localStorage.getItem("main-price");
             console.log(mainPrice)
             if (mainPrice != "null"){
-                document.getElementById('total-price').innerHTML = mainPrice;
+                document.getElementById('lab-total-price').innerHTML = mainPrice;
             }
           
         }

@@ -1,7 +1,7 @@
 // -----  Share slected card to details page -----
 
 $('.details-btn').click(function(){
-       
+       debugger
     var $target = $(this).parents('.card-detail');
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
@@ -66,16 +66,16 @@ $('.details-btn').click(function(){
     }
     else if(serviceOrder == "4")
     {
-        if(type == "زيارة طبيب"){
+        if(type == " زيارة طبيب"){
             window.location.href = "consult-details.html";
         }
-        else if(type == "زيارة تمريض"){
+        else if(type == " زيارة تمريض"){
             window.location.href = "nurse-details.html";
         }
-        else if(type == "زيارة جليس"){
+        else if(type == " زيارة جليس"){
             window.location.href = "sitter-details.html";
         }
-        else  if(type == "خدمات منزلية"){
+        else  if(type == " خدمات منزلية"){
             window.location.href = "home-details.html";
         }
         
@@ -93,7 +93,7 @@ $('.details-btn').click(function(){
 // ----- Share card details to reservation page-----
 function shareCardData()
 {
-    
+    debugger
     var sharedCardWeb = document.getElementById('set-card-data-web').innerHTML;
     localStorage.setItem("card-web", sharedCardWeb);
     var sharedCardMob = document.getElementById('set-card-data-mob').innerHTML;
@@ -109,14 +109,51 @@ function shareCardData()
 
 // ----- Special Offers-----
 
-$('.offers-btn').click(function(){
-       
-    var $target = $(this).parents('.card-detail');
+//  $('.offers-card').click(function(){
+//     var $target = $(this).parents('.order');
+//     console.log($target)
+//     var selectedCard = $target[0].innerHTML
+//     localStorage.setItem("detials", selectedCard)
+//     document.getElementById('documentOfferCard').innerHTML = selectedCard;
+
+//     var selectedName = document.querySelector('#documentOfferCard #order-selected-card-type').innerText;
+//     localStorage.setItem("selected-name", selectedName);
+
+//     var status = localStorage.getItem('status');
+//     console.log(status);
+//     if (status == "" || status == null ){
+//         alert("من فضلك سجل دخول أولا")
+//     }
+//     else{
+        
+//         var mainOrederCardImg =  document.querySelector('#documentOfferCard .order-img').innerHTML;
+//         localStorage.setItem("selected-main-order-img", mainOrederCardImg);
+//         var desc =  document.querySelector('#documentOfferCard .desc').innerHTML;
+//         localStorage.setItem("desc", desc);
+
+//         var title =  document.querySelector('#documentOfferCard .title').innerHTML;
+//         localStorage.setItem("title", title);
+
+//         var mobOrderCardDetails =  document.querySelector('#documentOfferCard .order-details').innerHTML;
+//         localStorage.setItem("selected-main-order-Details", mobOrderCardDetails);
+//         var mainOrderPrice =  document.querySelector('#documentOfferCard #order-price').innerHTML;
+//         localStorage.setItem("selected-main-order-price", mainOrderPrice);
+//         var orderDiscount =  document.querySelector('#documentOfferCard .discount-offer').innerHTML;
+//         localStorage.setItem("selected-order-discount", orderDiscount);
+//         window.location.href = "special-offer-details.html";
+//     }
+//  });
+
+
+$('.order-btn').click(function(){
+    debugger
+    var $target = $(this).parents('.order');
+    console.log($target)
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
-    document.getElementById('documentCard').innerHTML=selectedCard;
+    document.getElementById('documentOfferCard').innerHTML = selectedCard;
 
-    var selectedName = document.querySelector('#documentCard #selected-name').innerText;
+    var selectedName = document.querySelector('#documentOfferCard #order-selected-card-type').innerText;
     localStorage.setItem("selected-name", selectedName);
 
     var status = localStorage.getItem('status');
@@ -125,31 +162,34 @@ $('.offers-btn').click(function(){
         alert("من فضلك سجل دخول أولا")
     }
     else{
-        var saveCardWeb = document.getElementById('selected-card-web').innerHTML;
-        localStorage.setItem("selected-card-web", saveCardWeb);
-        var saveCardMob = document.getElementById('selected-card-mob').innerHTML;
-        localStorage.setItem("selected-card-mob", saveCardMob);
-        var type =  document.getElementById('selected-card-type').innerHTML;
-        localStorage.setItem("selected-card", type);
-        var queryString = "?type=" + type; 
-        window.location.href = "special-offer-details.html" + queryString; 
+        
+        var mainOrederCardImg =  document.querySelector('#documentOfferCard .order-img').innerHTML;
+        localStorage.setItem("selected-main-order-img", mainOrederCardImg);
+        var desc =  document.querySelector('#documentOfferCard .desc').innerHTML;
+        localStorage.setItem("desc", desc);
+
+        var title =  document.querySelector('#documentOfferCard .title').innerHTML;
+        localStorage.setItem("title", title);
+
+        var mobOrderCardDetails =  document.querySelector('#documentOfferCard .order-details').innerHTML;
+        localStorage.setItem("selected-main-order-Details", mobOrderCardDetails);
+        var mainOrderPrice =  document.querySelector('#documentOfferCard #order-price').innerHTML;
+        localStorage.setItem("selected-main-order-price", mainOrderPrice);
+        var orderDiscount =  document.querySelector('#documentOfferCard .discount-offer').innerHTML;
+        localStorage.setItem("selected-order-discount", orderDiscount);
+        window.location.href = "special-offer-details.html";
     }
 });
 
 // ----- Offers Details -----
 function shareOfferDetails(){
-    
     var shareOfferDetailsdWeb = document.getElementById('offer-details-web').innerHTML;
     localStorage.setItem("offer-details-web", shareOfferDetailsdWeb);
     var shareDoctorDetailsdWeb = document.getElementById('doctor-details-web').innerHTML;
     localStorage.setItem("doctor-details-web", shareDoctorDetailsdWeb);
-    // var shareOfferDetailsdMob = document.getElementById('offer-details-mob').innerHTML;
-    // localStorage.setItem("offer-details-mob", shareOfferDetailsdMob);
-    // var shareDoctorDetailsdMob = document.getElementById('doctor-details-mob').innerHTML;
-    // localStorage.setItem("doctor-details-mob", shareDoctorDetailsdMob);
-    var type = localStorage.getItem("selected-card");
-    var queryString = "?type=" + type; 
-    window.location.href = "special-offer-reserve.html" + queryString; 
+    var shareDoctorDetailsdMob = document.getElementById('doctor-details-mob').innerHTML;
+    localStorage.setItem("doctor-details-mob", shareDoctorDetailsdMob);
+    window.location.href = "special-offer-reserve.html"; 
 }
 
 // ------ Special Labs -----
@@ -206,6 +246,7 @@ $('.save-lab-card').click(function(){
     }
 
 });
+
 function saveSelectedlabCard(){
 
     var status = localStorage.getItem('status');

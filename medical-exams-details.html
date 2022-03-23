@@ -275,7 +275,7 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-8" id="myUL">
+                    <div class="col-lg-8 detalis" id="myUL">
                         <!-- item -->
                         <div class="desktop-show card-box p-2 py-4 card-detail"  id="set-card-data-web"> 
                             <div class="row">
@@ -285,22 +285,18 @@
                                 </div>
                                 <div class="col-lg-6 p-lg-0 detail" id="main-card-details">
                                 </div>
-                                <div class="col-lg-3 value-card react-icon text-center">
+                                <div class="col-lg-3 value-card react-icon text-center ">
                                     <div></div>
-                                    <div class="d-flex justify-content-around w-100">
-                                        <p class="mb-0">Save
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.001" viewBox="0 0 16 15.001">
-                                                <path id="Path_16627" data-name="Path 16627"
-                                                    d="M8,2.748l-.717-.737A3.756,3.756,0,0,0,1.4,3.053a4.715,4.715,0,0,0,.314,4.385C2.635,9.253,4.549,11.427,8,13.8c3.452-2.368,5.365-4.542,6.286-6.357A4.714,4.714,0,0,0,14.6,3.053,3.756,3.756,0,0,0,8.717,2.01ZM8,15C-7.333,4.868,3.279-3.04,7.825,1.143c.06.055.119.112.176.171q.085-.089.176-.17C12.721-3.042,23.334,4.867,8,15Z"
-                                                    transform="translate(0 0)" fill="#0065ff" fill-rule="evenodd" />
+                                    <div class="d-flex">
+                                        <p class="mb-0" id="save-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.024" viewBox="0 0 16 15.024">
+                                                <path id="save" d="M7.981,15.024,6.82,13.948Q5.246,12.488,4.5,11.777T2.7,9.914A15.418,15.418,0,0,1,1.18,8.031,8.907,8.907,0,0,1,.356,6.359,5.257,5.257,0,0,1,0,4.5,4.4,4.4,0,0,1,1.274,1.306,4.176,4.176,0,0,1,4.384,0a4.465,4.465,0,0,1,3.6,1.729A4.465,4.465,0,0,1,11.579,0a4.222,4.222,0,0,1,3.148,1.306A4.4,4.4,0,0,1,16,4.5a5.015,5.015,0,0,1-.375,1.864A10.79,10.79,0,0,1,14.8,8.031a13.266,13.266,0,0,1-1.518,1.883q-1.068,1.153-1.8,1.864T9.143,13.986Z" fill="#0065FF"></path>
                                             </svg>
                                         </p>
-                                        <p class="mb-0">Share
+                                        <p class="mb-0 share">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <g id="share" transform="translate(0)">
-                                                    <path id="Union_23" data-name="Union 23"
-                                                        d="M11,13.5a2.506,2.506,0,0,1,.085-.648L4.467,9.543a2.5,2.5,0,1,1,0-3.085l6.618-3.309a2.5,2.5,0,1,1,.448.894L4.915,7.351a2.519,2.519,0,0,1,0,1.3l6.618,3.309A2.5,2.5,0,1,1,11,13.5Z"
-                                                        transform="translate(0)" fill="#0065ff" />
+                                                    <path id="Union_23" data-name="Union 23" d="M11,13.5a2.506,2.506,0,0,1,.085-.648L4.467,9.543a2.5,2.5,0,1,1,0-3.085l6.618-3.309a2.5,2.5,0,1,1,.448.894L4.915,7.351a2.519,2.519,0,0,1,0,1.3l6.618,3.309A2.5,2.5,0,1,1,11,13.5Z" transform="translate(0)" fill="#0065ff"></path>
                                                 </g>
                                             </svg>
                                         </p>
@@ -314,7 +310,7 @@
                                     <div class="row">
                                         <div class="col-3 avatar txt-left" id="mob-detail-img">
                                         </div>
-                                        <div class="col-7" id="mob-detail-title">
+                                        <div class="col-7 no-pad" id="mob-detail-title">
                                         </div>
                                         <div class="col-2 no-pad">
                                             <div class="d-flex">
@@ -623,7 +619,7 @@
 
                                                             <p class="text-center pt-4 font-bold">
                                                                 تكلفة التحاليل:
-                                                                <span class="total-price"></span>
+                                                                <span id="lab-total-price"></span>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -791,7 +787,7 @@
 
                                                             <p class="text-center pt-4 font-bold">
                                                                 تكلفة التحاليل:
-                                                                <span class="total-price"></span>
+                                                                <span id="home-total-price"></span>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -1211,7 +1207,7 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/filter.js"></script>
     <script src="assets/js/set-card-details.js"></script>
-    <script src="assets/js/get-details.js"></script>
+    <script src="assets/js/get-labs-details.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
     <!-- Bootstrap 5 JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
@@ -1219,20 +1215,6 @@
     <!-- Vanilla Datepicker JS -->
     <script src='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js'></script>
     <script>
-
-       window.onload = function () {
-          var storedTests = localStorage.getItem("requiredTests");
-          if(storedTests!= null)
-          {
-            document.getElementById('no-exams').style.display = "none";
-            document.getElementById('list').innerHTML = storedTests;
-          }
-
-          else{
-            document.getElementById('no-exams').style.display = "block";
-          }
-       }
-
         // add requird tests
         function addItem($this) {
             document.getElementById('no-exams').style.display = "none";

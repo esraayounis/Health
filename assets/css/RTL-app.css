@@ -805,6 +805,14 @@ input{
   position: relative;
 }
 
+.float-left{
+  float:left;
+}
+
+.mar-offer-price{
+  margin:15px 15px 0 15px;
+}
+
 
 textarea{
   width: 100%;
@@ -960,9 +968,18 @@ form .btn button{
   height:300px;
 }
 
+.representatives.discount-offer{
+  width:40px;
+  height:50px;
+}
+
 
 
 @media (max-width: 600px) {
+
+  .offer-card #title, #main-details del, #order-price{
+    font-size:12px!important;
+  }
   .laboratorys .owl-nav{
     display: none!important;
   }
@@ -1236,6 +1253,19 @@ form .btn button{
 
 
   /* ====== Doctor Details & Reservations ======== */
+  .bg-page-header{
+    background: #E5F2FF;
+    overflow-x: hidden;
+  }
+  .offers-img img
+  {
+    height:150px!important;
+  }
+  
+  .offer-doctor-detail
+  {
+    margin-top: -100px!important;
+  }
   .doctor-detail .card-tabs #nav-laborat-tab.active{
     border-radius: 0px 10px 0px 0px;
   }
@@ -5461,6 +5491,7 @@ textarea {
   font-weight: normal;
   font-size: 14px;
   color: #868d9a;
+  margin-right:50px;
 }
 .doctor-detail .person-comment {
   padding: 40px;
@@ -5712,25 +5743,24 @@ textarea {
   color: #868d9a;
   margin-bottom: 6px;
 }
-.offers-section .card .card-offer .offer-details del {
+.offers-section .card .card-offer .offer-details del, #main-details del {
   font-weight: 600;
   font-size: 16px;
   color: #868d9a;
   margin-bottom: 5px;
   display: inline-block;
 }
-.offers-section .card .card-offer .offer-details h6 {
+.offers-section .card .card-offer .offer-details h6,  #main-details h6{
   font-weight: bold;
   font-size: 16px;
   color: #0065ff;
 }
-.offers-section .card .card-offer .offer-details p.note {
+.offers-section .card .card-offer .offer-details p.note,  #main-details p.note {
   font-weight: normal;
-  font-size: 9px;
+  font-size: 11px;
   color: #f00;
 }
-.offers-section .card .card-offer .offer-details button,
-.offers-section .card .card-offer .offer-details a {
+.offer-btn button, .order-btn button{
   width: 100px;
   height: 38.64px;
   border-radius: 4px;
@@ -5740,7 +5770,7 @@ textarea {
   color: #fff;
   position: absolute;
   left: 20px;
-  bottom: 7px;
+  bottom: 20px;
   border: none;
 }
 .offers-section .owl-nav {
@@ -5801,7 +5831,7 @@ textarea {
   transition: 0.3s;
 }
 
-.discount-offer {
+.discount-offer, #discount {
   background: transparent;
   width: 50px;
   height: 60px;
@@ -5987,6 +6017,23 @@ textarea {
 .account-info {
   border: 0px solid;
 }
+
+.offer-card #desc{
+  color: #868D9A;
+  font-size: 11px;
+}
+.offer-card #title{
+  color: #002154;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.offers-img img{
+  width:100%;
+  height:230px;
+}
+
+
 
 /* ----- Sign Up ------ */
 

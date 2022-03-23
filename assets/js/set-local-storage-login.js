@@ -22,7 +22,16 @@ if(user_records.some((v)=>{return v.email==emailLogin && v.psw==pswLogin}))
 }
 else
 {
-    //alert('Login Fail');
+  alert("هذا الحساب غير موجود ، من فضلك انشئ حساب أولا")
+  var media_query = 'screen and (max-width:600px)';
+  var matched = window.matchMedia(media_query).matches;
+  if(matched){
+    // window.location.href="sign-up-mobile.html"
+  }
+  else{
+    window.location.href="sign-up-web.html"
+  }
+
 }
 
 }
