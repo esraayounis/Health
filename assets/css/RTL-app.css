@@ -1264,7 +1264,7 @@ form .btn button{
   
   .offer-doctor-detail
   {
-    margin-top: -100px!important;
+    margin-top: -120px!important;
   }
   .doctor-detail .card-tabs #nav-laborat-tab.active{
     border-radius: 0px 10px 0px 0px;
@@ -4996,6 +4996,25 @@ button.fill-face span {
   font-size: 22px;
   color: #000;
 }
+
+#main-lab-discount
+{
+    background: #f00;
+    box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    border-right:6px solid #d20b0b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 13px;
+    right: 14px;
+    top: 10px;
+    height:30px;
+    width:70px;
+}
 .best-offer-laboratory .discount-offer {
   font-size: 13px;
   right: 14px;
@@ -5889,6 +5908,7 @@ textarea {
   background: transparent;
   border: none;
   direction: inherit;
+  color:#868d9a;
 }
 .info-book-special .book-form .row-input input:focus-visible {
   border: none !important;

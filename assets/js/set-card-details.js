@@ -94,12 +94,34 @@ $('.details-btn').click(function(){
 function shareCardData()
 {
     debugger
+
+    // save patient reservation data
+    let patientName,patientEmail,patientPhone,reservation;
+    patientName = document.getElementById("patientName").value;
+    patientEmail = document.getElementById("patientEmail").value;
+    patientPhone = document.getElementById("phone1").value;
+    reservation = document.querySelector("#patient-reserve .current").innerText;
+
+    let user_records=new Array();
+    user_records.push({
+        "patientName":patientName,
+        "patientEmail":patientEmail,
+        "patientPhone":patientPhone,
+        "reservation":reservation,
+    })
+
+    localStorage.setItem("patientName",patientName)
+    localStorage.setItem("patientEmail",patientEmail)
+    localStorage.setItem("patientPhone",patientPhone)
+    localStorage.setItem("reservation",reservation)
+
+
+    //addReservations();
     var sharedCardWeb = document.getElementById('set-card-data-web').innerHTML;
     localStorage.setItem("card-web", sharedCardWeb);
     var sharedCardMob = document.getElementById('set-card-data-mob').innerHTML;
     localStorage.setItem("card-mob", sharedCardMob);
 
-    //addReservations();
     var type =  localStorage.getItem("selected-service");
     var name = localStorage.getItem("selected-name");
     var queryString = "?type=" + type + "&name=" + name; 
@@ -107,46 +129,111 @@ function shareCardData()
 }
 
 
+function bestOffers($this){
+    debugger
+    var selectedCard = $this.innerHTML
+    localStorage.setItem("detials", selectedCard)
+    document.getElementById('documentOffer').innerHTML = selectedCard;
+
+    var selectedName = document.querySelector('#documentOffer .offer-title').innerText;
+    localStorage.setItem("selected-name", selectedName);
+
+    var status = localStorage.getItem('status');
+    console.log(status);
+    if (status == "" || status == null ){
+        alert("من فضلك سجل دخول أولا")
+    }
+    else{
+        
+        var mainOrederCardImg =  document.querySelector('#documentOffer .offer-details-img').innerHTML;
+        localStorage.setItem("selected-main-order-img", mainOrederCardImg);
+
+
+        var title =  document.querySelector('#documentOffer .offer-title').innerHTML;
+        localStorage.setItem("title", title);
+
+        var mainOrderPrice =  document.querySelector('#documentOffer #offer-price').innerHTML;
+        localStorage.setItem("selected-main-order-price", mainOrderPrice);
+        var orderDiscount =  document.querySelector('#documentOffer .home-offer').innerHTML;
+        localStorage.setItem("selected-order-discount", orderDiscount);
+        window.location.href = "special-offer-details.html";
+    }
+}
+
 // ----- Special Offers-----
 
-//  $('.offers-card').click(function(){
-//     var $target = $(this).parents('.order');
-//     console.log($target)
-//     var selectedCard = $target[0].innerHTML
-//     localStorage.setItem("detials", selectedCard)
-//     document.getElementById('documentOfferCard').innerHTML = selectedCard;
+function mostOfferWatching($this){
 
-//     var selectedName = document.querySelector('#documentOfferCard #order-selected-card-type').innerText;
-//     localStorage.setItem("selected-name", selectedName);
+    var selectedCard = $this.innerHTML
+    localStorage.setItem("detials", selectedCard)
+    document.getElementById('documentOfferCard').innerHTML = selectedCard;
 
-//     var status = localStorage.getItem('status');
-//     console.log(status);
-//     if (status == "" || status == null ){
-//         alert("من فضلك سجل دخول أولا")
-//     }
-//     else{
+    var selectedName = document.querySelector('#documentOfferCard #watch-selected-card-type').innerText;
+    localStorage.setItem("selected-name", selectedName);
+
+    var status = localStorage.getItem('status');
+    console.log(status);
+    if (status == "" || status == null ){
+        alert("من فضلك سجل دخول أولا")
+    }
+    else{
         
-//         var mainOrederCardImg =  document.querySelector('#documentOfferCard .order-img').innerHTML;
-//         localStorage.setItem("selected-main-order-img", mainOrederCardImg);
-//         var desc =  document.querySelector('#documentOfferCard .desc').innerHTML;
-//         localStorage.setItem("desc", desc);
+        var mainOrederCardImg =  document.querySelector('#documentOfferCard .watch-img').innerHTML;
+        localStorage.setItem("selected-main-order-img", mainOrederCardImg);
+        var desc =  document.querySelector('#documentOfferCard .watch-desc').innerHTML;
+        localStorage.setItem("desc", desc);
 
-//         var title =  document.querySelector('#documentOfferCard .title').innerHTML;
-//         localStorage.setItem("title", title);
+        var title =  document.querySelector('#documentOfferCard .watch-title').innerHTML;
+        localStorage.setItem("title", title);
 
-//         var mobOrderCardDetails =  document.querySelector('#documentOfferCard .order-details').innerHTML;
-//         localStorage.setItem("selected-main-order-Details", mobOrderCardDetails);
-//         var mainOrderPrice =  document.querySelector('#documentOfferCard #order-price').innerHTML;
-//         localStorage.setItem("selected-main-order-price", mainOrderPrice);
-//         var orderDiscount =  document.querySelector('#documentOfferCard .discount-offer').innerHTML;
-//         localStorage.setItem("selected-order-discount", orderDiscount);
-//         window.location.href = "special-offer-details.html";
-//     }
-//  });
+        var mobOrderCardDetails =  document.querySelector('#documentOfferCard .watch-details').innerHTML;
+        localStorage.setItem("selected-main-order-Details", mobOrderCardDetails);
+        var mainOrderPrice =  document.querySelector('#documentOfferCard #watch-price').innerHTML;
+        localStorage.setItem("selected-main-order-price", mainOrderPrice);
+        var orderDiscount =  document.querySelector('#documentOfferCard .watch-discount').innerHTML;
+        localStorage.setItem("selected-order-discount", orderDiscount);
+        window.location.href = "special-offer-details.html";
+    }
+ }
+// Most Offer Ordering in Mobile
 
+function mostOfferordering($this){
+
+    var selectedCard = $this.innerHTML
+    localStorage.setItem("detials", selectedCard)
+    document.getElementById('documentOfferCard').innerHTML = selectedCard;
+
+    var selectedName = document.querySelector('#documentOfferCard #mob-order-selected-card-type').innerText;
+    localStorage.setItem("selected-name", selectedName);
+
+    var status = localStorage.getItem('status');
+    console.log(status);
+    if (status == "" || status == null ){
+        alert("من فضلك سجل دخول أولا")
+    }
+    else{
+        
+        var mainOrederCardImg =  document.querySelector('#documentOfferCard .mob-order-img').innerHTML;
+        localStorage.setItem("selected-main-order-img", mainOrederCardImg);
+        var desc =  document.querySelector('#documentOfferCard .desc').innerHTML;
+        localStorage.setItem("desc", desc);
+
+        var title =  document.querySelector('#documentOfferCard .mob-order-title').innerHTML;
+        localStorage.setItem("title", title);
+
+        var mobOrderCardDetails =  document.querySelector('#documentOfferCard .mob-order-details').innerHTML;
+        localStorage.setItem("selected-main-order-Details", mobOrderCardDetails);
+        var mainOrderPrice =  document.querySelector('#documentOfferCard #mob-order-price').innerHTML;
+        localStorage.setItem("selected-main-order-price", mainOrderPrice);
+        var orderDiscount =  document.querySelector('#documentOfferCard .mob-order-discount').innerHTML;
+        localStorage.setItem("selected-order-discount", orderDiscount);
+        window.location.href = "special-offer-details.html";
+    }
+}
+
+// Most Offer Ordering in Web
 
 $('.order-btn').click(function(){
-    debugger
     var $target = $(this).parents('.order');
     console.log($target)
     var selectedCard = $target[0].innerHTML
@@ -195,59 +282,15 @@ function shareOfferDetails(){
 // ------ Special Labs -----
 $('.save-lab-card').click(function(){
        debugger
-    var $target = $(this).parents('.card-detail');
+    var $target = $(this).parents('.card-box');
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
-    document.getElementById('documentCard').innerHTML=selectedCard;
+    document.getElementById('documentCard').innerHTML = selectedCard;
+    var serviceName = document.getElementById("selected-service-name").innerText;
+    localStorage.setItem("serviceName", serviceName);
 
-    var type = localStorage.getItem("selected-service");
-    var serviceOrder = localStorage.getItem("service-num");
-
-    var selectedName = document.querySelector('#documentCard #selected-name').innerText;
+    var selectedName = document.querySelector('#documentCard #selected-exam-type').innerText;
     localStorage.setItem("selected-name", selectedName);
-
-    var media_query = 'screen and (max-width:600px)';
-    var matched = window.matchMedia(media_query).matches;
-    if(matched){
-        var mobCardImg =  document.querySelector('#documentCard #mob-img').innerHTML;
-        localStorage.setItem("selected-mob-img", mobCardImg);
-        var mobTitle =  document.querySelector('#documentCard #mob-title').innerHTML;
-        localStorage.setItem("selected-mob-title", mobTitle);
-        var mobCardDetails =  document.querySelector('#documentCard #mob-card-details').innerHTML;
-        localStorage.setItem("selected-mob-Details", mobCardDetails);
-        var mobPrice =  document.querySelector('#documentCard #mob-price');
-        if(mobPrice != null)
-        {
-            var mobPrice =  document.querySelector('#documentCard #mob-price').innerHTML;
-            localStorage.setItem("mob-price", mobPrice);  
-        }
-        else{
-            localStorage.setItem("main-price", null);  
-        }
-        console.log(mobPrice)
-       
-    }
-
-    else{
-        var mainCardImg =  document.querySelector('#documentCard #main-img').innerHTML;
-        localStorage.setItem("selected-main-img", mainCardImg);
-        var mainCardDetails =  document.querySelector('#documentCard #main-card-details').innerHTML;
-        localStorage.setItem("selected-main-Details", mainCardDetails);
-        var mainPrice =  document.querySelector('#documentCard #price');
-        if(mainPrice != null)
-        {
-            var mainPrice =  document.querySelector('#documentCard #price').innerHTML;
-            localStorage.setItem("main-price", mainPrice);  
-        }
-        else{
-            localStorage.setItem("main-price", null);  
-        }
-        console.log(mainPrice)
-    }
-
-});
-
-function saveSelectedlabCard(){
 
     var status = localStorage.getItem('status');
     console.log(status);
@@ -255,16 +298,18 @@ function saveSelectedlabCard(){
         alert("من فضلك سجل دخول أولا")
     }
     else{
-        var saveCardWeb = document.getElementById('selected-card-web').innerHTML;
-        localStorage.setItem("selected-card-web", saveCardWeb);
-        // var saveCardMob = document.getElementById('selected-card-mob').innerHTML;
-        // localStorage.setItem("selected-card-mob", saveCardMob);
-       var type =  document.getElementById('selected-card-type').innerHTML;
-        localStorage.setItem("selected-card", type);
-        var queryString = "?type=" + type; 
-        window.location.href = "special-offer-details.html" + queryString; 
+    
+        var mainCardImg =  document.querySelector('#documentCard #lab-img').innerHTML;
+        localStorage.setItem("selected-main-img", mainCardImg);
+        var mainCardDetails =  document.querySelector('#documentCard .desc-laborat').innerHTML;
+        localStorage.setItem("selected-main-Details", mainCardDetails);
+        var mainLabDiscount =  document.querySelector('#documentCard .lab-discount').innerHTML;
+        localStorage.setItem("selected-lab-Discount", mainLabDiscount);
+        localStorage.setItem("best-labs","bestLabs");
+        window.location.href = "medical-exams-details.html";
+
     }
-}
+});
 
 
 // ----- Add to Faviorts -----
@@ -324,6 +369,25 @@ $('#save-btn').click(function(){
 //         }
 //     });
 //  }
+
+
+//change selected service in details page
+
+$('.details-tab').click(function(){
+    debugger
+    var selectedName = document.querySelector('.details-tab.active .selected-tab').innerText;
+    localStorage.setItem("selected-name", selectedName);
+    setTimeout(getServiceTabPrice, 4000);   
+});
+
+function getServiceTabPrice() {
+    debugger
+    var price =  document.querySelector('.details-child.show .details-price').innerText;
+    localStorage.setItem("detailPrice", price);
+    console.log(price)
+  }
+  
+
 
 
 

@@ -433,25 +433,24 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/set-local-storage-users.js"></script>
     <script>
-
+        $(document).ready(function() {
+                
+                function ConvertFormat(xObj, xTraget) {
+                    debugger
+                    var date = new Date(xObj.value);
+                    var month = date.getMonth() + 1;
+                    var day = date.getDate();
+                    var year = date.getFullYear();
+                    if (month != 'NaN') {
+                        document.getElementById(xTraget).value = day + " / " + month + " / " + year;
+                    }
+                }
+            });
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
             onlyCountries: ['sa', 'eg', 'ur'],
             utilsScript: "build/js/utils.js",
         });
-    </script>
-    <script>
-      $(document).ready(function() {
-        function ConvertFormat(xObj, xTraget) {
-            var date = new Date(xObj.value);
-            var month = date.getMonth() + 1;
-            var day = date.getDate();
-            var year = date.getFullYear();
-            if (month != 'NaN') {
-                document.getElementById(xTraget).value = day + " / " + month + " / " + year;
-            }
-        }
-    });
     </script>
 </body>
 

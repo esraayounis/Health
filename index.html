@@ -4245,16 +4245,16 @@
                <div class="offers-cards">
                 <div class="owl-carousel owl-theme owl-carousel-offers">
                     <!-- item -->
-                    <div class="item">
+                    <div class="item" onclick="bestOffers(this)">
                         <div class="card box">
                             <div class="card-offer">
                                 <div class="offer-details-img">
                                     <img src="./assets/images/surgeon-making-injection-into-female-body-liposuction-concept.png" alt="">
                                 </div>
                                 <div class="offer-details mt-2">
-                                    <h4>شفط الدهون</h4>
+                                    <h4 class="offer-title">شفط الدهون</h4>
                                     <div class="only-offer mb-3">
-                                        <del>20,000 ريال</del>
+                                        <del id="offer-price">20,000 ريال</del>
                                         <h6>14000 ريال</h6>
                                     </div>
                                     <p class="note">
@@ -4270,16 +4270,16 @@
                     </div>
 
                     <!-- item -->
-                    <div class="item">
+                    <div class="item" onclick="bestOffers(this)">
                         <div class="card box">
                             <div class="card-offer">
                                 <div class="offer-details-img">
                                     <img src="./assets/images/surgeon-making-injection-into-female-body-liposuction-concept.png" alt="">
                                 </div>
                                 <div class="offer-details mt-2">
-                                    <h4>شفط الدهون</h4>
+                                    <h4 class="offer-title">شفط الدهون</h4>
                                     <div class="only-offer mb-3">
-                                        <del>20,000 ريال</del>
+                                        <del id="offer-price">20,000 ريال</del>
                                         <h6>14000 ريال</h6>
                                     </div>
                                     <p class="note">
@@ -4295,16 +4295,16 @@
                     </div>
 
                     <!-- item -->
-                    <div class="item">
+                    <div class="item" onclick="bestOffers(this)">
                         <div class="card box">
                             <div class="card-offer">
                                 <div class="offer-details-img">
                                     <img src="./assets/images/surgeon-making-injection-into-female-body-liposuction-concept.png" alt="">
                                 </div>
                                 <div class="offer-details mt-2">
-                                    <h4>شفط الدهون</h4>
+                                    <h4 class="offer-title">شفط الدهون</h4>
                                     <div class="only-offer mb-3">
-                                        <del>20,000 ريال</del>
+                                        <del id="offer-price">20,000 ريال</del>
                                         <h6>14000 ريال</h6>
                                     </div>
                                     <p class="note">
@@ -4320,16 +4320,16 @@
                     </div>
 
                     <!-- item -->
-                    <div class="item">
+                    <div class="item" onclick="bestOffers(this)">
                         <div class="card box">
                             <div class="card-offer">
                                 <div class="offer-details-img">
                                     <img src="./assets/images/surgeon-making-injection-into-female-body-liposuction-concept.png" alt="">
                                 </div>
                                 <div class="offer-details mt-2">
-                                    <h4>شفط الدهون</h4>
+                                    <h4 class="offer-title">شفط الدهون</h4>
                                     <div class="only-offer mb-3">
-                                        <del>20,000 ريال</del>
+                                        <del id="offer-price">20,000 ريال</del>
                                         <h6>14000 ريال</h6>
                                     </div>
                                     <p class="note">
@@ -4345,16 +4345,16 @@
                     </div>
 
                     <!-- item -->
-                    <div class="item">
+                    <div class="item" onclick="bestOffers(this)">
                         <div class="card box">
                             <div class="card-offer">
                                 <div class="offer-details-img">
                                     <img src="./assets/images/surgeon-making-injection-into-female-body-liposuction-concept.png" alt="">
                                 </div>
                                 <div class="offer-details mt-2">
-                                    <h4>شفط الدهون</h4>
+                                    <h4 class="offer-title">شفط الدهون</h4>
                                     <div class="only-offer mb-3">
-                                        <del>20,000 ريال</del>
+                                        <del id="offer-price">20,000 ريال</del>
                                         <h6>14000 ريال</h6>
                                     </div>
                                     <p class="note">
@@ -4370,16 +4370,16 @@
                     </div>
 
                     <!-- item -->
-                    <div class="item">
+                    <div class="item" onclick="bestOffers(this)">
                         <div class="card box">
                             <div class="card-offer">
                                 <div class="offer-details-img">
                                     <img src="./assets/images/surgeon-making-injection-into-female-body-liposuction-concept.png" alt="">
                                 </div>
                                 <div class="offer-details mt-2">
-                                    <h4>شفط الدهون</h4>
+                                    <h4 class="offer-title">شفط الدهون</h4>
                                     <div class="only-offer mb-3">
-                                        <del>20,000 ريال</del>
+                                        <del id="offer-price">20,000 ريال</del>
                                         <h6>14000 ريال</h6>
                                     </div>
                                     <p class="note">
@@ -4656,6 +4656,8 @@
         </div>
     </footer>
 
+
+    <div id="documentOffer" style="display: none;"></div>
     <div id="preloader"></div>
 
     <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -4673,6 +4675,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
+    <script src="assets/js/set-card-details.js"></script>
     <script>
 
      window.onload = function () {

@@ -38,6 +38,9 @@ $(document).ready(function() {
           var logindiv = document.querySelector('.login-mob1');
           logindiv.style.display = 'none';
         }
+        else{
+          
+        }
       }
     });
 function Logout()

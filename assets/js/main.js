@@ -279,7 +279,7 @@ function openServicesDropdown() {
 
 // Hide offers slider when click service in home page 
 
-$('.nav-link').click(function(){ 
+$('#nav-tab-main-cats .nav-link').click(function(){ 
     document.getElementById('specialOffers').style.display='none';
     document.getElementById('footer').style.display='none';
 });
