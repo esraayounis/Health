@@ -100,7 +100,7 @@ function shareCardData()
     patientName = document.getElementById("patientName").value;
     patientEmail = document.getElementById("patientEmail").value;
     patientPhone = document.getElementById("phone1").value;
-    reservation = document.querySelector("#patient-reserve .current").innerText;
+    reservation = document.querySelector(".patient-reserve .current").innerText;
 
     let user_records=new Array();
     user_records.push({
@@ -114,8 +114,7 @@ function shareCardData()
     localStorage.setItem("patientEmail",patientEmail)
     localStorage.setItem("patientPhone",patientPhone)
     localStorage.setItem("reservation",reservation)
-
-
+debugger
     //addReservations();
     var sharedCardWeb = document.getElementById('set-card-data-web').innerHTML;
     localStorage.setItem("card-web", sharedCardWeb);
@@ -127,6 +126,30 @@ function shareCardData()
     var queryString = "?type=" + type + "&name=" + name; 
     window.location.href = "reservations.html" + queryString; 
 }
+
+
+//change selected service in details page
+
+$('.details-tab').click(function(){
+    debugger
+    var selectedService = document.querySelector('.details-tab.active .selected-tab').innerText;
+    localStorage.setItem("selected-service", selectedService);
+    setTimeout(getServiceTabPrice, 4000);   
+});
+
+function getServiceTabPrice() {
+    debugger
+    var price =  document.querySelector('.details-child.show .details-price').innerText;
+    var media_query = 'screen and (max-width:600px)';
+    var matched = window.matchMedia(media_query).matches;
+    if(matched){
+        localStorage.setItem("mob-price", price);
+    }
+    else{
+        localStorage.setItem("main-price", price);
+    }
+  }
+  
 
 
 function bestOffers($this){
@@ -371,22 +394,6 @@ $('#save-btn').click(function(){
 //  }
 
 
-//change selected service in details page
-
-$('.details-tab').click(function(){
-    debugger
-    var selectedName = document.querySelector('.details-tab.active .selected-tab').innerText;
-    localStorage.setItem("selected-name", selectedName);
-    setTimeout(getServiceTabPrice, 4000);   
-});
-
-function getServiceTabPrice() {
-    debugger
-    var price =  document.querySelector('.details-child.show .details-price').innerText;
-    localStorage.setItem("detailPrice", price);
-    console.log(price)
-  }
-  
 
 
 

@@ -266,7 +266,7 @@
                                             <button class="input-group-text"> 
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
                                                 <path id="Union_63" data-name="Union 63" d="M.875,15A.89.89,0,0,1,0,14.095V2.905A.89.89,0,0,1,.9,2h2V3.5a1.1,1.1,0,1,0,2.2,0V2h5.825V3.5a1.1,1.1,0,1,0,2.2,0V2h2A.89.89,0,0,1,16,2.905v11.19a.89.89,0,0,1-.875.905ZM12,12h1V11H12ZM9,12h1V11H9ZM6,12H7V11H6ZM3,12H4V11H3Zm9-2.5h1v-1H12Zm-3,0h1v-1H9Zm-3,0H7v-1H6Zm-3,0H4v-1H3ZM12,7h1V6H12ZM9,7h1V6H9ZM6,7H7V6H6ZM3,7H4V6H3Zm8.5-3.5V.5a.5.5,0,1,1,1,0v3a.5.5,0,1,1-1,0Zm-8,0V.5a.5.5,0,1,1,1,0v3a.5.5,0,0,1-1,0Z" fill="#8d8d8d"/>
-                                              </svg>
+                                                </svg>
                                             </button>
                                             <input type="date" class="xDateContainer form-control" onchange="ConvertFormat(this,'birthdate');" style="position: absolute; opacity: 0.0;height: 100%;width: 100%;">
                                             <input type="text" id="birthdate" name="birthdate" style="border: none;height: 90%;" placeholder="تاريخ الميلاد" tabindex="-1">
@@ -433,24 +433,21 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/set-local-storage-users.js"></script>
     <script>
-        $(document).ready(function() {
-                
-                function ConvertFormat(xObj, xTraget) {
-                    debugger
-                    var date = new Date(xObj.value);
-                    var month = date.getMonth() + 1;
-                    var day = date.getDate();
-                    var year = date.getFullYear();
-                    if (month != 'NaN') {
-                        document.getElementById(xTraget).value = day + " / " + month + " / " + year;
-                    }
-                }
-            });
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
             onlyCountries: ['sa', 'eg', 'ur'],
             utilsScript: "build/js/utils.js",
         });
+
+        function ConvertFormat(xObj, xTraget) {
+            var date = new Date(xObj.value);
+            var month = date.getMonth() + 1;
+            var day = date.getDate();
+            var year = date.getFullYear();
+            if (month != 'NaN') {
+                document.getElementById(xTraget).value = day + " / " + month + " / " + year;
+            }
+        }
     </script>
 </body>
 
