@@ -218,12 +218,12 @@
                 </div>
 
                 <div class="login-group">
-                    <a href="sign-up-web.html" class="btn-registration d-none d-lg-inline-flex align-items-center justify-content-center p-0">
+                    <!-- <a href="sign-up-web.html" class="btn-registration d-none d-lg-inline-flex align-items-center justify-content-center p-0">
                             تسجيل جديد
                         </a>
                     <a href="login-web.html" class="btn-login d-none d-lg-inline-flex justify-content-center align-items-center p-0">
                             تسجيل دخول
-                        </a>
+                        </a> -->
                 </div>
             </div>
             <div class="language col"><a href="#language">En</a></div>
@@ -637,13 +637,12 @@
                                         </svg>
                                         <p class="mt-4 fw-bold">
                                             الإجمالي الكلي:
-                                            <span>880 ريال</span>
+                                            <span id="totalPrice"></span>
                                         </p>
                                     </div>
                                     <div class="choose-time">
                                         <h3 class="my-3"> بـــيــــانـــات الــحــجــز</h3>
-                                        <p class="text-center w-100">اليوم ، 28،يوليو في تمام الساعة الحادية عشر صباحاً
-                                        </p>
+                                        <p class="text-center w-100" id="date"></p>
                                       
                                         <div class="book-form py-3 px-4 pt-0">
                                             <hr class="my-4">
@@ -653,10 +652,7 @@
                                                             d="M14.8,4.6H7.6V17.4h9.6V7H14.8ZM7.6,3h8l3.2,3.2V17.4A1.6,1.6,0,0,1,17.2,19H7.6A1.6,1.6,0,0,1,6,17.4V4.6A1.6,1.6,0,0,1,7.6,3Zm1.6,7.2h6.4v1.6H9.2Zm0,3.2h6.4V15H9.2Z"
                                                             transform="translate(-6 -3)" fill="#868d9a" />
                                                     </svg>
-                                                <span class="current">
-                                                        الحجز لنفسي
-                                                    </span>
-                                               
+                                                <span class="current" id="reservationFor"></span>
                                             </div>
 
                                             <div class="d-flex mt-3">
@@ -666,7 +662,7 @@
                                                             fill="#868d9a" />
                                                     </svg>
                                                 <span class="current">اسم المريض كاملا : </span>
-                                                <span class="current">محمد السيد زيدان</span>
+                                                <span class="current" id="pName"></span>
                                             </div>
 
                                             <div class="mt-3" tabindex="0">
@@ -676,11 +672,8 @@
                                                             transform="translate(-9 -4)" fill="#868d9a" />
                                                     </svg>
 
-                                                <span class="current">
-                                                       رقم الموبيل  :
-                                                    </span>
-                                             
-                                                <span class="current">+9663455432234</span>
+                                                <span class="current">رقم الموبيل  :</span>
+                                                <span class="current" id="pPhone"></span>
                                             </div>
 
                                             <div class="d-flex mt-3">
@@ -690,7 +683,7 @@
                                                             transform="translate(-2.25 -5.625)" fill="#868d9a" />
                                                     </svg>
                                                 <span class="current"> البريد الالكتروني :  </span>
-                                                <span class="current"> mohamedsayed@gmail.com</span>
+                                                <span class="current" id="pEmail"></span>
                                             </div>
 
                                         </div>
@@ -1005,43 +998,8 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
-    <script>
-        // Get Shared Data
-        window.onload = function () {
-             var queryString = decodeURIComponent(window.location.search); //parsing 
-            queryString = queryString.substring(1); 
-             var queries = queryString.split("&"); 
-             console.log(queries)
-            data = {}, tmp= [];
-            for (var i = 0; i < queries.length; i++) 
-            { 
-                tmp = queries[i].split('=');
-                data[tmp[0]] = tmp[1];
-            } 
-            
-            console.log(data)
-         debugger
-            document.getElementById('selected-service').innerHTML = data.type;
-            document.getElementById('type').innerHTML = data.type;
-            document.getElementById('name').innerHTML = data.name;
-
-            var card1 =  localStorage.getItem("card-web");
-            var card2 =  localStorage.getItem("card-mob");
-            document.getElementById('card-data-web').innerHTML = card1;
-            document.getElementById('card-data-mob').innerHTML = card2;
-        }
-
-        //  Payment Method
-        $(document).ready(function() {
-            $('input[type="radio"]').click(function() {
-                var inputValue = $(this).attr("value");
-                var targetBox = $("." + inputValue);
-                $(".box").not(targetBox).hide();
-                $(targetBox).show();
-            });
-        });
-    </script>
-
+    <script src="assets/js/get-reservation-data.js"></script>
+    <script src="assets/js/set-card-details.js"></script>
 </body>
 
 </html>

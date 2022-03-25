@@ -1,6 +1,6 @@
 window.onload = function () {
     var selectCard = localStorage.getItem("detials");
-    console.log(selectCard)
+    
 
     var name = localStorage.getItem("selected-name");
     document.getElementById('selected-name').innerHTML = name;

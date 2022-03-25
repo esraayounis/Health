@@ -16,7 +16,7 @@ window.onload = function () {
   }
     
   var selectCard = localStorage.getItem("detials");
-  console.log(selectCard)
+  
 
   var service = localStorage.getItem("selected-service");
   document.getElementById('selected-service').innerHTML = service;
@@ -56,7 +56,7 @@ window.onload = function () {
   
       var mobPrice =  localStorage.getItem("mob-price");
       if (mobPrice != "null"){
-          document.getElementById('total-price').innerHTML = mobPrice;
+        document.querySelector('.details-price').innerText = mobPrice;
       }
     }
   }

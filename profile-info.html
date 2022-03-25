@@ -35,7 +35,7 @@
     <!-- #End Switch LTR & RTL -->
     <link href="assets/vendor/bootstrap/css/bootstrap-utilities.min.css" rel="stylesheet">
     
-    <link href="assets/css/intlTelInput.css" rel="stylesheet">
+    <link href="assets/vendor/build/css/intlTelInput.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <!-- <link href="assets/css/demo.css" rel="stylesheet"> -->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -157,12 +157,12 @@
                 </div>
 
                 <div class="login-group">
-                    <a href="sign-up-web.html" class="btn-registration d-none d-lg-inline-flex align-items-center justify-content-center p-0">
+                    <!-- <a href="sign-up-web.html" class="btn-registration d-none d-lg-inline-flex align-items-center justify-content-center p-0">
                             تسجيل جديد
                         </a>
                     <a href="login-web.html" class="btn-login d-none d-lg-inline-flex justify-content-center align-items-center p-0">
                             تسجيل دخول
-                        </a>
+                        </a> -->
                 </div>
             </div>
             <div class="language col"><a href="#language">En</a></div>
@@ -386,9 +386,9 @@
                                             <img src="assets/images/nothing.png" alt="">
                                         </div>
                                         <div class="container-fluid" id="current-reservation-list">
-                                            <div id="current-res-img"></div>
+                                            <!-- <div id="current-res-img"></div>
                                             <div id="current-res-details"></div>
-                                            <div id="current-price"></div>
+                                            <div id="current-price"></div> -->
                                         </div>
 
                                     </div>
@@ -450,7 +450,7 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
-    <script src="assets/js/intlTelInput.js"></script>
+    <script src="assets/vendor/build/js/intlTelInput.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
     <script src="assets/js/get-faviorts.js"></script>
     <!-- Template Main JS File -->
@@ -479,7 +479,7 @@
       var input = document.querySelector("#phone");
       window.intlTelInput(input, {
           onlyCountries: ['sa', 'eg', 'ur'],
-          utilsScript: "build/js/utils.js",
+          utilsScript: "assets/vendor/build/js/utils.js",
       });
     });
 

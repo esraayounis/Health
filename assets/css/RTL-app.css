@@ -4363,8 +4363,11 @@ body {
 }
 
 .book-form .iti--allow-dropdown .iti__flag-container{
-  right:130%;
+  right:132%;
   left:unset;
+}
+.choose-time{
+border-top: 1px solid #dfe0e2;
 }
 
 

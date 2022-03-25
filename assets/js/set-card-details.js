@@ -1,7 +1,6 @@
 // -----  Share slected card to details page -----
 
 $('.details-btn').click(function(){
-       debugger
     var $target = $(this).parents('.card-detail');
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
@@ -96,11 +95,12 @@ function shareCardData()
     debugger
 
     // save patient reservation data
-    let patientName,patientEmail,patientPhone,reservation;
+    let patientName,patientEmail,patientPhone,reservation,date;
     patientName = document.getElementById("patientName").value;
     patientEmail = document.getElementById("patientEmail").value;
-    patientPhone = document.getElementById("phone1").value;
+    patientPhone = document.getElementById("phone").value;
     reservation = document.querySelector(".patient-reserve .current").innerText;
+    date = document.getElementById("reservation-date").innerHTML;
 
     let user_records=new Array();
     user_records.push({
@@ -108,23 +108,21 @@ function shareCardData()
         "patientEmail":patientEmail,
         "patientPhone":patientPhone,
         "reservation":reservation,
+        "date":date
     })
 
     localStorage.setItem("patientName",patientName)
     localStorage.setItem("patientEmail",patientEmail)
     localStorage.setItem("patientPhone",patientPhone)
     localStorage.setItem("reservation",reservation)
+    localStorage.setItem("date",date)
 debugger
     //addReservations();
     var sharedCardWeb = document.getElementById('set-card-data-web').innerHTML;
     localStorage.setItem("card-web", sharedCardWeb);
     var sharedCardMob = document.getElementById('set-card-data-mob').innerHTML;
     localStorage.setItem("card-mob", sharedCardMob);
-
-    var type =  localStorage.getItem("selected-service");
-    var name = localStorage.getItem("selected-name");
-    var queryString = "?type=" + type + "&name=" + name; 
-    window.location.href = "reservations.html" + queryString; 
+    window.location.href = "reservations.html"; 
 }
 
 
@@ -350,7 +348,7 @@ $('#save-btn').click(function(){
     if(matched){
        var cardImg =  document.getElementById("mob-detail-img").innerHTML;
         var cardDetails =  document.getElementById("mob-card-details").innerHTML;
-        var price =  document.getElementById("total-price").innerHTML;
+        var price =  document.querySelector('.details-price').innerText;
         localStorage.setItem("saveCardImg" , cardImg);
         localStorage.setItem("saveCardDetails" , cardDetails);
         localStorage.setItem("price" , price);
@@ -358,7 +356,7 @@ $('#save-btn').click(function(){
     else{
         var cardImg =  document.getElementById("main-detail-img").innerHTML;
         var cardDetails =  document.getElementById("main-card-details").innerHTML;
-        var price =  document.getElementById("total-price").innerHTML;
+        var price =  document.querySelector('.details-price').innerText;
         localStorage.setItem("saveCardImg" , cardImg);
         localStorage.setItem("saveCardDetails" , cardDetails);
         localStorage.setItem("price" , price);
@@ -392,6 +390,18 @@ $('#save-btn').click(function(){
 //         }
 //     });
 //  }
+
+$('#cart').click(function(){ 
+debugger
+    // var add = Number(faviorts.getAttribute('data-count') || 0);
+    // faviorts.setAttribute('data-count', add + 1);
+    // var faviortCount =  document.querySelector("[data-count]").childElementCount;
+    // localStorage.setItem("faviorts-count", faviortCount);
+    window.location.href = "profile-info.html"
+   var reservations = localStorage.getItem('reservationPage');
+   document.getElementById('#current-reservation-list').innerHTML = reservations;
+});
+
 
 
 
