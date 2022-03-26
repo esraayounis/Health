@@ -1,11 +1,21 @@
 window.onload = function () {
     debugger
-    var selectCard = localStorage.getItem("detials");
     var service = localStorage.getItem("selected-service");
     document.getElementById('selected-service').innerHTML = service;
 
     var name = localStorage.getItem("selected-name");
     document.getElementById('selected-name').innerHTML = name;
+
+    var serviceOrder = localStorage.getItem("service-num");
+    if(serviceOrder == "3" || serviceOrder == "4"){
+      var totalPrice =  document.querySelector('.details-price').innerText;
+      localStorage.setItem("total-price", totalPrice);
+    }
+
+    else{
+      var totalPrice = localStorage.getItem("total-price");
+      document.querySelector('.details-price').innerText = totalPrice;
+    }
 
     var media_query = 'screen and (max-width:600px)';
     var matched = window.matchMedia(media_query).matches;
@@ -26,13 +36,6 @@ window.onload = function () {
 
         var mainCardDetails =  localStorage.getItem("selected-main-Details");
         document.getElementById('main-card-details').innerHTML = mainCardDetails;
-
-        var mainPrice =  localStorage.getItem("main-price");
-        console.log(mainPrice)
-        if (mainPrice != "null"){
-            document.querySelector('.details-price').innerText = mainPrice;
-        }
-        
     }
 
     debugger
@@ -77,30 +80,13 @@ window.onload = function () {
         document.getElementById('nav-home').classList.add('show');
     }
     
-    else if ( service ==" استشارة هاتفية") {
+    else if ( service ==" استشارة فيديو") {
         document.getElementById("nav-phone-tab").classList.add("active");
         document.getElementById('nav-phone').classList.add('active');
         document.getElementById('nav-phone').classList.add('show');
     }
-
-
-    // Examination
-    else if ( service ==" زيارة المعمل") {
-    document.getElementById("nav-laborat-tab").classList.add("active");
-    document.getElementById('nav-laborat').classList.add('active');
-    document.getElementById('nav-laborat').classList.add('show');
-    }
-    
-    else if ( service ==" زيارة منزلية") {
-    document.getElementById("nav-home-exam-tab").classList.add("active");
-    document.getElementById('nav-home-exam').classList.add('active');
-    document.getElementById('nav-home-exam').classList.add('show');
-    }
       
-
     localStorage.setItem("selected-service", service);
     console.log(service)
-   
-    var TotalPrice = document.querySelector('.details-price').innerText;
-    localStorage.setItem("total-price", TotalPrice);
+
 }

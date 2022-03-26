@@ -514,7 +514,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="inner inner-required">
+                        <div class="inner inner-required desktop-show">
                             <div class="card-box">
                                 <div class="header-card">
                                     <h5>
@@ -532,6 +532,29 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="inner inner-required mobile-show">
+                            <div class="card-box">
+                                <div class="header-card">
+                                    <h5>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23.064" viewBox="0 0 24 23.064">
+                                            <path id="Union_11" data-name="Union 11"
+                                                d="M17.283,21.3a1.764,1.764,0,1,1,1.763,1.764A1.763,1.763,0,0,1,17.283,21.3Zm-10.715,0a1.764,1.764,0,1,1,1.764,1.764A1.763,1.763,0,0,1,6.568,21.3Zm-1.05-3.723A2.086,2.086,0,0,1,5.58,14.92l.1-.1,1.286-1.05L3.37,2.4.556,1.54A.787.787,0,0,1,1.018.035l3.214.988a.782.782,0,0,1,.517.509L8.332,12.874H20.089l2.093-9.405H7.4L6.89,1.9H23.208a.806.806,0,0,1,.776.956L21.5,13.83a.784.784,0,0,1-.784.611H8.614L6.725,16.009a.525.525,0,0,0,.439.784H20.371a.784.784,0,0,1,0,1.567H7.289l-.107,0A2.155,2.155,0,0,1,5.518,17.577Z"
+                                                transform="translate(0)" fill="#fff" />
+                                        </svg> التحاليل المطلوبة
+                                    </h5>
+                                </div>
+                                <div class="content-card px-0 " id="exam-list-mob">
+                                    <ul id="list-mob">
+                                        <p id="no-exams-mob" class="txt-center">لا توجد</p>
+                                    </ul>
+                                </div>
+                                <div class="newExams" data-bs-toggle="modal" data-bs-target="#addNewExam">
+                                    <svg style="margin:0 10px;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16">
+                                        <path id="add" d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z" transform="translate(-7.5 -7.5)" fill="#0065ff"></path>
+                                    </svg><span class="add-exam">إضافة</span>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="inner card-tabs info-book-special">
                             <div class="card-box">
@@ -543,7 +566,7 @@
                                 <div class="content-card px-0 pt-0">
                                     <div class="header-detail-cats-tabs">
                                         <div class="nav nav-tabs" id="nav-tab-detail-cats" role="tablist">
-                                            <button class="nav-link pt-2 p-0 col details-tab" id="nav-laborat-tab" data-bs-toggle="tab" data-bs-target="#nav-laborat" type="button" role="tab" aria-controls="nav-laborat" aria-selected="true">
+                                            <button class="nav-link pt-2 p-0 col active details-tab" id="nav-laborat-tab" data-bs-toggle="tab" data-bs-target="#nav-laborat" type="button" role="tab" aria-controls="nav-laborat" aria-selected="true">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.754"
                                                     viewBox="0 0 24 22.754">
                                                     <path id="bxs-clinic"
@@ -565,7 +588,7 @@
                                     </div>
                                     <div class="content-detail-cats-tabs">
                                         <div class="tab-content" id="nav-tabContent-detail-cats">
-                                            <div class="tab-pane fade  details-child" id="nav-laborat" role="tabpanel" aria-labelledby="nav-covid-tab">
+                                            <div class="tab-pane fade  active show details-child" id="nav-laborat" role="tabpanel" aria-labelledby="nav-covid-tab">
                                                 <div class="row">
                                                     <div class="col p-0">
                                                         <div class="inner py-3 pt-4 text-center">
@@ -912,6 +935,92 @@
         </div>
 
     </main>
+
+
+    <div class="modal" tabindex="-1" id="addNewExam">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+                    <div class="row">
+                        <div class="container">
+                            <div class="inner card-required other">
+                                <div class="card-box overflow-hidden">
+                                    <div class="header-card bg-white mb-0">
+                                        <h5 class="mb-0">
+                                            <svg id="microscope" xmlns="http://www.w3.org/2000/svg" width="25.898" height="32" viewBox="0 0 25.898 32">
+                                        <path id="Union_13" data-name="Union 13"
+                                            d="M1.325,32a1.523,1.523,0,0,1,0-3.02H14.941A10.9,10.9,0,0,1,4.4,21.285H1A.963.963,0,1,1,1,19.36H8.965a.963.963,0,1,1,0,1.924H6.493a8.948,8.948,0,0,0,8.447,5.772,9.1,9.1,0,0,0,6.338-2.537A8.484,8.484,0,0,0,23.9,18.4a8.647,8.647,0,0,0-5.262-7.885l-5.81,5.611a1.018,1.018,0,0,1-1.409,0l-.7-.679L8.407,17.677a1.018,1.018,0,0,1-1.408,0L4.182,14.956a.937.937,0,0,1,0-1.36l2.312-2.232-.7-.681a.936.936,0,0,1,0-1.359L14.642.775a1.021,1.021,0,0,1,1.409,0l.7.681L17.97.283a1.019,1.019,0,0,1,1.408,0L22.2,3a.94.94,0,0,1,0,1.36L20.979,5.538l.7.679a.937.937,0,0,1,0,1.36l-1.555,1.5A10.533,10.533,0,0,1,25.9,18.4,10.774,10.774,0,0,1,14.941,28.98h7.594a1.523,1.523,0,0,1,0,3.02ZM6.3,14.276,7.7,15.636l2.221-2.143L8.589,12.062ZM18.7,5.064a.97.97,0,0,1,.163-.208l1.216-1.175-1.409-1.36L17.458,3.5a.987.987,0,0,1-.123.1Z"
+                                            fill="#0065ff" />
+                                    </svg>
+                                            <span class="text-black other-exams">تحاليل أخري</span>
+                                        </h5>
+                                    </div>
+                                    <div class="content-card px-0 pt-3">
+                                        <div class="row responsive mb-4">
+                                            <div class="row">
+                                                <input class="search-doctor-button" type="text" id="myInputExamMob" placeholder=" ابحث التحاليل التي ترغب بالحصول عليها">
+                                            </div>
+            
+                                        </div>
+                                        <div id="examinations-mob">
+                                            <!-- item -->
+                                            <div class="item d-flex justify-content-between align-content-around px-4 mb-3">
+                                                <p id="txtValMob1" class="w-100 " >أشعة خاصة بالأسنان</p>
+                                                <button type="button" id="btn1" onClick="addItemInMob(this)" class="add-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path id="add"
+                                                d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
+                                                transform="translate(-7.5 -7.5)" fill="#0065ff" />
+                                                </svg>
+                                                </button>
+                                            </div>
+                                            <!-- item -->
+                                            <div class="item d-flex justify-content-between align-content-around px-4 mb-3">
+                                            
+                                                <p id="txtValMob2" class="w-100" >أشعة عادية</p>
+                                                <button type="button" id="btn2" onClick="addItemInMob(this)" class="add-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path id="add"
+                                                d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
+                                                transform="translate(-7.5 -7.5)" fill="#0065ff" />
+                                                </svg>
+                                                </button>
+                                            </div>
+                                            <!-- item -->
+                                            <div class="item d-flex justify-content-between align-content-around px-4 mb-3">
+                                                <p id="txtValMob3" class="w-100" >دوبلر</p>
+                                                <button type="button" id="btn3" onClick="addItemInMob(this)" class="add-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path id="add"
+                                                d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
+                                                transform="translate(-7.5 -7.5)" fill="#0065ff" />
+                                                </svg>
+                                                </button>
+                                            </div>
+                                            <!-- item -->
+                                            <div class="item d-flex justify-content-between align-content-around px-4 mb-3">
+                                                <p id="txtValMob4" class="w-100" >موجات صوتية</p>
+                                                <button type="button" id="btn4" onClick="addItemInMob(this)" class="add-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path id="add"
+                                                d="M23.5,16.643H16.643V23.5H14.357V16.643H7.5V14.357h6.857V7.5h2.286v6.857H23.5Z"
+                                                transform="translate(-7.5 -7.5)" fill="#0065ff" />
+                                                </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary filter" data-bs-dismiss="modal">تأكيد</button>
+            </div>
+          </div>
+        </div>
+    </div>
     <!-- End #main -->
    <!--Mobile Navbar section-->
     <section class="fixedtabs">
@@ -988,6 +1097,8 @@
             </div>
         </div>
     </section>
+
+
       <!-- ======= Footer ======= -->
       <footer id="footer" class="d-none d-lg-block">
         <div class="footer-top">
@@ -1140,8 +1251,13 @@
     <!-- Vanilla Datepicker JS -->
     <script src='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js'></script>
     <script>
+
+     var media_query = 'screen and (max-width:600px)';
+    var matched = window.matchMedia(media_query).matches;
+    if(matched){
         // add requird tests
         function addItem($this) {
+            debugger
             document.getElementById('no-exams').style.display = "none";
             var txtVal =$this.previousElementSibling.innerText;
             console.log(txtVal)
@@ -1179,98 +1295,138 @@
             var grand_father = parent.parentNode;
             grand_father.removeChild(parent);
         }
-        
+    }
 
-        // rating and add comment
-        var count = 0;
-        var addcomment = document.getElementById("addcomment");
-        const widget = document.querySelector(".star-widget");
-        var time = new Date();
-        var username = localStorage.getItem('name');
-        addcomment.onclick = function () {
-            count++;
-            var comment = document.getElementById("comment").value;
-            var numstarts = localStorage.getItem("numstarts");
-            const rateContainer = document.getElementById('rate-container')
-            const elemObj = `<div   class="item">
-                    <div class="row person-comment">
-                        <div class="d-flex">
-                            <div class="col-lg-9">
-                                <div class="ratings star-widget">
-                                        <span class="stars" >
-                                          <i id="item${count}"  class="fa fa-star-o" data-star="1"></i>
-                                          <i  id="item${count}" class="fa fa-star-o" data-star="2"></i>
-                                          <i  id="item${count}" class="fa fa-star-o" data-star="3"></i>
-                                          <i  id="item${count}" class="fa fa-star-o" data-star="4"></i>
-                                          <i id="item${count}" class="fa fa-star-o" data-star="5"></i> </span>
-                                </div>
-                                <p class="pubilc">التقييم العام</p>
-                                <p class="comment">${comment}</p>
-                                <div class="info">
-                                    <span>${username}</span>
-                                    <span>${time}</span>
-                                </div>
+    else{
+//Add exam in mob 
+function addItemInMob($this) {
+            debugger
+            document.getElementById('no-exams-mob').style.display = "none";
+            var txtVal =$this.previousElementSibling.innerText;
+            console.log(txtVal)
+            liNode = document.createElement("div");
+            const exams = document.getElementById('list-mob')
+            const navlistElement = `<div class="item d-flex justify-content-between align-content-around">
+                                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="19.77" viewBox="0 0 16 19.77">
+                                                <g id="microscope" transform="translate(-1 -0.001)">
+                                                    <path id="Union_13" data-name="Union 13"
+                                                        d="M.819,19.77a.941.941,0,0,1,0-1.866H9.23A6.735,6.735,0,0,1,2.719,13.15H.615a.595.595,0,1,1,0-1.189H5.539a.595.595,0,1,1,0,1.189H4.011A5.528,5.528,0,0,0,9.23,16.716a5.62,5.62,0,0,0,3.916-1.567,5.242,5.242,0,0,0,1.622-3.783,5.342,5.342,0,0,0-3.251-4.871L7.927,9.961a.629.629,0,0,1-.87,0l-.435-.419L5.194,10.921a.629.629,0,0,1-.87,0L2.583,9.24a.579.579,0,0,1,0-.84L4.012,7.021,3.577,6.6a.578.578,0,0,1,0-.84L9.046.479a.631.631,0,0,1,.87,0L10.351.9,11.1.175a.629.629,0,0,1,.87,0l1.74,1.68a.58.58,0,0,1,0,.84l-.752.726.435.419a.579.579,0,0,1,0,.84l-.961.929A6.508,6.508,0,0,1,16,11.368,6.656,6.656,0,0,1,9.23,17.9h4.691a.941.941,0,0,1,0,1.866ZM3.889,8.82l.869.84L6.131,8.336l-.825-.884Zm7.665-5.691a.6.6,0,0,1,.1-.128l.751-.726-.87-.84-.751.726a.609.609,0,0,1-.076.062Z"
+                                                        transform="translate(1 0.001)" fill="#0065ff" />
+                                                </g>
+                                            </svg>
+                                            <p class="w-100 mx-3 addedItem" id="txtvalueMob">${txtVal}</p>
+                                            <svg  onclick="DeleteExamInMob(this)"  class="pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="18.667" viewBox="0 0 16 18.667">
+                                                    <g id="delete" transform="translate(4.351 1.6)">
+                                                        <path id="Union_12" data-name="Union 12"
+                                                            d="M2.667,18.667a1.32,1.32,0,0,1-1.334-1.306V4.306H0V3H16V4.306H14.667V17.361a1.32,1.32,0,0,1-1.334,1.306Zm0-1.306H13.333V4.306H2.667Zm6.56-2.32v-9h1.5v9Zm-3.955,0v-9h1.5v9ZM5,1.5V0h6V1.5Z"
+                                                            transform="translate(-4.351 -1.6)" fill="red" />
+                                                    </g>
+                                            </svg>
+                                          </div>`    
+            exams.insertAdjacentHTML('beforeend',navlistElement);
+            localStorage.setItem("requiredTests",navlistElement )
+        }
+       
+
+        function DeleteExamInMob(button) {
+            var parent = button.parentNode;
+            var grand_father = parent.parentNode;
+            grand_father.removeChild(parent);
+        }
+    }
+
+       
+
+    // rating and add comment
+    var count = 0;
+    var addcomment = document.getElementById("addcomment");
+    const widget = document.querySelector(".star-widget");
+    var time = new Date();
+    var username = localStorage.getItem('name');
+    addcomment.onclick = function () {
+        count++;
+        var comment = document.getElementById("comment").value;
+        var numstarts = localStorage.getItem("numstarts");
+        const rateContainer = document.getElementById('rate-container')
+        const elemObj = `<div   class="item">
+                <div class="row person-comment">
+                    <div class="d-flex">
+                        <div class="col-lg-9">
+                            <div class="ratings star-widget">
+                                    <span class="stars" >
+                                        <i id="item${count}"  class="fa fa-star-o" data-star="1"></i>
+                                        <i  id="item${count}" class="fa fa-star-o" data-star="2"></i>
+                                        <i  id="item${count}" class="fa fa-star-o" data-star="3"></i>
+                                        <i  id="item${count}" class="fa fa-star-o" data-star="4"></i>
+                                        <i id="item${count}" class="fa fa-star-o" data-star="5"></i> </span>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="rate">
-                                    <button type="button">${numstarts}</button>
-                                </div>
+                            <p class="pubilc">التقييم العام</p>
+                            <p class="comment">${comment}</p>
+                            <div class="info">
+                                <span>${username}</span>
+                                <span>${time}</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="rate">
+                                <button type="button">${numstarts}</button>
                             </div>
                         </div>
                     </div>
-                </div>`
-            rateContainer.insertAdjacentHTML('beforeend',elemObj);
-            let stars = document.querySelectorAll(`#item${count}.fa`);
-            stars.forEach( (item,index) => {
-                if((index+1) <= numstarts){
-                item.className = "fa fa-star";
-                item.style.color = "#ffc000";
-                }else{
-                item.className = "fa fa-star-o";
-                item.style.color = "black";
-                }
-            });
-            localStorage.setItem("comments",elemObj )
-        }
-
-        // calculate stars
-        let ratings = document.querySelectorAll(".ratings");
-        ratings.forEach ((rating)=>{
-            let stars = rating.querySelectorAll(".stars .fa");
-            stars.forEach( star => {
-                star.addEventListener("click", function () {
-                    const num = Number(this.dataset.star);
-                    localStorage.setItem("numstarts", num);
-                    stars.forEach( (item,index) => {
-                        if((index+1) <= num){
-                        item.className = "fa fa-star";
-                        item.style.color = "#ffc000";
-                        }else{
-                        item.className = "fa fa-star-o";
-                        item.style.color = "black";
-                        }
-                    })
-                });
-            });
+                </div>
+            </div>`
+        rateContainer.insertAdjacentHTML('beforeend',elemObj);
+        let stars = document.querySelectorAll(`#item${count}.fa`);
+        stars.forEach( (item,index) => {
+            if((index+1) <= numstarts){
+            item.className = "fa fa-star";
+            item.style.color = "#ffc000";
+            }else{
+            item.className = "fa fa-star-o";
+            item.style.color = "black";
+            }
         });
+        localStorage.setItem("comments",elemObj )
+    }
 
-
-      // Date
-        var datepickers = [].slice.call(document.querySelectorAll('[data-datepicker]'))
-        var datepickersList = datepickers.map(function (el) {
-            return new Datepicker(el, {
-                buttonClass: 'btn'
+    // calculate stars
+    let ratings = document.querySelectorAll(".ratings");
+    ratings.forEach ((rating)=>{
+        let stars = rating.querySelectorAll(".stars .fa");
+        stars.forEach( star => {
+            star.addEventListener("click", function () {
+                const num = Number(this.dataset.star);
+                localStorage.setItem("numstarts", num);
+                stars.forEach( (item,index) => {
+                    if((index+1) <= num){
+                    item.className = "fa fa-star";
+                    item.style.color = "#ffc000";
+                    }else{
+                    item.className = "fa fa-star-o";
+                    item.style.color = "black";
+                    }
+                })
             });
         });
+    });
 
 
-       //  phone
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            onlyCountries: ['sa', 'eg', 'ur'],
-            utilsScript: "assets/vendor/build/js/utils.js",
+    // Date
+    var datepickers = [].slice.call(document.querySelectorAll('[data-datepicker]'))
+    var datepickersList = datepickers.map(function (el) {
+        return new Datepicker(el, {
+            buttonClass: 'btn'
         });
-    </script>
+    });
+
+
+    //  phone
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        onlyCountries: ['sa', 'eg', 'ur'],
+        utilsScript: "assets/vendor/build/js/utils.js",
+    });
+</script>
 
 </body>
 
