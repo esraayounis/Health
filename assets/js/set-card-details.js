@@ -313,7 +313,7 @@ function shareOfferDetails(){
 // ------ Special Labs -----
 
 $('.save-lab-card').click(function(){
-       
+       debugger
     var $target = $(this).parents('.card-box');
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
@@ -338,7 +338,7 @@ $('.save-lab-card').click(function(){
         var mainLabDiscount =  document.querySelector('#documentCard .lab-discount').innerHTML;
         localStorage.setItem("selected-lab-Discount", mainLabDiscount);
         localStorage.setItem("best-labs","bestLabs");
-        window.location.href = "medical-exams-details.html";
+        window.location.href = "medical-exams-details.html?type=bestLabs";
 
     }
 });
@@ -375,42 +375,16 @@ $('#save-btn').click(function(){
 }); 
 
 // ----- Add to Reservations -----
-// function addReservations()
-// var notifications =  document.getElementById("cart");
-// var buttons =  document.querySelectorAll('.details-btn');
-// for(var btn of buttons){
-//     
-//     btn.addEventListener('click',(e)=>{
-//         
-//         var add = Number(notifications.getAttribute('data-count') || 0);
-//         notifications.setAttribute('data-count', add + 1);
-//         notifications.classList.add('zero');
-//         var reservationCount =  document.querySelector("[data-count]").childElementCount;
-//         localStorage.setItem("reservations-count", reservationCount)
-
-//         // copy paste element
-//         var parent = e.target.parentNode;
-//         var clone = parent.cloneNode(true);
-//         console.log(clone)
-//         localStorage.setItem("cloneCardData" , clone);
-
-//         if(clone){
-//             notifications.onclick =()=>{
-//                 window.location.href = "profile-info.html"
-//             }
-//         }
-//     });
-//  }
-
 $('#cart').click(function(){ 
-
-    // var add = Number(faviorts.getAttribute('data-count') || 0);
-    // faviorts.setAttribute('data-count', add + 1);
-    // var faviortCount =  document.querySelector("[data-count]").childElementCount;
-    // localStorage.setItem("faviorts-count", faviortCount);
+debugger
+    var reservations =  document.getElementById("cart");
+    var add = Number(reservations.getAttribute('data-count') || 0);
+    reservations.setAttribute('data-count', add + 1);
+    var reservationCount =  document.querySelector("[data-count]").childElementCount;
+    localStorage.setItem("reservation-count", reservationCount);
+    localStorage.getItem('reservationPage');
     window.location.href = "profile-info.html"
-   var reservations = localStorage.getItem('reservationPage');
-   document.getElementById('#current-reservation-list').innerHTML = reservations;
+  
 });
 
 

@@ -268,7 +268,7 @@
         <!-- End Breadcrumbs Section -->
 
 
-        <section class="search-result-section doctor-detail pt-2 basic-content">
+        <section class="search-result-section doctor-detail pt-2 basic-content " id="reservation-page">
             <div class="container">
                 <div class="row">
 
@@ -832,7 +832,7 @@
 
                                     </div>
                                     <div class="price-button mb-5">
-                                        <a class=" buy-btn" href="success.html">أدفع الآن</a>
+                                        <a class=" buy-btn" onclick="buyNow()">أدفع الآن</a>
                                     </div>
                                 </div>
                             </div>
@@ -1000,6 +1000,17 @@
     <script src="assets/js/get-local-storage-login.js"></script>
     <script src="assets/js/get-reservation-data.js"></script>
     <script src="assets/js/set-card-details.js"></script>
+    <script>
+        function buyNow(){
+            debugger
+            var reservationContents =  document.getElementById("reservation-page").innerHTML;
+            var reservationList =  [];
+            reservationList.push(reservationContents);
+            console.log(reservationList)
+            localStorage.setItem('reservationPage', reservationList);
+            window.location.href ="success.html";
+        }
+    </script>
 </body>
 
 </html>

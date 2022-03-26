@@ -28,10 +28,7 @@ window.onload = function () {
     setTimeout(() => {
        document.querySelector('.value-card').style.display = "none";
     }, 10);
-   
-    
-    var htmlContents = document.documentElement.innerHTML;
-    localStorage.setItem('reservationPage', JSON.stringify(htmlContents ));
+
 }
 
 //  Payment Method

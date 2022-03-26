@@ -386,9 +386,7 @@
                                             <img src="assets/images/nothing.png" alt="">
                                         </div>
                                         <div class="container-fluid" id="current-reservation-list">
-                                            <!-- <div id="current-res-img"></div>
-                                            <div id="current-res-details"></div>
-                                            <div id="current-price"></div> -->
+
                                         </div>
 
                                     </div>
@@ -510,7 +508,24 @@
     function showReservations(){
         $("#my-info" ).hide();
         $("#reservation" ).show();
-        $("#faviorts" ).hide(); 
+        $("#faviorts" ).hide();
+        debugger
+        var reservationCount = localStorage.getItem("reservation-count");
+        if(reservationCount == "0"){
+            document.getElementById("current-reserv-count").innerText = "0";
+            document.querySelector("#nav-current .not-found-data").style.display = "block";
+        }
+  
+        else{
+            document.getElementById("current-reserv-count").innerText = reservationCount;
+            document.querySelector("#nav-current .not-found-data").style.display = "none";
+        }
+        var reservations = localStorage.getItem('reservationPage');
+        console.log(reservations)
+        document.getElementById('current-reservation-list').innerHTML = reservations;
+
+   
+
     }
 
     function showFaviorts(){

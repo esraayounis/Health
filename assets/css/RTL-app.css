@@ -67,7 +67,7 @@ h6 {
 }
 
 .full-width{
-  width:100%!important;;
+  width:100%!important;
 }
 
 .txt-right{
@@ -6175,13 +6175,11 @@ textarea {
     color:white;
     text-align: center;
     width:15px;
-    height:15px;
     background: red;
     font-size: 12px;
     border-radius: 5px;
     top:-12px;
     right:16px;
-    opacity: 0;
     justify-content: center;
   }
 
