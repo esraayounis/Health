@@ -1,5 +1,5 @@
 window.onload = function () {
-        debugger
+        
 
   if(localStorage.getItem("best-labs") == "bestLabs"){
     document.getElementById('main-lab-discount').style.display = "none";
@@ -18,7 +18,7 @@ window.onload = function () {
     var matched = window.matchMedia(media_query).matches;
     // mob
     if(matched){
-        debugger
+        
         if(localStorage.getItem("best-labs") == "bestLabs")
         {
           var examName =  localStorage.getItem("serviceName")

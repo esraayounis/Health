@@ -1,5 +1,5 @@
 window.onload = function () {
-    debugger
+    
     var service = localStorage.getItem("selected-service");
     document.getElementById('selected-service').innerHTML = service;
 
@@ -38,7 +38,7 @@ window.onload = function () {
         document.getElementById('main-card-details').innerHTML = mainCardDetails;
     }
 
-    debugger
+    
     // Active Details tabs when click on it in details page
     var service = localStorage.getItem("selected-service");
 

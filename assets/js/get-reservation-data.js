@@ -1,6 +1,6 @@
 // Get Shared Data
 window.onload = function () {
-    debugger
+    
     var patientName = localStorage.getItem("patientName",patientName)
     var patientEmail = localStorage.getItem("patientEmail",patientEmail)
     var patientPhone = localStorage.getItem("patientPhone",patientPhone)

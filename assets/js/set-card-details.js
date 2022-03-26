@@ -1,7 +1,7 @@
 // -----  Share slected card to details page -----
 
 $('.details-btn').click(function(){
-    debugger
+    
     var $target = $(this).parents('.card-detail');
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
@@ -60,6 +60,12 @@ $('.details-btn').click(function(){
        
     }
 
+    var selectTime = localStorage.getItem("selected-time");
+    console.log(selectTime)
+    // var selectDate = localStorage.getItem("selected-date");
+    // var text = "في تمام الساعة";
+    // localStorage.setItem("selected-date", selectDate + text + selectTime);
+
     if(serviceOrder == "1" )
     {
         window.location.href = "";
@@ -101,7 +107,7 @@ $('.details-btn').click(function(){
 // ----- Share card details to reservation page-----
 function shareCardData()
 {
-    debugger
+    
     // save patient reservation data
     let patientName,patientEmail,patientPhone,reservation,date;
     patientName = document.getElementById("patientName").value;
@@ -139,20 +145,20 @@ function shareCardData()
 // ----- Change selected service in details page------
 
 $('.details-tab').click(function(){
-    debugger
+    
     var selectedService = document.querySelector('.details-tab.active .selected-tab').innerText;
     localStorage.setItem("selected-service", selectedService);
     setTimeout(getServiceTabPrice, 4000);   
 });
 
 function getServiceTabPrice() {
-    debugger
+    
     var price =  document.querySelector('.details-child.show .details-price').innerText;
     localStorage.setItem("total-price", price);
 }
   
 function bestOffers($this){
-    debugger
+    
     var selectedCard = $this.innerHTML
     localStorage.setItem("detials", selectedCard)
     document.getElementById('documentOffer').innerHTML = selectedCard;
@@ -307,7 +313,7 @@ function shareOfferDetails(){
 // ------ Special Labs -----
 
 $('.save-lab-card').click(function(){
-       debugger
+       
     var $target = $(this).parents('.card-box');
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
@@ -373,9 +379,9 @@ $('#save-btn').click(function(){
 // var notifications =  document.getElementById("cart");
 // var buttons =  document.querySelectorAll('.details-btn');
 // for(var btn of buttons){
-//     debugger
+//     
 //     btn.addEventListener('click',(e)=>{
-//         debugger
+//         
 //         var add = Number(notifications.getAttribute('data-count') || 0);
 //         notifications.setAttribute('data-count', add + 1);
 //         notifications.classList.add('zero');
@@ -397,7 +403,7 @@ $('#save-btn').click(function(){
 //  }
 
 $('#cart').click(function(){ 
-debugger
+
     // var add = Number(faviorts.getAttribute('data-count') || 0);
     // faviorts.setAttribute('data-count', add + 1);
     // var faviortCount =  document.querySelector("[data-count]").childElementCount;
@@ -406,3 +412,15 @@ debugger
    var reservations = localStorage.getItem('reservationPage');
    document.getElementById('#current-reservation-list').innerHTML = reservations;
 });
+
+
+// ----- Get Date & Time -----
+
+$('.select-Time').click(function(){
+    
+    var selectTime = this.innerText;
+    console.log(selectTime)
+    localStorage.setItem("selected-time", selectTime)
+
+});
+
