@@ -1,7 +1,4 @@
 window.onload = function () {
-    var selectCard = localStorage.getItem("detials");
-    
-
     var name = localStorage.getItem("selected-name");
     document.getElementById('selected-name').innerHTML = name;
 

@@ -319,7 +319,7 @@ $('.save-lab-card').click(function(){
     localStorage.setItem("detials", selectedCard)
     document.getElementById('documentCard').innerHTML = selectedCard;
     var serviceName = document.getElementById("selected-service-name").innerText;
-    localStorage.setItem("serviceName", serviceName);
+    localStorage.setItem("selected-service", serviceName);
 
     var selectedName = document.querySelector('#documentCard #selected-exam-type').innerText;
     localStorage.setItem("selected-name", selectedName);
@@ -330,7 +330,7 @@ $('.save-lab-card').click(function(){
         alert("من فضلك سجل دخول أولا")
     }
     else{
-    
+    debugger
         var mainCardImg =  document.querySelector('#documentCard #lab-img').innerHTML;
         localStorage.setItem("selected-main-img", mainCardImg);
         var mainCardDetails =  document.querySelector('#documentCard .desc-laborat').innerHTML;

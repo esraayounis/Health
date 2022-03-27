@@ -884,6 +884,10 @@ textarea:focus-visible{
   display: flex;
 }
 
+#no-exams{
+  padding-bottom:15px;
+}
+
 /* ==== Rate add comment ====== */
 
 
@@ -932,7 +936,7 @@ form header{
 }
 
 form .textarea{
-  padding:0 40px;
+  padding:0 40px 0 0;
 }
 
 form .textarea textarea{
@@ -973,9 +977,38 @@ form .btn button{
   height:50px;
 }
 
+#list,  #list-mob{
+  padding: 0px 15px;
+  margin: 8px 0px;
+}
+
+#exam-list{
+  padding-bottom:0
+}
+
+#main-detail-title, #mob-detail-title{
+  color: #0065FF;
+  padding: 0 10px 20px 0!important;
+}
+
+
+#main-detail-img{
+    padding-top: 35px;
+}
+
+
 
 
 @media (max-width: 600px) {
+  #mob-detail-title, .save-icons{
+    margin-top:15px;
+    padding:0!important;
+  }
+  .labs#mob-lab-discount{
+    top: 0px;
+    font-size: 9px;
+    height: 30px!important;
+  }
 
   .offer-card #title, #main-details del, #order-price{
     font-size:12px!important;
@@ -1274,9 +1307,7 @@ form .btn button{
     border-radius: 10px 10px 0px 0px;
   }
 
-  .doctor-detail .card-tabs #nav-laborat-tab.active p{
-       color:white;
-  }
+
 
   .doctor-detail .card-tabs #nav-laborat-tab.active svg{
     fill: white !important;
@@ -1320,6 +1351,8 @@ form .btn button{
     padding:0 25px!important;
     font-size:16px!important;
   }
+
+
 
   .exam{
     padding:0 0.5rem!important;
@@ -5597,7 +5630,7 @@ textarea {
   font-weight: normal;
   font-size: 14px;
   color: #868d9a;
-  margin-right:50px;
+  /* margin-right:50px; */
 }
 .doctor-detail .person-comment {
   padding: 40px;

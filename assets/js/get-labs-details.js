@@ -1,5 +1,4 @@
 window.onload = function () {
-        debugger
     const queryString = window.location.search;
 
     const urlParams = new URLSearchParams(queryString);
@@ -24,22 +23,16 @@ window.onload = function () {
     if(matched){
       document.getElementById('main-lab-discount').style.display = "none";
       document.getElementById('mob-lab-discount').style.display = "block";
+      document.getElementById('mob-detail-title').innerHTML = name;
 
-      var examName =  localStorage.getItem("serviceName")
-      document.getElementById('selected-name').innerHTML = examName;
-      document.getElementById('mob-lab-discount').style.display = "block";
       var labDiscount = localStorage.getItem("selected-lab-Discount");
       document.getElementById('mob-lab-discount').innerHTML = labDiscount;
 
       var labCardImg =  localStorage.getItem("selected-main-img");
-      var labCardDetails =  localStorage.getItem("selected-main-Details");
-      
-      document.getElementById('mob-detail-title').innerHTML = examName;
       document.getElementById('mob-detail-img').innerHTML = labCardImg;
-      document.getElementById('mob-card-details').innerHTML = labCardDetails;
-  
-      
 
+      var labCardDetails =  localStorage.getItem("selected-main-Details");
+      document.getElementById('mob-card-details').innerHTML = labCardDetails;
 
       if(storedTests!= null)
       {
@@ -57,19 +50,14 @@ window.onload = function () {
 
       document.getElementById('main-lab-discount').style.display = "block";
       document.getElementById('mob-lab-discount').style.display = "none";
+      document.getElementById('main-detail-title').innerHTML = name;
       
       var mainCardImg =  localStorage.getItem("selected-main-img");
       document.getElementById('main-detail-img').innerHTML = mainCardImg;
   
       var mainCardDetails =  localStorage.getItem("selected-main-Details");
       document.getElementById('main-card-details').innerHTML = mainCardDetails;
-  
 
-      var title = localStorage.getItem("selected-name");
-      document.getElementById('main-detail-title').innerHTML = title;
-      var examName =  localStorage.getItem("serviceName")
-      document.getElementById('selected-name').innerHTML = examName;
-      document.getElementById('main-lab-discount').style.display = "block";
       var labDiscount = localStorage.getItem("selected-lab-Discount");
       document.getElementById('main-lab-discount').innerHTML = labDiscount;
 
@@ -91,15 +79,15 @@ window.onload = function () {
 
 // Other Labs
   else{
-
+debugger
     document.getElementById('main-lab-discount').style.display = "none";
     document.getElementById('mob-lab-discount').style.display = "none";
     var service = localStorage.getItem("selected-service");
     document.getElementById('selected-service').innerHTML = service;
-
-    var name = localStorage.getItem("selected-name");
+  
+    var name =  localStorage.getItem("selected-name")
     document.getElementById('selected-name').innerHTML = name;
-
+  
     var serviceOrder = localStorage.getItem("service-num");
     if(serviceOrder == "3" || serviceOrder == "4"){
       var totalPrice =  document.querySelector('.details-price').innerText;
