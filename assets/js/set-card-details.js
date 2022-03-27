@@ -1,7 +1,7 @@
 // -----  Share slected card to details page -----
 
 $('.details-btn').click(function(){
-    
+    debugger
     var $target = $(this).parents('.card-detail');
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
@@ -80,16 +80,16 @@ $('.details-btn').click(function(){
     }
     else if(serviceOrder == "4")
     {
-        if(type == " زيارة طبيب"){
+        if(type == "زيارة طبيب"){
             window.location.href = "consult-details.html";
         }
-        else if(type == " زيارة تمريض"){
+        else if(type == "زيارة تمريض"){
             window.location.href = "nurse-details.html";
         }
-        else if(type == " زيارة جليس"){
+        else if(type == "زيارة جليس"){
             window.location.href = "sitter-details.html";
         }
-        else  if(type == " خدمات منزلية"){
+        else  if(type == "خدمات منزلية"){
             window.location.href = "home-details.html";
         }
         
@@ -347,7 +347,7 @@ $('.save-lab-card').click(function(){
 // ----- Add to Faviorts -----
 
 $('#save-btn').click(function(){ 
-    
+    debugger
     document.getElementById("save").style.fill = "red";
     var faviorts =  document.getElementById("save-btn");
     var add = Number(faviorts.getAttribute('data-count') || 0);
