@@ -1,10 +1,11 @@
 window.onload = function () {
-    
+    debugger
     var service = localStorage.getItem("selected-service");
     document.getElementById('selected-service').innerHTML = service;
 
     var name = localStorage.getItem("selected-name");
     document.getElementById('selected-name').innerHTML = name;
+
 
     var serviceOrder = localStorage.getItem("service-num");
     if(serviceOrder == "3" || serviceOrder == "4"){
@@ -41,7 +42,7 @@ window.onload = function () {
     
     // Active Details tabs when click on it in details page
     var service = localStorage.getItem("selected-service");
-
+debugger
     // Government
     if ( service ==" إصدار إقامة") {
       document.getElementById("nav-iqama-issurance-tab").classList.add("active");
@@ -69,14 +70,14 @@ window.onload = function () {
 
     
     // Consult
-    else if ( service ==" زيارة عيادة") {
+    else if ( service ==" زيارة عيادة" || service ==" زيارة طبيب") {
         document.getElementById("nav-clinic-tab").classList.add("active");
         document.getElementById('nav-clinic').classList.add('active');
         document.getElementById('nav-clinic').classList.add('show');  
     }
     else if ( service ==" زيارة منزلية") {
         document.getElementById("nav-home-tab").classList.add("active");
-        document.getElementById('nnav-home').classList.add('active');
+        document.getElementById('nav-home').classList.add('active');
         document.getElementById('nav-home').classList.add('show');
     }
     

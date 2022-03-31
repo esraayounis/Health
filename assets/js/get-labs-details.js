@@ -79,7 +79,6 @@ window.onload = function () {
 
 // Other Labs
   else{
-debugger
     document.getElementById('main-lab-discount').style.display = "none";
     document.getElementById('mob-lab-discount').style.display = "none";
     var service = localStorage.getItem("selected-service");

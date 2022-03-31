@@ -1,5 +1,8 @@
 // Get Shared Data
 window.onload = function () {
+    document.getElementById('error-discount-text').style.display ="none";
+    document.getElementById('succuss-discount-text').style.display ="none"; 
+    document.getElementById('delete-code-btn').style.display ="none"; 
     
     var patientName = localStorage.getItem("patientName",patientName)
     var patientEmail = localStorage.getItem("patientEmail",patientEmail)
@@ -25,14 +28,11 @@ window.onload = function () {
     var card2 =  localStorage.getItem("card-mob");
     document.getElementById('card-data-web').innerHTML = card1;
     document.getElementById('card-data-mob').innerHTML = card2;
-    setTimeout(() => {
-       document.querySelector('.value-card').style.display = "none";
-    }, 10);
-
 }
 
 //  Payment Method
 $(document).ready(function() {
+    debugger
     $('input[type="radio"]').click(function() {
         var inputValue = $(this).attr("value");
         var targetBox = $("." + inputValue);

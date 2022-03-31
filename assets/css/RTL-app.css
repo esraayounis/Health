@@ -899,7 +899,7 @@ textarea:focus-visible{
   display: none;
 }
 .star-widget{
-  padding: 0 40px 30px 0;
+  padding: 0 40px 15px 0;
 }
 
 .person-comment .star-widget
@@ -992,12 +992,71 @@ form .btn button{
 }
 
 
-#main-detail-img{
-    padding-top: 35px;
+.stars .fa{
+  padding:0 2px;
+}
+
+.stars svg{
+  padding: 0 2px;
+}
+
+.card-box .pad-content{
+  padding:1rem 0 0 0;
+}
+
+ .search-result-section .item-input .nice-select{
+  margin: 0!important;
+  padding: 0!important;
+  font-size: 13px!important;
+  border: none!important;
+  text-align: left!important;
+  line-height: 25px!important;
+  top:-2px!important;
+}
+
+.search-result-section .item-input .nice-select .list{
+  left: 0;
+  overflow-y: scroll;
+  max-height: 200px;
+}
+
+.search-result-section .item-input .nice-select .list li{
+  text-align: left!important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.item-input.exp{
+  overflow: unset!important;
+}
+
+.item-input input{
+  width:100%!important;
+  overflow: unset!important;
+}
+
+.item-input .current{
+  text-align: left!important;
+}
+
+.item-input .nice-select::after{
+  top:8px;
+  right:12px !important;
+  left: auto!important;
 }
 
 
+.alert-danger, .alert-success{
+  font-size: 13px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom:0
+}
 
+.form-inputs .active{
+  transform: scale(1.2);
+  transition: transform ease-in-out 0.3s;
+}
 
 @media (max-width: 600px) {
   #mob-detail-title, .save-icons{
@@ -1389,7 +1448,7 @@ form .btn button{
   .doctor-detail .rate-doctor .card-box .header-card h5
   {font-size: 14px;}
 
-  .card-detail .value-card .btn
+  .card-detail .btn
   {
     width: 30%!important;
   }
@@ -2830,16 +2889,17 @@ section {
 /* .card-doctor .stars svg{
   margin:0 3px!important;
 } */
-
-
+/* 
+#main-card-details{
+  padding: 1.8rem 0 0 0;
+} */
 .share{
   padding: 0 10px;
 }
 
 .consult{
-  display: block!important;
   text-align: left;
-  padding: 10px 25px;
+  padding: 0px 25px;
 }
 
 .doctors .member {
@@ -3745,7 +3805,7 @@ body {
   font-size: 20px;
   color: #000;
 }
-.card-detail .value-card .btn {
+.card-detail .btn {
   max-width: 100px;
   width: 100%;
   height: 40px;
@@ -3820,7 +3880,6 @@ body {
   color: #313450;
   border: none;
   background: transparent;
-  margin-bottom: 8px;
   padding: 5px 20px;
   text-align: center;
 }
@@ -3956,6 +4015,9 @@ body {
 
 .card-required .content-card .item {
   border-bottom: 1px solid #D8D7D7;
+}
+.card-required .content-card .item:last-child {
+  border-bottom: none;
 }
 
 .card-required .responsive p {
@@ -5004,14 +5066,14 @@ button.fill-face span {
   margin-right:10px;
 
 }
-.search-result-section .nice-select::after {
+ .search-result-section .nice-select::after {
   right: auto;
   left: 12px;
   width: 10px;
   height: 10px;
   border-bottom: 2px solid #0065ff;
   border-right: 2px solid #0065ff;
-}
+} 
 
 
 
@@ -5669,6 +5731,7 @@ textarea {
   font-weight: normal;
   font-size: 14px;
   color: #0065FF;
+  margin-bottom:0;
 }
 .doctor-detail .pleace-comment form input {
   padding: 10px 15px;
@@ -6072,9 +6135,10 @@ textarea {
 }
 .info-book-special .notes {
   font-weight: normal;
-  font-size: 14px;
+  font-size: 11px;
   text-align: center;
   color: #868d9a;
+  margin-bottom:20px!important;
 }
 
 .offer-img {

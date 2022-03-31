@@ -13,6 +13,7 @@ $('.details-btn').click(function(){
     var selectedName = document.querySelector('#documentCard #selected-name').innerText;
     localStorage.setItem("selected-name", selectedName);
 
+
     var media_query = 'screen and (max-width:600px)';
     var matched = window.matchMedia(media_query).matches;
     if(matched){
@@ -60,8 +61,8 @@ $('.details-btn').click(function(){
        
     }
 
-    var selectTime = localStorage.getItem("selected-time");
-    console.log(selectTime)
+    // var selectTime = localStorage.getItem("selected-time");
+    // console.log(selectTime)
     // var selectDate = localStorage.getItem("selected-date");
     // var text = "في تمام الساعة";
     // localStorage.setItem("selected-date", selectDate + text + selectTime);
@@ -80,16 +81,16 @@ $('.details-btn').click(function(){
     }
     else if(serviceOrder == "4")
     {
-        if(type == "زيارة طبيب"){
+        if(type == " زيارة طبيب"){
             window.location.href = "consult-details.html";
         }
-        else if(type == "زيارة تمريض"){
+        else if(type == " زيارة تمريض"){
             window.location.href = "nurse-details.html";
         }
-        else if(type == "زيارة جليس"){
+        else if(type == " زيارة جليس"){
             window.location.href = "sitter-details.html";
         }
-        else  if(type == "خدمات منزلية"){
+        else  if(type == " خدمات منزلية"){
             window.location.href = "home-details.html";
         }
         
@@ -347,31 +348,37 @@ $('.save-lab-card').click(function(){
 // ----- Add to Faviorts -----
 
 $('#save-btn').click(function(){ 
-    debugger
-    document.getElementById("save").style.fill = "red";
+    debugger 
+    document.getElementById("save").style.fill = "#0065FF";
     var faviorts =  document.getElementById("save-btn");
     var add = Number(faviorts.getAttribute('data-count') || 0);
     faviorts.setAttribute('data-count', add + 1);
     var faviortCount =  document.querySelector("[data-count]").childElementCount;
     localStorage.setItem("faviorts-count", faviortCount);
-    var media_query = 'screen and (max-width:600px)';
-    var matched = window.matchMedia(media_query).matches;
-    if(matched){
-       var cardImg =  document.getElementById("mob-detail-img").innerHTML;
-        var cardDetails =  document.getElementById("mob-card-details").innerHTML;
-        var price =  document.querySelector('.details-price').innerText;
-        localStorage.setItem("saveCardImg" , cardImg);
-        localStorage.setItem("saveCardDetails" , cardDetails);
-        localStorage.setItem("price" , price);
-    }
-    else{
-        var cardImg =  document.getElementById("main-detail-img").innerHTML;
-        var cardDetails =  document.getElementById("main-card-details").innerHTML;
-        var price =  document.querySelector('.details-price').innerText;
-        localStorage.setItem("saveCardImg" , cardImg);
-        localStorage.setItem("saveCardDetails" , cardDetails);
-        localStorage.setItem("price" , price);
-    }
+    var cardImg =  document.getElementById("main-detail-img").innerHTML;
+    var cardDetails =  document.getElementById("main-card-details").innerHTML;
+    var price =  document.querySelector('.details-price').innerText;
+    localStorage.setItem("saveCardImg" , cardImg);
+    localStorage.setItem("saveCardDetails" , cardDetails);
+    localStorage.setItem("price" , price);
+    
+});
+
+$('#save-btn-mob').click(function(){ 
+    debugger 
+    document.getElementById("save-mob").style.fill = "#0065FF";
+    var faviorts =  document.getElementById("save-btn-mob");
+    var add = Number(faviorts.getAttribute('data-count') || 0);
+    faviorts.setAttribute('data-count', add + 1);
+    var faviortCount =  document.querySelector("[data-count]").childElementCount;
+    localStorage.setItem("faviorts-count", faviortCount);
+    var cardImg =  document.getElementById("mob-detail-img").innerHTML;
+    var cardDetails =  document.getElementById("mob-card-details").innerHTML;
+    var price =  document.querySelector('.details-price').innerText;
+    localStorage.setItem("saveCardImg" , cardImg);
+    localStorage.setItem("saveCardDetails" , cardDetails);
+    localStorage.setItem("price" , price);
+  
 }); 
 
 // ----- Add to Reservations -----
