@@ -359,7 +359,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-lg-4">
-                                                                                    <div class="item-input exp mb-4">
+                                                                                    <div class="item-input exp mb-3">
                                                                                         <span>Expiry Year</span>
                                                                                         <select id="exp-year">
                                                                                             <option value="16"> 2016</option>
@@ -429,14 +429,24 @@
                                             </div>
                                         
                                         </div>
-                                        <hr class="mar-hr">
-                                       
-                                        <div class="d-flex price mb-4">
-                                            <span class="fw-bold txt-md">إجمالي المبلغ</span>
-                                            <span class="fw-bold txt-md" id="total">880 ريال</span>
-
+                                        <div id="div-discount">
+                                            <hr class="mar-hr">
+                                            <div class="d-flex price mb-4">
+                                                <span class="fw-bold txt-md">الخصم</span>
+                                                <div class="d-flex"> 
+                                                  <span class="fw-bold txt-md" id="discount-value"></span><span class="fw-bold txt-md mr-3">ريال</span>
+                                                </div>
+    
+                                            </div>
+                                            <div class="d-flex price">
+                                                <span class="fw-bold txt-md">إجمالي المبلغ</span>
+                                                <div class="d-flex"> 
+                                                    <span class="fw-bold txt-md" id="total"></span><span class="fw-bold txt-md mr-3">ريال</span>
+                                                </div>
+    
+                                            </div>
                                         </div>
-                                        <div class="price-button mb-5">
+                                        <div class="price-button mb-4 mt-4">
                                             <a class="buy-btn" onclick="buyNow()">أدفع الآن</a>
                                         </div>
                                     </div>
@@ -926,102 +936,6 @@
     <script src="assets/js/set-card-details.js"></script>
     <script src="assets/vendor/cleave/cleave.js"></script>
     <script src="assets/js/payment-methods.js"></script>
-    <script>
-       
-  
-    function onlyNumberKey(evt) {
-          
-        // Only ASCII character in that range allowed
-        var ASCIICode = (evt.which) ? evt.which : evt.keyCode
-        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
-            return false;
-        return true;
-    }
-
-    function applyDiscount(){
-        var promoCode = document.getElementById('discount-code').value;
-        //  var price = document.getElementById('total').innerText;
-        if(promoCode != ""){
-        //    var korting = (Math.round(((promoCode - price)/price)*100)); 
-            document.getElementById('error-discount-text').style.display ="none";
-            document.getElementById('succuss-discount-text').style.display ="block"; 
-            document.getElementById('delete-code-btn').style.display ="block";   
-        }
-        else{
-        document.getElementById('succuss-discount-text').style.display ="none";
-        document.getElementById('delete-code-btn').style.display ="none";   
-        document.getElementById('error-discount-text').style.display ="block";
-        }
-    }
-
-    function deleteCode(){
-        var deletePromo = document.getElementById('discount-code').value = "";
-        document.getElementById('succuss-discount-text').style.display ="none";
-        document.getElementById('error-discount-text').style.display ="none";
-    }
-    
-    document.querySelector('.cc-number').oninput = () =>{
-        var ccNumber = document.querySelector('.cc-number').value;
-        document.querySelector('.cc-number').innerText = ccNumber;
-    }
-
-    // document.querySelector('.cc-number-mob').oninput = () =>{
-    //     var ccNumber = document.querySelector('.cc-number-mob').value;
-    //     document.querySelector('.cc-number-mob').innerText = ccNumber;
-    // }
-   
-    document.querySelector('#exp-month').oninput = () =>{
-        var expMonth = document.querySelector('#exp-month').value;
-        document.querySelector('#exp-month').innerText = expMonth;
-    }
-
-    document.querySelector('#exp-year').oninput = () =>{
-        var expYear = document.querySelector('#exp-year').value;
-        document.querySelector('#exp-year').innerText = expYear;
-    }
-
-    document.querySelector('.cc-cvc').oninput = () =>{
-        var cvv = document.querySelector('.cc-cvc').value;
-        document.querySelector('.cc-cvc').innerText = cvv;
-    }
-
-    function checkRadio()
-    {
-        debugger
-        var payment = document.querySelector('.pay');
-        var paymentType = '';
-        for(i = 0; i < payment.length; i++)
-            {
-            console.log(payment[i].type + ":" + payment[i].value);
-                if(payment[i].checked)
-                {
-                    console.log(payment[i].value)
-                    paymentType = payment[i].value;
-                }
-        }
-        return paymentType != '' ? true : false;
-    }
-
-
-    function buyNow(){
-            debugger
-            var payment = checkRadio();
-            if (payment == false)
-            {
-                document.getElementById('payment-type').style.display ="block"; 
-            }
-            else{
-                document.getElementById('payment-type').style.display ="none"; 
-            }
-          
-            var reservationContents =  document.getElementById("reservation-page").innerHTML;
-            var reservationList =  [];
-            reservationList.push(reservationContents);
-            console.log(reservationList)
-            localStorage.setItem('reservationPage', reservationList);
-            window.location.href ="success.html";
-        }
-    </script>
 </body>
 
 </html>

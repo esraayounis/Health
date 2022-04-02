@@ -996,9 +996,9 @@ form .btn button{
   padding:0 2px;
 }
 
-.stars svg{
+/* .stars svg{
   padding: 0 2px;
-}
+} */
 
 .card-box .pad-content{
   padding:1rem 0 0 0;
@@ -3777,7 +3777,7 @@ body {
   color: #868d9a;
 }
 .card-detail .detail .stars {
-  margin: 0 12px;
+  margin: 0 6px;
 }
 .card-detail .detail .stars svg {
   margin-left: 4px;
@@ -3962,6 +3962,10 @@ body {
 
 .pl-6 {
   padding-left: 6px !important;
+}
+
+.mr-3{
+  margin-right:3px;
 }
 
 .nice-select2 {
@@ -4189,8 +4193,13 @@ body {
   left: 0;
 }
 
+.sidenav .link.active{
+  background: #8d8d8d40;
+  color: black;
+}
+
 .mar-hr{
-  margin:40px 0;
+  margin:20px 0;
 }
 
 .book-form .current{
@@ -5090,6 +5099,11 @@ button.fill-face span {
 .card-detail .nice-select .current{
   font-size: 14px;
 }
+
+.item-input, .search-result-section  .item-input .nice-select .list li,  .search-result-section  .item-input .nice-select .current{
+  font-size:13px;
+}
+
 /* .choose-time
 {
   border-top: 1px solid #c4c4c4;

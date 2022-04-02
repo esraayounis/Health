@@ -73,6 +73,10 @@ $('.details-btn').click(function(){
     }
     else if(serviceOrder == "2")
     {
+
+       var branch =  document.querySelector(".selected-address .current").innerText;
+       localStorage.setItem("selected-branch", branch);
+
         window.location.href = "government-details.html";
     }
     else if(serviceOrder == "3")
@@ -81,6 +85,15 @@ $('.details-btn').click(function(){
     }
     else if(serviceOrder == "4")
     {
+        if(type != " زيارة طبيب")
+        {
+            var branch =  document.querySelector(".selected-address .current").innerText;
+            localStorage.setItem("selected-branch", branch);
+            var period =  document.querySelector(".selected-period .current").innerText;
+            localStorage.setItem("selected-period", period);
+
+        }
+
         if(type == " زيارة طبيب"){
             window.location.href = "consult-details.html";
         }
@@ -97,6 +110,8 @@ $('.details-btn').click(function(){
     }
     else if(serviceOrder == "5" ||  serviceOrder == "covid")
     {
+        var branch =  document.querySelector(".selected-address .current").innerText;
+        localStorage.setItem("selected-branch", branch);
         window.location.href = "medical-exams-details.html";
     }
     else
@@ -390,7 +405,7 @@ debugger
     var reservationCount =  document.querySelector("[data-count]").childElementCount;
     localStorage.setItem("reservation-count", reservationCount);
     localStorage.getItem('reservationPage');
-    window.location.href = "profile-info.html"
+    window.location.href = "profile-info.html?type=reservations"
   
 });
 

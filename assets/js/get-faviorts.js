@@ -20,10 +20,18 @@
     }
 
     unsave.addEventListener('click', function(ev) {
-        
         var btn = ev.target
         var cardBody = btn.parentElement
         var card = cardBody.parentElement
 
         card.parentElement.removeChild(card)
+
+        if (card.parentElement  == null){
+            document.getElementById("faviorts-count").innerText = "0";
+            document.querySelector("#faviorts .not-found-data").style.display = "block";
+        }
+
+        else{
+            document.querySelector("#faviorts .not-found-data").style.display = "none";
+        }
     })

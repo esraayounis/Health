@@ -171,15 +171,15 @@
     <!-- End Header -->
 
     <div class="sidenav" id="sidenav">
-        <a href="javascript:void(0)" class="link" onclick="javascript:showMyInfo();"> 
+        <a href="javascript:void(0)" class="link" id="profile-title" onclick="javascript:showMyInfo();"> 
             <img src="assets/images/svg-menu/user-plus.svg">    
             <span class="pad-15">الملف الشخصي</span>
         </a>
-        <a   href="javascript:void(0)" class="link" onclick="javascript:showReservations();">
+        <a   href="javascript:void(0)" class="link" id="reservations-title" onclick="javascript:showReservations();">
             <img src="assets/images/svg-menu/reservation-active.svg">
             <span class="pad-15">الحجوزات</span>
         </a>
-        <a href="javascript:void(0)" class="link" onclick="javascript:showFaviorts();">
+        <a href="javascript:void(0)" class="link" id="faviorts-title" onclick="javascript:showFaviorts();">
             <img src="assets/images/svg-menu/favorite-active.svg">
             <span class="pad-15">المفضلة</span>
         </a>
@@ -386,6 +386,41 @@
                                             <img src="assets/images/nothing.png" alt="">
                                         </div>
                                         <div class="container-fluid" id="current-reservation-list">
+                                            <div class="row">
+                                                <div class="col-lg-3 p-lg-0">
+                                                    <div class="avatar text-center" id="img">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 p-lg-0 detail">
+                                                    <h6 class="title-card txt-md">
+                                                        <span id="selected-name"></span>
+                                                    </h6>
+                                                    <div class="d-flex">
+                                                        <p>العنوان</p>
+                                                        <p id="address"></p>
+                                                    </div>
+                                                
+                                                    <div class="d-flex">
+                                                        <p>الفرع:</p>
+                                                        <p id="branch"></p>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <p>التاريخ:</p>
+                                                        <p id="date"></p>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <p>الأجمالي:</p>
+                                                        <p id="total-price"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <label>
+                                                        <input type="checkbox" checked="checked" name="paid">تم الدفع  
+                                                    </label>
+                                                </div>
+                                               
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade py-4 px-1" id="nav-previous" role="tabpanel" aria-labelledby="nav-previous-tab">
@@ -411,7 +446,7 @@
               <div class="container-fluid not-found-data">
                   <img src="assets/images/nothing.png" alt="">
               </div>
-              <div class="container-fluid">
+              <div class="container-fluid pb-2">
                 <div class=" card-box p-2 py-4 card-doctor card-detail">
                     <div class="row">
                         <div class="col-lg-3 p-lg-0">
@@ -425,7 +460,7 @@
                         <div class="col-lg-3 value-card text-center">
                             <div>
                                 <p class="mb-1">الإجمالي</p>
-                                <h5 id="faviort-price"></unsaveh5>
+                                <h5 id="faviort-price"></h5>
                             </div>
                             <button type="button" class="btn" id="unsave">مسح</button>
                         </div>
@@ -492,18 +527,50 @@
 
 
     // Active page
+    var type = window.location.search.substring(1);
+    if(type == "type=reservations"){
+        document.getElementById('profile-title').classList.remove("active");
+        document.getElementById('faviorts-title').classList.remove("active");
+        document.getElementById('reservations-title').classList.add("active");
+        $("#my-info" ).hide();
+        $("#reservation" ).show();
+        $("#faviorts" ).hide();
+        debugger
+        var reservationCount = localStorage.getItem("reservation-count");
+        if(reservationCount == "0"){
+            document.getElementById("current-reserv-count").innerText = "0";
+            document.querySelector("#nav-current .not-found-data").style.display = "block";
+        }
+  
+        else{
+            document.getElementById("current-reserv-count").innerText = reservationCount;
+            document.querySelector("#nav-current .not-found-data").style.display = "none";
+        }
+        var reservations = localStorage.getItem('reservationPage');
+        var items = JSON.parse(reservations);
+        console.log(items)
 
-    $("#my-info" ).show();
-    $("#faviorts" ).hide();
-    $("#reservation" ).hide();
+        for (var i in items){
+            document.getElementById('current-reservation-list').innerHTML = items[i].card;
+            // document.getElementById('current-reservation-list').innerHTML = items[i].date;
+            // document.getElementById('current-reservation-list').innerHTML = items[i].discount;
+            // document.getElementById('current-reservation-list').innerHTML = items[i].price;
+            // document.getElementById('current-reservation-list').innerHTML = items[i].paymentmethod;
+        }
+
+
+    }
     
-    function showMyInfo(){
+    else{
         $("#my-info" ).show();
         $("#faviorts" ).hide();
         $("#reservation" ).hide();
     }
-    
+
     function showReservations(){
+        document.getElementById('profile-title').classList.remove("active");
+        document.getElementById('faviorts-title').classList.remove("active");
+        document.getElementById('reservations-title').classList.add("active");
         $("#my-info" ).hide();
         $("#reservation" ).show();
         $("#faviorts" ).hide();
@@ -523,7 +590,21 @@
         document.getElementById('current-reservation-list').innerHTML = reservations;
     }
 
+
+    function showMyInfo(){
+        document.getElementById('reservations-title').classList.remove("active");
+        document.getElementById('faviorts-title').classList.remove("active");
+        document.getElementById('profile-title').classList.add("active");
+        $("#my-info" ).show();
+        $("#faviorts" ).hide();
+        $("#reservation" ).hide();
+    }
+    
+   
     function showFaviorts(){
+        document.getElementById('profile-title').classList.remove("active");
+        document.getElementById('reservations-title').classList.remove("active");
+        document.getElementById('faviorts-title').classList.add("active");
         $("#my-info" ).hide();
         $("#reservation" ).hide();  
         $("#faviorts" ).show();
