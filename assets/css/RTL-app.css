@@ -140,6 +140,23 @@ h6 {
   display: none;
 }
 
+.mr-30{
+  margin-right:30px;
+}
+
+.selected-doctor{
+  width:25%!important;
+}
+
+.choose-doctor{
+  font-weight: 600;
+  line-height: 3;
+}
+.search-result-section .nice-select.selected-doctor .list li{
+  font-size:14px;
+  padding: 6px 20px;
+}
+
 
 /* Style the checkmark/indicator */
 .checkmark:after {
@@ -4884,7 +4901,7 @@ button.fill-face span {
 }
 .hero .content-main-cats-tabs .content-sub-cats-tabs .group-select .nice-select-hero .list li {
   text-align: right;
-  padding: 0 10px;
+  padding: 6px 10px;
 }
 @media (max-width: 992px) {
   .hero .content-main-cats-tabs .content-sub-cats-tabs .type-home-serve {
@@ -5154,12 +5171,15 @@ button.fill-face span {
 
 .search-result-section .nice-select .list {
   right: 0;
+  left:0
 }
 .search-result-section .nice-select .list li {
   text-align: right;
   font-weight: normal;
   font-size: 16px;
   color: #868d9a;
+  padding-top:6px;
+  padding-bottom:6px;
 }
 
 .content-card .nice-select
