@@ -317,12 +317,39 @@ $('.order-btn').click(function(){
 // ----- Offers Details -----
 
 function shareOfferDetails(){
+    debugger
+     // save patient reservation data
+     let patientName,patientEmail,patientPhone,reservation,date,selectedDoctor;
+     patientName = document.getElementById("patientName").value;
+     patientEmail = document.getElementById("patientEmail").value;
+     patientPhone = document.getElementById("phone").value;
+     reservation = document.querySelector(".patient-reserve .current").innerText;
+     date = document.getElementById("reservation-date").innerHTML;
+     selectedDoctor = document.querySelector(".selected-doctor .current").innerText;
+ 
+     let user_records=new Array();
+     user_records.push({
+         "patientName":patientName,
+         "patientEmail":patientEmail,
+         "patientPhone":patientPhone,
+         "reservation":reservation,
+         "date":date
+     })
+ 
+     localStorage.setItem("patientName",patientName)
+     localStorage.setItem("patientEmail",patientEmail)
+     localStorage.setItem("patientPhone",patientPhone)
+     localStorage.setItem("reservation",reservation)
+     localStorage.setItem("date",date)
+     localStorage.setItem("offer-doctor",selectedDoctor)
+
     var shareOfferDetailsdWeb = document.getElementById('offer-details-web').innerHTML;
     localStorage.setItem("offer-details-web", shareOfferDetailsdWeb);
     var shareDoctorDetailsdWeb = document.getElementById('doctor-details-web').innerHTML;
     localStorage.setItem("doctor-details-web", shareDoctorDetailsdWeb);
     var shareDoctorDetailsdMob = document.getElementById('doctor-details-mob').innerHTML;
     localStorage.setItem("doctor-details-mob", shareDoctorDetailsdMob);
+    localStorage.getItem("total-price");
     window.location.href = "special-offer-reserve.html"; 
 }
 

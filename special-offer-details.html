@@ -294,9 +294,9 @@
                     
                         <!-- item -->
                         <div class=" desktop-show card-box p-2 py-4 card-detail" id="doctor-details-web">
-                            <div class="row">
+                            <div class="row mb-4" id="choose-doctor">
                                 <div class="d-flex col-12 mr-30">
-                                    <div class="choose-doctor">اختر دكتور : 
+                                    <div class="choose-doctor txt-md">اختر دكتور : 
                                     </div>
                                     <div class="nice-select nice-select2  selected-doctor" tabindex="0">
                                         <span class="current">   شادي السيد عبدالعزيز </span>
@@ -313,7 +313,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-4">
+                            <div class="row">
                                 <div class="col-lg-3 p-lg-0">
                                     <div class="avatar text-center">
                                         <img src="./assets/./images/abdo2.png" alt="">
@@ -395,6 +395,25 @@
                         </div>
 
                         <div class="mobile-show card-box p-2 py-4 card-detail" id="doctor-details-mob">
+                            <div class="row mb-4" id="choose-doctor">
+                                <div class="d-flex col-12 mr-30">
+                                    <div class="choose-doctor txt-md">اختر دكتور : 
+                                    </div>
+                                    <div class="nice-select nice-select2  selected-doctor" tabindex="0">
+                                        <span class="current">   شادي السيد عبدالعزيز </span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="7.761" height="8" viewBox="0 0 7.761 8">
+                                            <path id="arrow-down-fill" d="M12.879,20a1.036,1.036,0,0,1-.86-.569L9.3,14.9a2.451,2.451,0,0,1-.168-1.964A1.193,1.193,0,0,1,10.156,12H15.6a1.193,1.193,0,0,1,1.028.933,2.451,2.451,0,0,1-.168,1.964l-2.722,4.533A1.036,1.036,0,0,1,12.879,20Z" transform="translate(-8.998 -12)" fill="#868d9a"></path>
+                                        </svg>
+                                        <ul class="list">
+                                            <li data-value="1" class="option selected focus"> شادي السيد عبدالعزيز </li>
+                                            <li data-value="1" class="option">صبري حلمي</li>
+                                            <li data-value="1" class="option">أحمد عباس</li>
+                                            <li data-value="1" class="option">علاء محمد</li>
+                                            <li data-value="1" class="option">وليد ياسين</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-lg-2 ">
                                     <div class="row">
@@ -403,10 +422,7 @@
                                         </div>
                                         <div class="col-9">
                                             <div class="d-flex">
-                                                <h6 class="col-9 title-card txt-md">
-                                                    شادي السيد عبدالعزيز
-                                                </h6>
-                                               
+                                                <h6 class="col-9 title-card txt-md">شادي السيد عبدالعزيز</h6>  
                                             </div>
                                             <div class="d-flex">
                                                 <div class="stars d-flex align-items-center justify-content-center mt-2">
@@ -600,8 +616,8 @@
                                         </svg>
                                         <span>زيارة عيادة</span>
                                     </div>
-                                    <div class="price-nurse py-4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="33.75" height="27" viewBox="0 0 33.75 27">
+                                    <div class="price-nurse py-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 33.75 27">
                                             <g id="cash-outline" transform="translate(-1.125 -4.5)">
                                                 <path id="Path_16619" data-name="Path 16619"
                                                     d="M3.375,5.625h29.25A1.125,1.125,0,0,1,33.75,6.75V22.5a1.125,1.125,0,0,1-1.125,1.125H3.375A1.125,1.125,0,0,1,2.25,22.5V6.75A1.125,1.125,0,0,1,3.375,5.625Z"
@@ -635,7 +651,7 @@
                                                     stroke-width="2.25"></path>
                                             </g>
                                         </svg>
-                                        <p class="text-center pt-4 font-bold">
+                                        <p class="text-center pt-2 font-bold">
                                             السعر:
                                             <span id="price"></span>
                                         </p>
@@ -684,7 +700,7 @@
                                                         <li value="لشخص أخر" class="option txt-md">لشخص أخر</li>
                                                     </ul>
                                                 </div>
-
+    
                                                 <div class="row-input d-flex mt-3 px-2">
                                                     <svg id="user-avatar-filled-alt" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                         <path id="Union_48" data-name="Union 48"
@@ -693,7 +709,7 @@
                                                     </svg>
                                                     <input class="h-100 w-100 px-2" type="text" id="patientName" placeholder="اسم المريض كاملا">
                                                 </div>
-
+    
                                                 <div class="row-input d-flex mt-3 px-2">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16.014" viewBox="0 0 10 16.014">
                                                         <path id="mobile-solid" d="M17.889,4H10.111A1.128,1.128,0,0,0,9,5.144V18.87a1.128,1.128,0,0,0,1.111,1.144h7.778A1.128,1.128,0,0,0,19,18.87V5.144A1.128,1.128,0,0,0,17.889,4ZM14.556,18.87H13.444V17.726h1.111Zm-4.444-2.288V5.144h7.778V16.583Z" transform="translate(-9 -4)" fill="#8d8d8d"/>
@@ -701,7 +717,7 @@
                                                     <input name="" id="phone" class="h-100 w-100 px-2" placeholder="رقم الموبيل" type="tel">
                                                 </div>
                                                 
-
+    
                                                 <div class="row-input d-flex mt-3 px-2">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
                                                         <path id="mail"
@@ -710,7 +726,7 @@
                                                     </svg>
                                                     <input class="h-100 w-100 px-2" type="email" id="patientEmail" placeholder="البريد الإلكتروني">
                                                 </div>
-
+    
                                                 <div class="row">
                                                     <div class="col-7">
                                                         <button type="button" class="mt-4 w-100 bg-red btn" onClick="shareOfferDetails()" >أحجز الآن</button>

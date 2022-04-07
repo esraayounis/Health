@@ -1115,6 +1115,9 @@ form .btn button{
 }
 
 @media (max-width: 600px) {
+  .selected-doctor {
+    width: 50%!important;
+  }
   #mob-detail-title, .save-icons{
     margin-top:15px;
     padding:0!important;
@@ -5910,7 +5913,6 @@ textarea {
 
 .price-nurse {
   text-align: center;
-  border-bottom: 1px solid #c4c4c4;
 }
 .price-nurse p {
   font-weight: 600;
@@ -6281,7 +6283,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid #dfe0e2;
   flex-direction: column;
 }
 .title-price span {
@@ -6293,6 +6295,20 @@ textarea {
 
 .account-info {
   border: 0px solid;
+}
+
+#current-reservation-list .offer img{
+  width:150px;
+  height:100px;
+}
+
+.note{
+  color:red;
+  font-size:12px;
+}
+
+.order-price{
+  color: #0065ff;
 }
 
 .offer-card #desc{

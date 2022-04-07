@@ -1,56 +1,32 @@
 // Get Shared Data
 window.onload = function () {
-    document.getElementById('error-discount-text').style.display ="none";
-    document.getElementById('succuss-discount-text').style.display ="none";
-    document.getElementById('delete-code-btn').style.display ="none";
-    document.getElementById('div-discount').style.display ="none";
-    document.getElementById('select-payment-method').style.display ="none";
-    document.getElementById('visa-data').style.display ="none";
+    debugger
+    var name = localStorage.getItem("selected-name");
+    document.getElementById('selected-name').innerHTML = name;
+    
+   var offercard1 =  localStorage.getItem("offer-details-web");
+   document.getElementById('offer-details-web').innerHTML = offercard1;
+   var doctorcard1 =  localStorage.getItem("doctor-details-web"); 
+   document.getElementById('doctor-details-web').innerHTML = doctorcard1;
+   var doctorcard2 =  localStorage.getItem("doctor-details-mob");
+   document.getElementById('doctor-details-mob').innerHTML = doctorcard2;
+   setTimeout(() => {
+    document.getElementById('choose-doctor').style.display ="none";
+   }, 50);
 
-    setTimeout(() => {
-    document.querySelector('.value-card').style.display ="none";
-
-    var selectedService =  localStorage.getItem("service-num");
-    if(selectedService == "2" || selectedService == "5"){
-        var getSelectedBranch = localStorage.getItem("selected-branch");
-        document.querySelector('.selected-address').style.display ="none";
-        var selectedBranch= document.getElementById('address-branch');
-        var branch = `<p>${getSelectedBranch}</p>`;
-        selectedBranch.insertAdjacentHTML('beforeend',branch)
-    }
-
-    else if(selectedService == "4"){
-        var getSelectedBranch = localStorage.getItem("selected-branch");
-        document.querySelector('.selected-address').style.display ="none";
-        var selectedBranch= document.getElementById('address-branch');
-        var branch = `<p>${getSelectedBranch}</p>`;
-        selectedBranch.insertAdjacentHTML('beforeend',branch)
-
-        var getSelectedPeriod = localStorage.getItem("selected-period");
-        document.querySelector('.selected-period').style.display ="none";
-        var selectedPeriod = document.getElementById('period');
-        var period = `<p>${getSelectedPeriod}</p>`;
-        selectedPeriod.insertAdjacentHTML('beforeend',period)
-    }
-
-    else{
-        //do nothing
-    }
-    }, 50);
-
-
+   document.getElementById('error-discount-text').style.display ="none";
+   document.getElementById('succuss-discount-text').style.display ="none";
+   document.getElementById('delete-code-btn').style.display ="none";
+   document.getElementById('div-discount').style.display ="none";
+   document.getElementById('select-payment-method').style.display ="none";
+   document.getElementById('visa-data').style.display ="none";
 
     var patientName = localStorage.getItem("patientName",patientName)
     var patientEmail = localStorage.getItem("patientEmail",patientEmail)
     var patientPhone = localStorage.getItem("patientPhone",patientPhone)
     var reservation = localStorage.getItem("reservation",reservation)
     var date = localStorage.getItem("date",date)
-    var type =  localStorage.getItem("selected-service");
-    var name = localStorage.getItem("selected-name");
 
-    document.getElementById('selected-service').innerHTML = type;
-    document.getElementById('type').innerHTML = type;
-    document.getElementById('name').innerHTML = name;
     document.getElementById('pName').innerHTML = patientName;
     document.getElementById('pEmail').innerHTML = patientEmail;
     document.getElementById('pPhone').innerHTML = patientPhone;
@@ -59,11 +35,6 @@ window.onload = function () {
 
     var totalPrice = localStorage.getItem("total-price");
     document.getElementById('totalPrice').innerHTML = totalPrice;
-    debugger
-    var card1 =  localStorage.getItem("card-web");
-    var card2 =  localStorage.getItem("card-mob");
-    document.getElementById('card-data-web').innerHTML = card1;
-    document.getElementById('card-data-mob').innerHTML = card2;
 }
 
 //  Payment Method
@@ -167,11 +138,11 @@ window.onload = function () {
 
     
        
-        var image = document.querySelector('.avatar').innerHTML;
+        var image = document.querySelector('.offers-img').innerHTML;
 
-        var title = document.querySelector('.title-card').innerHTML;
+        var title = document.getElementById('title').innerHTML;
 
-        var address = document.querySelector('.address').innerHTML;
+        var priceDetails = document.getElementById('main-details').innerHTML;
 
         var reservationDate = document.getElementById('date').innerHTML;
 
@@ -190,21 +161,17 @@ window.onload = function () {
          const elemObj = `<div class="card-box p-2 py-4 card-detail">
             <div class="row">
              <div class="col-lg-3 p-lg-0">
-                 <div class="avatar text-center">${image}</div>
+                 <div class="avatar offer text-center">${image}</div>
              </div>
              <div class="col-lg-6 p-lg-0 detail">
-                 <h6 class="title-card txt-md"> ${title}</h6>
-              
-                 <div class="d-flex align-items-center">
-                  <p><span class="reserve-title" >العنوان:</span></p>
-                  <p >${address}</p>
-                 </div>
-                
-                <div class="align-items-center check-branch">
-                    <p><span class="reserve-title">الفرع:</span></p>
-                    <p >${branch}</p>
+                <div class="d-flex align-items-center">
+                 <p><span class="reserve-title">التفاصيل:</span></p>
+                 <p >${title}</p>
                 </div>
-
+                <div class="d-flex align-items-center">
+                 <p><span class="reserve-title">تفاصيل السعر:</span></p>
+                 <p >${priceDetails}</p>
+                </div>
                 <div class="d-flex align-items-center">
                     <p><span class="reserve-title">التاريخ:</span></p>
                     <p >${reservationDate}</p>
@@ -248,22 +215,8 @@ window.onload = function () {
             divPaid.insertAdjacentHTML('beforeend',paid);
              
         }
-        
-
-        var serviceNum =  localStorage.getItem("service-num");
-        var serviceName = localStorage.getItem("selected-service");
-        
-        if (serviceNum == "3" || serviceName == " زيارة طبيب "){
-          document.querySelector('.check-branch').style.display = "none";
-          document.querySelector('.stars-special').style.display = "none";
-          
-        }
-        else{
-            document.querySelector('.check-branch').style.display = "flex";
-            var branch = document.querySelector('.selected-address .current').innerHTML;
-        }
-
-         localStorage.setItem('reservationPage',reservationList.innerHTML);
+    
+        localStorage.setItem('reservationPage',reservationList.innerHTML);
 
         document.querySelector('.cc-number').oninput = () =>{
             var ccNumber = document.querySelector('.cc-number').value;
@@ -307,7 +260,6 @@ window.onload = function () {
             document.getElementById('select-payment-method').style.display ="none";
             document.getElementById('visa-data').style.display ="none";
         }
-
 
         window.location.href ="success.html";
     }
