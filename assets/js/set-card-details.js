@@ -85,8 +85,9 @@ $('.details-btn').click(function(){
     }
     else if(serviceOrder == "4")
     {
-        if(type != " زيارة طبيب")
+        if(type != " زيارة طبيب" || type == "زيارة طبيب")
         {
+            debugger
             var branch =  document.querySelector(".selected-address .current").innerText;
             localStorage.setItem("selected-branch", branch);
             var period =  document.querySelector(".selected-period .current").innerText;
@@ -94,16 +95,16 @@ $('.details-btn').click(function(){
 
         }
 
-        if(type == " زيارة طبيب"){
+        if(type == " زيارة طبيب" || type == "زيارة طبيب"){
             window.location.href = "consult-details.html";
         }
-        else if(type == " زيارة تمريض"){
+        else if(type == " زيارة تمريض" || type == "زيارة تمريض"){
             window.location.href = "nurse-details.html";
         }
-        else if(type == " زيارة جليس"){
+        else if(type == " زيارة جليس" || type == "زيارة جليس"){
             window.location.href = "sitter-details.html";
         }
-        else  if(type == " خدمات منزلية"){
+        else  if(type == " خدمات منزلية" || type == "خدمات منزلية"){
             window.location.href = "home-details.html";
         }
         
@@ -390,7 +391,7 @@ $('.save-lab-card').click(function(){
 // ----- Add to Faviorts -----
 
 $('#save-btn').click(function(){ 
-    debugger 
+     
     document.getElementById("save").style.fill = "#0065FF";
     var faviorts =  document.getElementById("save-btn");
     var add = Number(faviorts.getAttribute('data-count') || 0);
@@ -400,15 +401,38 @@ $('#save-btn').click(function(){
     var cardImg =  document.getElementById("main-detail-img").innerHTML;
     var cardDetails =  document.getElementById("main-card-details").innerHTML;
     var price =  document.querySelector('.details-price').innerText;
-    localStorage.setItem("saveCardImg" , cardImg);
-    localStorage.setItem("saveCardDetails" , cardDetails);
-    localStorage.setItem("price" , price);
+
+    var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList')) || [];
+    console.log(retrievedFaviorts)
+    if(retrievedFaviorts == ""){
+        faviortsList = [];
+        let faviort = {
+            faviortCount:faviortCount,
+            cardImg: cardImg,
+            cardDetails: cardDetails,
+            price: price
+        }
+        faviortsList.push(faviort);
+        localStorage.setItem('faviortsList', JSON.stringify(faviortsList) );
+    }
+
+    else{
+    let faviort = {
+        cardImg: cardImg,
+        cardDetails: cardDetails,
+        price: price
+    }
     
+    retrievedFaviorts.push(faviort);
+    localStorage.setItem('faviortsList', JSON.stringify(retrievedFaviorts));
+   }
+   
+
 });
 
 $('#save-btn-mob').click(function(){ 
     debugger 
-    document.getElementById("save-mob").style.fill = "#0065FF";
+    document.getElementById("save-btn-mob").style.fill = "#0065FF";
     var faviorts =  document.getElementById("save-btn-mob");
     var add = Number(faviorts.getAttribute('data-count') || 0);
     faviorts.setAttribute('data-count', add + 1);
@@ -417,11 +441,33 @@ $('#save-btn-mob').click(function(){
     var cardImg =  document.getElementById("mob-detail-img").innerHTML;
     var cardDetails =  document.getElementById("mob-card-details").innerHTML;
     var price =  document.querySelector('.details-price').innerText;
-    localStorage.setItem("saveCardImg" , cardImg);
-    localStorage.setItem("saveCardDetails" , cardDetails);
-    localStorage.setItem("price" , price);
+
+    var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList')) || [];
+    console.log(retrievedFaviorts)
+    if(retrievedFaviorts == ""){
+        faviortsList = [];
+        let faviort = {
+            faviortCount:faviortCount,
+            cardImg: cardImg,
+            cardDetails: cardDetails,
+            price: price
+        }
+        faviortsList.push(faviort);
+        localStorage.setItem('faviortsList', JSON.stringify(faviortsList) );
+    }
+
+    else{
+    let faviort = {
+        cardImg: cardImg,
+        cardDetails: cardDetails,
+        price: price
+    }
+    
+    retrievedFaviorts.push(faviort);
+    localStorage.setItem('faviortsList', JSON.stringify(retrievedFaviorts));
+   }
   
-}); 
+});
 
 // ----- Add to Reservations -----
 $('#cart').click(function(){ 

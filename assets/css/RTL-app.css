@@ -940,6 +940,10 @@ textarea:focus-visible{
   display: flex;
 }
 
+#faviort-price{
+  font-size: 14px;
+}
+
 
 /* ==== Rate add comment ====== */
 
@@ -5095,13 +5099,23 @@ button.fill-face span {
   color: #868d9a;
   margin-bottom: 5px;
 }
-.offers-cards h6 {
+.offers-cards h6{
   font-size: 11px;
   color: #0065ff;
 }
-.offers-cards .note {
+.offers-cards .note , #reservation .note{
   font-weight: normal;
   font-size: 9px;
+  color: #f00 !important;
+}
+#reservation #order-price{
+  font-size: 14px;
+  color: #0065ff;
+  padding:0 3px;
+}
+#reservation .note{
+  font-weight: normal;
+  font-size: 11px;
   color: #f00 !important;
 }
 
@@ -6299,10 +6313,6 @@ textarea {
   height:100px;
 }
 
-.note{
-  color:red;
-  font-size:12px;
-}
 
 .order-price{
   color: #0065ff;
