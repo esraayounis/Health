@@ -1,4 +1,5 @@
 window.onload = function () {
+  debugger
     const queryString = window.location.search;
 
     const urlParams = new URLSearchParams(queryString);
@@ -6,11 +7,14 @@ window.onload = function () {
     const page_type = urlParams.get('type')
     
     console.log(page_type);
-
-  if(page_type == "bestLabs"){
+    document.getElementById('no-exams').style.display = "none";
+    document.getElementById('no-exams-mob').style.display = "none";
 
     var storedTests = localStorage.getItem("requiredTests");
 
+  if(page_type == "bestLabs"){
+
+  
     var service = localStorage.getItem("selected-service");
     document.getElementById('selected-service').innerHTML = service;
   
@@ -34,10 +38,10 @@ window.onload = function () {
       var labCardDetails =  localStorage.getItem("selected-main-Details");
       document.getElementById('mob-card-details').innerHTML = labCardDetails;
 
-      if(storedTests!= null)
+      if(storedTests!= "null")
       {
         document.getElementById('no-exams-mob').style.display = "none";
-        document.getElementById('list').innerHTML = storedTests;
+        document.getElementById('list-mob').innerHTML = storedTests;
       }
 
       else{
@@ -45,7 +49,7 @@ window.onload = function () {
       }
     }
   
-  // web
+   // web
     else{  
 
       document.getElementById('main-lab-discount').style.display = "block";
@@ -62,10 +66,10 @@ window.onload = function () {
       document.getElementById('main-lab-discount').innerHTML = labDiscount;
 
   
-      if(storedTests!= null)
+      if(storedTests!= "null")
       {
         document.getElementById('no-exams').style.display = "none";
-        document.getElementById('list').innerHTML = storedTests;
+        document.getElementById('list-web').innerHTML = storedTests;
       }
   
       else{
@@ -74,8 +78,6 @@ window.onload = function () {
     
     }
   }
-
-
 
 // Other Labs
   else{
@@ -109,6 +111,15 @@ window.onload = function () {
 
         var mobCardDetails =  localStorage.getItem("selected-mob-Details");
         document.getElementById('mob-card-details').innerHTML = mobCardDetails;
+        if(storedTests!= "null")
+        {
+          document.getElementById('no-exams-mob').style.display = "none";
+          document.getElementById('list-mob').innerHTML = storedTests;
+        }
+  
+        else{
+          document.getElementById('no-exams-mob').style.display = "block";
+        }
     }
 
     else{
@@ -117,6 +128,15 @@ window.onload = function () {
 
         var mainCardDetails =  localStorage.getItem("selected-main-Details");
         document.getElementById('main-card-details').innerHTML = mainCardDetails;
+        if(storedTests!= "null")
+      {
+        document.getElementById('no-exams').style.display = "none";
+        document.getElementById('list-web').innerHTML = storedTests;
+      }
+  
+      else{
+        document.getElementById('no-exams').style.display = "block";
+      }
     }
 
   }

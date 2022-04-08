@@ -931,18 +931,15 @@ textarea:focus-visible{
 .search-doctor-button{
   padding:0 70px;
 }
-#list
+#list, #list-web
 {
   padding:10px 0 0 0;
 }
 
-.exam, #list .item{
+.exam, #list .item, #list-web .item{
   display: flex;
 }
 
-#no-exams{
-  padding-bottom:15px;
-}
 
 /* ==== Rate add comment ====== */
 
@@ -1033,7 +1030,7 @@ form .btn button{
   height:50px;
 }
 
-#list,  #list-mob{
+#list,  #list-mob, #list-web{
   padding: 0px 15px;
   margin: 8px 0px;
 }
