@@ -439,6 +439,7 @@ $('#save-btn-mob').click(function(){
     var faviortCount =  document.querySelector("[data-count]").childElementCount;
     localStorage.setItem("faviorts-count", faviortCount);
     var cardImg =  document.getElementById("mob-detail-img").innerHTML;
+    var title =  document.getElementById("title").innerHTML;
     var cardDetails =  document.getElementById("mob-card-details").innerHTML;
     var price =  document.querySelector('.details-price').innerText;
 
@@ -449,6 +450,7 @@ $('#save-btn-mob').click(function(){
         let faviort = {
             faviortCount:faviortCount,
             cardImg: cardImg,
+            title: title,
             cardDetails: cardDetails,
             price: price
         }
@@ -459,6 +461,7 @@ $('#save-btn-mob').click(function(){
     else{
     let faviort = {
         cardImg: cardImg,
+        title: title,
         cardDetails: cardDetails,
         price: price
     }

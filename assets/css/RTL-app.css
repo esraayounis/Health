@@ -1116,6 +1116,9 @@ form .btn button{
 }
 
 @media (max-width: 600px) {
+  #faviort-price{
+    font-size: 11px;
+  }
   .selected-doctor {
     width: 50%!important;
   }

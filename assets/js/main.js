@@ -150,29 +150,46 @@
 
     else{
       document.querySelector("#faviorts .not-found-data").style.display = "none";
-      for (i = 0; i < retrievedFaviorts.length; i++){
+      for (var i = 0; i < retrievedFaviorts.length; i++){
           document.getElementById("faviorts-count").innerText = i+1;
           const faviortsContainer = document.querySelector('.faviorts-container-mob')
-          const navlistElement = ` <div class=" card-box p-2 py-4 card-doctor card-detail">
-                  <div class="row">
-               <div class="col-lg-3 p-lg-0">
-                   <div class="avatar text-center" id="faviort-img">
-                   ${retrievedFaviorts[i].cardImg}
-                     </div>
-                 </div>
-                <div class="col-lg-6 p-lg-0 detail" id="faviort-details">
-                ${retrievedFaviorts[i].cardDetails}
-                </div>
-                <div class="col-lg-3 value-card text-center">
-                     <div>
-                        <p class="mb-1">الإجمالي</p>
-                         <h5 id="faviort-price">${retrievedFaviorts[i].price}</unsaveh5>
-                   </div>
-                   <button type="button" class="btn" id="unsave">مسح</button>
-                 </div>
-             </div>
-          </div>`    
+          const navlistElement = `
+          <div class="card-box card-doctor p-2 py-4 card-detail">
+                            <div class="row">
+                                <div class="col-lg-2 ">
+                                    <div class="row">
+                                        <div class="col-3 avatar txt-left" id="faviort-img">
+                                        ${retrievedFaviorts[i].cardImg}
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="d-flex">
+                                                <h6 class="title-card txt-md" id="title">
+                                                ${retrievedFaviorts[i].title}
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7  detail mt-3" id="faviort-details">
+                                 ${retrievedFaviorts[i].cardDetails}
+                                </div>
+                                <div class="col-lg-3 d-flex value-card react-icon text-center">
+                                    <div></div>
+                                    <div class="reserves justify-content-around w-100">
+                                        <div class="mb-0 d-flex avaliable-btn">
+                                            <p class="">الإجمالي</p>
+                                            <h5 id="faviort-price">${retrievedFaviorts[i].price}</h5>
+                                        </div>
+                                        <button type="button" class="btn" id="unsave">مسح</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`    
       faviortsContainer.insertAdjacentHTML('beforeend',navlistElement);
+      setTimeout(() => {
+        document.querySelector('#faviort-details .title-card').style.display ="none";
+        document.querySelector('.stars-special').style.display ="none";
+       }, 50);
       }
     }
 
