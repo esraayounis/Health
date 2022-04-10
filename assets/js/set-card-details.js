@@ -1,7 +1,7 @@
 // -----  Share slected card to details page -----
 
 $('.details-btn').click(function(){
-    debugger
+    
     var $target = $(this).parents('.card-detail');
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
@@ -85,9 +85,9 @@ $('.details-btn').click(function(){
     }
     else if(serviceOrder == "4")
     {
-        if(type != " زيارة طبيب" || type == "زيارة طبيب")
+        if(type != "زيارة طبيب")
         {
-            debugger
+            
             var branch =  document.querySelector(".selected-address .current").innerText;
             localStorage.setItem("selected-branch", branch);
             var period =  document.querySelector(".selected-period .current").innerText;
@@ -95,16 +95,16 @@ $('.details-btn').click(function(){
 
         }
 
-        if(type == " زيارة طبيب" || type == "زيارة طبيب"){
+        if(type == "زيارة طبيب"){
             window.location.href = "consult-details.html";
         }
-        else if(type == " زيارة تمريض" || type == "زيارة تمريض"){
+        else if(type == "زيارة تمريض"){
             window.location.href = "nurse-details.html";
         }
-        else if(type == " زيارة جليس" || type == "زيارة جليس"){
+        else if(type == "زيارة جليس"){
             window.location.href = "sitter-details.html";
         }
-        else  if(type == " خدمات منزلية" || type == "خدمات منزلية"){
+        else  if(type == "خدمات منزلية"){
             window.location.href = "home-details.html";
         }
         
@@ -318,7 +318,7 @@ $('.order-btn').click(function(){
 // ----- Offers Details -----
 
 function shareOfferDetails(){
-    debugger
+    
      // save patient reservation data
      let patientName,patientEmail,patientPhone,reservation,date,selectedDoctor;
      patientName = document.getElementById("patientName").value;
@@ -357,7 +357,7 @@ function shareOfferDetails(){
 // ------ Special Labs -----
 
 $('.save-lab-card').click(function(){
-       debugger
+       
     var $target = $(this).parents('.card-box');
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
@@ -374,7 +374,7 @@ $('.save-lab-card').click(function(){
         alert("من فضلك سجل دخول أولا")
     }
     else{
-    debugger
+    
         var mainCardImg =  document.querySelector('#documentCard #lab-img').innerHTML;
         localStorage.setItem("selected-main-img", mainCardImg);
         var mainCardDetails =  document.querySelector('#documentCard .desc-laborat').innerHTML;
@@ -431,7 +431,7 @@ $('#save-btn').click(function(){
 });
 
 $('#save-btn-mob').click(function(){ 
-    debugger 
+     
     document.getElementById("save-btn-mob").style.fill = "#0065FF";
     var faviorts =  document.getElementById("save-btn-mob");
     var add = Number(faviorts.getAttribute('data-count') || 0);
@@ -474,7 +474,7 @@ $('#save-btn-mob').click(function(){
 
 // ----- Add to Reservations -----
 $('#cart').click(function(){ 
-debugger
+
     var reservations =  document.getElementById("cart");
     var add = Number(reservations.getAttribute('data-count') || 0);
     reservations.setAttribute('data-count', add + 1);

@@ -5,7 +5,7 @@ if (matched) {
         creditCard: true,
         delimiter: '-',
         onCreditCardTypeChanged: function (type) {
-            debugger
+            
             console.log(type)
             if(type === 'visa'){
                 document.querySelector('.visa').classList.add('active');
@@ -41,7 +41,7 @@ else{
         creditCard: true,
         delimiter: '-',
         onCreditCardTypeChanged: function (type) {
-            debugger
+            
             console.log(type)
             if(type === 'visa'){
                 document.querySelector('.visa').classList.add('active');

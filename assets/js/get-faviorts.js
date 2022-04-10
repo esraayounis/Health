@@ -39,7 +39,7 @@ window.onload = function () {
 }
 
 $('#unsave').click(function(ev){ 
-        debugger
+        
     var btn = ev.target
     var cardBody = btn.parentElement
     var card = cardBody.parentElement

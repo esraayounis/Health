@@ -1,5 +1,5 @@
 window.onload = function () {
-    debugger
+    
     var service = localStorage.getItem("selected-service");
     document.getElementById('selected-service').innerHTML = service;
 
@@ -42,27 +42,27 @@ window.onload = function () {
     
     // Active Details tabs when click on it in details page
     var service = localStorage.getItem("selected-service");
-debugger
+
     // Government
-    if ( service ==" إصدار إقامة") {
+    if ( service =="إصدار إقامة") {
       document.getElementById("nav-iqama-issurance-tab").classList.add("active");
       document.getElementById('nav-iqama-issurance').classList.add('active');
       document.getElementById('nav-iqama-issurance').classList.add('show');
     }
     
-    else if ( service ==" تجديد إقامة") {
+    else if ( service =="تجديد إقامة") {
       document.getElementById("nav-renewal-iqama-tab").classList.add("active");
       document.getElementById('nav-renewal-iqama').classList.add('active');
       document.getElementById('nav-renewal-iqama').classList.add('show');
     }
     
-    else if ( service ==" شهادة صحية") {
+    else if ( service =="شهادة صحية") {
       document.getElementById("nav-health-certificate-tab").classList.add("active");
       document.getElementById('nav-health-certificate').classList.add('active');
       document.getElementById('nav-health-certificate').classList.add('show');
     }
 
-    else if ( service ==" رخصة مرور") {
+    else if ( service =="رخصة مرور") {
       document.getElementById("nav-traffic-license-tab").classList.add("active");
       document.getElementById('nav-traffic-license').classList.add('active');
       document.getElementById('nav-traffic-license').classList.add('show');
@@ -70,18 +70,18 @@ debugger
 
     
     // Consult
-    else if ( service ==" زيارة عيادة" || service ==" زيارة طبيب") {
+    else if ( service =="زيارة عيادة" || service =="زيارة طبيب") {
         document.getElementById("nav-clinic-tab").classList.add("active");
         document.getElementById('nav-clinic').classList.add('active');
         document.getElementById('nav-clinic').classList.add('show');  
     }
-    else if ( service ==" زيارة منزلية") {
+    else if ( service =="زيارة منزلية") {
         document.getElementById("nav-home-tab").classList.add("active");
         document.getElementById('nav-home').classList.add('active');
         document.getElementById('nav-home').classList.add('show');
     }
     
-    else if ( service ==" استشارة فيديو") {
+    else if ( service =="استشارة فيديو") {
         document.getElementById("nav-phone-tab").classList.add("active");
         document.getElementById('nav-phone').classList.add('active');
         document.getElementById('nav-phone').classList.add('show');

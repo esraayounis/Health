@@ -132,7 +132,7 @@
      * Mobile faviorts btn
     */
     $('.open-faviorts').click(function() {
-        debugger
+        
       select('#faviorts').classList.toggle('open-faviorts')
       select('#faviorts').classList.toggle('dis-block')
       select('.favorite path').classList.toggle('fill-active')
@@ -342,48 +342,48 @@ $('#nav-tab-main-cats .nav-link').click(function(){
 
 //   Share slected service name 
 $('.parent-header1').click(function(){ 
-    var typeService =  document.querySelector('.child-header1').innerText;
+    var typeService =  document.querySelector('.child-header1 #title-tab').innerText;
     localStorage.setItem("selected-service", typeService);
     localStorage.setItem("service-num", "1");
     console.log(typeService)   
 });
 $('.parent-header2').click(function(){ 
-    var typeService =  document.querySelector('.child-header2').innerText;
+    var typeService =  document.querySelector('.child-header2 #title-tab').innerText;
     localStorage.setItem("selected-service", typeService);
     localStorage.setItem("service-num", "2");
     console.log(typeService)   
 });
 $('.parent-header3').click(function(){ 
 
-    var typeService =  document.querySelector('.child-header3').innerText;
+    var typeService =  document.querySelector('.child-header3 #title-tab').innerText;
     localStorage.setItem("selected-service", typeService);
     localStorage.setItem("service-num", "3");
     console.log(typeService)   
 });
 $('.parent-header4').click(function(){ 
 
-    var typeService =  document.querySelector('.child-header4').innerText;
+    var typeService =  document.querySelector('.child-header4 #title-tab').innerText;
     localStorage.setItem("selected-service", typeService);
     localStorage.setItem("service-num", "4");
     console.log(typeService)   
 });
 $('.parent-header5').click(function(){ 
 
-    var typeService =  document.querySelector('.child-header5').innerText;
+    var typeService =  document.querySelector('.child-header5 #title-tab').innerText;
     localStorage.setItem("selected-service", typeService);
     localStorage.setItem("service-num", "5");
     console.log(typeService)   
 });
 
 $('.child-header1').click(function(){
-    var typeService =  document.querySelector('.child-header1.active').innerText; 
+    var typeService =  document.querySelector('.child-header1.active #title-tab').innerText; 
     localStorage.setItem("selected-service", typeService);
     localStorage.setItem("service-num", "1");
     console.log(typeService)
 });
 
 $('.child-header2').click(function(){
-    var typeService =  document.querySelector('.child-header2.active').innerText; 
+    var typeService =  document.querySelector('.child-header2.active #title-tab').innerText; 
     localStorage.setItem("selected-service", typeService);
     localStorage.setItem("service-num", "2");
     console.log(typeService)
@@ -391,7 +391,7 @@ $('.child-header2').click(function(){
 
 
 $('.child-header3').click(function(){
-    var typeService =  document.querySelector('.child-header3.active').innerText; 
+    var typeService =  document.querySelector('.child-header3.active #title-tab').innerText; 
     localStorage.setItem("selected-service", typeService);
     localStorage.setItem("service-num", "3");
     console.log(typeService)
@@ -399,7 +399,7 @@ $('.child-header3').click(function(){
 
 
 $('.child-header4').click(function(){
-    var typeService =  document.querySelector('.child-header4.active').innerText; 
+    var typeService =  document.querySelector('.child-header4.active #title-tab').innerText; 
     localStorage.setItem("selected-service", typeService);
     localStorage.setItem("service-num", "4");
     console.log(typeService)
@@ -408,7 +408,7 @@ $('.child-header4').click(function(){
 
 $('.child-header5').click(function(){
 
-    var typeService =  document.querySelector('.child-header5.active').innerText; 
+    var typeService =  document.querySelector('.child-header5.active #title-tab').innerText; 
     localStorage.setItem("selected-service", typeService);
     localStorage.setItem("service-num", "5");
     console.log(typeService)

@@ -67,7 +67,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     var inputFilter = $('#myInputExamMob');
     inputFilter.on('keyup', function() {
-        debugger
+        
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInputExamMob");
     filter = input.value.toUpperCase();

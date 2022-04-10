@@ -140,8 +140,8 @@ h6 {
   display: none;
 }
 
-.mr-30{
-  margin-right:30px;
+.pad-r-40{
+  padding-right:40px;
 }
 
 .selected-doctor{
@@ -809,7 +809,11 @@ article .nice-select2{
 }
 
 .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus{
-  font-size: 14px;
+  font-size: 14px!important;
+}
+.search-result-section .nice-select .list{
+  max-height: 250px;
+  overflow-y: scroll;
 }
 
 .svg-gender{
@@ -3807,7 +3811,7 @@ body {
 
 
 .card-detail {
-  padding: 20px 0!important;
+  padding: 20px 0 0 0!important;
 }
 .card-detail .title-card {
   font-weight: 600;
@@ -4190,6 +4194,7 @@ body {
   flex-direction: column;
   align-items: baseline;
   direction: ltr;
+  margin-right: 20px;
 }
 .form-inputs span {
   text-align: left;
@@ -4909,6 +4914,7 @@ button.fill-face span {
 .hero .content-main-cats-tabs .content-sub-cats-tabs .group-select .nice-select-hero .list li {
   text-align: right;
   padding: 6px 10px;
+  font-size:15px;
 }
 @media (max-width: 992px) {
   .hero .content-main-cats-tabs .content-sub-cats-tabs .type-home-serve {
@@ -5195,8 +5201,7 @@ button.fill-face span {
   font-weight: normal;
   font-size: 16px;
   color: #868d9a;
-  padding-top:6px;
-  padding-bottom:6px;
+ 
 }
 
 .content-card .nice-select
@@ -5765,7 +5770,7 @@ textarea {
   border: none;
 }
 .doctor-detail .rate-doctor .card-box {
-  padding-top: 31px;
+  padding-top: 10px;
 }
 .doctor-detail .rate-doctor .card-box .header-card h5 {
   font-weight: 600;
@@ -5782,7 +5787,7 @@ textarea {
   font-weight: normal;
   font-size: 14px;
   color: #868d9a;
-  /* margin-right:50px; */
+  margin-right:50px;
 }
 .doctor-detail .person-comment {
   padding: 40px;

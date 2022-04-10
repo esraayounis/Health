@@ -1,11 +1,18 @@
 // Get Shared Data
 window.onload = function () {
-    document.getElementById('error-discount-text').style.display ="none";
-    document.getElementById('succuss-discount-text').style.display ="none";
-    document.getElementById('delete-code-btn').style.display ="none";
-    document.getElementById('div-discount').style.display ="none";
-    document.getElementById('select-payment-method').style.display ="none";
-    document.getElementById('visa-data').style.display ="none";
+    document.querySelector('.desktop-show #error-discount-text').style.display ="none";
+    document.querySelector('.desktop-show #succuss-discount-text').style.display ="none";
+    document.querySelector('.desktop-show #delete-code-btn').style.display ="none";
+    document.querySelector('.desktop-show #div-discount').style.display ="none";
+    document.querySelector('.desktop-show #select-payment-method').style.display ="none";
+    document.querySelector('.desktop-show #visa-data').style.display ="none";
+ 
+    document.querySelector('.mobile-show #error-discount-text').style.display ="none";
+    document.querySelector('.mobile-show #succuss-discount-text').style.display ="none";
+    document.querySelector('.mobile-show #delete-code-btn').style.display ="none";
+    document.querySelector('.mobile-show #div-discount').style.display ="none";
+    document.querySelector('.mobile-show #select-payment-method').style.display ="none";
+    document.querySelector('.mobile-show #visa-data').style.display ="none";
 
     setTimeout(() => {
     document.querySelector('.value-card').style.display ="none";
@@ -59,7 +66,7 @@ window.onload = function () {
 
     var totalPrice = localStorage.getItem("total-price");
     document.getElementById('totalPrice').innerHTML = totalPrice;
-    debugger
+    
     var card1 =  localStorage.getItem("card-web");
     var card2 =  localStorage.getItem("card-mob");
     document.getElementById('card-data-web').innerHTML = card1;
@@ -104,7 +111,7 @@ window.onload = function () {
         return true;
     }
 
-    function applyDiscount(){  debugger
+    function applyDiscount(){  
         var promoCode = document.getElementById('discount-code').value;
          var price = document.getElementById('totalPrice').innerText;
          var matches = price.match(/(\d+)/);
@@ -112,7 +119,7 @@ window.onload = function () {
         if(promoCode != ""){
         //   if(promoCode == "code1"){ return 10;}
             var discount = 20;
-          debugger
+          
             var total = matches[0] - discount;
             document.getElementById('total').innerHTML = total;
             document.getElementById('succuss-discount-text').style.display ="block";
@@ -139,7 +146,7 @@ window.onload = function () {
 
     function checkRadio()
     {
-        debugger
+        
         var payment = document.querySelectorAll('.payment');
         var paymentType = '';
         for(var i in  payment){
@@ -253,7 +260,7 @@ window.onload = function () {
         var serviceNum =  localStorage.getItem("service-num");
         var serviceName = localStorage.getItem("selected-service");
         
-        if (serviceNum == "3" || serviceName == " زيارة طبيب "){
+        if (serviceNum == "3" || serviceName == "زيارة طبيب"){
           document.querySelector('.check-branch').style.display = "none";
           document.querySelector('.stars-special').style.display = "none";
           

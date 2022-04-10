@@ -25,7 +25,7 @@ const linkedinBtn = document.querySelector(".linkedin-btn");
 const whatsappBtn = document.querySelector(".whatsapp-btn");
 
 function init() {
-  debugger
+  
   var shareCard = document.getElementById('set-card-data-web').innerHTML
   
 

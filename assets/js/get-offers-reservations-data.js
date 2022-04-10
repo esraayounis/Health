@@ -1,6 +1,6 @@
 // Get Shared Data
 window.onload = function () {
-    debugger
+    
     var name = localStorage.getItem("selected-name");
     document.getElementById('selected-name').innerHTML = name;
     
@@ -11,15 +11,22 @@ window.onload = function () {
    var doctorcard2 =  localStorage.getItem("doctor-details-mob");
    document.getElementById('doctor-details-mob').innerHTML = doctorcard2;
    setTimeout(() => {
-    document.getElementById('choose-doctor').style.display ="none";
+    document.querySelector('#doctor-details-web #choose-doctor').style.display ="none";
+    document.querySelector('#doctor-details-mob #choose-doctor').style.display ="none";
    }, 50);
+   document.querySelector('.desktop-show #error-discount-text').style.display ="none";
+   document.querySelector('.desktop-show #succuss-discount-text').style.display ="none";
+   document.querySelector('.desktop-show #delete-code-btn').style.display ="none";
+   document.querySelector('.desktop-show #div-discount').style.display ="none";
+   document.querySelector('.desktop-show #select-payment-method').style.display ="none";
+   document.querySelector('.desktop-show #visa-data').style.display ="none";
 
-   document.getElementById('error-discount-text').style.display ="none";
-   document.getElementById('succuss-discount-text').style.display ="none";
-   document.getElementById('delete-code-btn').style.display ="none";
-   document.getElementById('div-discount').style.display ="none";
-   document.getElementById('select-payment-method').style.display ="none";
-   document.getElementById('visa-data').style.display ="none";
+   document.querySelector('.mobile-show #error-discount-text').style.display ="none";
+   document.querySelector('.mobile-show #succuss-discount-text').style.display ="none";
+   document.querySelector('.mobile-show #delete-code-btn').style.display ="none";
+   document.querySelector('.mobile-show #div-discount').style.display ="none";
+   document.querySelector('.mobile-show #select-payment-method').style.display ="none";
+   document.querySelector('.mobile-show #visa-data').style.display ="none";
 
     var patientName = localStorage.getItem("patientName",patientName)
     var patientEmail = localStorage.getItem("patientEmail",patientEmail)
@@ -75,7 +82,7 @@ window.onload = function () {
         return true;
     }
 
-    function applyDiscount(){  debugger
+    function applyDiscount(){  
         var promoCode = document.getElementById('discount-code').value;
          var price = document.getElementById('totalPrice').innerText;
          var matches = price.match(/(\d+)/);
@@ -83,7 +90,7 @@ window.onload = function () {
         if(promoCode != ""){
         //   if(promoCode == "code1"){ return 10;}
             var discount = 20;
-          debugger
+          
             var total = matches[0] - discount;
             document.getElementById('total').innerHTML = total;
             document.getElementById('succuss-discount-text').style.display ="block";
@@ -110,7 +117,7 @@ window.onload = function () {
 
     function checkRadio()
     {
-        debugger
+        
         var payment = document.querySelectorAll('.payment');
         var paymentType = '';
         for(var i in  payment){
