@@ -1,7 +1,6 @@
 // -----  Share slected card to details page -----
 
 $('.details-btn').click(function(){
-    
     var $target = $(this).parents('.card-detail');
     var selectedCard = $target[0].innerHTML
     localStorage.setItem("detials", selectedCard)
@@ -149,6 +148,7 @@ function shareCardData()
     localStorage.setItem("date",date)
 
     //addReservations();
+    debugger
     var sharedCardWeb = document.getElementById('set-card-data-web').innerHTML;
     localStorage.setItem("card-web", sharedCardWeb);
     var sharedCardMob = document.getElementById('set-card-data-mob').innerHTML;
@@ -431,19 +431,18 @@ $('#save-btn').click(function(){
 });
 
 $('#save-btn-mob').click(function(){ 
-     
-    document.getElementById("save-btn-mob").style.fill = "#0065FF";
+    document.getElementById("save-mob").style.fill = "#0065FF";
     var faviorts =  document.getElementById("save-btn-mob");
     var add = Number(faviorts.getAttribute('data-count') || 0);
     faviorts.setAttribute('data-count', add + 1);
     var faviortCount =  document.querySelector("[data-count]").childElementCount;
     localStorage.setItem("faviorts-count", faviortCount);
     var cardImg =  document.getElementById("mob-detail-img").innerHTML;
-    var title =  document.getElementById("title").innerHTML;
+    var title =  document.querySelector("#mob-detail-title .title-card").innerHTML;
     var cardDetails =  document.getElementById("mob-card-details").innerHTML;
     var price =  document.querySelector('.details-price').innerText;
 
-    var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList')) || [];
+    var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsListMob')) || [];
     console.log(retrievedFaviorts)
     if(retrievedFaviorts == ""){
         faviortsList = [];
@@ -455,7 +454,7 @@ $('#save-btn-mob').click(function(){
             price: price
         }
         faviortsList.push(faviort);
-        localStorage.setItem('faviortsList', JSON.stringify(faviortsList) );
+        localStorage.setItem('faviortsListMob', JSON.stringify(faviortsList) );
     }
 
     else{
@@ -467,14 +466,14 @@ $('#save-btn-mob').click(function(){
     }
     
     retrievedFaviorts.push(faviort);
-    localStorage.setItem('faviortsList', JSON.stringify(retrievedFaviorts));
+    localStorage.setItem('faviortsListMob', JSON.stringify(retrievedFaviorts));
    }
   
 });
 
 // ----- Add to Reservations -----
 $('#cart').click(function(){ 
-
+debugger
     var reservations =  document.getElementById("cart");
     var add = Number(reservations.getAttribute('data-count') || 0);
     reservations.setAttribute('data-count', add + 1);

@@ -807,6 +807,11 @@ article .nice-select2{
     font-size: 14px;
     padding-right: 40px;
 }
+.nice-select .option{
+  padding: 5px 18px!important;
+  text-align: right;
+  color:#868d9a;
+}
 
 .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus{
   font-size: 14px!important;
@@ -960,7 +965,7 @@ textarea:focus-visible{
   display: none;
 }
 .star-widget{
-  padding: 0 40px 15px 0;
+  padding: 0 30px 15px 0;
 }
 
 .person-comment .star-widget
@@ -1121,13 +1126,13 @@ form .btn button{
 
 @media (max-width: 600px) {
   #faviort-price{
-    font-size: 11px;
+    font-size: 11px!important;
+    line-height: 3.5;
   }
   .selected-doctor {
     width: 50%!important;
   }
   #mob-detail-title, .save-icons{
-    margin-top:15px;
     padding:0!important;
   }
   .labs#mob-lab-discount{
@@ -1278,10 +1283,20 @@ form .btn button{
 
   #reservation, #faviorts{
     display: none;
+    margin-top:-35px;
+    z-index: 1;
   }
 
   .main-opacity .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link,  .header-sub-cats-tabs .nav.nav-tabs{
     height:60px;
+  }
+
+  #faviorts .card-detail .title-card{
+    line-height: 3;
+  }
+
+  .mr-t-10{
+    margin-top:-10px;
   }
 
 
@@ -3811,7 +3826,7 @@ body {
 
 
 .card-detail {
-  padding: 20px 0 0 0!important;
+  padding: 20px 0!important;
 }
 .card-detail .title-card {
   font-weight: 600;
@@ -4043,6 +4058,11 @@ body {
   display: flex;
   align-items: center;
   border: none;
+  float: none;
+  text-align: right !important;
+  padding-right: 10px;
+  height: auto;
+  margin-right: 10px
 }
 .nice-select2 .current {
   font-weight: normal;
@@ -6387,7 +6407,6 @@ textarea {
   #cart.zero:before{
     opacity:1;
   }
-
 
 
 

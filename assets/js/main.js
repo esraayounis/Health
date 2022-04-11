@@ -132,7 +132,6 @@
      * Mobile faviorts btn
     */
     $('.open-faviorts').click(function() {
-        
       select('#faviorts').classList.toggle('open-faviorts')
       select('#faviorts').classList.toggle('dis-block')
       select('.favorite path').classList.toggle('fill-active')
@@ -140,10 +139,11 @@
       $('.basic-content').toggleClass('dis-none')
       $('#reservation').toggleClass('dis-none')
     //   Get Faviorts 
+    debugger
     var faviortsCount = localStorage.getItem("faviorts-count");
-    var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList'));
+    var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsListMob'));
     console.log(retrievedFaviorts)
-    if(faviortsCount == "0"){
+    if(retrievedFaviorts == null){
       document.getElementById("faviorts-count").innerText = "0";
       document.querySelector("#faviorts .not-found-data").style.display = "block";
     }
@@ -186,14 +186,13 @@
                             </div>
                         </div>`    
       faviortsContainer.insertAdjacentHTML('beforeend',navlistElement);
-      setTimeout(() => {
-        document.querySelector('#faviort-details .title-card').style.display ="none";
-        document.querySelector('.stars-special').style.display ="none";
-       }, 50);
+     
       }
     }
 
     })
+
+
 
      /*
      * Mobile offers btn

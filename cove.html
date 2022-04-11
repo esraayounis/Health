@@ -812,6 +812,68 @@
                 </div>
             </div>
         </section>
+         <!-- ====== Profile in Mobile ====== -->
+         <div class="card-box mobile-show" id="reservation">
+            <div class="content-main-cats-tabs">
+            <!-- #Content mian-cats -->
+            <div class="tab-content" id="nav-tabContent-main-cats">
+                <!-- item-1 cov -->
+                <div class="tab-pane fade show active" id="nav-reservations" role="tabpanel" aria-labelledby="nav-reservations-tab">
+                    <div class="tab-pane fade active show" id="nav-examinations-con" role="tabpanel" aria-labelledby="nav-examinations-tab">
+                        <div class="header-sub-cats-tabs ">
+                            <div class="nav nav-tabs" id="nav-reservations" role="tablist">
+                                <div class="nav-link py-4 active col" id="nav-current-tab" data-bs-toggle="tab" data-bs-target="#nav-current" type="button" role="tab" aria-controls="nav-current" aria-selected="true">
+                                    <div class="mar-top-15 txt-center">
+                                    <span id="current-reserv-count"></span><br><span> الحجوزات الحالية </span>
+                                    </div>
+                                </div>
+                                <div class="nav-link py-4 col" id="nav-previous-tab" data-bs-toggle="tab" data-bs-target="#nav-previous" type="button" role="tab" aria-controls="nav-previous" aria-selected="false">
+                                    <div class="mar-top-15 txt-center">
+                                    <span>0</span><br><span>الحجوزات السابقة</span>
+                                    </div>
+                                </div>
+                                <div class="nav-link py-4 col" id="nav-cancelled-tab" data-bs-toggle="tab" data-bs-target="#nav-cancelled" type="button" role="tab" aria-controls="nav-cancelled" aria-selected="false">
+                                    <div class="mar-top-15 txt-center">
+                                    <span>0</span><br><span>الحجوزات الملغية</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-sub-cats-tabs">
+                            <div class="tab-content" id="nav-tabContent-sub-cats">
+                                <div class="tab-pane fade py-4 px-1 show active" id="nav-current" role="tabpanel" aria-labelledby="nav-current-tab">
+                                    <div class="container-fluid not-found-data txt-center">
+                                        <img src="assets/images/nothing.png" alt="">
+                                    </div>
+                                    <div class="container-fluid" id="current-reservation-list">
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade py-4 px-1" id="nav-previous" role="tabpanel" aria-labelledby="nav-previous-tab">
+                                    <div class="container-fluid not-found-data txt-center">
+                                        <img src="assets/images/nothing.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade py-4 px-1" id="nav-cancelled" role="tabpanel" aria-labelledby="nav-cancelled-tab">
+                                    <div class="container-fluid not-found-data txt-center">
+                                        <img src="assets/images/nothing.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+         <div class="box-shadow card-box mobile-show" id="faviorts">
+            <h6  class="faviorts"><div id="faviorts-count"></div><div class="mr-t-10">المفضلة</div></h6>
+            <div class="container-fluid not-found-data">
+                <img src="assets/images/nothing.png" alt="">
+            </div>
+            <div class="container-fluid faviorts-container-mob">
+            </div>
+        </div>
 
     </main>
     <!-- End #main -->
@@ -911,7 +973,7 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="assets/js/filter.js"></script>
+   <script src="assets/js/filter.js"></script>
     <script src="assets/vendor/Jquery-Pagination/jquery.twbsPagination.js"></script>
     <script src="assets/js/paging.js"></script>
     <script src="assets/js/paging-mob.js"></script>

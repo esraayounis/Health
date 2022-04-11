@@ -1,5 +1,6 @@
 // Get Shared Data
 window.onload = function () {
+    debugger
     document.querySelector('.desktop-show #error-discount-text').style.display ="none";
     document.querySelector('.desktop-show #succuss-discount-text').style.display ="none";
     document.querySelector('.desktop-show #delete-code-btn').style.display ="none";
@@ -16,7 +17,7 @@ window.onload = function () {
 
     setTimeout(() => {
     document.querySelector('.value-card').style.display ="none";
-
+    document.querySelector('.save-icons').style.display ="none";
     var selectedService =  localStorage.getItem("service-num");
     if(selectedService == "2" || selectedService == "5"){
         var getSelectedBranch = localStorage.getItem("selected-branch");
@@ -24,7 +25,7 @@ window.onload = function () {
         var selectedBranch= document.getElementById('address-branch');
         var branch = `<p>${getSelectedBranch}</p>`;
         selectedBranch.insertAdjacentHTML('beforeend',branch)
-    }
+    } 
 
     else if(selectedService == "4"){
         var getSelectedBranch = localStorage.getItem("selected-branch");

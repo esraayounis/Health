@@ -1,5 +1,4 @@
 window.onload = function () {
-    
     var service = localStorage.getItem("selected-service");
     document.getElementById('selected-service').innerHTML = service;
 

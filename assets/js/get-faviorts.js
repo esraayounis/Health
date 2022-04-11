@@ -1,10 +1,11 @@
 
 window.onload = function () {
           // Faviorts
+          debugger
           var faviortsCount = localStorage.getItem("faviorts-count");
           var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList'));
           console.log(retrievedFaviorts)
-          if(faviortsCount == "0"){
+          if(retrievedFaviorts == null){
             document.getElementById("faviorts-count").innerText = "0";
             document.querySelector("#faviorts .not-found-data").style.display = "block";
           }
@@ -29,8 +30,9 @@ window.onload = function () {
                             <p class="mb-1">الإجمالي</p>
                             <h5 id="faviort-price"> ${retrievedFaviorts[i].price}</h5>
                         </div>
-                        <button type="button" class="btn" id="unsave">مسح</button>
+                        
                     </div>
+                    <button type="button" class="btn" onclick="deleteItem(this)">مسح</button>
                 </div>
             </div>`    
             faviortsContainer.insertAdjacentHTML('beforeend',navlistElement);
@@ -38,21 +40,21 @@ window.onload = function () {
         }
 }
 
-$('#unsave').click(function(ev){ 
-        
-    var btn = ev.target
-    var cardBody = btn.parentElement
-    var card = cardBody.parentElement
 
-    card.parentElement.removeChild(card)
 
-    if (card.parentElement  == null){
-        document.getElementById("faviorts-count").innerText = "0";
-        document.querySelector("#faviorts .faviorts-container").style.display = "none";
-        document.querySelector("#faviorts .not-found-data").style.display = "block";
-    }
+function deleteItem(elem){ 
+    debugger  
+    var parent = elem.parentNode;
+    var grand_father = parent.parentNode;
+    grand_father.removeChild(parent);
+    
+//     if(grand_father.innerText == ""){
+//       document.getElementById("faviorts-count").innerText = "0";
+//       document.querySelector("#faviorts .faviorts-container").style.display = "none";
+//       document.querySelector("#faviorts .not-found-data").style.display = "block";
+//   }
 
-    else{
-        document.querySelector("#faviorts .not-found-data").style.display = "none";
-    }
-})
+//   else{
+//       document.querySelector("#faviorts .not-found-data").style.display = "none";
+//   }
+}
