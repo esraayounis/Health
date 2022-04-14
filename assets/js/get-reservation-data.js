@@ -1,6 +1,5 @@
 // Get Shared Data
 window.onload = function () {
-    debugger
     document.querySelector('.desktop-show #error-discount-text').style.display ="none";
     document.querySelector('.desktop-show #succuss-discount-text').style.display ="none";
     document.querySelector('.desktop-show #delete-code-btn').style.display ="none";
@@ -16,6 +15,7 @@ window.onload = function () {
     document.querySelector('.mobile-show #visa-data').style.display ="none";
 
     setTimeout(() => {
+        debugger
     document.querySelector('.value-card').style.display ="none";
     document.querySelector('.save-icons').style.display ="none";
     var selectedService =  localStorage.getItem("service-num");
@@ -25,6 +25,9 @@ window.onload = function () {
         var selectedBranch= document.getElementById('address-branch');
         var branch = `<p>${getSelectedBranch}</p>`;
         selectedBranch.insertAdjacentHTML('beforeend',branch)
+        selectedPeriod = null;
+        localStorage.setItem("branch", getSelectedBranch);
+        localStorage.setItem("period", selectedPeriod);
     } 
 
     else if(selectedService == "4"){
@@ -39,10 +42,15 @@ window.onload = function () {
         var selectedPeriod = document.getElementById('period');
         var period = `<p>${getSelectedPeriod}</p>`;
         selectedPeriod.insertAdjacentHTML('beforeend',period)
+        localStorage.setItem("branch", getSelectedBranch);
+        localStorage.setItem("period", getSelectedPeriod);
     }
 
     else{
-        //do nothing
+        selectedBranch = "";
+        selectedPeriod = "";
+        localStorage.setItem("branch", selectedBranch);
+        localStorage.setItem("period", selectedPeriod);
     }
     }, 50);
 
@@ -174,12 +182,17 @@ window.onload = function () {
         }
 
     
-       
         var image = document.querySelector('.avatar').innerHTML;
 
         var title = document.querySelector('.title-card').innerHTML;
-
-        var address = document.querySelector('.address').innerHTML;
+        var serviceNum =  localStorage.getItem("service-num");
+        if(serviceNum == "4"){
+            var address = "";
+        }
+        else{
+            var address = document.querySelector('.address').innerHTML;
+        }
+      
 
         var reservationDate = document.getElementById('date').innerHTML;
 
@@ -193,85 +206,46 @@ window.onload = function () {
             reservationDiscount = "لا يوجد"
         }
 
+        var selectedBranch = localStorage.getItem("branch");
+        var selectedPeriod = localStorage.getItem("period");
         var paymentMethod =  localStorage.getItem("payment-method");
-         var reservationList =  document.querySelector('.reservationList');
-         const elemObj = `<div class="card-box p-2 py-4 card-detail">
-            <div class="row">
-             <div class="col-lg-3 p-lg-0">
-                 <div class="avatar text-center">${image}</div>
-             </div>
-             <div class="col-lg-6 p-lg-0 detail">
-                 <h6 class="title-card txt-md"> ${title}</h6>
-              
-                 <div class="d-flex align-items-center">
-                  <p><span class="reserve-title" >العنوان:</span></p>
-                  <p >${address}</p>
-                 </div>
-                
-                <div class="align-items-center check-branch">
-                    <p><span class="reserve-title">الفرع:</span></p>
-                    <p >${branch}</p>
-                </div>
-
-                <div class="d-flex align-items-center">
-                    <p><span class="reserve-title">التاريخ:</span></p>
-                    <p >${reservationDate}</p>
-                </div>
-
-                <div class="d-flex align-items-center">
-                  <p><span class="reserve-title">الخصم:</span></p>
-                  <p>${reservationDiscount}</p>
-                </div>
-
-                <div class="d-flex align-items-center">
-                    <p><span class="reserve-title">الأجمالي:</span></p>
-                    <p >${reservationTotalPrice}</p>
-                </div>
-             </div>
-             <div class="col-lg-3">
-             <div class="txt-payment paid">
-             </div>
-             
-              <span class="txt-payment not-paid"></span>
-             </div>
-            </div>
-         </div>`
-         reservationList.insertAdjacentHTML('beforeend',elemObj);
-         console.log(reservationList)
-    
-        if(paymentMethod == "الدفع عند الاستلام"){
-            var divUnPaid =  document.querySelector('.paid');
-            var unpaid =  `${paymentMethod}`
-            divUnPaid.insertAdjacentHTML('beforeend',unpaid);
+     
+debugger
+        var retrievedReservations = JSON.parse(localStorage.getItem('reservationList')) || [];
+        console.log(retrievedReservations)
+        if(retrievedReservations == ""){
+            reservationList = [];
+            let reservations = {
+                cardImg: image,
+                title: title,
+                address: address,
+                date: reservationDate,
+                discount: reservationDiscount,
+                price: reservationTotalPrice,
+                paymentMethod:paymentMethod,
+                branch: selectedBranch,
+                period: selectedPeriod
+            }
+            reservationList.push(reservations);
+            localStorage.setItem('reservationList', JSON.stringify(reservationList) );
         }
-
-        else{
     
-            var divPaid =  document.querySelector('.paid');
-            var paid =  `<label class="">
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-                ${paymentMethod}
-                </label>`
-            divPaid.insertAdjacentHTML('beforeend',paid);
-             
+        else{
+        let reservations = {
+            cardImg: image,
+            title: title,
+            address: address,
+            date: reservationDate,
+            discount: reservationDiscount,
+            price: reservationTotalPrice,
+            paymentMethod:paymentMethod,
+            branch: selectedBranch,
+            period: selectedPeriod
         }
         
-
-        var serviceNum =  localStorage.getItem("service-num");
-        var serviceName = localStorage.getItem("selected-service");
-        
-        if (serviceNum == "3" || serviceName == "زيارة طبيب"){
-          document.querySelector('.check-branch').style.display = "none";
-          document.querySelector('.stars-special').style.display = "none";
-          
-        }
-        else{
-            document.querySelector('.check-branch').style.display = "flex";
-            var branch = document.querySelector('.selected-address .current').innerHTML;
-        }
-
-         localStorage.setItem('reservationPage',reservationList.innerHTML);
+        retrievedReservations.push(reservations);
+        localStorage.setItem('reservationList', JSON.stringify(retrievedReservations));
+       }
 
         document.querySelector('.cc-number').oninput = () =>{
             var ccNumber = document.querySelector('.cc-number').value;

@@ -4062,7 +4062,7 @@ body {
   text-align: right !important;
   padding-right: 10px;
   height: auto;
-  margin-right: 10px
+  /* margin-right: 10px */
 }
 .nice-select2 .current {
   font-weight: normal;

@@ -385,7 +385,7 @@
                                         <div class="container-fluid not-found-data txt-center">
                                             <img src="assets/images/nothing.png" alt="">
                                         </div>
-                                        <div class="container-fluid" id="current-reservation-list">
+                                        <div class="container-fluid current-reservation"  id="current-reservation-list">
                                            
                                         </div>
                                     </div>
@@ -473,7 +473,7 @@
         }
     }
 
-
+debugger
     // Active page
     var type = window.location.search.substring(1);
     if(type == "type=reservations"){
@@ -483,20 +483,80 @@
         $("#my-info" ).hide();
         $("#reservation" ).show();
         $("#faviorts" ).hide();
-        
-        var reservationCount = localStorage.getItem("reservation-count");
-        if(reservationCount == "0"){
+
+        var retrievedReservations = JSON.parse(localStorage.getItem('reservationList'));
+        console.log(retrievedReservations)
+        if(retrievedReservations == null){
             document.getElementById("current-reserv-count").innerText = "0";
             document.querySelector("#nav-current .not-found-data").style.display = "block";
         }
-  
+
         else{
-            document.getElementById("current-reserv-count").innerText = reservationCount;
             document.querySelector("#nav-current .not-found-data").style.display = "none";
+        
+            for (i = 0; i < retrievedReservations.length; i++){
+                document.getElementById("current-reserv-count").innerText = i+1;
+                const currentReservationsList = document.querySelector('.current-reservation');
+                const elemObj = `<div class="card-box p-2 py-4 card-detail">
+                <div class="row">
+                    <div class="col-lg-3 p-lg-0">
+                        <div class="avatar text-center">${retrievedReservations[i].cardImg}</div>
+                    </div>
+                    <div class="col-lg-6 p-lg-0 detail">
+                        <h6 class="title-card txt-md"> ${retrievedReservations[i].title}</h6>
+                    
+                        <div class="d-flex align-items-center address">
+                        <p><span class="reserve-title" >العنوان:</span></p>
+                        <p >${retrievedReservations[i].address}</p>
+                        </div>
+                    
+                    <div class="d-flex align-items-center check-branch">
+                        <p><span class="reserve-title">الفرع:</span></p>
+                        <p class="branch">${retrievedReservations[i].branch}</p>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <p><span class="reserve-title">التاريخ:</span></p>
+                        <p >${retrievedReservations[i].date}</p>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <p><span class="reserve-title">الخصم:</span></p>
+                        <p>${retrievedReservations[i].discount}</p>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <p><span class="reserve-title">الأجمالي:</span></p>
+                        <p >${retrievedReservations[i].price}</p>
+                    </div>
+                    <div class="col-lg-3">
+                    
+                    <span class="txt-payment not-paid"> ${retrievedReservations[i].paymentMethod}</span>
+                    </div>
+                </div>
+                </div>`
+                currentReservationsList.insertAdjacentHTML('beforeend',elemObj);
+                console.log(currentReservationsList)
+                if(retrievedReservations[i].address == ""){
+                    document.querySelector('.address').style.display = "none";
+                }
+                
+            
+                var serviceNum =  localStorage.getItem("service-num");
+                var serviceName = localStorage.getItem("selected-service");
+                
+                if (serviceNum == "3" || serviceName == "زيارة طبيب"){
+                    document.querySelector('.check-branch').style.display = "none";
+                    document.querySelector('.stars-special').style.display = "none";
+                    
+                }
+                else{
+                    document.querySelector('.check-branch').style.display = "flex";
+                   
+                }
+            }
         }
-        var reservations = localStorage.getItem('reservationPage');
-        console.log(reservations)
-        document.getElementById('current-reservation-list').innerHTML = reservations;
+            
     }
     
     else{
@@ -512,19 +572,78 @@
         $("#my-info" ).hide();
         $("#reservation" ).show();
         $("#faviorts" ).hide();
-        var reservationCount = localStorage.getItem("reservation-count");
-        if(reservationCount == "0"){
+        var retrievedReservations = JSON.parse(localStorage.getItem('reservationList'));
+        console.log(retrievedReservations)
+        if(retrievedReservations == null){
             document.getElementById("current-reserv-count").innerText = "0";
             document.querySelector("#nav-current .not-found-data").style.display = "block";
         }
-  
+
         else{
-            document.getElementById("current-reserv-count").innerText = reservationCount;
             document.querySelector("#nav-current .not-found-data").style.display = "none";
+            var paymentMethod =  localStorage.getItem("payment-method");
+            for (i = 0; i < retrievedReservations.length; i++){
+                document.getElementById("current-reserv-count").innerText = i+1;
+                const currentReservationsList = document.querySelector('.current-reservation');
+                const elemObj = `<div class="card-box p-2 py-4 card-detail">
+                <div class="row">
+                    <div class="col-lg-3 p-lg-0">
+                        <div class="avatar text-center">${retrievedReservations[i].cardImg}</div>
+                    </div>
+                    <div class="col-lg-6 p-lg-0 detail">
+                        <h6 class="title-card txt-md"> ${retrievedReservations[i].title}</h6>
+                    
+                        <div class="d-flex align-items-center address">
+                        <p><span class="reserve-title" >العنوان:</span></p>
+                        <p >${retrievedReservations[i].address}</p>
+                        </div>
+                    
+                        <div class="d-flex align-items-center check-branch">
+                        <p><span class="reserve-title">الفرع:</span></p>
+                        <p class="branch">${retrievedReservations[i].branch}</p>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <p><span class="reserve-title">التاريخ:</span></p>
+                        <p >${retrievedReservations[i].date}</p>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <p><span class="reserve-title">الخصم:</span></p>
+                        <p>${retrievedReservations[i].discount}</p>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <p><span class="reserve-title">الأجمالي:</span></p>
+                        <p >${retrievedReservations[i].price}</p>
+                    </div>
+                    <div class="col-lg-3">
+                       <span class="txt-payment not-paid"> ${retrievedReservations[i].paymentMethod}</span>
+                    </div>
+                </div>
+                </div>`
+                currentReservationsList.insertAdjacentHTML('beforeend',elemObj);
+                console.log(currentReservationsList)
+
+                if(retrievedReservations[i].address == ""){
+                    document.querySelector('.address').style.display = "none";
+                }
+               
+            
+                var serviceNum =  localStorage.getItem("service-num");
+                var serviceName = localStorage.getItem("selected-service");
+                
+                if (serviceNum == "3" || serviceName == "زيارة طبيب"){
+                    document.querySelector('.check-branch').style.display = "none";
+                    document.querySelector('.stars-special').style.display = "none";
+                    
+                }
+                else{
+                    document.querySelector('.check-branch').style.display = "flex";
+                   
+                }
+            }
         }
-        var reservations = localStorage.getItem('reservationPage');
-        console.log(reservations)
-        document.getElementById('current-reservation-list').innerHTML = reservations;
     }
 
 

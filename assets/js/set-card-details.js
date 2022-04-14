@@ -418,6 +418,7 @@ $('#save-btn').click(function(){
 
     else{
     let faviort = {
+        faviortCount:faviortCount,
         cardImg: cardImg,
         cardDetails: cardDetails,
         price: price
@@ -427,7 +428,6 @@ $('#save-btn').click(function(){
     localStorage.setItem('faviortsList', JSON.stringify(retrievedFaviorts));
    }
    
-
 });
 
 $('#save-btn-mob').click(function(){ 
@@ -473,15 +473,7 @@ $('#save-btn-mob').click(function(){
 
 // ----- Add to Reservations -----
 $('#cart').click(function(){ 
-debugger
-    var reservations =  document.getElementById("cart");
-    var add = Number(reservations.getAttribute('data-count') || 0);
-    reservations.setAttribute('data-count', add + 1);
-    var reservationCount =  document.querySelector("[data-count]").childElementCount;
-    localStorage.setItem("reservation-count", reservationCount);
-    localStorage.getItem('reservationPage');
     window.location.href = "profile-info.html?type=reservations"
-  
 });
 
 
