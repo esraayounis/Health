@@ -1001,9 +1001,6 @@ form header{
   transition: all 0.2s ease;
 }
 
-form .textarea{
-  padding:0 40px 0 0;
-}
 
 form .textarea textarea{
   outline: none;
@@ -1125,9 +1122,34 @@ form .btn button{
 }
 
 @media (max-width: 600px) {
+  #hero #faviorts p, #hero #reservation p{
+    margin: 0 !important;
+  }
+  #hero #faviorts .card-box, #hero #reservation .card-box{
+    top: 0 !important;
+  }
+
+  #faviorts .detail{
+    padding-right:2rem!important;
+  } 
+  #reservation .detail{
+    padding-right:1.5rem!important;
+  } 
   #faviort-price{
     font-size: 11px!important;
     line-height: 3.5;
+  }
+
+  #reservation .reserve-title{
+    font-size:13px!important;
+  }
+
+  #reservation-page .content-card{
+    padding-right:0!important;
+  }
+
+  #selected-name{
+    font-size:14px;
   }
   .selected-doctor {
     width: 50%!important;
@@ -1318,6 +1340,11 @@ form .btn button{
 
   #hero .nice-select2 svg{
     top:5px;
+  }
+
+  
+  #hero #faviorts .nice-select2 svg{
+    top: auto !important;;
   }
 
   .fill-active{
@@ -4639,7 +4666,7 @@ body {
 }
 
 .book-form .iti--allow-dropdown .iti__flag-container{
-  right:132%;
+  right:100%;
   left:unset;
 }
 .choose-time{
@@ -5926,6 +5953,12 @@ textarea {
     padding-right: 3rem;
     margin-bottom: 1rem;
   }
+  #faviorts .detail{
+    padding-right:2rem!important;
+  } 
+  #reservation .detail{
+    padding-right:1.5rem!important;
+  } 
 }
 
 @media (max-width: 992px) {

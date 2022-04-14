@@ -125,6 +125,72 @@
         $('#home').toggleClass('dis-none')
         $('.basic-content').toggleClass('dis-none')
         $('#faviorts').toggleClass('dis-none')
+        var retrievedReservations = JSON.parse(localStorage.getItem('reservationList'));
+        console.log(retrievedReservations)
+        if(retrievedReservations == null){
+            document.getElementById("current-reserv-count").innerText = "0";
+            document.querySelector("#nav-current .not-found-data").style.display = "block";
+        }
+
+        else{
+            document.querySelector("#nav-current .not-found-data").style.display = "none";
+            var paymentMethod =  localStorage.getItem("payment-method");
+            for (var i = 0; i < retrievedReservations.length; i++){
+                document.getElementById("current-reserv-count").innerText = i+1;
+                const currentReservationsList = document.querySelector('.current-reservation-list-mob');
+                const elemObj = `<div class="card-box p-2 py-4 card-detail">
+                <div class="row">
+                    <div class="col-lg-2">
+                       <div class="row">
+                          <div class="col-3 avatar mar-top-15 text-center">${retrievedReservations[i].cardImg}</div>
+                          <div class="col-9">
+                            <div class="d-flex"> <h6 class="title-card txt-md"> ${retrievedReservations[i].title}</h6></div>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-lg-7 detail mt-2 ">
+                    
+                        <div class="d-flex align-items-center address">
+                          <p><span class="reserve-title" >العنوان:</span></p>
+                          <p >${retrievedReservations[i].address}</p>
+                        </div>
+                    
+                        <div class="d-flex align-items-center check-branch">
+                          <p><span class="reserve-title">الفرع:</span></p>
+                          <p class="branch">${retrievedReservations[i].branch}</p>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <p><span class="reserve-title">التاريخ:</span></p>
+                            <p >${retrievedReservations[i].date}</p>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <p><span class="reserve-title">الخصم:</span></p>
+                            <p>${retrievedReservations[i].discount}</p>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <p><span class="reserve-title">الأجمالي:</span></p>
+                            <p >${retrievedReservations[i].price}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                       <span class="txt-payment not-paid"> ${retrievedReservations[i].paymentMethod}</span>
+                    </div>
+                  </div>
+                </div>`
+                currentReservationsList.insertAdjacentHTML('beforeend',elemObj);
+                console.log(currentReservationsList)
+
+                if(retrievedReservations[i].address == ""){
+                    document.querySelector('.address').style.display = "none";
+                }
+               
+            
+              
+            }
+        }
 
     })
 
@@ -139,8 +205,7 @@
       $('.basic-content').toggleClass('dis-none')
       $('#reservation').toggleClass('dis-none')
     //   Get Faviorts 
-    debugger
-    var faviortsCount = localStorage.getItem("faviorts-count");
+    
     var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsListMob'));
     console.log(retrievedFaviorts)
     if(retrievedFaviorts == null){
@@ -170,7 +235,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-7  detail mt-3" id="faviort-details">
+                                <div class="col-lg-7  detail mt-2" id="faviort-details">
                                  ${retrievedFaviorts[i].cardDetails}
                                 </div>
                                 <div class="col-lg-3 d-flex value-card react-icon text-center">
@@ -180,19 +245,32 @@
                                             <p class="">الإجمالي</p>
                                             <h5 id="faviort-price">${retrievedFaviorts[i].price}</h5>
                                         </div>
-                                        <button type="button" class="btn" id="unsave">مسح</button>
+                                        <button type="button" class="btn" onclick="deleteFaviortsItem(this)">مسح</button>
                                     </div>
                                 </div>
                             </div>
                         </div>`    
       faviortsContainer.insertAdjacentHTML('beforeend',navlistElement);
-     
       }
     }
-
     })
 
-
+    function deleteFaviortsItem(elem){ 
+          
+        var parent = elem.parentNode;
+        var grand_father = parent.parentNode;
+        grand_father.removeChild(parent);
+        
+        //     if(grand_father.innerText == ""){
+        //       document.getElementById("faviorts-count").innerText = "0";
+        //       document.querySelector("#faviorts .faviorts-container").style.display = "none";
+        //       document.querySelector("#faviorts .not-found-data").style.display = "block";
+        //   }
+        
+        //   else{
+        //       document.querySelector("#faviorts .not-found-data").style.display = "none";
+        //   }
+    }
 
      /*
      * Mobile offers btn

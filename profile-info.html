@@ -385,7 +385,7 @@
                                         <div class="container-fluid not-found-data txt-center">
                                             <img src="assets/images/nothing.png" alt="">
                                         </div>
-                                        <div class="container-fluid current-reservation"  id="current-reservation-list">
+                                        <div class="container-fluid current-reservation-list" >
                                            
                                         </div>
                                     </div>
@@ -473,7 +473,7 @@
         }
     }
 
-debugger
+
     // Active page
     var type = window.location.search.substring(1);
     if(type == "type=reservations"){
@@ -496,7 +496,7 @@ debugger
         
             for (i = 0; i < retrievedReservations.length; i++){
                 document.getElementById("current-reserv-count").innerText = i+1;
-                const currentReservationsList = document.querySelector('.current-reservation');
+                const currentReservationsList = document.querySelector('.current-reservation-list');
                 const elemObj = `<div class="card-box p-2 py-4 card-detail">
                 <div class="row">
                     <div class="col-lg-3 p-lg-0">
@@ -545,15 +545,17 @@ debugger
                 var serviceNum =  localStorage.getItem("service-num");
                 var serviceName = localStorage.getItem("selected-service");
                 
+                
                 if (serviceNum == "3" || serviceName == "زيارة طبيب"){
-                    document.querySelector('.check-branch').style.display = "none";
-                    document.querySelector('.stars-special').style.display = "none";
+                    document.querySelector('.check-branch').style.display = "none!important";
+                    document.querySelector('.stars-special').style.display = "none!important";
                     
                 }
                 else{
                     document.querySelector('.check-branch').style.display = "flex";
-                   
+                
                 }
+                
             }
         }
             

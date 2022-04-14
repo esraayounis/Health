@@ -15,7 +15,7 @@ window.onload = function () {
     document.querySelector('.mobile-show #visa-data').style.display ="none";
 
     setTimeout(() => {
-        debugger
+        
     document.querySelector('.value-card').style.display ="none";
     document.querySelector('.save-icons').style.display ="none";
     var selectedService =  localStorage.getItem("service-num");
@@ -192,6 +192,15 @@ window.onload = function () {
         else{
             var address = document.querySelector('.address').innerHTML;
         }
+
+        var serviceName = localStorage.getItem("selected-service");
+        // 
+        // if (serviceNum == "3" || serviceName == "زيارة طبيب"){
+
+        //     document.querySelector('.stars-special').style.display = "none"; 
+        // }
+        
+    
       
 
         var reservationDate = document.getElementById('date').innerHTML;
@@ -210,7 +219,7 @@ window.onload = function () {
         var selectedPeriod = localStorage.getItem("period");
         var paymentMethod =  localStorage.getItem("payment-method");
      
-debugger
+
         var retrievedReservations = JSON.parse(localStorage.getItem('reservationList')) || [];
         console.log(retrievedReservations)
         if(retrievedReservations == ""){

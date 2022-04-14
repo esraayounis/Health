@@ -148,7 +148,7 @@ function shareCardData()
     localStorage.setItem("date",date)
 
     //addReservations();
-    debugger
+    
     var sharedCardWeb = document.getElementById('set-card-data-web').innerHTML;
     localStorage.setItem("card-web", sharedCardWeb);
     var sharedCardMob = document.getElementById('set-card-data-mob').innerHTML;

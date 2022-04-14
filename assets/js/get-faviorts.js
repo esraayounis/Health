@@ -1,7 +1,7 @@
 
 window.onload = function () {
           // Faviorts
-    debugger
+    
     var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList'));
     console.log(retrievedFaviorts)
     if(retrievedFaviorts == null){
@@ -31,7 +31,7 @@ window.onload = function () {
                     </div>
                     
                 </div>
-                <button type="button" class="btn" onclick="deleteItem(this)">مسح</button>
+                <button type="button" class="btn" onclick="deleteFaviortsItem(this)">مسح</button>
             </div>
         </div>`    
         faviortsContainer.insertAdjacentHTML('beforeend',navlistElement);
@@ -41,8 +41,8 @@ window.onload = function () {
 
 
 
-function deleteItem(elem){ 
-    debugger  
+function deleteFaviortsItem(elem){ 
+      
     var parent = elem.parentNode;
     var grand_father = parent.parentNode;
     grand_father.removeChild(parent);
