@@ -25,7 +25,7 @@ window.onload = function () {
    document.querySelector('.mobile-show #succuss-discount-text').style.display ="none";
    document.querySelector('.mobile-show #delete-code-btn').style.display ="none";
    document.querySelector('.mobile-show #div-discount').style.display ="none";
-   document.querySelector('.mobile-show #select-payment-method').style.display ="none";
+   document.querySelector('.mobile-show #select-payment-method-mob').style.display ="none";
    document.querySelector('.mobile-show #visa-data').style.display ="none";
 
     var patientName = localStorage.getItem("patientName",patientName)
@@ -134,14 +134,30 @@ window.onload = function () {
     function buyNow(){
         
         var payment = checkRadio();
-        if (payment == false)
-        {
-            document.getElementById('select-payment-method').style.display ="block";
-            return false;
+        var media_query = 'screen and (max-width:600px)';
+        var matched = window.matchMedia(media_query).matches;
+        if(matched){
+            if (payment == false)
+            {
+                document.getElementById('select-payment-method-mob').style.display ="block";
+                return false;
+            }
+            else{
+                document.getElementById('select-payment-method-mob').style.display ="none";
+            }
         }
+
         else{
-            document.getElementById('select-payment-method').style.display ="none";
+            if (payment == false)
+            {
+                document.getElementById('select-payment-method').style.display ="block";
+                return false;
+            }
+            else{
+                document.getElementById('select-payment-method').style.display ="none";
+            }
         }
+
 
     
        
@@ -230,8 +246,7 @@ window.onload = function () {
             document.querySelector('.cc-number').innerText = ccNumber;
         }
     
-        var media_query = 'screen and (max-width:600px)';
-        var matched = window.matchMedia(media_query).matches;
+       
         if(matched){
             document.querySelector('.cc-number-mob').oninput = () =>{
                 var ccNumber = document.querySelector('.cc-number-mob').value;
@@ -264,7 +279,11 @@ window.onload = function () {
         }
 
         else{
-            document.getElementById('select-payment-method').style.display ="none";
+            if(matched){
+            document.getElementById('select-payment-method-mob').style.display ="none";}
+            else{
+                document.getElementById('select-payment-method').style.display ="none";}
+            }
             document.getElementById('visa-data').style.display ="none";
         }
 

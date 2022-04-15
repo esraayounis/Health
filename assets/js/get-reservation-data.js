@@ -11,7 +11,7 @@ window.onload = function () {
     document.querySelector('.mobile-show #succuss-discount-text').style.display ="none";
     document.querySelector('.mobile-show #delete-code-btn').style.display ="none";
     document.querySelector('.mobile-show #div-discount').style.display ="none";
-    document.querySelector('.mobile-show #select-payment-method').style.display ="none";
+    document.querySelector('.mobile-show #select-payment-method-mob').style.display ="none";
     document.querySelector('.mobile-show #visa-data').style.display ="none";
 
     setTimeout(() => {
@@ -170,21 +170,36 @@ window.onload = function () {
 
 
     function buyNow(){
-        
+        debugger
         var payment = checkRadio();
-        if (payment == false)
-        {
-            document.getElementById('select-payment-method').style.display ="block";
-            return false;
+        var media_query = 'screen and (max-width:600px)';
+        var matched = window.matchMedia(media_query).matches;
+        if(matched){
+            if (payment == false)
+            {
+                document.getElementById('select-payment-method-mob').style.display ="block";
+                return false;
+            }
+            else{
+                document.getElementById('select-payment-method-mob').style.display ="none";
+            }
         }
+
         else{
-            document.getElementById('select-payment-method').style.display ="none";
+            if (payment == false)
+            {
+                document.getElementById('select-payment-method').style.display ="block";
+                return false;
+            }
+            else{
+                document.getElementById('select-payment-method').style.display ="none";
+            }
         }
 
     
-        var image = document.querySelector('.avatar').innerHTML;
+        var image = document.getElementById('mob-detail-img').innerHTML;
 
-        var title = document.querySelector('.title-card').innerHTML;
+        var title = document.querySelector('#mob-detail-title .title-card').innerHTML;
         var serviceNum =  localStorage.getItem("service-num");
         if(serviceNum == "4"){
             var address = "";
@@ -193,15 +208,7 @@ window.onload = function () {
             var address = document.querySelector('.address').innerHTML;
         }
 
-        var serviceName = localStorage.getItem("selected-service");
-        // 
-        // if (serviceNum == "3" || serviceName == "زيارة طبيب"){
-
-        //     document.querySelector('.stars-special').style.display = "none"; 
-        // }
-        
     
-      
 
         var reservationDate = document.getElementById('date').innerHTML;
 
@@ -219,7 +226,7 @@ window.onload = function () {
         var selectedPeriod = localStorage.getItem("period");
         var paymentMethod =  localStorage.getItem("payment-method");
      
-
+debugger
         var retrievedReservations = JSON.parse(localStorage.getItem('reservationList')) || [];
         console.log(retrievedReservations)
         if(retrievedReservations == ""){
@@ -261,8 +268,6 @@ window.onload = function () {
             document.querySelector('.cc-number').innerText = ccNumber;
         }
     
-        var media_query = 'screen and (max-width:600px)';
-        var matched = window.matchMedia(media_query).matches;
         if(matched){
             document.querySelector('.cc-number-mob').oninput = () =>{
                 var ccNumber = document.querySelector('.cc-number-mob').value;
@@ -295,7 +300,11 @@ window.onload = function () {
         }
 
         else{
-            document.getElementById('select-payment-method').style.display ="none";
+            if(matched){
+            document.getElementById('select-payment-method-mob').style.display ="none";}
+            else{
+                document.getElementById('select-payment-method').style.display ="none";
+            }
             document.getElementById('visa-data').style.display ="none";
         }
 

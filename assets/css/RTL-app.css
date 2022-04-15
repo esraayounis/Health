@@ -1128,6 +1128,9 @@ form .btn button{
   #hero #faviorts .card-box, #hero #reservation .card-box{
     top: 0 !important;
   }
+  #faviorts, #reservation{
+    margin:0 10px;
+  }
 
   #faviorts .detail{
     padding-right:2rem!important;
@@ -4241,7 +4244,7 @@ body {
   flex-direction: column;
   align-items: baseline;
   direction: ltr;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 .form-inputs span {
   text-align: left;
@@ -4666,7 +4669,7 @@ body {
 }
 
 .book-form .iti--allow-dropdown .iti__flag-container{
-  right:100%;
+  right:130%;
   left:unset;
 }
 .choose-time{

@@ -155,7 +155,7 @@
                           <p >${retrievedReservations[i].address}</p>
                         </div>
                     
-                        <div class="d-flex align-items-center check-branch">
+                        <div class="d-flex align-items-center" id="check-branch">
                           <p><span class="reserve-title">الفرع:</span></p>
                           <p class="branch">${retrievedReservations[i].branch}</p>
                         </div>
@@ -186,9 +186,18 @@
                 if(retrievedReservations[i].address == ""){
                     document.querySelector('.address').style.display = "none";
                 }
-               
             
-              
+                var serviceNum =  localStorage.getItem("service-num");
+                var serviceName = localStorage.getItem("selected-service");
+                // debugger
+                // if (serviceNum == "3" || serviceName == "زيارة طبيب"){
+                //     document.getElementById('.check-branch').style.display = "none";
+                // }
+                
+                // else{
+                //     document.getElementById('.check-branch').style.display = "flex";
+                   
+                // }
             }
         }
 
@@ -205,7 +214,7 @@
       $('.basic-content').toggleClass('dis-none')
       $('#reservation').toggleClass('dis-none')
     //   Get Faviorts 
-    
+    debugger
     var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsListMob'));
     console.log(retrievedFaviorts)
     if(retrievedFaviorts == null){
@@ -256,7 +265,7 @@
     })
 
     function deleteFaviortsItem(elem){ 
-          
+        debugger  
         var parent = elem.parentNode;
         var grand_father = parent.parentNode;
         grand_father.removeChild(parent);
