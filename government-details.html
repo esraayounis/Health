@@ -294,7 +294,8 @@
                                                     stroke="#0065FF" fill="white" />
                                             </svg>
                                         </p>
-                                        <p class="mb-0 share">
+                                       
+                                        <p class="mb-0 share" id="shareButton">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
                                                 <g id="share" transform="translate(0)">
                                                     <path id="Union_23" data-name="Union 23"
@@ -324,14 +325,14 @@
                                                             stroke="#0065FF"  fill="white"/>
                                                     </svg>
                                                 </p>
-                                                <p class="mb-0 share">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                        <g id="share" transform="translate(0)">
-                                                            <path id="Union_23" data-name="Union 23"
-                                                                d="M11,13.5a2.506,2.506,0,0,1,.085-.648L4.467,9.543a2.5,2.5,0,1,1,0-3.085l6.618-3.309a2.5,2.5,0,1,1,.448.894L4.915,7.351a2.519,2.519,0,0,1,0,1.3l6.618,3.309A2.5,2.5,0,1,1,11,13.5Z"
-                                                                transform="translate(0)" fill="#0065ff" />
-                                                        </g>
-                                                    </svg>
+                                                <p class="mb-0 share" id="shareButtonMob">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                                                            <g id="share" transform="translate(0)">
+                                                                <path id="Union_23" data-name="Union 23"
+                                                                    d="M11,13.5a2.506,2.506,0,0,1,.085-.648L4.467,9.543a2.5,2.5,0,1,1,0-3.085l6.618-3.309a2.5,2.5,0,1,1,.448.894L4.915,7.351a2.519,2.519,0,0,1,0,1.3l6.618,3.309A2.5,2.5,0,1,1,11,13.5Z"
+                                                                    transform="translate(0)" fill="#0065ff" />
+                                                            </g>
+                                                        </svg>
                                                 </p>
                                             </div>
                                          </div>
@@ -434,7 +435,7 @@
                                         <textarea id="comment" cols="30" placeholder="اكتب هنا"></textarea>
                                         </div>
                                         <div class="col-4">
-                                        <button class="post-comment" type="button"  id="addcomment">تقييم</button>
+                                        <button class="post-comment"  id="addcomment">تقييم</button>
                                         </div>
                                     </div>
                                 </form>
@@ -1114,7 +1115,48 @@
     </footer>
     <!-- End Footer -->
 
-  
+   <!-- Share Dialog -->
+   <div class="sharing">
+    <div class="share-dialog">
+        <header>
+          <h6 class="dialog-title txt-center">مشاركة من خلال</h6>
+          <button class="close-button"><svg><use href="#close"></use></svg></button>
+        </header>
+    
+        <div class="targets">
+          <a class="button facebook-btn">
+            <i class="fab fa-facebook"></i>
+            <span>Facebook</span>
+          </a>
+          
+          <a class="button twitter-btn">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+          
+          <a class="button linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          
+
+          <a class="button whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>Whatsapp</span>
+          </a>
+        </div>
+    </div>
+      
+
+    <svg class="hidden">
+        <defs>
+          <symbol id="share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></symbol>
+          <symbol id="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></symbol>
+        </defs>
+    </svg>
+   </div>
+  <!-- End Share Dialog -->
+
     <div id="preloader"></div>
     <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a> -->
@@ -1124,9 +1166,6 @@
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <!-- <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script> -->
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
     <script src="assets/vendor/build/js/intlTelInput.js"></script>
@@ -1136,66 +1175,79 @@
     <script src="assets/js/set-card-details.js"></script>
     <script src="assets/js/get-details.js"></script>
     <script src="assets/js/get-local-storage-login.js"></script>
+    <script src="assets/js/social-share-btn.js"></script>
     
     <script>
         // ***** rating and add comment ******
         var count = 0;
         var addcomment = document.getElementById("addcomment");
+        addcomment.disabled = true;
         const widget = document.querySelector(".star-widget");
         var time = new Date();
         var username = localStorage.getItem('name');
-        addcomment.onclick = function () {
-            count++;
-            var comment = document.getElementById("comment").value;
-            var numstarts = localStorage.getItem("numstarts");
-            const rateContainer = document.getElementById('rate-container')
-            const elemObj = `<div   class="item">
-                    <div class="row person-comment">
-                        <div class="d-flex">
-                            <div class="col-lg-9">
-                                <div class="ratings star-widget">
-                                        <span class="stars" >
-                                          <i id="item${count}"  class="fa fa-star-o" data-star="1"></i>
-                                          <i  id="item${count}" class="fa fa-star-o" data-star="2"></i>
-                                          <i  id="item${count}" class="fa fa-star-o" data-star="3"></i>
-                                          <i  id="item${count}" class="fa fa-star-o" data-star="4"></i>
-                                          <i id="item${count}" class="fa fa-star-o" data-star="5"></i> </span>
+        var commentInput = document.getElementById("comment");
+        commentInput.addEventListener('keyup', e => {
+
+            debugger
+            if (e.target.value == "") {
+                addcomment.disabled = true;
+            } 
+            else {
+                addcomment.disabled = false;
+                count++;
+                var comment = document.getElementById("comment").value;
+                var numstarts = localStorage.getItem("numstarts");
+                const rateContainer = document.getElementById('rate-container')
+                const elemObj = `<div   class="item">
+                        <div class="row person-comment">
+                            <div class="d-flex">
+                                <div class="col-lg-9">
+                                    <div class="ratings star-widget">
+                                            <span class="stars" >
+                                            <i id="item${count}"  class="fa fa-star-o" data-star="1"></i>
+                                            <i  id="item${count}" class="fa fa-star-o" data-star="2"></i>
+                                            <i  id="item${count}" class="fa fa-star-o" data-star="3"></i>
+                                            <i  id="item${count}" class="fa fa-star-o" data-star="4"></i>
+                                            <i id="item${count}" class="fa fa-star-o" data-star="5"></i> </span>
+                                    </div>
+                                    <p class="pubilc">التقييم العام</p>
+                                    <p class="comment">${comment}</p>
+                                    <div class="info">
+                                        <span>${username}</span>
+                                        <span>${time}</span>
+                                    </div>
                                 </div>
-                                <p class="pubilc">التقييم العام</p>
-                                <p class="comment">${comment}</p>
-                                <div class="info">
-                                    <span>${username}</span>
-                                    <span>${time}</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="rate">
-                                    <button type="button">${numstarts}</button>
+                                <div class="col-lg-3">
+                                    <div class="rate">
+                                        <button type="button">${numstarts}</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>`
-            rateContainer.insertAdjacentHTML('beforeend',elemObj);
-            let stars = document.querySelectorAll(`#item${count}.fa`);
-            stars.forEach( (item,index) => {
-                if((index+1) <= numstarts){
-                item.className = "fa fa-star";
-                item.style.color = "#ffc000";
-                }else{
-                item.className = "fa fa-star-o";
-                item.style.color = "black";
-                }
-            });
-           
-            localStorage.setItem("comments",elemObj )
-        }
+                    </div>`
+                rateContainer.insertAdjacentHTML('beforeend',elemObj);
+                let stars = document.querySelectorAll(`#item${count}.fa`);
+                stars.forEach( (item,index) => {
+                    if((index+1) <= numstarts){
+                    item.className = "fa fa-star";
+                    item.style.color = "#ffc000";
+                    }else{
+                    item.className = "fa fa-star-o";
+                    item.style.color = "black";
+                    }
+                });
+
+                localStorage.setItem("comments",elemObj )
+                document.getElementById("comment").value = "";
+            }
+        });
 
        
 
         //***** calculate stars *****
         let ratings = document.querySelectorAll(".ratings");
         ratings.forEach ((rating)=>{
+            debugger
             let stars = rating.querySelectorAll(".stars .fa");
             stars.forEach( star => {
                 star.addEventListener("click", function () {

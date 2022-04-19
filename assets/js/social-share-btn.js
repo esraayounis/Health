@@ -26,12 +26,17 @@ const whatsappBtn = document.querySelector(".whatsapp-btn");
 
 function init() {
   
-  var shareCard = document.getElementById('set-card-data-web').innerHTML
-  
+  var media_query = 'screen and (max-width:600px)';
+  var matched = window.matchMedia(media_query).matches;
+  if (matched) {
+    var shareCard = document.getElementById('set-card-data-mob').innerHTML
+  }
+  else{
+    var shareCard = document.getElementById('set-card-data-web').innerHTML
+  }
 
   let postUrl = encodeURI(shareCard);
   let postTitle = encodeURI("Hi everyone, please check this out: ");
-
   facebookBtn.setAttribute(
     "href",
     `https://www.facebook.com/sharer.php?u=${postUrl}`
@@ -48,6 +53,7 @@ function init() {
     `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`
   );
 
+
   whatsappBtn.setAttribute(
     "href",
     `https://wa.me/?text=${postTitle} ${postUrl}`
@@ -55,3 +61,35 @@ function init() {
 }
 
 init();
+var media_query = 'screen and (max-width:600px)';
+  var matched = window.matchMedia(media_query).matches;
+  if (matched) {
+    const shareButtonMob = document.getElementById('shareButtonMob');
+    const shareDialog = document.querySelector('.share-dialog');
+    const closeButton = document.querySelector('.close-button');
+
+    shareButtonMob.addEventListener('click', event => {
+      
+      shareDialog.classList.add('is-open');
+    });
+
+    closeButton.addEventListener('click', event => {
+      shareDialog.classList.remove('is-open');
+    });
+  }
+  else{
+    const shareButton = document.getElementById('shareButton');
+    const shareDialog = document.querySelector('.share-dialog');
+    const closeButton = document.querySelector('.close-button');
+
+    shareButton.addEventListener('click', event => {
+      
+      shareDialog.classList.add('is-open');
+    });
+
+    closeButton.addEventListener('click', event => {
+      shareDialog.classList.remove('is-open');
+    });
+
+  }
+
