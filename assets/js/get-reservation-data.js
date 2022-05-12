@@ -170,7 +170,6 @@ window.onload = function () {
 
 
     function buyNow(){
-        debugger
         var payment = checkRadio();
         var media_query = 'screen and (max-width:600px)';
         var matched = window.matchMedia(media_query).matches;
@@ -183,6 +182,8 @@ window.onload = function () {
             else{
                 document.getElementById('select-payment-method-mob').style.display ="none";
             }
+            var image = document.getElementById('mob-detail-img').innerHTML;
+            var title = document.querySelector('#mob-detail-title .title-card').innerHTML;
         }
 
         else{
@@ -194,12 +195,11 @@ window.onload = function () {
             else{
                 document.getElementById('select-payment-method').style.display ="none";
             }
+            var image = document.getElementById('main-detail-img').innerHTML;
+            var title = document.querySelector('#main-card-details .title-card').innerHTML;
         }
 
-    
-        var image = document.getElementById('mob-detail-img').innerHTML;
 
-        var title = document.querySelector('#mob-detail-title .title-card').innerHTML;
         var serviceNum =  localStorage.getItem("service-num");
         if(serviceNum == "4"){
             var address = "";
@@ -208,12 +208,8 @@ window.onload = function () {
             var address = document.querySelector('.address').innerHTML;
         }
 
-    
-
         var reservationDate = document.getElementById('date').innerHTML;
-
         var reservationDiscount = document.getElementById('discount-value').innerHTML;
-
         if(reservationDiscount != ""){
             var reservationTotalPrice = document.getElementById('total').innerHTML;
         }
@@ -226,7 +222,6 @@ window.onload = function () {
         var selectedPeriod = localStorage.getItem("period");
         var paymentMethod =  localStorage.getItem("payment-method");
      
-debugger
         var retrievedReservations = JSON.parse(localStorage.getItem('reservationList')) || [];
         console.log(retrievedReservations)
         if(retrievedReservations == ""){

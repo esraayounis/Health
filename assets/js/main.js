@@ -217,7 +217,7 @@
     debugger
     var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsListMob'));
     console.log(retrievedFaviorts)
-    if(retrievedFaviorts == null){
+    if(retrievedFaviorts == null || retrievedFaviorts.length == 0){
       document.getElementById("faviorts-count").innerText = "0";
       document.querySelector("#faviorts .not-found-data").style.display = "block";
     }
@@ -254,7 +254,7 @@
                                             <p class="">الإجمالي</p>
                                             <h5 id="faviort-price">${retrievedFaviorts[i].price}</h5>
                                         </div>
-                                        <button type="button" class="btn" onclick="deleteFaviortsItem(this)">مسح</button>
+                                        <button type="button" class="btn" id="${i}" onclick="deleteFaviortsItemMob(this , ${i})">مسح</button>
                                     </div>
                                 </div>
                             </div>
@@ -264,22 +264,7 @@
     }
     })
 
-    function deleteFaviortsItem(elem){ 
-        debugger  
-        var parent = elem.parentNode;
-        var grand_father = parent.parentNode;
-        grand_father.removeChild(parent);
-        
-        //     if(grand_father.innerText == ""){
-        //       document.getElementById("faviorts-count").innerText = "0";
-        //       document.querySelector("#faviorts .faviorts-container").style.display = "none";
-        //       document.querySelector("#faviorts .not-found-data").style.display = "block";
-        //   }
-        
-        //   else{
-        //       document.querySelector("#faviorts .not-found-data").style.display = "none";
-        //   }
-    }
+    
 
      /*
      * Mobile offers btn
@@ -386,6 +371,34 @@
     });
 
 })()
+
+function deleteFaviortsItemMob(elem, index){ 
+    debugger  
+    var element = elem.offsetParent.children[2].children[index];
+    element.remove();
+    console.log(element)
+
+    var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsListMob'));
+    for (i = 0; i < retrievedFaviorts.length; i++){
+      if(elem.id == i){
+        retrievedFaviorts.splice(retrievedFaviorts[i], 1);
+        console.log(retrievedFaviorts)
+        localStorage.setItem('faviortsListMob', JSON.stringify(retrievedFaviorts));
+        if(retrievedFaviorts == "[]" || retrievedFaviorts.length == 0)
+        {
+            document.getElementById("faviorts-count").innerText = "0";
+            document.querySelector("#faviorts .faviorts-container-mob").style.display = "none";
+            document.querySelector("#faviorts .not-found-data").style.display = "block";
+        }
+        else{
+            document.querySelector("#faviorts .not-found-data").style.display = "none";
+            var faviortsCount = document.getElementById("faviorts-count").innerText;
+            document.getElementById("faviorts-count").innerText = faviortsCount-1;
+            
+        }
+      }
+    }
+}
 
 
 
@@ -505,6 +518,7 @@ $('.child-header5').click(function(){
 */
 jQuery(".services-links a").click(function(e) {
     e.preventDefault();
+    debugger
     var activeLink =  jQuery(this).text().trim();
     if(window.location.href == "index.html")
     {
@@ -565,7 +579,7 @@ jQuery(".services-links a").click(function(e) {
     }
 
     else{
-        var queryString = "?activeService=" + activeLink
+        var queryString = "?activeService=" + activeLink;
         window.location.href = "index.html" + queryString;
     }
 });

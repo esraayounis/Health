@@ -740,6 +740,18 @@ Desktop Navigation
 }
 
 
+#faviort-details .nice-select2{
+  margin-right:10px;
+  width: 110px;
+}
+
+
+#faviorts .card-detail{
+ z-index: -1;
+ position: static;
+}
+
+
 
 .not-found-data{
 
@@ -954,6 +966,9 @@ textarea:focus-visible{
 }
 
 
+
+
+
 /* ==== Rate add comment ====== */
 
 
@@ -1120,6 +1135,16 @@ form .btn button{
   transform: scale(1.2);
   transition: transform ease-in-out 0.3s;
 }
+
+.heart-active{
+  fill:#0065FF;
+}
+
+.mr-t-10{
+  margin-top:-10px;
+}
+
+
 
 @media (max-width: 600px) {
   .doctor-detail .rate-doctor p {
@@ -1323,9 +1348,7 @@ form .btn button{
     line-height: 3;
   }
 
-  .mr-t-10{
-    margin-top:-10px;
-  }
+
 
 
 
@@ -1826,6 +1849,7 @@ form .btn button{
       float: left;
       padding: 0 25px;
     }
+
 
     .change-pass{
       position: absolute;
@@ -6561,7 +6585,10 @@ textarea {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd}
+.dropdown-content a:hover {
+  background-color: #ddd;
+  border-radius:5px 5px 0 0 ;
+}
 
 .show {display:block;}
 

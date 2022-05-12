@@ -4736,7 +4736,7 @@
             data[tmp[0]] = tmp[1];
         } 
         console.log(data)
-        
+        debugger
         var  activeLink = data.activeService;
         var services = document.getElementById("nav-home-care-tab").innerText;
         var governments = document.getElementById("nav-government-tab").innerText;
@@ -4751,6 +4751,7 @@
             document.getElementById('nav-home-care').classList.add('show');
             var service1 =  document.querySelector('#nav-home-care #title-tab').innerText; 
             localStorage.setItem("selected-service", service1);
+            localStorage.setItem("service-num", "1");
             console.log(service1)
         }
         if ( activeLink === tabs[1]) {
@@ -4759,6 +4760,7 @@
             document.getElementById('nav-government').classList.add('show');
             var service2 =  document.querySelector('#nav-government #title-tab').innerText; 
             localStorage.setItem("selected-service", service2);
+            localStorage.setItem("service-num", "2");
             console.log(service2)
             
         }
@@ -4768,6 +4770,7 @@
             document.getElementById('nav-consultation').classList.add('show');
             var service3 =  document.querySelector('#nav-consultation #title-tab').innerText; 
             localStorage.setItem("selected-service", service3);
+            localStorage.setItem("service-num", "3");
             console.log(service3)
         }
         if ( activeLink === tabs[3]) {
@@ -4776,6 +4779,7 @@
             document.getElementById('nav-covid').classList.add('show');
             var service4 =  document.querySelector('#nav-covid #title-tab').innerText; 
             localStorage.setItem("selected-service", service4);
+            localStorage.setItem("service-num", "4");
             console.log(service4)
         }
         if ( activeLink === tabs[4]) {
@@ -4784,30 +4788,31 @@
             document.getElementById('nav-examinations').classList.add('show');
             var service5 =  document.querySelector('#nav-examinations #title-tab').innerText; 
             localStorage.setItem("selected-service", service5);
+            localStorage.setItem("service-num", "5");
             console.log(service5)
         }
         }
     }
 
     
-  // Covid pop up
-    // $(document).ready(function() {
+//   Covid pop up
+    $(document).ready(function() {
 
-    //     const popup = document.querySelector('.popup')
-    //     const overlay = document.querySelector('.bg-overlay')
-    //     const close = document.querySelector('.close')
-    //     window.onload = function() {
-    //             setTimeout(function() {
-    //                 popup.style.display = "block";
-    //                 overlay.style.display = "block";
-    //             }, 1000)
-    //         }
-    //     $('.close').on('click', function() {
-    //         overlay.style.display = "none";
-    //         popup.style.display = "none";
-    //     })
+        const popup = document.querySelector('.popup')
+        const overlay = document.querySelector('.bg-overlay')
+        const close = document.querySelector('.close')
+        window.onload = function() {
+                setTimeout(function() {
+                    popup.style.display = "block";
+                    overlay.style.display = "block";
+                }, 1000)
+            }
+        $('.close').on('click', function() {
+            overlay.style.display = "none";
+            popup.style.display = "none";
+        })
 
-    // });
+    });
 
     </script>
 </body>

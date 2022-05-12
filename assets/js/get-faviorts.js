@@ -1,15 +1,17 @@
 
 window.onload = function () {
           // Faviorts
-    
-    var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList'));
+    debugger
+    var retrievedFaviorts = localStorage.getItem('faviortsList');
     console.log(retrievedFaviorts)
-    if(retrievedFaviorts == null){
+    if(retrievedFaviorts == null || retrievedFaviorts == "[]"){
     document.getElementById("faviorts-count").innerText = "0";
+    document.querySelector("#faviorts .faviorts-container").style.display = "none";
     document.querySelector("#faviorts .not-found-data").style.display = "block";
     }
 
     else{
+        var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList'))
         document.querySelector("#faviorts .not-found-data").style.display = "none";
         for (i = 0; i < retrievedFaviorts.length; i++){
             document.getElementById("faviorts-count").innerText = i+1;
@@ -29,10 +31,11 @@ window.onload = function () {
                         <p class="mb-1">الإجمالي</p>
                         <h5 id="faviort-price"> ${retrievedFaviorts[i].price}</h5>
                     </div>
-                    
+                    <button type="button" class="btn delete" id="${i}" onclick="deleteFaviortsItem(this, ${i})">مسح</button>
                 </div>
-                <button type="button" class="btn" onclick="deleteFaviortsItem(this)">مسح</button>
             </div>
+            
+            
         </div>`    
         faviortsContainer.insertAdjacentHTML('beforeend',navlistElement);
         }
@@ -40,20 +43,30 @@ window.onload = function () {
 }
 
 
+function deleteFaviortsItem(elem, index){ 
 
-function deleteFaviortsItem(elem){ 
-      
-    var parent = elem.parentNode;
-    var grand_father = parent.parentNode;
-    grand_father.removeChild(parent);
-    
-//     if(grand_father.innerText == ""){
-//       document.getElementById("faviorts-count").innerText = "0";
-//       document.querySelector("#faviorts .faviorts-container").style.display = "none";
-//       document.querySelector("#faviorts .not-found-data").style.display = "block";
-//   }
+    var element = elem.offsetParent.children[2].children[0].children[3].lastElementChild.children[index];
+    element.remove();
+    console.log(element)
 
-//   else{
-//       document.querySelector("#faviorts .not-found-data").style.display = "none";
-//   }
+    var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList'));
+    for (i = 0; i < retrievedFaviorts.length; i++){
+      if(elem.id == i){
+        retrievedFaviorts.splice(retrievedFaviorts[i], 1);
+        console.log(retrievedFaviorts)
+        localStorage.setItem('faviortsList', JSON.stringify(retrievedFaviorts));
+        if(retrievedFaviorts == "[]")
+        {
+            document.getElementById("faviorts-count").innerText = "0";
+            document.querySelector("#faviorts .faviorts-container").style.display = "none";
+            document.querySelector("#faviorts .not-found-data").style.display = "block";
+        }
+        else{
+            document.querySelector("#faviorts .not-found-data").style.display = "none";
+            var faviortsCount = document.getElementById("faviorts-count").innerText;
+            document.getElementById("faviorts-count").innerText = faviortsCount-1;
+            
+        }
+      }
+    }
 }

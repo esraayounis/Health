@@ -493,7 +493,6 @@
 
         else{
             document.querySelector("#nav-current .not-found-data").style.display = "none";
-        
             for (i = 0; i < retrievedReservations.length; i++){
                 document.getElementById("current-reserv-count").innerText = i+1;
                 const currentReservationsList = document.querySelector('.current-reservation-list');
@@ -505,12 +504,12 @@
                     <div class="col-lg-6 p-lg-0 detail">
                         <h6 class="title-card txt-md"> ${retrievedReservations[i].title}</h6>
                     
-                        <div class="d-flex align-items-center address">
+                        <div class="align-items-center address">
                         <p><span class="reserve-title" >العنوان:</span></p>
                         <p >${retrievedReservations[i].address}</p>
                         </div>
                     
-                    <div class="d-flex align-items-center check-branch">
+                    <div class="align-items-center check-branch">
                         <p><span class="reserve-title">الفرع:</span></p>
                         <p class="branch">${retrievedReservations[i].branch}</p>
                     </div>
@@ -568,6 +567,7 @@
     }
 
     function showReservations(){
+        
         document.getElementById('profile-title').classList.remove("active");
         document.getElementById('faviorts-title').classList.remove("active");
         document.getElementById('reservations-title').classList.add("active");
@@ -586,7 +586,7 @@
             var paymentMethod =  localStorage.getItem("payment-method");
             for (i = 0; i < retrievedReservations.length; i++){
                 document.getElementById("current-reserv-count").innerText = i+1;
-                const currentReservationsList = document.querySelector('.current-reservation');
+                const currentReservationsList = document.querySelector('.current-reservation-list');
                 const elemObj = `<div class="card-box p-2 py-4 card-detail">
                 <div class="row">
                     <div class="col-lg-3 p-lg-0">
@@ -595,12 +595,12 @@
                     <div class="col-lg-6 p-lg-0 detail">
                         <h6 class="title-card txt-md"> ${retrievedReservations[i].title}</h6>
                     
-                        <div class="d-flex align-items-center address">
+                        <div class="align-items-center address">
                         <p><span class="reserve-title" >العنوان:</span></p>
                         <p >${retrievedReservations[i].address}</p>
                         </div>
                     
-                        <div class="d-flex align-items-center check-branch">
+                        <div class="align-items-center check-branch">
                         <p><span class="reserve-title">الفرع:</span></p>
                         <p class="branch">${retrievedReservations[i].branch}</p>
                     </div>

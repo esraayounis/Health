@@ -391,83 +391,155 @@ $('.save-lab-card').click(function(){
 // ----- Add to Faviorts -----
 
 $('#save-btn').click(function(){ 
-     
-    document.getElementById("save").style.fill = "#0065FF";
-    var faviorts =  document.getElementById("save-btn");
-    var add = Number(faviorts.getAttribute('data-count') || 0);
-    faviorts.setAttribute('data-count', add + 1);
-    var faviortCount =  document.querySelector("[data-count]").childElementCount;
-    localStorage.setItem("faviorts-count", faviortCount);
-    var cardImg =  document.getElementById("main-detail-img").innerHTML;
-    var cardDetails =  document.getElementById("main-card-details").innerHTML;
-    var price =  document.querySelector('.details-price').innerText;
+     $('#save').toggleClass("heart-active");
+     var cardImg =  document.getElementById("main-detail-img").innerHTML;
+     var cardDetails =  document.getElementById("main-card-details").innerHTML;
+     var price =  document.querySelector('.details-price').innerText;
+     const div = document.querySelector('#save');
+     var checkActiveStatus =  div.classList.contains('heart-active');
+     if(checkActiveStatus == true)
+     {
+        var faviorts =  document.getElementById("save-btn");
+        var add = Number(faviorts.getAttribute('data-count') || 0);
+        faviorts.setAttribute('data-count', add + 1);
+        var faviortCount =  document.querySelector("[data-count]").childElementCount;
+        localStorage.setItem("faviorts-count", faviortCount);
+        var retrievedFaviorts = localStorage.getItem('faviortsList');
+        console.log(retrievedFaviorts)
+        if(retrievedFaviorts == null){
+            faviortsList = [];
+            let faviort = {
+                cardImg: cardImg,
+                cardDetails: cardDetails,
+                price: price
+            }
+            faviortsList.push(faviort);
+            localStorage.setItem('faviortsList', JSON.stringify(faviortsList) );
+        }
 
-    var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList')) || [];
-    console.log(retrievedFaviorts)
-    if(retrievedFaviorts == ""){
-        faviortsList = [];
+        else{
+         var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList'));
         let faviort = {
-            faviortCount:faviortCount,
             cardImg: cardImg,
             cardDetails: cardDetails,
             price: price
         }
-        faviortsList.push(faviort);
-        localStorage.setItem('faviortsList', JSON.stringify(faviortsList) );
-    }
+        
+        retrievedFaviorts.push(faviort);
+        localStorage.setItem('faviortsList', JSON.stringify(retrievedFaviorts));
+        }
+     }
+     else{
+        var faviorts =  document.getElementById("save-btn");
+        var add = Number(faviorts.getAttribute('data-count') || 0);
+        faviorts.setAttribute('data-count', add - 1);
+        var faviortCount =  document.querySelector("[data-count]").childElementCount;
+        localStorage.setItem("faviorts-count", faviortCount);
+        var retrievedFaviorts = localStorage.getItem('faviortsList');
+        console.log(retrievedFaviorts)
+        if(retrievedFaviorts == null){
+            faviortsList = [];
+            let faviort = {
+                cardImg: cardImg,
+                cardDetails: cardDetails,
+                price: price
+            }
+            faviortsList.pop(faviort);
+            localStorage.setItem('faviortsList', JSON.stringify(faviortsList) );
+        }
 
-    else{
-    let faviort = {
-        faviortCount:faviortCount,
-        cardImg: cardImg,
-        cardDetails: cardDetails,
-        price: price
-    }
-    
-    retrievedFaviorts.push(faviort);
-    localStorage.setItem('faviortsList', JSON.stringify(retrievedFaviorts));
-   }
+        else{
+            var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsList'));
+        let faviort = {
+            cardImg: cardImg,
+            cardDetails: cardDetails,
+            price: price
+        }
+        
+        retrievedFaviorts.pop(faviort);
+        localStorage.setItem('faviortsList', JSON.stringify(retrievedFaviorts));
+        }
+     }
+     
    
 });
 
 $('#save-btn-mob').click(function(){ 
-    document.getElementById("save-mob").style.fill = "#0065FF";
-    var faviorts =  document.getElementById("save-btn-mob");
-    var add = Number(faviorts.getAttribute('data-count') || 0);
-    faviorts.setAttribute('data-count', add + 1);
-    var faviortCount =  document.querySelector("[data-count]").childElementCount;
-    localStorage.setItem("faviorts-count", faviortCount);
+    $('#save-mob').toggleClass("heart-active");
     var cardImg =  document.getElementById("mob-detail-img").innerHTML;
     var title =  document.querySelector("#mob-detail-title .title-card").innerHTML;
     var cardDetails =  document.getElementById("mob-card-details").innerHTML;
     var price =  document.querySelector('.details-price').innerText;
+    const div = document.querySelector('#save-mob');
+    var checkActiveStatus =  div.classList.contains('heart-active');
+    if(checkActiveStatus == true)
+    {
+       var faviorts =  document.getElementById("save-btn-mob");
+       var add = Number(faviorts.getAttribute('data-count') || 0);
+        faviorts.setAttribute('data-count', add + 1);
+        var faviortCount =  document.querySelector("[data-count]").childElementCount;
+        localStorage.setItem("faviorts-count", faviortCount);
 
-    var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsListMob')) || [];
-    console.log(retrievedFaviorts)
-    if(retrievedFaviorts == ""){
-        faviortsList = [];
+        var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsListMob')) || [];
+        console.log(retrievedFaviorts)
+        if(retrievedFaviorts == ""){
+            faviortsList = [];
+            let faviort = {
+                cardImg: cardImg,
+                title: title,
+                cardDetails: cardDetails,
+                price: price
+            }
+            faviortsList.push(faviort);
+            localStorage.setItem('faviortsListMob', JSON.stringify(faviortsList) );
+        }
+
+        else{
         let faviort = {
-            faviortCount:faviortCount,
             cardImg: cardImg,
             title: title,
             cardDetails: cardDetails,
             price: price
         }
-        faviortsList.push(faviort);
-        localStorage.setItem('faviortsListMob', JSON.stringify(faviortsList) );
+        
+        retrievedFaviorts.push(faviort);
+        localStorage.setItem('faviortsListMob', JSON.stringify(retrievedFaviorts));
+        }
     }
-
     else{
-    let faviort = {
-        cardImg: cardImg,
-        title: title,
-        cardDetails: cardDetails,
-        price: price
+        var faviorts =  document.getElementById("save-btn-mob");
+       var add = Number(faviorts.getAttribute('data-count') || 0);
+        faviorts.setAttribute('data-count', add - 1);
+        var faviortCount =  document.querySelector("[data-count]").childElementCount;
+        localStorage.setItem("faviorts-count", faviortCount);
+
+        var retrievedFaviorts = JSON.parse(localStorage.getItem('faviortsListMob')) || [];
+        console.log(retrievedFaviorts)
+        if(retrievedFaviorts == ""){
+            faviortsList = [];
+            let faviort = {
+                cardImg: cardImg,
+                title: title,
+                cardDetails: cardDetails,
+                price: price
+            }
+            faviortsList.pop(faviort);
+            localStorage.setItem('faviortsListMob', JSON.stringify(faviortsList) );
+        }
+
+        else{
+        let faviort = {
+            cardImg: cardImg,
+            title: title,
+            cardDetails: cardDetails,
+            price: price
+        }
+        
+        retrievedFaviorts.pop(faviort);
+        localStorage.setItem('faviortsListMob', JSON.stringify(retrievedFaviorts));
+        }
+
     }
-    
-    retrievedFaviorts.push(faviort);
-    localStorage.setItem('faviortsListMob', JSON.stringify(retrievedFaviorts));
-   }
   
 });
 
