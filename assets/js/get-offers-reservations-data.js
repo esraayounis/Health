@@ -83,7 +83,7 @@ window.onload = function () {
     }
 
     function applyDiscount(){  
-        var promoCode = document.getElementById('discount-code').value;
+        var promoCode = document.querySelector('.discount-code').value;
          var price = document.getElementById('totalPrice').innerText;
          var matches = price.match(/(\d+)/);
 
@@ -98,6 +98,7 @@ window.onload = function () {
             document.getElementById('div-discount').style.display ="block";
             document.getElementById('discount-value').innerHTML = discount;
             document.getElementById('error-discount-text').style.display ="none";
+            document.querySelector('.price').style.display ="flex";
 
         }
         else{
@@ -105,13 +106,15 @@ window.onload = function () {
             document.getElementById('succuss-discount-text').style.display ="none";
             document.getElementById('delete-code-btn').style.display ="none";
             document.getElementById('error-discount-text').style.display ="block";
+            document.querySelector('.price').style.display ="none";
         }
     }
 
     function deleteCode(){
-        var deletePromo = document.getElementById('discount-code').value = "";
+        var deletePromo = document.querySelector('.discount-code').value = "";
         document.getElementById('succuss-discount-text').style.display ="none";
         document.getElementById('error-discount-text').style.display ="none";
+        document.querySelector('.price').style.display ="none";
     }
 
 
